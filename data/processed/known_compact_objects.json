@@ -1,0 +1,72 @@
+[
+  {
+    "name":"Sagittarius A*",
+    "object_type":"black_hole",
+    "mass_msun":4100000.0,
+    "class":"supermassive",
+    "note":"Milky Way center"
+  },
+  {
+    "name":"M87*",
+    "object_type":"black_hole",
+    "mass_msun":6500000000.0,
+    "class":"supermassive",
+    "note":"M87 jet"
+  },
+  {
+    "name":"Cygnus X-1",
+    "object_type":"black_hole",
+    "mass_msun":21.2,
+    "class":"stellar",
+    "note":"X-ray binary"
+  },
+  {
+    "name":"GW150914 final",
+    "object_type":"black_hole",
+    "mass_msun":62.0,
+    "class":"stellar",
+    "note":"GW merger remnant"
+  },
+  {
+    "name":"GW190521 final",
+    "object_type":"black_hole",
+    "mass_msun":142.0,
+    "class":"intermediate",
+    "note":"GW merger remnant"
+  },
+  {
+    "name":"TON 618",
+    "object_type":"black_hole",
+    "mass_msun":66000000000.0,
+    "class":"supermassive",
+    "note":"quasar"
+  },
+  {
+    "name":"Phoenix A*",
+    "object_type":"black_hole",
+    "mass_msun":10000000000.0,
+    "class":"supermassive",
+    "note":"BCG"
+  },
+  {
+    "name":"Morris-Thorne wormhole (demo)",
+    "object_type":"wormhole",
+    "mass_msun":1.0,
+    "class":"theoretical",
+    "note":"hypothetical throat mass scale"
+  },
+  {
+    "name":"Ellis drainhole (demo)",
+    "object_type":"wormhole",
+    "mass_msun":0.0,
+    "class":"theoretical",
+    "note":"massless throat"
+  },
+  {
+    "name":"White hole (time-reversed demo)",
+    "object_type":"white_hole",
+    "mass_msun":10.0,
+    "class":"hypothetical",
+    "note":"theoretical only"
+  }
+]

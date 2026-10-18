@@ -1,0 +1,11 @@
+name,object_type,mass_msun,class,note
+Sagittarius A*,black_hole,4100000.0,supermassive,Milky Way center
+M87*,black_hole,6500000000.0,supermassive,M87 jet
+Cygnus X-1,black_hole,21.2,stellar,X-ray binary
+GW150914 final,black_hole,62.0,stellar,GW merger remnant
+GW190521 final,black_hole,142.0,intermediate,GW merger remnant
+TON 618,black_hole,66000000000.0,supermassive,quasar
+Phoenix A*,black_hole,10000000000.0,supermassive,BCG
+Morris-Thorne wormhole (demo),wormhole,1.0,theoretical,hypothetical throat mass scale
+Ellis drainhole (demo),wormhole,0.0,theoretical,massless throat
+White hole (time-reversed demo),white_hole,10.0,hypothetical,theoretical only

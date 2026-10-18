@@ -34,7 +34,10 @@ exotic-compact-objects/
 │   ├── 18_ml_astronomy.ipynb
 │   ├── 19_gw_strain_analysis.ipynb
 │   ├── 20_gwtc_remnant_catalog.ipynb
-│   └── 21_agn_mass_catalog.ipynb
+│   ├── 21_agn_mass_catalog.ipynb
+│   ├── 22_blackcat_dynamical_catalog.ipynb
+│   ├── 23_early_smbh_growth.ipynb
+│   └── 24_quantum_gravity.ipynb
 ├── scripts/          # download + build scripts
 ├── figures/
 └── reports/
@@ -66,9 +69,18 @@ cd /home/dawe/Projects/astro-science/research/projects/exotic-compact-objects
 
 Outputs: `premium/figures/gwtc_recent_20_remnants.html` and exploration notebook `notebooks/20_gwtc_remnant_catalog.ipynb`.
 
+## BlackCAT dynamical stellar-mass systems
+
+Published BlackCAT VizieR tables are mirrored at `data/external/blackcat_tablea1.tsv` through `tablea4.tsv` plus `blackcat_refs.tsv`; fetch again with `scripts/download_blackcat.py` and rebuild the cleaned 18-row joined subset using `scripts/process_blackcat.py`. The cleaned data are `data/processed/blackcat_dynamical.csv`. It includes masses, asymmetric errors or explicit limit flags, orbital periods, mass functions, companion RV amplitudes, distances, positions, outburst counts, and citations. The original local `blackcat_bhxb.csv` contains synthetic `BHXRB_###` rows and was not used as observational evidence. Rebuild the Plotly view via `/home/dawe/Projects/astro-science/.venv/bin/python scripts/build_blackcat_dashboard.py`; see `notebooks/22_blackcat_dynamical_catalog.ipynb`. The notebook audits $f(M)=PK_2^3/(2\pi G)$, but disagreement can arise from mixed per-object literature inputs; reported values remain untouched pending paper-level checks.
+
 ## AGN reverberation-mapping mass sample
 
 `data/processed/agn_reverberation_masses.csv` normalizes the local 86-row AGN compilation; 70 entries have numeric log-mass estimates. It retains positions, redshift, original log-mass errors and converted asymmetric linear-mass offsets. Run `/home/dawe/Projects/astro-science/.venv/bin/python scripts/build_agn_reverberation_dashboard.py` to regenerate `premium/figures/agn_reverberation_catalog.html`; see `notebooks/21_agn_mass_catalog.ipynb`. Reported uncertainties are transformed as $\Delta M_-=M(1-10^{-\sigma_-})$ and $\Delta M_+=M(10^{\sigma_+}-1)$, where the catalogue error columns are dex offsets. The literature compilation is heterogeneous and not selection-corrected; use descriptive plots only unless selection and measurement systematics are modeled. Both processed catalogs also include Astropy-derived Schwarzschild radius, Eddington luminosity (using the conventional 1.26×10^38 erg/s per solar mass scaling), and Schwarzschild Hawking temperature. These are model-derived reference quantities, not directly observed measurements; the Hawking temperature is formal for astrophysical holes and ignores accretion/environmental effects. Recompute with `scripts/add_bh_derived_quantities.py` using the project's Astropy environment.
+
+## Open research problems
+
+- [Early supermassive black-hole growth](premium/early_smbh_growth.md) — high-redshift observations, Eddington-growth derivations, and conditional seed-mass scenarios ([notebook](notebooks/22_early_smbh_growth.ipynb)).
+- [Quantum gravity](premium/quantum_gravity.md) — Planck-scale derivations, low-energy effective theory, candidate approaches, and model-dependent tests ([notebook](notebooks/24_quantum_gravity.ipynb)).
 
 ## Models implemented
 

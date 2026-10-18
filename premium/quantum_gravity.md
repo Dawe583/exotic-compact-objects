@@ -16,62 +16,61 @@ GR makes geometry dynamical: its metric responds to stress-energy. QFT normally 
 
 ## Planck scales: dimensional derivation
 
-Use SI dimensions $[G]=mathrm{L^3M^{-1}T^{-2}}$, $[hbar]=mathrm{ML^2T^{-1}}$, and $[c]=mathrm{LT^{-1}}$. Seek a length $G^ahbar^b c^d$. Equating exponents to length gives
+Use SI dimensions $[G]=\mathrm{L^3M^{-1}T^{-2}}$, $[\hbar]=\mathrm{ML^2T^{-1}}$, and $[c]=\mathrm{LT^{-1}}$. Seek a length $G^a\hbar^b c^d$. Equating exponents to length gives
 
 $$
-3a+2b+d=1,qquad -a+b=0,qquad -2a-b-d=0.
+3a+2b+d=1,\qquad -a+b=0,\qquad -2a-b-d=0.
 $$
 
 From the mass equation $b=a$. The time equation gives $d=-3a$, and the length equation becomes $2a=1$, hence $a=b=1/2$ and $d=-3/2$:
 
 $$
-ell_P=sqrt{rac{hbar G}{c^3}}.
+\ell_P=\sqrt{\frac{\hbar G}{c^3}}.
 $$
 
 The associated time, mass, energy, and temperature are defined by
 
 $$
-t_P=rac{ell_P}{c}=sqrt{rac{hbar G}{c^5}},quad m_P=sqrt{rac{hbar c}{G}},quad E_P=m_Pc^2=sqrt{rac{hbar c^5}{G}},quad T_P=rac{E_P}{k_B}.
+t_P=\frac{\ell_P}{c}=\sqrt{\frac{\hbar G}{c^5}},\quad m_P=\sqrt{\frac{\hbar c}{G}},\quad E_P=m_Pc^2=\sqrt{\frac{\hbar c^5}{G}},\quad T_P=\frac{E_P}{k_B}.
 $$
 
-These are combinations of constants, not measured particle properties. The conventions use the unreduced Planck mass; factors such as $8pi$ enter reduced-Planck conventions in field theory.
+These are combinations of constants, not measured particle properties. The conventions use the unreduced Planck mass; factors such as $8\pi$ enter reduced-Planck conventions in field theory.
 
 ## Schwarzschild–Compton crossover (heuristic)
 
-For a mass $m$, the Schwarzschild radius of a nonrotating classical black hole is $r_s=2Gm/c^2$. The reduced Compton wavelength is $arlambda_C=hbar/(mc)$. Equating the two,
+For a mass $m$, the Schwarzschild radius of a nonrotating classical black hole is $r_s=2Gm/c^2$. The reduced Compton wavelength is $\bar{\lambda}_C=\hbar/(mc)$. Equating the two,
 
 $$
-rac{2Gm}{c^2}=rac{hbar}{mc}
-quadLongrightarrowquad
-2Gm^2=hbar c
-quadLongrightarrowquad
-m=rac{m_P}{sqrt{2}},qquad r_s=arlambda_C=sqrt{2},ell_P.
+\frac{2Gm}{c^2}=\frac{\hbar}{mc}
+\quad\Longrightarrow\quad
+2Gm^2=\hbar c
+\quad\Longrightarrow\quad
+m=\frac{m_P}{\sqrt{2}},\qquad r_s=\bar{\lambda}_C=\sqrt{2}\,\ell_P.
 $$
 
 The conventional Planck scale is therefore the order-of-magnitude crossover, with order-unity differences depending on radius/wavelength conventions. This is a heuristic comparison of classical and quantum localization scales, not a derivation of a black-hole production threshold or evidence that a quantum black hole has been observed.
 
 ## Bekenstein–Hawking entropy and its dimensions
 
-For a Schwarzschild horizon, $A=4pi r_s^2$. Substituting $r_s=2GM/c^2$ gives
+For a Schwarzschild horizon, $A=4\pi r_s^2$. Substituting $r_s=2GM/c^2$ gives
 
 $$
-A=4pileft(rac{2GM}{c^2}ight)^2=rac{16pi G^2M^2}{c^4}.
+A=4\pi\left(\frac{2GM}{c^2}\right)^2=\frac{16\pi G^2M^2}{c^4}.
 $$
 
 The semiclassical Bekenstein–Hawking entropy is
 
 $$
-S_{BH}=rac{k_B A}{4ell_P^2}.
+S_{BH}=\frac{k_B A}{4\ell_P^2}.
 $$
 
-Since $ell_P^2=hbar G/c^3$, this is equivalently
+Since $\ell_P^2=\hbar G/c^3$, this is equivalently
 
 $$
-S_{BH}=rac{k_B A c^3}{4hbar G}
-=rac{4pi k_B GM^2}{hbar c}.
+S_{BH}=\frac{k_B A c^3}{4\hbar G}=\frac{4\pi k_B GM^2}{\hbar c}.
 $$
 
-Dimensional interpretation: $[A]=mathrm{L^2}$ and $[ell_P^2]=mathrm{L^2}$, so $A/(4ell_P^2)$ is dimensionless and counts entropy in units of $k_B$; $S_{BH}$ has thermodynamic entropy units. The area law is a semiclassical result (with important quantum-gravity implications), not a direct count of experimentally resolved horizon microstates. Its microscopic interpretation depends on a candidate theory.
+Dimensional interpretation: $[A]=\mathrm{L^2}$ and $[\ell_P^2]=\mathrm{L^2}$, so $A/(4\ell_P^2)$ is dimensionless and counts entropy in units of $k_B$; $S_{BH}$ has thermodynamic entropy units. The area law is a semiclassical result (with important quantum-gravity implications), not a direct count of experimentally resolved horizon microstates. Its microscopic interpretation depends on a candidate theory.
 
 ## Approaches and what each does not establish
 
@@ -87,13 +86,55 @@ These programs are not interchangeable versions of one agreed theory. EFT is a s
 
 ## EFT power counting: a controlled illustration
 
-At characteristic energy $E$, a higher-derivative correction is generically suppressed by powers of $E/E_P$ (or an appropriate EFT cutoff), with coefficients set by Wilson coefficients and operator structure. The plot uses $epsilon^2=(E/E_P)^2$ as a **dimensional suppression illustration** with unit coefficient, not a prediction for a specific observable. Small $epsilon$ supports an expansion; near unity it signals breakdown of that expansion, not a numerical prediction for UV physics.
+At characteristic energy $E$, a higher-derivative correction is generically suppressed by powers of $E/E_P$ (or an appropriate EFT cutoff), with coefficients set by Wilson coefficients and operator structure. The plot uses $\epsilon^2=(E/E_P)^2$ as a **dimensional suppression illustration** with unit coefficient, not a prediction for a specific observable. Small $\epsilon$ supports an expansion; near unity it signals breakdown of that expansion, not a numerical prediction for UV physics.
 
 ## Conditional phenomenology: Lorentz-violating photon dispersion
 
-A frequently discussed model-dependent example modifies photon dispersion as $E^2simeq p^2c^2[1+eta(E/E_{QG})^n]$, with $|eta|(E/E_{QG})^nll1$. To leading order the fractional group-velocity shift is approximately $delta v/csimeq (n+1)eta(E/E_{QG})^n/2$ for this convention. A propagation-time difference over distance $L$ is then $Delta tsimeq -(n+1)eta L(E/E_{QG})^n/(2c)$ (sign depends on convention). The notebook plots this formula for explicitly chosen $eta,n,E_{QG},L$ and does **not** use an observed lag or claim a bound.
+A frequently discussed model-dependent example modifies photon dispersion as
+
+$$
+E^2\simeq p^2c^2\left[1+\eta\left(\frac{E}{E_{QG}}\right)^n\right],\qquad |\eta|\left(\frac{E}{E_{QG}}\right)^n\ll1.
+$$
+
+Here $\eta$ is a dimensionless model parameter, $n$ is a positive integer, and $E_{QG}$ is a model scale; none is a measured parameter in the illustration. Different dispersion operators need not give the same coefficient or energy dependence.
+
+For the stated convention, set $x=E/E_{QG}$ and rewrite the dispersion relation to first order as
+
+$$
+p(E)=\frac{E}{c}\left(1+\eta x^n\right)^{-1/2}\simeq\frac{E}{c}\left(1-\frac{\eta}{2}x^n\right).
+$$
+
+Differentiate this approximate momentum with respect to energy:
+
+$$
+\frac{dp}{dE}\simeq\frac{1}{c}\left[1-\frac{n+1}{2}\eta x^n\right].
+$$
+
+The group velocity is $v_g=dE/dp=(dp/dE)^{-1}$, so expanding the reciprocal to first order gives
+
+$$
+\frac{v_g}{c}\simeq 1+\frac{n+1}{2}\eta\left(\frac{E}{E_{QG}}\right)^n,
+\qquad \frac{\delta v}{c}\simeq\frac{n+1}{2}\eta\left(\frac{E}{E_{QG}}\right)^n.
+$$
+
+For a constant energy along a flat-space path of length $L$, the first-order travel-time difference is
+
+$$
+\Delta t\simeq\frac{L}{v_g}-\frac{L}{c}\simeq-\frac{n+1}{2}\eta\frac{L}{c}\left(\frac{E}{E_{QG}}\right)^n.
+$$
+
+The sign depends on the convention and sign of $\eta$. This is the leading-order result; it assumes small $|\eta|x^n$, a specified dispersion relation, and neglects expansion/redshift evolution. The notebook plots this formula for explicitly chosen $\eta,n,E_{QG},L$ and does **not** use an observed lag or claim a bound.
 
 Actual constraints require a specified operator/model, source-intrinsic emission-lag treatment, redshift integration, instrumental response, and selection/systematic analysis. Liberati & Maccione review such model-dependent phenomenology ([arXiv:0906.0681](https://arxiv.org/abs/0906.0681)); this reference is not a blanket bound on quantum gravity. No direct detection of Lorentz-violating quantum-gravity dispersion is claimed here.
+
+## Quantitative observational constraints
+
+These are constraints on specific phenomenological signatures, not detections of quantum gravity:
+
+- **GRB 090510:** Fermi detected a $31\,\mathrm{GeV}$ photon during the first second from a burst at $z=0.903\pm0.003$. Using the one-sigma conservative photon-energy and redshift values ($28.0\,\mathrm{GeV}$ and $z=0.900$), the authors' most conservative emission-start choice gives $E_{QG,1}/E_P>1.19$ for a **linear** energy-dependent photon-propagation model. Less conservative emission-time choices give stronger limits, but depend more heavily on associating the high-energy photon with lower-energy emission. This does not constrain all quantum-gravity models; the source's intrinsic emission time is a central assumption ([Fermi LAT/GBM Collaboration, *Nature* 462, 331 (2009)](https://arxiv.org/abs/0908.1832)).
+- **GW170817 / GRB 170817A:** the measured gamma-ray delay was $(1.74\pm0.05)\,\mathrm{s}$. The published interval for the relative gravitational-wave and light propagation speeds is $-3\times10^{-15}<(v_g-v_\gamma)/c<7\times10^{-16}$. This tests relative propagation in that event, with interpretation conditional on the source-emission timing; it is not a direct measurement of Planck-scale spacetime structure ([LIGO Scientific Collaboration et al., *Phys. Rev. Lett.* 119, 161101 (2017)](https://arxiv.org/abs/1710.05834)).
+
+The notebook reproduces these published intervals in separate panels because they constrain different quantities. Its companion theoretical curve remains a toy model, not a fit to either event.
 
 ## Observational status and unsolved questions
 

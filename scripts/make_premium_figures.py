@@ -78,5 +78,3 @@ fig.update_layout(template=TEMPLATE, title='Schwarzschild orbit', xaxis_title='x
 fig.write_html(str(OUT/'orbit_schw.html'), include_plotlyjs='cdn')
 
 print('premium figures done')
-EOF
-python scripts/make_premium_figures.py

@@ -140,13 +140,13 @@ Define near-horizon coordinates:
 r = r_e + \lambda \rho, \quad t = \frac{\tau}{\lambda}, \quad \lambda \to 0
 \end{equation}
 
-The metric becomes:
+With the stated $(-,+,+,+)$ signature, the near-horizon metric is:
 
 \begin{equation}
-ds^2 = \frac{\rho^2}{r_e^2} d\tau^2 - \frac{r_e^2}{\rho^2} d\rho^2 - r_e^2 d\Omega^2
+ds^2 = -\frac{\rho^2}{r_e^2} d\tau^2 + \frac{r_e^2}{\rho^2} d\rho^2 + r_e^2 d\Omega^2.
 \end{equation}
 
-This is $\text{AdS}_2 \times S^2$ with radii $r_e$ for both factors.
+This is $\mathrm{AdS}_2 \times S^2$ with radius $r_e$ for both factors. (The overall signs in the original expression had the opposite signature and contradicted the ansatz.)
 
 ---
 
@@ -208,19 +208,20 @@ The first law of black hole mechanics for RN black holes:
 \boxed{dM = \frac{\kappa}{8\pi G} dA + \Phi_+ dQ}
 \end{equation}
 
-where $\Phi_+ = Q/r_+$ is the electric potential at the horizon.
+Here the displayed action and metric use an electromagnetic normalization in which $f(r)=1-2GM/r+GQ^2/r^2$; the thermodynamic potential and charge must use the corresponding conjugate normalization consistently.
 
 \begin{proof}
 Vary $M = \frac{r_+}{2G} + \frac{Q^2}{2r_+}$ (from $f(r_+)=0$):
 
 \begin{align}
-dM &= \frac{dr_+}{2G} + \frac{Q}{r_+} dQ - \frac{Q^2}{2r_+^2} dr_+ \\
-&= \left( \frac{1}{2G} - \frac{Q^2}{2r_+^2} \right) dr_+ + \frac{Q}{r_+} dQ \\
-&= \frac{r_+^2 - G Q^2}{2G r_+^2} dr_+ + \Phi_+ dQ \\
-&= \frac{r_+ - r_-}{4G r_+^2} (8\pi r_+ dr_+) + \Phi_+ dQ \\
-&= \frac{\kappa}{2\pi} \frac{dA}{8\pi G} + \Phi_+ dQ \quad \text{(using } dA = 8\pi r_+ dr_+) \\
-&= T_H dS + \Phi_+ dQ
+dM &= \left(\frac{1}{2G}-\frac{Q^2}{2r_+^2}\right)dr_+ + \frac{Q}{r_+}dQ \\
+&= \frac{r_+-r_-}{2G r_+}dr_+ + \Phi_+dQ \\
+&= \frac{\kappa}{8\pi G}dA + \Phi_+dQ \\
+&= T_HdS + \Phi_+dQ,
 \end{align}
+where $r_+r_-=GQ^2$, $\kappa=(r_+-r_-)/(2r_+^2)$, $dA=8\pi r_+dr_+$, and $dS=dA/(4G)$.
+
+For clarity, the area contribution is $\kappa dA/(8\pi G)$; replacing it by $T_H dS$ uses $T_H=\kappa/(2\pi)$ and $S=A/(4G)$.
 \end{proof}
 
 The **Smarr formula** (from scaling arguments):
@@ -286,10 +287,10 @@ Thus:
 C_Q = T_H \frac{2\pi r_+/G}{(3G Q^2 - r_+^2)/(4\pi r_+^4)} = \frac{2\pi r_+^2}{G} \frac{r_+^2 - G Q^2}{3G Q^2 - r_+^2}
 \end{equation}
 
-Using $r_+^2 - G Q^2 = r_+(r_+ - r_-)$:
+Using the fixed-charge derivative directly, the heat capacity simplifies to:
 
 \begin{equation}
-\boxed{C_Q = \frac{2\pi r_+^2}{G} \frac{r_+(r_+ - r_-)}{3G Q^2 - r_+^2}}
+\boxed{C_Q = \frac{2\pi r_+^2}{G} \frac{r_+^2 - G Q^2}{3G Q^2 - r_+^2}}
 \end{equation}
 
 $C_Q$ diverges at $r_+^2 = 3G Q^2$, signaling a **Davies phase transition**. For $r_+^2 < 3G Q^2$, $C_Q < 0$ (thermodynamically unstable); for $r_+^2 > 3G Q^2$, $C_Q > 0$ (stable).

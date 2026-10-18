@@ -17,7 +17,16 @@ exotic-compact-objects/
 │   ├── 01_exotic_compact_objects_fundamentals.ipynb
 │   ├── 02_extended_models.ipynb
 │   ├── 03_data_exploration.ipynb
-│   └── 04_white_hole_instability.ipynb
+│   ├── 04_white_hole_instability.ipynb
+│   ├── 05_equation_derivations.ipynb
+│   ├── 06_visual_models.ipynb
+│   ├── 07_geodesics.ipynb
+│   ├── 08_sympy_christoffel.ipynb
+│   ├── 09_white_hole_extended.ipynb
+│   ├── 10_complete_theory.ipynb
+│   ├── 11_data_synthesis.ipynb
+│   ├── 12_advanced_models.ipynb
+│   └── 13_white_hole_deep_dive.ipynb
 ├── scripts/          # download + build scripts
 ├── figures/
 └── reports/

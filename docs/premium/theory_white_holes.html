@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theory White Holes</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header><h1>Theory White Holes</h1></header>
+<nav>
+<a href="index.html">Home</a>
+<a href="theory.html">Theory</a>
+<a href="data.html">Data</a>
+<a href="models.html">Models</a>
+<a href="geodesics.html">Geodesics</a>
+<a href="whiteholes.html">White Holes</a>
+<a href="advanced.html">Advanced</a>
+</nav>
+<main>
+<h1>White Holes: A Complete Theoretical Treatment</h1></p><p><strong>Author:</strong> GR Theory Working Group  
+<strong>Date:</strong> October 2026  
+<strong>Status:</strong> Self-contained theoretical review with full derivations  </p><p>---</p><h2>1. Definition: The Time-Reversed Schwarzschild Solution</h2></p><h3>1.1 Schwarzschild Metric and Time Reversal</h3></p><p>The Schwarzschild metric in standard coordinates \((t, r, \theta, \phi)\) is:</p><p>\begin{equation}
+ds^2 = -\left(1 - \frac{r_s}{r}\right) c^2 dt^2 + \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 + r^2 d\Omega^2
+\label{eq:schwarzschild}
+\end{equation}</p><p>where \(r_s = 2GM/c^2\) is the Schwarzschild radius and \(d\Omega^2 = d\theta^2 + \sin^2\theta \, d\phi^2\) is the metric on the unit 2-sphere.</p><p>Under time reversal \(t \to -t\), the metric \eqref{eq:schwarzschild} is invariant, since \(g_{tt}\) depends only on \(r\). This symmetry is deceptive: while the \emph{metric tensor} is invariant, the \emph{causal structure} distinguishes the black hole (BH) from the white hole (WH) regions. The time-reversed interpretation emerges when we consider which region of the maximal extension we are describing.</p><p>The Schwarzschild solution is a vacuum solution (\(R_{\mu\nu} = 0\)) of the Einstein field equations:</p><p>\begin{equation}
+R_{\mu\nu} - \frac{1}{2} R g_{\mu\nu} = \frac{8\pi G}{c^4} T_{\mu\nu} = 0
+\end{equation}</p><p>The Birkhoff theorem guarantees that any spherically symmetric vacuum solution is asymptotically flat and isometric to the Schwarzschild solution.</p><h3>1.2 Kruskal-Szekeres Maximal Extension</h3></p><p>The coordinate singularity at \(r = r_s\) in \eqref{eq:schwarzschild} is removed by the Kruskal-Szekeres transformation. Define:</p><p>\begin{equation}
+u = \left(\frac{r}{r_s} - 1\right)^{1/2} e^{r/(2r_s)} \cosh\left(\frac{ct}{2r_s}\right)
+\end{equation}</p><p>\begin{equation}
+v = \left(\frac{r}{r_s} - 1\right)^{1/2} e^{r/(2r_s)} \sinh\left(\frac{ct}{2r_s}\right)
+\end{equation}</p><p>for \(r > r_s\), and:</p><p>\begin{equation}
+u = \left(1 - \frac{r}{r_s}\right)^{1/2} e^{r/(2r_s)} \sinh\left(\frac{ct}{2r_s}\right)
+\end{equation}</p><p>\begin{equation}
+v = \left(1 - \frac{r}{r_s}\right)^{1/2} e^{r/(2r_s)} \cosh\left(\frac{ct}{2r_s}\right)
+\end{equation}</p><p>for \(r < r_s\). The inverse relations are:</p><p>\begin{equation}
+\left(\frac{r}{r_s} - 1\right) e^{r/r_s} = u^2 - v^2
+\label{eq:r_of_uv}
+\end{equation}</p><p>\begin{equation}
+\frac{ct}{2r_s} = \tanh^{-1}\left(\frac{v}{u}\right) \quad \text{for } r > r_s, \qquad
+\frac{ct}{2r_s} = \tanh^{-1}\left(\frac{u}{v}\right) \quad \text{for } r < r_s
+\label{eq:t_of_uv}
+\end{equation}</p><p>The metric becomes:</p><p>\begin{equation}
+ds^2 = \frac{4r_s^3}{r} e^{-r/r_s} \left(-c^2 dt_{\text{KS}}^2 + dr_{\text{KS}}^2\right) + r^2 d\Omega^2
+\label{eq:kruskal_metric}
+\end{equation}</p><p>where we define null Kruskal coordinates:</p><p>\begin{equation}
+U = u - v, \qquad V = u + v
+\end{equation}</p><p>so that:</p><p>\begin{equation}
+ds^2 = -\frac{4r_s^3}{r} e^{-r/r_s} \left(-c^2 dU\, dV\right) + r^2 d\Omega^2 = -\frac{4r_s^3}{r} e^{-r/r_s} c^2 dU\, dV + r^2 d\Omega^2
+\label{eq:kruskal_null}
+\end{equation}</p><h3>1.3 The Four Regions</h3></p><p>The Kruskal diagram divides spacetime into four distinct regions:</p><p>\begin{align}
+\textbf{Region I (Exterior):} \quad & u > 0, \quad |v| < u, \quad r > r_s \\
+\textbf{Region II (Black Hole Interior):} \quad & v > 0, \quad |u| < v, \quad r < r_s \\
+\textbf{Region III (Parallel Exterior):} \quad & u < 0, \quad |v| < -u, \quad r > r_s \\
+\textbf{Region IV (White Hole Interior):} \quad & v < 0, \quad |u| < -v, \quad r < r_s
+\end{align}</p><p>In Region I (our universe), the future-directed timelike curves (\(dt > 0\)) flow from the past horizon (\(U = 0\), \(V > 0\)) toward the future horizon (\(V = 0\), \(U > 0\)), crossing into Region II where they inevitably reach \(r = 0\).</p><p>In Region IV, the situation is reversed: past-directed timelike curves emerge from the past singularity at \(r = 0\) and flow toward the white hole horizon at \(U = 0\), \(V < 0\). No future-directed timelike curve can enter Region IV from Region I.</p><h3>1.4 Horizons as Null Surfaces</h3></p><p>The event horizon \(r = r_s\) is a null hypersurface. In Kruskal coordinates:</p><p>\begin{equation}
+r = r_s \iff u^2 - v^2 = 0 \iff u = \pm v
+\end{equation}</p><p>These are the null surfaces \(U = 0\) (\(v = u\), for \(u > 0\) this is Region I \(\leftrightarrow\) II) and \(V = 0\) (\(v = -u\), for \(u > 0\) this is Region I \(\leftrightarrow\) IV). The surface gravity \(\kappa\) is:</p><p>\begin{equation}
+\kappa = \frac{c^4}{4GM} = \frac{c^2}{2r_s}
+\end{equation}</p><p>The Killing vector \(\xi = \partial_t\) is:</p><p>\begin{equation}
+\xi^\mu = \left(\frac{c}{2r_s}\right)(u \partial_u + v \partial_v)
+\end{equation}</p><p>On the future horizon (\(U = 0\)), \(\xi\) is null and generates the horizon. On the past horizon (\(V = 0\)), \(\xi\) is also null, but the flow is \emph{outward}---this is the white hole horizon.</p><p>The surface gravity of the white hole horizon has the same magnitude but opposite sign in the sense that the horizon generators are past-directed. This can be seen by computing the norm:</p><p>\begin{equation}
+\|\xi\|^2 = g_{\mu\nu} \xi^\mu \xi^\nu = -\frac{r_s}{r}\left(1 - \frac{r_s}{r}\right) \cdot \frac{1}{4} (u^2 - v^2) \cdot \frac{4}{r_s^2} \cdot \frac{r}{r_s} e^{-r/r_s}
+\end{equation}</p><p>Evaluating on \(r = r_s\): \(\|\xi\|^2 = 0\), confirming the null character.</p><p>---</p><h2>2. Metric in Kruskal Coordinates and the White Hole Region</h2></p><h3>2.1 Explicit Metric Components</h3></p><p>From \eqref{eq:kruskal_null}, the metric in \((U, V, \theta, \phi)\) coordinates is:</p><p>\begin{equation}
+ds^2 = -\frac{4r_s^3}{r} e^{-r/r_s} c^2 dU\, dV + r^2 (d\theta^2 + \sin^2\theta \, d\phi^2)
+\end{equation}</p><p>where \(r = r(U, V)\) is determined implicitly by:</p><p>\begin{equation}
+\frac{r}{r_s} e^{r/r_s} = \frac{r}{r_s} e^{r/r_s} = UV + \frac{r_s}{r} e^{r/r_s} \cdot r_s \quad \text{with} \quad \frac{r}{r_s}e^{r/r_s} = 1 + \frac{UV}{r_s} e^{1}
+\end{equation}</p><p>More cleanly:</p><p>\begin{equation}
+\left(\frac{r}{r_s} - 1\right) e^{r/r_s} = UV = u^2 - v^2
+\end{equation}</p><p>The lapse and shift in \((U, V)\) coordinates can be extracted by writing \(ds^2 = -\Omega^{-2} dU\, dV + r^2 d\Omega^2\) where:</p><p>\begin{equation}
+\Omega^2 = \frac{r}{4r_s^3} e^{r/r_s} c^{-2}
+\end{equation}</p><h3>2.2 White Hole Interior: Region IV</h3></p><p>In Region IV, \(V = u + v > 0\) but \(u < 0\) and \(|u| < -v\), meaning \(u < 0\), \(v < 0\), and \(|u| < |v|\). The metric becomes:</p><p>\begin{equation}
+ds^2 = \frac{4r_s^3}{r} e^{-r/r_s} \left(-c^2 dU\, dV\right) + r^2 d\Omega^2, \quad r < r_s
+\end{equation}</p><p>The key feature is that \(r\) is now a \emph{decreasing} function of proper time for future-directed observers:</p><p>\begin{equation}
+\frac{dr}{d\tau} = -\sqrt{E^2 - \left(1 - \frac{r_s}{r}\right)\left(1 + \frac{L^2}{r^2}\right)}
+\end{equation}</p><p>where \(E\) and \(L\) are the conserved specific energy and angular momentum. The minus sign is essential: \(r\) always decreases toward \(0\).</p><h3>2.3 Singularity in the Past</h3></p><p>The singularity at \(r = 0\) in Region IV is a \emph{past} singularity. This can be seen by examining the Kretschmann scalar:</p><p>\begin{equation}
+R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = \frac{48 G^2 M^2}{c^4 r^6} = \frac{3 c^8}{4 G^2 M^2 r^6}
+\label{eq:kretschmann}
+\end{equation}</p><p>At \(r \to 0\), \(R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} \to \infty\), confirming a physical singularity. The causal structure is that of a past boundary: all timelike curves in Region IV originate at \(r = 0\) and cannot be extended beyond it into the past.</p><p>In Region II (black hole), the singularity is in the \emph{future}: all timelike curves end at \(r = 0\).</p><p>This is the fundamental distinction:
+\begin{align}
+\text{Black hole (Region II):} \quad & \text{singularity in the future, } r \text{ decreases} \\
+\text{White hole (Region IV):} \quad & \text{singularity in the past, } r \text{ increases}
+\end{align}</p><h3>2.4 Geodesic Structure in Region IV</h3></p><p>Radial geodesics in Region IV satisfy:</p><p>\begin{equation}
+\left(\frac{dr}{d\tau}\right)^2 = E^2 - \left(1 - \frac{r_s}{r}\right)
+\end{equation}</p><p>For a particle starting at the singularity \(r = 0\) with \(E > 0\):</p><p>\begin{equation}
+\tau(r) = \int_0^r \frac{dr'}{\sqrt{E^2 - 1 + r_s/r'}} = \frac{r_s}{E^2 - 1} \left[\sqrt{\frac{r}{r_s}\left(\frac{r}{r_s} + E^2 - 1\right)} - \frac{E^2 - 1}{2} \ln\left(\frac{\sqrt{r/r_s} + \sqrt{r/r_s + E^2 - 1}}{\sqrt{E^2 - 1}}\right)\right]
+\end{equation}</p><p>For \(E \gg 1\) (ultra-relativistic), \(\tau \approx \frac{2}{3} \frac{r^{3/2}}{\sqrt{r_s}}\), the free-fall time. The particle reaches the horizon \(r = r_s\) in finite proper time:</p><p>\begin{equation}
+\Delta\tau_{IV} = \frac{2}{3} \frac{r_s}{c} \approx 1.05 \times 10^{-5} \left(\frac{M}{M_\odot}\right) \text{ s}
+\end{equation}</p><p>For a solar-mass white hole, the total lifetime of Region IV is \(\sim 10^{-5}\) s. For a supermassive white hole of \(10^9 M_\odot\):</p><p>\begin{equation}
+\Delta\tau_{IV} \approx 1.05 \times 10^{-5} \times 10^9 \text{ s} \approx 10^4 \text{ s} \approx 3 \text{ hours}
+\end{equation}</p><p>---</p><h2>3. Instability Analysis</h2></p><h3>3.1 Perturbation Equations</h3></p><p>Consider scalar perturbations \(\Phi\) on the Schwarzschild background. The Regge-Wheeler equation for odd-parity perturbations (and the Zerilli equation for even-parity) takes the form of a Schrödinger-like equation:</p><p>\begin{equation}
+\frac{d^2\Psi}{dr_*^2} + \left(\omega^2 - V_{\text{eff}}(r)\right) \Psi = 0
+\label{eq:regge_wheeler}
+\end{equation}</p><p>where \(r_* = r + r_s \ln|r/r_s - 1|\) is the tortoise coordinate and \(V_{\text{eff}}\) is an effective potential.</p><p>For the white hole, the boundary conditions are reversed: instead of requiring purely ingoing waves at the horizon (black hole) and outgoing waves at infinity, we require purely \emph{outgoing} waves at the white hole horizon and \emph{ingoing} waves at infinity (since time is reversed).</p><h3>3.2 Growth vs Damping: The QNM Spectrum</h3></p><p>The quasi-normal mode (QNM) frequencies \(\omega_n = \omega_n^{(R)} + i\omega_n^{(I)}\) satisfy:</p><p>\begin{equation}
+\omega_n^{(I)} > 0 \quad \text{(damped modes, black hole)}
+\end{equation}</p><p>For a black hole, \(\omega_n^{(I)} > 0\) means \(e^{-i\omega_n t} = e^{-i\omega_n^{(R)} t} e^{\omega_n^{(I)} t}\) grows exponentially in time. Wait---this is the convention where \(\omega_n^{(I)} > 0\) corresponds to \emph{growing} modes for \(e^{-i\omega t}\) convention. Let us be precise:</p><p>With the convention \(e^{-i\omega t}\), a mode with \(\omega = \omega_R + i\omega_I\) behaves as \(e^{-i\omega_R t} e^{\omega_I t}\). Therefore:</p><p>\begin{align}
+\text{Black hole:} \quad & \omega_I > 0 \quad \Rightarrow \quad \text{mode grows in time } t \to +\infty \text{ (unstable)} \\
+\text{White hole:} \quad & \omega_I < 0 \quad \Rightarrow \quad \text{mode grows in time } t \to -\infty \text{ (unstable)}
+\end{align}</p><p>The QNM spectrum for Schwarzschild is:</p><p>\begin{equation}
+\omega_n = \frac{1}{3\sqrt{3} r_s} \left[\ln 3 + 2\pi i \left(n + \frac{1}{2}\right)\right], \quad n = 0, 1, 2, \ldots
+\end{equation}</p><p>The imaginary part \(\omega_I = \frac{2\pi}{3\sqrt{3} r_s} \left(n + \frac{1}{2}\right)\) is positive. This means that for a black hole, the mode grows as \(t \to +\infty\). For a white hole, time is reversed: the mode grows as \(t \to -\infty\), i.e., into the past.</p><h3>3.3 The Toy Exponential Model</h3></p><p>Consider a toy model where a perturbation amplitude \(A(t)\) grows according to:</p><p>\begin{equation}
+\frac{dA}{dt} = \gamma A
+\end{equation}</p><p>For a white hole with surface gravity \(\kappa = c^2/(2r_s)\), the Lyapunov exponent is:</p><p>\begin{equation}
+\gamma = \kappa = \frac{c^2}{2r_s} = \frac{c^3}{4GM}
+\end{equation}</p><p>This gives the e-folding time:</p><p>\begin{equation}
+\tau_{\text{inst}} = \gamma^{-1} = \frac{2r_s}{c} = \frac{4GM}{c^3}
+\end{equation}</p><p>For \(M = 10 M_\odot\):</p><p>\begin{equation}
+\tau_{\text{inst}} = \frac{4 \times 6.674 \times 10^{-11} \times 10 \times 1.989 \times 10^{30}}{(3 \times 10^8)^3} \approx 1.97 \times 10^{-4} \text{ s}
+\end{equation}</p><p>The amplitude grows as \(A(t) = A_0 e^{\gamma t}\). After one e-folding, the perturbation doubles in amplitude. After \(N\) e-foldings, \(A = A_0 e^N\). The perturbation becomes nonlinear when \(A \sim 1\), i.e., after \(N \sim \ln(1/A_0)\) e-foldings.</p><h3>3.4 Instability from Mass Inflation</h3></p><p>The mass inflation instability (Poisson and Israel 1990) is the strongest instability of the white hole. Consider the perturbation mass function \(m(v)\) along the horizon. The evolution equation is:</p><p>\begin{equation}
+\frac{dm}{dv} = \frac{1}{2} \left(\frac{dm}{dr}\right)^2 \cdot \frac{r^2}{\ell^2}
+\end{equation}</p><p>where \(\ell\) is a length scale of the perturbation. For a white hole, this leads to exponential growth of the interior mass:</p><p>\begin{equation}
+m(v) \sim m_0 e^{\kappa v}
+\end{equation}</p><p>where \(v\) is the advanced time. The mass inflation timescale is:</p><p>\begin{equation}
+\tau_{\text{inflation}} \sim \kappa^{-1} = \frac{2r_s}{c} \sim 10^{-5} \left(\frac{M}{M_\odot}\right) \text{ s}
+\end{equation}</p><h3>3.5 Summary of Instability Timescales</h3></p><p>\begin{align}
+\text{Free-fall time:} \quad & \tau_{\text{ff}} \sim \frac{2}{3}\frac{r_s}{c} \sim 10^{-5} \left(\frac{M}{M_\odot}\right) \text{ s} \\
+\text{QNM e-folding time:} \quad & \tau_{\text{QNM}} \sim \frac{2\pi}{3\sqrt{3}} \frac{r_s}{c} \sim 10^{-4} \left(\frac{M}{M_\odot}\right) \text{ s} \\
+\text{Mass inflation time:} \quad & \tau_{\text{MI}} \sim \frac{2r_s}{c} \sim 10^{-5} \left(\frac{M}{M_\odot}\right) \text{ s} \\
+\text{Hawking evaporation time:} \quad & \tau_{\text{evap}} \sim \frac{5120\pi G^2 M^3}{\hbar c^4} \sim 10^{67} \left(\frac{M}{M_\odot}\right)^3 \text{ yr}
+\end{align}</p><p>The white hole is catastrophically unstable on astrophysical timescales, unless stabilized by exotic physics.</p><p>---</p><h2>4. Can White Holes Exist?</h2></p><h3>4.1 Classical Arguments Against</h3></p><p>The classical argument against white holes rests on several pillars:</p><p>\textbf{(i) Thermodynamic Arrow.} The second law of thermodynamics states \(dS/dt \geq 0\). A white hole \emph{decreases} the total entropy of the universe when it ejects matter, since the matter inside has low entropy (it came from a singularity) and the ejection process is irreversible. More precisely, the entropy of a white hole is:</p><p>\begin{equation}
+S_{\text{WH}} = \frac{k_B c^3 A}{4 G \hbar} = \frac{4\pi k_B G M^2}{\hbar c}
+\end{equation}</p><p>When the white hole ejects mass \(\delta M\), its entropy changes by \(\delta S = \frac{8\pi k_B G M}{\hbar c} \delta M < 0\) (since \(\delta M < 0\)). The ejected matter carries entropy \(S_{\text{matter}} > 0\). For the second law to hold:</p><p>\begin{equation}
+\delta S_{\text{total}} = \delta S_{\text{WH}} + \delta S_{\text{matter}} \geq 0
+\end{equation}</p><p>This requires the ejected matter to have entropy exceeding the white hole's entropy loss, which is generically satisfied for realistic ejecta. However, the \emph{formation} of a white hole from gravitational collapse would require \emph{decreasing} the entropy of the collapsing matter, violating the second law.</p><p>\textbf{(ii) Cosmic Censorship.} Penrose's weak cosmic censorship conjecture states that singularities must be hidden behind horizons. A naked singularity (the white hole singularity at \(r = 0\) in Region IV is \emph{not} hidden---it is visible to observers in Region I and III) violates cosmic censorship.</p><p>\textbf{(iii) Formation Mechanism.} There is no known classical process that can produce a white hole. The time-reversed collapse of matter into a black hole requires the matter to \emph{emerge} from a singularity, which is not a solution of the Einstein equations with realistic initial data.</p><p>\subsection 4.2 Quantum Arguments For</p><p>Quantum mechanics provides several potential pathways to white hole formation:</p><p>\textbf{(i) Hawking Radiation and Time Reversal.} The Hawking process is thermal and does not carry information. The time-reversed Hawking process would be a white hole that \emph{absorbs} thermal radiation and \emph{emits} a pure state. This is unitary but requires fine-tuning of the initial state.</p><p>\textbf{(ii) The White Hole as a Quantum Tunneling Event.} In the path integral formulation, the amplitude for tunneling from a black hole to a white hole is:</p><p>\begin{equation}
+\mathcal{A} \sim e^{-S_E/\hbar}
+\end{equation}</p><p>where \(S_E\) is the Euclidean action. For the Schwarzschild solution, \(S_E = \pi r_s^2 / G = 4\pi G M^2 / \hbar c\), giving:</p><p>\begin{equation}
+\mathcal{A} \sim \exp\left(-\frac{4\pi G M^2}{\hbar c}\right)
+\end{equation}</p><p>This is exponentially suppressed for macroscopic masses. For \(M \sim 10^{-8}\) kg (Planck mass scale), \(S_E/\hbar \sim 1\), and tunneling becomes probable.</p><p>\textbf{(iii) Loop Quantum Gravity (LQG).} In LQG, the singularity is resolved by quantum geometry effects. The black hole interior undergoes a quantum bounce, transitioning to a white hole. This is discussed in Section 6.</p><p>\subsection 4.3 The Thermodynamic Arrow and Time Reversal</p><p>The fundamental question is whether the arrow of time is:
+\begin{enumerate}
+\item \emph{Emergent:} determined by boundary conditions (low entropy past), or
+\item \emph{Fundamental:} determined by a time-asymmetric law.
+\end{enumerate}</p><p>If the arrow is emergent, white holes are as natural as black holes, and the universe could contain both. If the arrow is fundamental (e.g., due to the quantum measurement postulate or decoherence), white holes are forbidden.</p><p>The Page curve and the information paradox suggest that black hole evaporation is unitary, which is compatible with a white hole interpretation: the black hole evaporates and transitions to a white hole that releases the information.</p><p>---</p><h2>5. Hypothesized Observational Signatures</h2></p><h3>5.1 Gamma-Ray Bursts (GRBs)</h3></p><p>The most discussed signature is the white hole explosion. If a white hole of mass \(M\) exists, it would eject its entire mass-energy on a timescale \(\tau \sim r_s/c\). The luminosity would be:</p><p>\begin{equation}
+L \sim \frac{Mc^2}{\tau} \sim \frac{Mc^3}{r_s} = \frac{c^5}{2G} \approx 1.81 \times 10^{52} \text{ W}
+\end{equation}</p><p>This is independent of mass and is of order \(10^{52}\) W, comparable to the Eddington luminosity of a \(10^9 M_\odot\) object. The total energy is \(E \sim Mc^2\), which for \(M \sim 10^{12}\) kg (asteroid mass) is \(E \sim 10^{29}\) J, comparable to a GRB.</p><p>The observed GRB rate is \(\sim 1\) per day per sky. If white holes are responsible, the number density is:</p><p>\begin{equation}
+n_{\text{WH}} \sim \frac{1}{\tau_{\text{obs}} \cdot V_{\text{obs}}} \sim \frac{1}{1 \text{ Gpc}^3 \text{ yr}}
+\end{equation}</p><h3>5.2 Fast Radio Bursts (FRBs)</h3></p><p>FRBs have millisecond durations and dispersion measures suggesting extragalactic origins. A white hole of mass \(M\) with \(\tau \sim r_s/c \sim 10^{-3}\) s requires:</p><p>\begin{equation}
+M \sim \frac{\tau c^3}{2G} \sim \frac{10^{-3} \times (3 \times 10^8)^3}{2 \times 6.674 \times 10^{-11}} \sim 2 \times 10^{29} \text{ kg} \sim 10^{-4} M_\odot
+\end{equation}</p><p>The energy released is \(E \sim Mc^2 \sim 2 \times 10^{46}\) J, within the FRB energy budget. The radio emission could be produced by coherent curvature radiation from the ejecta.</p><p>The repetition rate of some FRBs (e.g., FRB 121102) is problematic for white hole models, since a white hole is destroyed in the explosion. However, if the white hole is in a binary system and accretes matter between explosions, repeated bursts are possible.</p><h3>5.3 Fast Transients and the "White Hole as Big Bang"</h3></p><p>The most speculative idea is that the Big Bang itself was a white hole explosion. In this scenario, the universe emerged from a singularity that is the white hole singularity. The observable universe would be the interior of Region IV.</p><p>The correspondence can be made precise in the McVittie metric or the Schwarzschild-de Sitter metric. The scale factor \(a(t)\) in a flat FLRW universe is:</p><p>\begin{equation}
+a(t) \propto t^{2/3} \quad \text{(matter-dominated)}, \qquad a(t) \propto t^{1/2} \quad \text{(radiation-dominated)}
+\end{equation}</p><p>The white hole ejection has \(r \propto t\) in the ultra-relativistic limit, which is similar to the radiation-dominated expansion. The Hubble parameter is:</p><p>\begin{equation}
+H = \frac{\dot{a}}{a} = \frac{1}{2t} \quad \text{(radiation-dominated)}
+\end{equation}</p><p>The age of the universe is \(t \sim H^{-1} \sim 13.8\) Gyr. If this equals the white hole time \(\tau \sim r_s/c\), the mass is:</p><p>\begin{equation}
+M \sim \frac{c^3 H^{-1}}{2G} \sim \frac{(3 \times 10^8)^3 \times 4.35 \times 10^{17}}{2 \times 6.674 \times 10^{-11}} \sim 10^{54} \text{ kg} \sim 10^{24} M_\odot
+\end{equation}</p><p>This is roughly the mass of the observable universe, providing a suggestive numerical coincidence.</p><h3>5.4 High-Energy Neutrinos</h3></p><p>A white hole explosion would produce a burst of high-energy neutrinos via \(p\gamma\) and \(pp\) interactions in the ejecta. The neutrino energy is:</p><p>\begin{equation}
+E_\nu \sim 0.05 \times \gamma_{\text{rel}} m_p c^2 \sim 0.05 \times 100 \times 938 \text{ MeV} \sim 5 \text{ TeV}
+\end{equation}</p><p>IceCube and KM3NeT could detect such neutrinos, providing a distinctive signature.</p><p>---</p><h2>6. White Holes in Cosmology: LQG and Planck Stars</h2></p><h3>6.1 Loop Quantum Gravity Framework</h3></p><p>In LQG, area and volume are quantized. The area spectrum is:</p><p>\begin{equation}
+A = 8\pi \gamma \ell_P^2 \sum_i \sqrt{j_i(j_i + 1)}
+\end{equation}</p><p>where \(\gamma\) is the Barbero-Immirzi parameter, \(\ell_P = \sqrt{\hbar G/c^3}\) is the Planck length, and \(j_i\) are half-integer spins.</p><p>The black hole interior, described by the Kantowski-Sachs metric:</p><p>\begin{equation}
+ds^2 = -N^2 dt^2 + a^2(t) dr^2 + b^2(t) d\Omega^2
+\end{equation}</p><p>undergoes a quantum bounce when the density reaches the Planck scale:</p><p>\begin{equation}
+\rho \sim \rho_P = \frac{c^5}{\hbar G^2} \sim 5.16 \times 10^{96} \text{ kg/m}^3
+\end{equation}</p><p>The bounce transitions the black hole interior to a white hole interior. The transition time is:</p><p>\begin{equation}
+t_{\text{bounce}} \sim \frac{4M}{c^3} \left(\frac{M}{m_P}\right)^{1/3} \ell_P \sim \left(\frac{M}{m_P}\right)^{4/3} t_P
+\end{equation}</p><p>where \(m_P = \sqrt{\hbar c/G}\) is the Planck mass and \(t_P = \ell_P/c\) is the Planck time. For \(M \sim 10 M_\odot\):</p><p>\begin{equation}
+t_{\text{bounce}} \sim \left(\frac{10 \times 1.989 \times 10^{30}}{2.176 \times 10^{-8}}\right)^{4/3} \times 5.39 \times 10^{-44} \text{ s} \sim 10^{-5} \text{ s} \times 10^{55} \sim 10^{50} \text{ s}
+\end{equation}</p><p>This is far longer than the age of the universe. However, for small black holes (\(M \sim m_P\)), the bounce time is:</p><p>\begin{equation}
+t_{\text{bounce}} \sim t_P \sim 10^{-43} \text{ s}
+\end{equation}</p><h3>6.2 Planck Stars</h3></p><p>A Planck star is a hypothetical object formed when a neutron star's core reaches Planck density and undergoes a quantum bounce. The Planck star has:</p><p>\begin{equation}
+R \sim \left(\frac{M}{m_P}\right)^{1/3} \ell_P \sim \left(\frac{M}{M_\odot}\right)^{1/3} \times 10^{-35} \text{ m}
+\end{equation}</p><p>For \(M \sim 10 M_\odot\), \(R \sim 10^{-33}\) m, which is \(\sim 10^2\) times smaller than the Schwarzschild radius \(r_s \sim 30\) km. The Planck star is hidden inside the black hole horizon.</p><p>However, the quantum bounce creates a white hole region. The white hole horizon expands to encompass the Planck star, and the entire object becomes a white hole. The lifetime of this configuration is the black hole lifetime plus the white hole lifetime:</p><p>\begin{equation}
+t_{\text{total}} \sim t_{\text{Hawking}} + t_{\text{WH}} \sim t_{\text{Hawking}}
+\end{equation}</p><p>since \(t_{\text{WH}} \ll t_{\text{Hawking}}\).</p><p>The Planck star scenario (Rovelli and Vidotto 2014) provides a concrete mechanism for black hole to white hole transition:</p><p>\begin{enumerate}
+\item A massive star collapses to a black hole.
+\item The interior reaches Planck density and bounces.
+\item The bounce creates a white hole interior.
+\item The white hole horizon expands and merges with the black hole horizon.
+\item The object is now a white hole that eventually explodes.
+\end{enumerate}</p><p>The total process takes \(\sim 10^{67}\) years for a solar-mass black hole, but the final explosion is sudden and releases all the mass-energy.</p><h3>6.3 LQG White Hole Metric</h3></p><p>The effective LQG-corrected metric for a black hole to white hole transition can be written as:</p><p>\begin{equation}
+ds^2 = -\left(1 - \frac{2GM}{c^2 r} + \frac{\alpha \ell_P^2}{r^2}\right) c^2 dt^2 + \left(1 - \frac{2GM}{c^2 r} + \frac{\alpha \ell_P^2}{r^2}\right)^{-1} dr^2 + r^2 d\Omega^2
+\end{equation}</p><p>where \(\alpha\) is a dimensionless parameter from LQG. The correction term \(\alpha \ell_P^2/r^2\) prevents the singularity at \(r = 0\) and creates a second horizon:</p><p>\begin{equation}
+r_{\pm} = \frac{GM}{c^2} \pm \sqrt{\left(\frac{GM}{c^2}\right)^2 - \alpha \ell_P^2}
+\end{equation}</p><p>The inner horizon \(r_-\) is the white hole horizon. The bounce occurs at \(r = r_-\).</p><h3>6.4 Cosmological Implications</h3></p><p>If every black hole transitions to a white hole, the universe contains a population of white holes with masses ranging from Planck mass to supermassive. The white hole explosion rate is:</p><p>\begin{equation}
+\Gamma_{\text{WH}} \sim \frac{1}{t_{\text{Hawking}}(M)} \cdot n_{\text{BH}}(M)
+\end{equation}</p><p>For \(M \sim 10^{12}\) kg (primordial black holes), \(t_{\text{Hawking}} \sim 10^{10}\) yr \(\sim\) age of universe. These would be exploding now, producing GRBs. The non-observation of such explosions constrains the abundance of primordial black holes.</p><p>---</p><h2>7. Constraints and Null Results</h2></p><h3>7.1 GRB Constraints</h3></p><p>If white holes produce GRBs, the GRB luminosity function must match the white hole mass function. The GRB rate density is:</p><p>\begin{equation}
+\rho_{\text{GRB}} \sim 10^{-8} \text{ Mpc}^{-3} \text{ yr}^{-1}
+\end{equation}</p><p>The white hole model requires:</p><p>\begin{equation}
+\rho_{\text{WH}} \sim \frac{\rho_{\text{GRB}}}{\tau_{\text{WH}}} \sim \frac{10^{-8} \text{ Mpc}^{-3} \text{ yr}^{-1}}{10^{-5} \text{ s}} \sim 10^{-3} \text{ Mpc}^{-3} \text{ s}^{-1}
+\end{equation}</p><p>This is a very high rate, implying that white holes would be extremely common. The non-observation of a stochastic gravitational wave background from white hole explosions constrains the rate to:</p><p>\begin{equation}
+\rho_{\text{WH}} < 10^{-6} \text{ Mpc}^{-3}
+\end{equation}</p><p>which is in tension with the GRB rate if all GRBs are white hole explosions.</p><h3>7.2 FRB Constraints</h3></p><p>The repeating FRB 121102 has a repetition rate of \(\sim 100\) bursts per year. If this is a white hole, the white hole must survive between bursts, requiring accretion. The required accretion rate is:</p><p>\begin{equation}
+\dot{M} \sim \frac{E_{\text{burst}}}{c^2 \cdot T_{\text{repeat}}} \sim \frac{10^{40} \text{ J}}{(3 \times 10^8)^2 \cdot 3.15 \times 10^6 \text{ s}} \sim 10^7 \text{ kg/s}
+\end{equation}</p><p>This is \(\sim 10^{-8} M_\odot\) per year, which is plausible for a white hole in a dense environment. However, the energy budget of \(\sim 10^{40}\) J per burst is \(10^{22}\) times smaller than the white hole mass-energy, requiring extreme efficiency.</p><h3>7.3 Cosmic Microwave Background Constraints</h3></p><p>A population of exploding white holes would inject energy into the CMB, producing spectral distortions. The energy injection rate is:</p><p>\begin{equation}
+\frac{dE}{dV dt} \sim \rho_{\text{WH}} \cdot \frac{Mc^2}{\tau_{\text{WH}}} \sim \rho_{\text{WH}} \cdot \frac{c^5}{2G}
+\end{equation}</p><p>The COBE/FIRAS constraint on spectral distortions is:</p><p>\begin{equation}
+\frac{dE}{dV dt} < 10^{-25} \text{ erg cm}^{-3} \text{ s}^{-1} \sim 10^{-31} \text{ J m}^{-3} \text{ s}^{-1}
+\end{equation}</p><p>This gives:</p><p>\begin{equation}
+\rho_{\text{WH}} < \frac{2G}{c^5} \times 10^{-31} \sim 10^{-53} \text{ m}^{-3}
+\end{equation}</p><p>which is an extremely tight constraint, essentially ruling out any significant population of exploding white holes.</p><h3>7.4 Gravitational Wave Constraints</h3></p><p>The white hole explosion would produce a burst of gravitational waves. The characteristic strain is:</p><p>\begin{equation}
+h \sim \frac{G}{c^4} \cdot \frac{E_{\text{GW}}}{d} \sim \frac{G}{c^4} \cdot \frac{\epsilon Mc^2}{d}
+\end{equation}</p><p>where \(\epsilon \sim 10^{-5}\) is the efficiency and \(d\) is the distance. For a white hole at \(d \sim 1\) Gpc:</p><p>\begin{equation}
+h \sim \frac{6.674 \times 10^{-11}}{(3 \times 10^8)^4} \cdot \frac{10^{-5} \times 10^{12} \times (3 \times 10^8)^2}{3.086 \times 10^{25}} \sim 10^{-33}
+\end{equation}</p><p>This is far below LIGO sensitivity (\(h \sim 10^{-21}\)). LISA would be sensitive to \(h \sim 10^{-20}\), still far above the white hole signal.</p><h3>7.5 Summary of Constraints</h3></p><p>\begin{align}
+\text{GRB rate:} \quad & \rho_{\text{WH}} \lesssim 10^{-3} \text{ Mpc}^{-3} \text{ (model-dependent)} \\
+\text{CMB distortions:} \quad & \rho_{\text{WH}} \lesssim 10^{-53} \text{ m}^{-3} \text{ (very tight)} \\
+\text{Gravitational waves:} \quad & \text{No detection, constraints weak} \\
+\text{High-energy neutrinos:} \quad & \text{No detection, constraints weak}
+\end{align}</p><p>The CMB constraint is the most stringent, essentially ruling out any cosmological population of exploding white holes. However, this constraint assumes the white holes are exploding \emph{now}. If all white holes exploded in the early universe, the constraint is evaded.</p><h3>7.6 The Final Verdict</h3></p><p>White holes are a legitimate solution of Einstein's equations, but they are:
+\begin{enumerate}
+\item \emph{Classically forbidden} by the second law of thermodynamics and cosmic censorship.
+\item \emph{Quantum mechanically possible} but exponentially suppressed for macroscopic masses.
+\item \emph{Observationally constrained} to be extremely rare or non-existent in the present universe.
+\item \emph{Quantum gravity motivated} through the LQG black hole to white hole transition.
+\end{enumerate}</p><p>The most promising avenue is the LQG Planck star scenario, where black holes transition to white holes on timescales \(\sim (M/m_P)^{4/3} t_P\). For stellar-mass black holes, this is far longer than the age of the universe, but for primordial black holes of mass \(\sim 10^{12}\) kg, the transition occurs now, producing observable explosions.</p><p>The search for white holes continues through multi-messenger observations of GRBs, FRBs, and high-energy neutrinos, as well as gravitational wave astronomy.</p><p>---</p><h2>Appendix A: Key Equations Summary</h2></p><p>\begin{align}
+\text{Schwarzschild radius:} \quad & r_s = \frac{2GM}{c^2} \\
+\text{Surface gravity:} \quad & \kappa = \frac{c^4}{4GM} \\
+\text{Hawking temperature:} \quad & T_H = \frac{\hbar c^3}{8\pi G M k_B} \\
+\text{Bekenstein-Hawking entropy:} \quad & S = \frac{k_B c^3 A}{4G\hbar} = \frac{4\pi k_B G M^2}{\hbar c} \\
+\text{Hawking evaporation time:} \quad & \tau_H = \frac{5120\pi G^2 M^3}{\hbar c^4} \\
+\text{Kretschmann scalar:} \quad & R_{\mu\nu\rho\sigma}R^{\mu\nu\rho\sigma} = \frac{48 G^2 M^2}{c^4 r^6} \\
+\text{White hole free-fall time:} \quad & \tau_{\text{ff}} = \frac{2}{3}\frac{r_s}{c} \\
+\text{White hole instability time:} \quad & \tau_{\text{inst}} = \frac{2r_s}{c} = \frac{4GM}{c^3} \\
+\text{LQG bounce time:} \quad & t_{\text{bounce}} \sim \left(\frac{M}{m_P}\right)^{4/3} t_P \\
+\text{Planck star radius:} \quad & R \sim \left(\frac{M}{m_P}\right)^{1/3} \ell_P
+\end{align}</p><h2>Appendix B: Useful Conversions</h2></p><p>\begin{align}
+1 M_\odot &= 1.989 \times 10^{30} \text{ kg} \\
+r_s(M_\odot) &= 2.95 \text{ km} \\
+\tau_{\text{ff}}(M_\odot) &= 1.05 \times 10^{-5} \text{ s} \\
+\tau_H(M_\odot) &= 10^{67} \text{ yr} \\
+\ell_P &= 1.616 \times 10^{-35} \text{ m} \\
+t_P &= 5.391 \times 10^{-44} \text{ s} \\
+m_P &= 2.176 \times 10^{-8} \text{ kg} \\
+\rho_P &= 5.16 \times 10^{96} \text{ kg/m}^3
+\end{align}</p><p>---</p><h2>References</h2></p><p>1. Schwarzschild, K. (1916). "Über das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie." <em>Sitzungsberichte der Königlich Preussischen Akademie der Wissenschaften</em>, 189-196.
+2. Kruskal, M. D. (1960). "Maximal Extension of Schwarzschild Metric." <em>Physical Review</em>, 119, 1743.
+3. Szekeres, G. (1960). "On the Singularities of a Riemannian Manifold." <em>Publ. Math. Debrecen</em>, 7, 285.
+4. Penrose, R. (1965). "Gravitational Collapse and Space-Time Singularities." <em>Physical Review Letters</em>, 14, 57.
+5. Hawking, S. W. (1974). "Black Hole Explosions?" <em>Nature</em>, 248, 30.
+6. Poisson, E. and Israel, W. (1990). "Internal Structure of Black Holes." <em>Physical Review D</em>, 41, 1796.
+7. Rovelli, C. and Vidotto, F. (2014). "Planck Stars." <em>International Journal of Modern Physics D</em>, 23, 1442026.
+8. Barcelo, C., Carballo-Rubio, R., and Garay, L. J. (2016). "Black holes turn white fast, otherwise stay black: no half measures." <em>Journal of High Energy Physics</em>, 2016, 157.
+9. Haggard, H. M. and Rovelli, C. (2015). "Quantum-gravity effects outside the horizon spark black to white hole tunneling." <em>Physical Review D</em>, 92, 104020.
+10. Christodoulou, M. and D'Ambrosio, F. (2024). "White holes as remnants: An exploding scenario." <em>Physical Review D</em>, 110, 064011.
+</p>
+</main>
+<footer>Exotic Compact Objects — Premium View</footer>
+</body>
+</html>

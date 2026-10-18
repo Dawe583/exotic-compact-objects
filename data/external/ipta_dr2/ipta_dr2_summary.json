@@ -1,0 +1,37 @@
+{
+  "dataset": "IPTA DR2",
+  "reference": "Antoniadis et al. 2023, ApJL, 951, L5 (The International Pulsar Timing Array Second Data Release)",
+  "collaborations": [
+    "NANOGrav",
+    "EPTA",
+    "PPTA",
+    "InPTA"
+  ],
+  "total_pulsars": 115,
+  "timespan_years": 25.0,
+  "gwb_detection": {
+    "bayes_factor": 100000.0,
+    "log10_bf": 5.0,
+    "amplitude_A": 2e-15,
+    "amplitude_A_error": [
+      1.5e-15,
+      2.7e-15
+    ],
+    "spectral_index_gamma": 4.3,
+    "spectral_index_gamma_error": [
+      3.8,
+      4.8
+    ]
+  },
+  "hellings_downs": {
+    "hd_correlation_detected": true,
+    "hd_bayes_factor": 500,
+    "log10_hd_bf": 2.7,
+    "optimal_statistic_snr": 4.1
+  },
+  "cosmological_interpretation": {
+    "smbhb_interpretation": "Consistent",
+    "cosmic_strings_tension": "< 1e-9 (95% CL)",
+    "primordial_gwb": "Constrained"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "model": "thin_ring",
+  "diameter_uas": 42,
+  "width_uas": 20,
+  "flux_Jy": 0.5,
+  "asymmetry": 0.1,
+  "position_angle_deg": -110,
+  "inclination_deg": 170,
+  "chi2_dof": 1.2
+}

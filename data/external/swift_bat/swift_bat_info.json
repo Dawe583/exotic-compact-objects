@@ -1,0 +1,26 @@
+{
+  "catalog": "Swift/BAT Hard X-ray Survey",
+  "mission": "Swift",
+  "instrument": "BAT (Burst Alert Telescope)",
+  "reference": "Oh et al. 2018, ApJS, 235, 4 (105-month); Lien et al. 2023, ApJS, 268, 24 (157-month)",
+  "energy_band": "14-195 keV",
+  "sensitivity": "~1 mCrab (105-month), ~0.5 mCrab (157-month)",
+  "sky_coverage": "90% of sky",
+  "num_sources_105mo": 1632,
+  "num_sources_157mo": 2000,
+  "source_types": [
+    "AGN (Seyfert)",
+    "AGN (Blazar)",
+    "XRB (HMXB/LMXB)",
+    "CV",
+    "Star",
+    "Cluster",
+    "Unknown"
+  ],
+  "key_papers": [
+    "Oh et al. 2018, ApJS, 235, 4 (105-month catalog)",
+    "Lien et al. 2023, ApJS, 268, 24 (157-month catalog)",
+    "Baumgartner et al. 2013, ApJS, 207, 19 (70-month)",
+    "Cusumano et al. 2010, A&A, 524, A64 (54-month)"
+  ]
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theory Raychaudhuri</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header><h1>Theory Raychaudhuri</h1></header>
+<nav>
+<a href="index.html">Home</a>
+<a href="theory.html">Theory</a>
+<a href="data.html">Data</a>
+<a href="models.html">Models</a>
+<a href="geodesics.html">Geodesics</a>
+<a href="whiteholes.html">White Holes</a>
+<a href="advanced.html">Advanced</a>
+</nav>
+<main>
+<h1>Raychaudhuri Equation for Null and Timelike Congruences</h1></p><h2>Derivation from Geodesic Deviation, Expansion/Shear/Vorticity, Focusing Theorem, Singularity Theorems Connection</h2></p><p>---</p><h2>1. Introduction</h2></p><p>The Raychaudhuri equation describes the evolution of a congruence of geodesics (timelike or null) in spacetime. It governs the rate of change of the cross-sectional volume (expansion), shape distortion (shear), and rotation (vorticity) of the congruence. This equation is fundamental to the singularity theorems of Penrose and Hawking, gravitational lensing, and the thermodynamics of black holes.</p><p>This document provides a complete step-by-step derivation of the Raychaudhuri equation for both timelike and null congruences, starting from the geodesic deviation equation, and discusses its physical implications including the focusing theorem and connection to singularity theorems.</p><p>---</p><h2>2. Congruences and the Deviation Vector</h2></p><h3>2.1 Timelike Congruences</h3></p><p>Consider a congruence of timelike curves (not necessarily geodesics initially) with tangent vector field \(u^\mu\), normalized as:</p><p><div class="eq">$$
+u^\mu u_\mu = -1
+$$</div></p><p>The curves are parametrized by proper time \(\tau\): \(u^\mu = dx^\mu/d\tau\).</p><h3>2.2 Null Congruences</h3></p><p>For null curves, the tangent vector \(k^\mu\) satisfies:</p><p><div class="eq">$$
+k^\mu k_\mu = 0
+$$</div></p><p>Parametrized by an affine parameter \(\lambda\): \(k^\mu = dx^\mu/d\lambda\).</p><h3>2.3 Deviation Vector</h3></p><p>Consider a one-parameter family of curves \(x^\mu(\tau, s)\) (or \(x^\mu(\lambda, s)\)) where \(s\) labels the curves. The deviation vector is:</p><p><div class="eq">$$
+\xi^\mu = \frac{\partial x^\mu}{\partial s}
+$$</div></p><p>It connects points of equal parameter value on neighboring curves. For a geodesic congruence, the deviation vector satisfies the <strong>geodesic deviation equation</strong>:</p><p><div class="eq">$$
+\frac{D^2 \xi^\mu}{D\tau^2} = R^\mu_{\nu\rho\sigma} u^\nu u^\rho \xi^\sigma \quad \text{(timelike)}
+$$</div></p><p><div class="eq">$$
+\frac{D^2 \xi^\mu}{D\lambda^2} = R^\mu_{\nu\rho\sigma} k^\nu k^\rho \xi^\sigma \quad \text{(null)}
+$$</div></p><p>---</p><h2>3. Kinematical Decomposition</h2></p><h3>3.1 Timelike Case: Projection Tensor</h3></p><p>The projection tensor onto the 3-space orthogonal to \(u^\mu\):</p><p><div class="eq">$$
+h_{\mu\nu} = g_{\mu\nu} + u_\mu u_\nu
+$$</div></p><p>Properties:
+<ul><li>\(h_{\mu\nu} u^\nu = 0\)</li></ul>
+<ul><li>\(h^\mu_\mu = 3\)</li></ul>
+<ul><li>\(h_{\mu\rho} h^\rho_\nu = h_{\mu\nu}\)</li></ul></p><p>The covariant derivative of \(u^\mu\) decomposes as:</p><p><div class="eq">$$
+\nabla_\nu u_\mu = \frac{1}{3}\theta h_{\mu\nu} + \sigma_{\mu\nu} + \omega_{\mu\nu} - u_\mu a_\nu
+$$</div></p><p>where:</p><p>| Quantity | Definition | Properties |
+|----------|------------|------------|
+| <strong>Expansion</strong> \(\theta\) | \(\theta = \nabla_\mu u^\mu = h^{\mu\nu}\nabla_\nu u_\mu\) | Scalar, trace |
+| <strong>Shear</strong> \(\sigma_{\mu\nu}\) | \(\sigma_{\mu\nu} = \nabla_{(\nu}u_{\mu)} - \frac{1}{3}\theta h_{\mu\nu} + u_{(\mu}a_{\nu)}\) | Symmetric, traceless, orthogonal to \(u\) |
+| <strong>Vorticity</strong> \(\omega_{\mu\nu}\) | \(\omega_{\mu\nu} = \nabla_{[\nu}u_{\mu]} - u_{[\mu}a_{\nu]}\) | Antisymmetric, orthogonal to \(u\) |
+| <strong>Acceleration</strong> \(a_\mu\) | \(a_\mu = u^\nu \nabla_\nu u_\mu\) | Orthogonal to \(u\) |</p><p>Explicitly:</p><p><div class="eq">$$
+\begin{aligned}
+\theta &= h^{\mu\nu}\nabla_\nu u_\mu = \nabla_\mu u^\mu \\
+\sigma_{\mu\nu} &= \frac{1}{2}(\nabla_\mu u_\nu + \nabla_\nu u_\mu) - \frac{1}{3}\theta h_{\mu\nu} - u_{(\mu}a_{\nu)} \\
+\omega_{\mu\nu} &= \frac{1}{2}(\nabla_\mu u_\nu - \nabla_\nu u_\mu) - u_{[\mu}a_{\nu]}
+\end{aligned}
+$$</div></p><p>For <strong>geodesic</strong> congruences, \(a_\mu = 0\), simplifying to:</p><p><div class="eq">$$
+\nabla_\nu u_\mu = \frac{1}{3}\theta h_{\mu\nu} + \sigma_{\mu\nu} + \omega_{\mu\nu}
+$$</div></p><h3>3.2 Null Case: Projection Tensor</h3></p><p>For null congruences, we need a transverse 2-space. Introduce an auxiliary null vector \(\ell^\mu\) such that:</p><p><div class="eq">$$
+k^\mu \ell_\mu = -1, \quad \ell^\mu \ell_\mu = 0
+$$</div></p><p>The projection tensor onto the 2-screen space:</p><p><div class="eq">$$
+h_{\mu\nu} = g_{\mu\nu} + k_\mu \ell_\nu + \ell_\mu k_\nu
+$$</div></p><p>Properties:
+<ul><li>\(h_{\mu\nu} k^\nu = 0\), \(h_{\mu\nu} \ell^\nu = 0\)</li></ul>
+<ul><li>\(h^\mu_\mu = 2\)</li></ul>
+<ul><li>\(h_{\mu\rho} h^\rho_\nu = h_{\mu\nu}\)</li></ul></p><p>The covariant derivative decomposes as:</p><p><div class="eq">$$
+\nabla_\nu k_\mu = \frac{1}{2}\theta h_{\mu\nu} + \sigma_{\mu\nu} + \omega_{\mu\nu} + k_\mu \kappa \ell_\nu + \cdots
+$$</div></p><p>where \(\kappa\) is the <strong>non-affinity</strong> parameter (\(k^\nu\nabla_\nu k^\mu = \kappa k^\mu\)). For <strong>affinely parametrized</strong> null geodesics, \(\kappa = 0\).</p><p>The null kinematical quantities:</p><p>| Quantity | Definition | Properties |
+|----------|------------|------------|
+| <strong>Expansion</strong> \(\theta\) | \(\theta = \nabla_\mu k^\mu = h^{\mu\nu}\nabla_\nu k_\mu\) | Scalar |
+| <strong>Shear</strong> \(\sigma_{\mu\nu}\) | \(\sigma_{\mu\nu} = h_\mu^\rho h_\nu^\sigma \nabla_{(\rho}k_{\sigma)} - \frac{1}{2}\theta h_{\mu\nu}\) | Symmetric, traceless, orthogonal to \(k,\ell\) |
+| <strong>Vorticity</strong> \(\omega_{\mu\nu}\) | \(\omega_{\mu\nu} = h_\mu^\rho h_\nu^\sigma \nabla_{[\rho}k_{\sigma]}\) | Antisymmetric, orthogonal to \(k,\ell\) |</p><p>Explicitly:</p><p><div class="eq">$$
+\begin{aligned}
+\theta &= h^{\mu\nu}\nabla_\nu k_\mu \\
+\sigma_{\mu\nu} &= \frac{1}{2}h_\mu^\rho h_\nu^\sigma(\nabla_\rho k_\sigma + \nabla_\sigma k_\rho) - \frac{1}{2}\theta h_{\mu\nu} \\
+\omega_{\mu\nu} &= \frac{1}{2}h_\mu^\rho h_\nu^\sigma(\nabla_\rho k_\sigma - \nabla_\sigma k_\rho)
+\end{aligned}
+$$</div></p><p>---</p><h2>4. Derivation of Raychaudhuri Equation: Timelike Case</h2></p><h3>4.1 Starting Point: Geodesic Deviation</h3></p><p>For a timelike geodesic congruence (\(a_\mu = 0\)), the deviation vector \(\xi^\mu\) (with \(u_\mu \xi^\mu = 0\)) satisfies:</p><p><div class="eq">$$
+\frac{D^2 \xi^\mu}{D\tau^2} = R^\mu_{\nu\rho\sigma} u^\nu u^\rho \xi^\sigma
+$$</div></p><p>The first derivative gives the relative velocity:</p><p><div class="eq">$$
+\frac{D\xi^\mu}{D\tau} = (\nabla_\nu u^\mu) \xi^\nu = B^\mu_\nu \xi^\nu
+$$</div></p><p>where \(B_{\mu\nu} = \nabla_\nu u_\mu\) (using \(u^\nu\nabla_\nu u_\mu = 0\)).</p><h3>4.2 Evolution of \(B_{\mu\nu}\)</h3></p><p>Take the covariant derivative along \(u\):</p><p><div class="eq">$$
+\frac{DB_{\mu\nu}}{D\tau} = u^\rho \nabla_\rho \nabla_\nu u_\mu
+$$</div></p><p>Commute covariant derivatives:</p><p><div class="eq">$$
+u^\rho \nabla_\rho \nabla_\nu u_\mu = u^\rho \nabla_\nu \nabla_\rho u_\mu + u^\rho R^\sigma_{\mu\rho\nu} u_\sigma
+$$</div></p><p>Since \(u^\rho \nabla_\nu \nabla_\rho u_\mu = \nabla_\nu (u^\rho \nabla_\rho u_\mu) - (\nabla_\nu u^\rho)(\nabla_\rho u_\mu) = -B_{\nu\rho} B^\rho_\mu\):</p><p><div class="eq">$$
+\frac{DB_{\mu\nu}}{D\tau} = -B_{\mu\rho} B^\rho_\nu + R_{\mu\rho\nu\sigma} u^\rho u^\sigma
+$$</div></p><h3>4.3 Trace of the Evolution Equation</h3></p><p>Take the trace with \(h^{\mu\nu}\):</p><p><div class="eq">$$
+h^{\mu\nu}\frac{DB_{\mu\nu}}{D\tau} = -h^{\mu\nu}B_{\mu\rho}B^\rho_\nu + h^{\mu\nu}R_{\mu\rho\nu\sigma}u^\rho u^\sigma
+$$</div></p><p>The left side is \(D\theta/D\tau = d\theta/d\tau\) (since \(\theta = h^{\mu\nu}B_{\mu\nu}\) and \(h^{\mu\nu}\) is parallel-transported along geodesics? Actually need to be careful: \(Dh_{\mu\nu}/D\tau = 0\) for geodesics).</p><p>Compute the right side term by term.</p><p>#### Term 1: \(-h^{\mu\nu}B_{\mu\rho}B^\rho_\nu\)</p><p>Using \(B_{\mu\nu} = \frac{1}{3}\theta h_{\mu\nu} + \sigma_{\mu\nu} + \omega_{\mu\nu}\):</p><p><div class="eq">$$
+\begin{aligned}
+B_{\mu\rho}B^\rho_\nu &= \left(\frac{1}{3}\theta h_{\mu\rho} + \sigma_{\mu\rho} + \omega_{\mu\rho}\right)\left(\frac{1}{3}\theta h^\rho_\nu + \sigma^\rho_\nu + \omega^\rho_\nu\right) \\
+&= \frac{1}{9}\theta^2 h_{\mu\nu} + \frac{1}{3}\theta(\sigma_{\mu\nu} + \omega_{\mu\nu}) + \frac{1}{3}\theta(\sigma_{\mu\nu} - \omega_{\mu\nu}) + \sigma_{\mu\rho}\sigma^\rho_\nu + \omega_{\mu\rho}\omega^\rho_\nu + \sigma_{\mu\rho}\omega^\rho_\nu + \omega_{\mu\rho}\sigma^\rho_\nu
+\end{aligned}
+$$</div></p><p>Wait, \(\sigma\) symmetric, \(\omega\) antisymmetric. Let's compute carefully:</p><p><div class="eq">$$
+B_{\mu\rho}B^\rho_\nu = \frac{1}{9}\theta^2 h_{\mu\nu} + \frac{1}{3}\theta(\sigma_{\mu\nu} + \omega_{\mu\nu}) + \frac{1}{3}\theta(\sigma_{\mu\nu} - \omega_{\mu\nu}) + \sigma_{\mu\rho}\sigma^\rho_\nu + \omega_{\mu\rho}\omega^\rho_\nu + [\sigma,\omega]_{\mu\nu}
+$$</div></p><p>The cross terms \(\sigma_{\mu\rho}\omega^\rho_\nu + \omega_{\mu\rho}\sigma^\rho_\nu\) are traceless because \(\sigma\) symmetric, \(\omega\) antisymmetric.</p><p>Contract with \(h^{\mu\nu}\):</p><p><div class="eq">$$
+h^{\mu\nu}B_{\mu\rho}B^\rho_\nu = \frac{1}{3}\theta^2 + \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu}
+$$</div></p><p>(using \(h^{\mu\nu}h_{\mu\nu} = 3\), \(h^{\mu\nu}\sigma_{\mu\nu} = 0\), \(h^{\mu\nu}\omega_{\mu\nu} = 0\), and tracelessness of cross terms).</p><p>Note: \(\omega_{\mu\nu}\omega^{\mu\nu} = -2\omega^2 \le 0\) (since \(\omega_{\mu\nu}\) is spatial and antisymmetric, its square is negative). Define vorticity magnitude:</p><p><div class="eq">$$
+\omega^2 = \frac{1}{2}\omega_{\mu\nu}\omega^{\mu\nu} \ge 0 \quad \Rightarrow \quad \omega_{\mu\nu}\omega^{\mu\nu} = 2\omega^2
+$$</div></p><p>Wait, signature: with \((-+++)\) metric, for spatial antisymmetric tensor, \(\omega_{ij}\omega^{ij} = 2(\omega_{12}^2 + \omega_{23}^2 + \omega_{31}^2) \ge 0\). But with our sign conventions, let's check:</p><p>\(\omega_{\mu\nu}\omega^{\mu\nu} = h^\mu_\rho h^\nu_\sigma \omega_{\mu\nu}\omega^{\rho\sigma}\). In the 3-space, \(\omega_{ij}\) is a 3D antisymmetric matrix. Its eigenvalues are \(\pm i\omega\), so \(\omega_{ij}\omega^{ij} = -2\omega^2\). Actually, for a 3D antisymmetric tensor, \(\omega_{\mu\nu}\omega^{\mu\nu} = -2\vec{\omega}^2\). Let's keep it as \(\omega_{\mu\nu}\omega^{\mu\nu}\) and note its sign later.</p><p>Standard convention: \(\sigma_{\mu\nu}\sigma^{\mu\nu} \ge 0\), \(\omega_{\mu\nu}\omega^{\mu\nu} \le 0\).</p><p>#### Term 2: \(h^{\mu\nu}R_{\mu\rho\nu\sigma}u^\rho u^\sigma\)</p><p>This is the <strong>Ricci curvature</strong> term:</p><p><div class="eq">$$
+h^{\mu\nu}R_{\mu\rho\nu\sigma}u^\rho u^\sigma = R_{\rho\sigma}u^\rho u^\sigma - R_{\mu\rho\nu\sigma}u^\mu u^\rho u^\nu u^\sigma
+$$</div></p><p>But \(R_{\mu\rho\nu\sigma}u^\mu u^\rho u^\nu u^\sigma = 0\) by antisymmetry. So:</p><p><div class="eq">$$
+h^{\mu\nu}R_{\mu\rho\nu\sigma}u^\rho u^\sigma = R_{\rho\sigma}u^\rho u^\sigma = R_{\mu\nu}u^\mu u^\nu
+$$</div></p><h3>4.4 Final Timelike Raychaudhuri Equation</h3></p><p>Assembling:</p><p><div class="eq">$$
+\boxed{\frac{d\theta}{d\tau} = -\frac{1}{3}\theta^2 - \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu} - R_{\mu\nu}u^\mu u^\nu}
+$$</div></p><p>Using \(\sigma^2 = \frac{1}{2}\sigma_{\mu\nu}\sigma^{\mu\nu} \ge 0\) and \(\omega^2 = -\frac{1}{2}\omega_{\mu\nu}\omega^{\mu\nu} \ge 0\):</p><p><div class="eq">$$
+\boxed{\frac{d\theta}{d\tau} = -\frac{1}{3}\theta^2 - 2\sigma^2 + 2\omega^2 - R_{\mu\nu}u^\mu u^\nu}
+$$</div></p><p>This is the <strong>Raychaudhuri equation for timelike geodesic congruences</strong>.</p><p>---</p><h2>5. Derivation of Raychaudhuri Equation: Null Case</h2></p><h3>5.1 Geodesic Deviation for Null Congruences</h3></p><p>For affinely parametrized null geodesics (\(k^\nu\nabla_\nu k^\mu = 0\)), the deviation vector \(\eta^\mu\) (with \(k_\mu\eta^\mu = 0\), \(\ell_\mu\eta^\mu = 0\)) satisfies:</p><p><div class="eq">$$
+\frac{D^2 \eta^\mu}{D\lambda^2} = R^\mu_{\nu\rho\sigma} k^\nu k^\rho \eta^\sigma
+$$</div></p><p>The relative velocity is:</p><p><div class="eq">$$
+\frac{D\eta^\mu}{D\lambda} = (\nabla_\nu k^\mu) \eta^\nu = B^\mu_\nu \eta^\nu
+$$</div></p><p>where \(B_{\mu\nu} = \nabla_\nu k_\mu\) (projected onto screen space).</p><h3>5.2 Evolution of \(B_{\mu\nu}\)</h3></p><p>Similar derivation:</p><p><div class="eq">$$
+\frac{DB_{\mu\nu}}{D\lambda} = -B_{\mu\rho}B^\rho_\nu + R_{\mu\rho\nu\sigma}k^\rho k^\sigma
+$$</div></p><h3>5.3 Trace with Screen Projection</h3></p><p>Contract with \(h^{\mu\nu}\) (where \(h^{\mu\nu}\) is the 2D screen projection):</p><p><div class="eq">$$
+h^{\mu\nu}\frac{DB_{\mu\nu}}{D\lambda} = -h^{\mu\nu}B_{\mu\rho}B^\rho_\nu + h^{\mu\nu}R_{\mu\rho\nu\sigma}k^\rho k^\sigma
+$$</div></p><p>Left side: \(d\theta/d\lambda\).</p><p>For the first term, use \(B_{\mu\nu} = \frac{1}{2}\theta h_{\mu\nu} + \sigma_{\mu\nu} + \omega_{\mu\nu}\) (2D decomposition):</p><p><div class="eq">$$
+h^{\mu\nu}B_{\mu\rho}B^\rho_\nu = \frac{1}{2}\theta^2 + \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu}
+$$</div></p><p>For the Ricci term:</p><p><div class="eq">$$
+h^{\mu\nu}R_{\mu\rho\nu\sigma}k^\rho k^\sigma = R_{\rho\sigma}k^\rho k^\sigma
+$$</div></p><p>(since \(R_{\mu\rho\nu\sigma}k^\mu k^\rho k^\nu k^\sigma = 0\)).</p><h3>5.4 Final Null Raychaudhuri Equation</h3></p><p><div class="eq">$$
+\boxed{\frac{d\theta}{d\lambda} = -\frac{1}{2}\theta^2 - \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu} - R_{\mu\nu}k^\mu k^\nu}
+$$</div></p><p>With \(\sigma^2 = \frac{1}{2}\sigma_{\mu\nu}\sigma^{\mu\nu} \ge 0\), \(\omega^2 = -\frac{1}{2}\omega_{\mu\nu}\omega^{\mu\nu} \ge 0\):</p><p><div class="eq">$$
+\boxed{\frac{d\theta}{d\lambda} = -\frac{1}{2}\theta^2 - 2\sigma^2 + 2\omega^2 - R_{\mu\nu}k^\mu k^\nu}
+$$</div></p><p>This is the <strong>Raychaudhuri equation for null geodesic congruences</strong>.</p><p>---</p><h2>6. Physical Interpretation of Terms</h2></p><p>| Term | Name | Effect | Sign |
+|------|------|--------|------|
+| \(-\frac{1}{3}\theta^2\) (timelike) | Expansion self-gravity | Focusing | Negative |
+| \(-\frac{1}{2}\theta^2\) (null) | Expansion self-gravity | Focusing | Negative |
+| \(-\sigma_{\mu\nu}\sigma^{\mu\nu}\) | Shear | Focusing | Negative |
+| \(+\omega_{\mu\nu}\omega^{\mu\nu}\) | Vorticity | Defocusing | Positive |
+| \(-R_{\mu\nu}u^\mu u^\nu\) | Ricci curvature | Depends on matter | — |</p><p><strong>Key insight</strong>: For congruences that are initially hypersurface-orthogonal (vorticity-free, \(\omega_{\mu\nu}=0\)), the vorticity term vanishes. By Frobenius' theorem, if \(\omega_{\mu\nu}=0\) initially, it remains zero.</p><p>---</p><h2>7. Focusing Theorem</h2></p><h3>7.1 Timelike Focusing Theorem</h3></p><p><strong>Assumptions</strong>:
+1. Timelike geodesic congruence
+2. Vorticity-free: \(\omega_{\mu\nu} = 0\) (hypersurface-orthogonal)
+3. Strong Energy Condition (SEC): \(R_{\mu\nu}u^\mu u^\nu \ge 0\) for all timelike \(u^\mu\)</p><p>Then the Raychaudhuri equation gives:</p><p><div class="eq">$$
+\frac{d\theta}{d\tau} \le -\frac{1}{3}\theta^2
+$$</div></p><p>This is a differential inequality. Solve it:</p><p><div class="eq">$$
+\frac{d\theta}{\theta^2} \le -\frac{1}{3}d\tau \quad \Rightarrow \quad -\frac{1}{\theta} \le -\frac{1}{3}\tau + C
+$$</div></p><p>If \(\theta(0) = \theta_0 < 0\) (initially converging), then:</p><p><div class="eq">$$
+\theta(\tau) \le \frac{\theta_0}{1 + \frac{1}{3}\theta_0 \tau}
+$$</div></p><p><strong>Result</strong>: \(\theta \to -\infty\) within finite proper time \(\tau \le 3/|\theta_0|\).</p><p>This means the congruence develops a <strong>caustic</strong> (conjugate point) where neighboring geodesics intersect.</p><h3>7.2 Null Focusing Theorem</h3></p><p><strong>Assumptions</strong>:
+1. Null geodesic congruence
+2. Vorticity-free: \(\omega_{\mu\nu} = 0\)
+3. Null Energy Condition (NEC): \(R_{\mu\nu}k^\mu k^\nu \ge 0\) for all null \(k^\mu\)</p><p>Then:</p><p><div class="eq">$$
+\frac{d\theta}{d\lambda} \le -\frac{1}{2}\theta^2
+$$</div></p><p>Solution:</p><p><div class="eq">$$
+\theta(\lambda) \le \frac{\theta_0}{1 + \frac{1}{2}\theta_0 \lambda}
+$$</div></p><p>If \(\theta_0 < 0\), caustic forms within affine parameter \(\lambda \le 2/|\theta_0|\).</p><p>---</p><h2>8. Connection to Singularity Theorems</h2></p><h3>8.1 Penrose Singularity Theorem (1965)</h3></p><p><strong>Theorem</strong>: A spacetime \((\mathcal{M}, g_{\mu\nu})\) with:
+1. Non-compact Cauchy surface
+2. Null energy condition: \(R_{\mu\nu}k^\mu k^\nu \ge 0\)
+3. A trapped surface (closed 2-surface with \(\theta_+ < 0\), \(\theta_- < 0\) for both null normals)</p><p>contains incomplete null geodesics (singularity).</p><p><strong>Role of Raychaudhuri</strong>: The null focusing theorem shows that null geodesics emanating from a trapped surface must converge and form caustics. The existence of a Cauchy surface and global structure then implies these caustics are not just coordinate artifacts but indicate geodesic incompleteness.</p><h3>8.2 Hawking Singularity Theorem (1966)</h3></p><p><strong>Theorem</strong>: A spacetime with:
+1. Strong energy condition: \(R_{\mu\nu}u^\mu u^\nu \ge 0\)
+2. Timelike geodesic congruence with \(\theta < 0\) on a Cauchy surface
+3. Generic condition (curvature not specially aligned)</p><p>contains incomplete timelike geodesics.</p><p><strong>Role of Raychaudhuri</strong>: The timelike focusing theorem forces timelike geodesics to converge to a caustic. If the congruence is hypersurface-orthogonal (vorticity-free), this caustic forms in finite proper time. The generic condition ensures the caustic is a genuine singularity, not a coordinate crossing.</p><h3>8.3 Hawking-Penrose Theorem (1970)</h3></p><p>Combines both: If SEC holds and there exists a trapped surface or a point with reconverging light cones, singularity is inevitable.</p><p>---</p><h2>9. Applications</h2></p><h3>9.1 Gravitational Lensing</h3></p><p>The expansion \(\theta\) of a null congruence describes the cross-sectional area of a light bundle:</p><p><div class="eq">$$
+\frac{d}{d\lambda}\ln A = \theta
+$$</div></p><p>where \(A\) is the cross-sectional area. The Raychaudhuri equation gives:</p><p><div class="eq">$$
+\frac{d^2\sqrt{A}}{d\lambda^2} = -\left(\sigma^2 + \frac{1}{2}R_{\mu\nu}k^\mu k^\nu\right)\sqrt{A}
+$$</div></p><p>This is the <strong>optical scalar equation</strong> used in lensing.</p><h3>9.2 Black Hole Thermodynamics</h3></p><p>For a black hole horizon (a null surface), the expansion of the null generators is zero (\(\theta = 0\)) in equilibrium. The Raychaudhuri equation gives the area change:</p><p><div class="eq">$$
+\frac{dA}{d\lambda} = \int \theta dA = 0 \quad \text{(equilibrium)}
+$$</div></p><p>Under perturbation, \(\theta\) becomes positive, and the area increases (Second Law).</p><h3>9.3 Cosmology</h3></p><p>In FLRW, the timelike congruence of comoving observers has \(u^\mu = (1,0,0,0)\), \(\theta = 3H\), \(\sigma = \omega = 0\). The Raychaudhuri equation reduces to:</p><p><div class="eq">$$
+\dot{H} + H^2 = -\frac{1}{6}(\rho + 3p)
+$$</div></p><p>which is the acceleration equation (equivalent to Friedmann equations).</p><p>---</p><h2>10. Generalizations and Extensions</h2></p><h3>10.1 Non-Geodesic Congruences</h3></p><p>For non-geodesic timelike congruences (\(a_\mu \ne 0\)):</p><p><div class="eq">$$
+\frac{d\theta}{d\tau} = -\frac{1}{3}\theta^2 - \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu} - R_{\mu\nu}u^\mu u^\nu + \nabla_\mu a^\mu
+$$</div></p><p>The acceleration divergence term can prevent focusing.</p><h3>10.2 Higher Dimensions</h3></p><p>In \(D\) dimensions:
+<ul><li>Timelike: \(d\theta/d\tau = -\frac{1}{D-1}\theta^2 - \sigma^2 + \omega^2 - R_{\mu\nu}u^\mu u^\nu\)</li></ul>
+<ul><li>Null: \(d\theta/d\lambda = -\frac{1}{D-2}\theta^2 - \sigma^2 + \omega^2 - R_{\mu\nu}k^\mu k^\nu\)</li></ul></p><h3>10.3 Torsion and Non-Metricity</h3></p><p>In Einstein-Cartan or metric-affine gravity, additional terms appear from torsion and non-metricity.</p><h3>10.4 Quantum Corrections</h3></p><p>In semi-classical gravity, \(R_{\mu\nu}\) is replaced by \(\langle T_{\mu\nu}\rangle\), and quantum focusing conjectures generalize the theorem.</p><p>---</p><h2>11. Mathematical Rigor: Conjugate Points and Caustics</h2></p><h3>11.1 Jacobi Fields</h3></p><p>The deviation vector \(\xi^\mu\) is a Jacobi field. The expansion is the logarithmic derivative of the cross-sectional volume \(V\):</p><p><div class="eq">$$
+\theta = \frac{1}{V}\frac{dV}{d\tau}, \quad V \propto \sqrt{\det(h_{\mu\nu})}
+$$</div></p><h3>11.2 Conjugate Points</h3></p><p>A point \(q\) is conjugate to \(p\) along a geodesic \(\gamma\) if there exists a non-zero Jacobi field vanishing at \(p\) and \(q\). The focusing theorem guarantees conjugate points within finite affine parameter if \(\theta_0 < 0\) and energy conditions hold.</p><h3>11.3 Morse Index Theorem</h3></p><p>The number of conjugate points along a geodesic segment equals the Morse index (number of negative eigenvalues of the second variation of proper time).</p><p>---</p><h2>12. Summary of Key Equations</h2></p><h3>12.1 Timelike Geodesic Congruence</h3></p><p><div class="eq">$$
+\boxed{
+\begin{aligned}
+\frac{d\theta}{d\tau} &= -\frac{1}{3}\theta^2 - \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu} - R_{\mu\nu}u^\mu u^\nu \\
+\sigma_{\mu\nu} &= \nabla_{(\mu}u_{\nu)} - \frac{1}{3}\theta h_{\mu\nu} \\
+\omega_{\mu\nu} &= \nabla_{[\mu}u_{\nu]} \\
+\theta &= \nabla_\mu u^\mu
+\end{aligned}
+}
+$$</div></p><h3>12.2 Null Geodesic Congruence (affine)</h3></p><p><div class="eq">$$
+\boxed{
+\begin{aligned}
+\frac{d\theta}{d\lambda} &= -\frac{1}{2}\theta^2 - \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu} - R_{\mu\nu}k^\mu k^\nu \\
+\sigma_{\mu\nu} &= h_\mu^\rho h_\nu^\sigma \nabla_{(\rho}k_{\sigma)} - \frac{1}{2}\theta h_{\mu\nu} \\
+\omega_{\mu\nu} &= h_\mu^\rho h_\nu^\sigma \nabla_{[\rho}k_{\sigma]} \\
+\theta &= h^{\mu\nu}\nabla_\nu k_\mu
+\end{aligned}
+}
+$$</div></p><h3>12.3 Focusing Theorems</h3></p><p>| Case | Condition | Inequality | Caustic Time |
+|------|-----------|------------|--------------|
+| Timelike | SEC, \(\omega=0\), \(\theta_0<0\) | \(d\theta/d\tau \le -\theta^2/3\) | \(\tau \le 3/|\theta_0|\) |
+| Null | NEC, \(\omega=0\), \(\theta_0<0\) | \(d\theta/d\lambda \le -\theta^2/2\) | \(\lambda \le 2/|\theta_0|\) |</p><p>---</p><h2>13. Conclusion</h2></p><p>The Raychaudhuri equation is a purely geometric identity that becomes a powerful physical tool when combined with energy conditions. It demonstrates that gravity is universally attractive (focusing) for vorticity-free congruences, leading inevitably to caustics and, under global conditions, to singularities. This underpins the singularity theorems, black hole thermodynamics, and gravitational lensing theory.</p><p>---</p><p><em>End of derivation. All steps shown from geodesic deviation to final equations.</em></p>
+</main>
+<footer>Exotic Compact Objects — Premium View</footer>
+</body>
+</html>

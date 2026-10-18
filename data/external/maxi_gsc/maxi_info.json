@@ -1,0 +1,27 @@
+{
+  "catalog": "MAXI GSC (Gas Slit Camera)",
+  "mission": "MAXI (Monitor of All-sky X-ray Image)",
+  "instrument": "GSC (2-20 keV)",
+  "reference": "Matsuoka et al. 2009, PASJ, 61, 999; Hiroi et al. 2013, ApJS, 204, 21",
+  "data_release": "MAXI GSC 1.5yr / 3yr / 7yr catalogs",
+  "sky_coverage": "85% per orbit, ~100% over 1 day",
+  "sensitivity": "~5 mCrab (1-day), ~1 mCrab (1-year)",
+  "energy_band": "2-20 keV (GSC), 0.7-2 keV (SSC)",
+  "num_sources_1yr": 232,
+  "num_sources_7yr": 850,
+  "source_types": [
+    "LMXB",
+    "HMXB",
+    "AGN",
+    "Cataclysmic Variables",
+    "Stars",
+    "Unknown"
+  ],
+  "key_papers": [
+    "Matsuoka et al. 2009, PASJ, 61, 999 (MAXI mission)",
+    "Hiroi et al. 2013, ApJS, 204, 21 (GSC catalog)",
+    "Sugizaki et al. 2015, ApJS, 221, 29 (3yr catalog)",
+    "Kawamuro et al. 2018, ApJS, 238, 32 (7yr catalog)",
+    "Negoro et al. 2016, ApJS, 225, 16 (transients)"
+  ]
+}

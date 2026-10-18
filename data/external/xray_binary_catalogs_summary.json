@@ -1,0 +1,77 @@
+{
+  "catalogs": [
+    {
+      "name": "MAXI/GSC",
+      "source": "HEASARC",
+      "band": "2-20 keV",
+      "type": "All-sky monitor"
+    },
+    {
+      "name": "Swift/BAT 105-month",
+      "source": "HEASARC",
+      "band": "14-195 keV",
+      "type": "Hard X-ray survey"
+    },
+    {
+      "name": "NICER Master",
+      "source": "HEASARC",
+      "band": "0.2-12 keV",
+      "type": "Observation log"
+    },
+    {
+      "name": "4XMM-DR12",
+      "source": "Vizier",
+      "band": "0.2-12 keV",
+      "type": "XMM serendipitous"
+    },
+    {
+      "name": "CSC 2.1",
+      "source": "Vizier",
+      "band": "0.5-7 keV",
+      "type": "Chandra sources"
+    },
+    {
+      "name": "INTEGRAL IBIS",
+      "source": "Vizier",
+      "band": "17-100 keV",
+      "type": "Hard X-ray survey"
+    },
+    {
+      "name": "eROSITA eRASS1",
+      "source": "Vizier",
+      "band": "0.2-8 keV",
+      "type": "All-sky survey"
+    },
+    {
+      "name": "NuSTAR Serendipitous",
+      "source": "Vizier",
+      "band": "3-24 keV",
+      "type": "Hard X-ray survey"
+    },
+    {
+      "name": "Liu HMXB",
+      "source": "Vizier",
+      "band": "Various",
+      "type": "HMXB catalog"
+    },
+    {
+      "name": "Liu LMXB",
+      "source": "Vizier",
+      "band": "Various",
+      "type": "LMXB catalog"
+    },
+    {
+      "name": "Corbet HMXB",
+      "source": "Vizier",
+      "band": "Various",
+      "type": "HMXB catalog"
+    },
+    {
+      "name": "BlackCAT",
+      "source": "Vizier",
+      "band": "Various",
+      "type": "BH X-ray binaries"
+    }
+  ],
+  "total_catalogs": 12
+}

@@ -1,0 +1,18 @@
+{
+  "catalog": "Liu et al. 2007 LMXB Catalog",
+  "reference": "Liu et al. 2007, ApJS, 172, 225",
+  "num_systems": 187,
+  "columns": [
+    "Name",
+    "RA",
+    "Dec",
+    "Type",
+    "Orbital_Period",
+    "Porb_err",
+    "Inclination",
+    "Dist_kpc",
+    "Lx_erg_s",
+    "Ref"
+  ],
+  "description": "Comprehensive catalog of Galactic LMXBs"
+}

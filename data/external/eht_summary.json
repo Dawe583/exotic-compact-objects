@@ -1,0 +1,33 @@
+{
+  "m87": {
+    "mass_Msun": 6500000000.0,
+    "distance_Mpc": 16.8,
+    "ring_diameter_uas": 42,
+    "spin_constraint": ">0.5 (95% CL)",
+    "key_papers": 9
+  },
+  "sgra": {
+    "mass_Msun": 4297000.0,
+    "distance_kpc": 8.277,
+    "ring_diameter_uas": 51.8,
+    "spin_constraint": ">0.5 (95% CL)",
+    "variability": "30 min timescale",
+    "polarization": "5% linear, 1% circular",
+    "key_papers": 8
+  },
+  "common": {
+    "wavelength_mm": 1.3,
+    "frequency_GHz": 230,
+    "telescopes": [
+      "ALMA",
+      "APEX",
+      "IRAM 30m",
+      "JCMT",
+      "LMT",
+      "SMA",
+      "SMT",
+      "SPT"
+    ],
+    "resolution_uas": 20
+  }
+}

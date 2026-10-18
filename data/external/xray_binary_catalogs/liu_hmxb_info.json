@@ -1,0 +1,19 @@
+{
+  "catalog": "Liu et al. 2007 HMXB Catalog",
+  "reference": "Liu et al. 2007, ApJS, 172, 225",
+  "num_systems": 114,
+  "columns": [
+    "Name",
+    "RA",
+    "Dec",
+    "Type",
+    "Orbital_Period",
+    "Porb_err",
+    "Eccentricity",
+    "SpType",
+    "Dist_kpc",
+    "Lx_erg_s",
+    "Ref"
+  ],
+  "description": "Comprehensive catalog of Galactic HMXBs with orbital parameters"
+}

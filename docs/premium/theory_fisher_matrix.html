@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Theory Fisher Matrix</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+<header><h1>Theory Fisher Matrix</h1></header>
+<nav>
+<a href="index.html">Home</a>
+<a href="theory.html">Theory</a>
+<a href="data.html">Data</a>
+<a href="models.html">Models</a>
+<a href="geodesics.html">Geodesics</a>
+<a href="whiteholes.html">White Holes</a>
+<a href="advanced.html">Advanced</a>
+</nav>
+<main>
+<h1>Fisher Information Matrix for Gravitational Wave Parameter Estimation</h1></p><h2>Derivatives of Waveform w.r.t. Masses/Spins, SNR Integrals, Covariance Matrix, Degeneracy Analysis for BH Binary Parameters</h2></p><p>---</p><h2>1. Introduction</h2></p><p>The Fisher information matrix (FIM) provides a powerful analytical framework for estimating parameter uncertainties in gravitational wave (GW) observations. In the high signal-to-noise ratio (SNR) limit, the posterior distribution for signal parameters \(\theta^i\) is well-approximated by a multivariate Gaussian with covariance matrix given by the inverse Fisher matrix. This document provides a complete derivation of the FIM for compact binary coalescence signals, including waveform derivatives, inner products, SNR integrals, and degeneracy analysis for black hole binary parameters.</p><p>---</p><h2>2. GW Data Analysis Framework</h2></p><h3>2.1 Signal Model</h3></p><p>The GW strain from a compact binary inspiral-merger-ringdown is:</p><p><div class="eq">$$
+h(t; \theta) = h_+(t; \theta) F_+(\alpha, \delta, \psi) + h_\times(t; \theta) F_\times(\alpha, \delta, \psi)
+$$</div></p><p>where \(\theta = \{M_c, \eta, \chi_1, \chi_2, t_c, \phi_c, D_L, \alpha, \delta, \psi, \iota\}\) are the parameters, and \(F_{+,\times}\) are antenna pattern functions.</p><p>In frequency domain (stationary phase approximation for inspiral):</p><p><div class="eq">$$
+\tilde{h}(f; \theta) = \mathcal{A}(f; \theta) e^{i\Psi(f; \theta)}
+$$</div></p><h3>2.2 Noise Model</h3></p><p>Detector noise is characterized by the one-sided power spectral density (PSD) \(S_n(f)\):</p><p><div class="eq">$$
+\langle \tilde{n}(f) \tilde{n}^*(f') \rangle = \frac{1}{2} \delta(f-f') S_n(f)
+$$</div></p><h3>2.3 Inner Product</h3></p><p>The noise-weighted inner product between two signals \(a, b\):</p><p><div class="eq">$$
+\boxed{(a|b) = 4 \Re \int_{f_{\text{min}}}^{f_{\text{max}}} \frac{\tilde{a}(f) \tilde{b}^*(f)}{S_n(f)} df}
+$$</div></p><p>Properties:
+<ul><li>Real and symmetric: \((a|b) = (b|a)\)</li></ul>
+<ul><li>Positive definite: \((h|h) > 0\) for \(h \ne 0\)</li></ul>
+<ul><li>SNR: \(\rho = \sqrt{(h|h)}\)</li></ul></p><p>---</p><h2>3. Fisher Information Matrix</h2></p><h3>3.1 Definition</h3></p><p>For a signal \(h(\theta)\) with parameters \(\theta^i\), the Fisher matrix is:</p><p><div class="eq">$$
+\boxed{\Gamma_{ij} = \left( \frac{\partial h}{\partial \theta^i} \middle| \frac{\partial h}{\partial \theta^j} \right)}
+$$</div></p><h3>3.2 Gaussian Approximation</h3></p><p>In the high-SNR limit, the likelihood is:</p><p><div class="eq">$$
+\mathcal{L}(\theta) \propto \exp\left[-\frac{1}{2}(\Delta h | \Delta h)\right] \approx \exp\left[-\frac{1}{2}\Gamma_{ij} \Delta\theta^i \Delta\theta^j\right]
+$$</div></p><p>where \(\Delta h = h(\theta) - h(\hat{\theta})\) and \(\Delta\theta^i = \theta^i - \hat{\theta}^i\).</p><h3>3.3 Covariance Matrix</h3></p><p>The parameter covariance matrix is the inverse Fisher matrix:</p><p><div class="eq">$$
+\boxed{\Sigma^{ij} = (\Gamma^{-1})^{ij}}
+$$</div></p><p>The 1-\(\sigma\) uncertainty on parameter \(\theta^i\):</p><p><div class="eq">$$
+\sigma_{\theta^i} = \sqrt{\Sigma^{ii}}
+$$</div></p><p>Correlation coefficient:</p><p><div class="eq">$$
+\rho_{ij} = \frac{\Sigma^{ij}}{\sqrt{\Sigma^{ii}\Sigma^{jj}}}
+$$</div></p><p>---</p><h2>4. Waveform Derivatives</h2></p><h3>4.1 Frequency-Domain Waveform (SPA)</h3></p><p>For non-precessing binaries in the inspiral regime (post-Newtonian):</p><p><div class="eq">$$
+\tilde{h}(f) = \mathcal{A} f^{-7/6} e^{i\Psi(f)}
+$$</div></p><p>Amplitude:</p><p><div class="eq">$$
+\mathcal{A} = \frac{1}{D_L} \sqrt{\frac{5}{24}} \pi^{-2/3} \mathcal{M}_c^{5/6} \mathcal{F}(\iota, \psi)
+$$</div></p><p>where \(\mathcal{F}\) encodes antenna patterns and inclination.</p><p>Phase:</p><p><div class="eq">$$
+\Psi(f) = 2\pi f t_c - \phi_c - \frac{\pi}{4} + \frac{3}{128}(\pi \mathcal{M}_c f)^{-5/3} \sum_{k=0}^N \psi_k (\pi \mathcal{M}_c f)^{k/3}
+$$</div></p><h3>4.2 Key Parameters</h3></p><p>| Parameter | Symbol | Description |
+|-----------|--------|-------------|
+| Chirp mass | \(\mathcal{M}_c = (m_1 m_2)^{3/5}/(m_1+m_2)^{1/5}\) | Dominant phase evolution |
+| Symmetric mass ratio | \(\eta = m_1 m_2/(m_1+m_2)^2\) | Sub-dominant phase |
+| Effective spin | \(\chi_{\text{eff}} = (m_1\chi_1 + m_2\chi_2)/M\) | Leading spin-orbit |
+| Precessing spin | \(\chi_p\) | Precession effects |
+| Coalescence time | \(t_c\) | Time of merger |
+| Coalescence phase | \(\phi_c\) | Phase at merger |
+| Luminosity distance | \(D_L\) | Amplitude scaling |
+| Inclination | \(\iota\) | Amplitude modulation |</p><h3>4.3 Derivatives of the Waveform</h3></p><p>Write \(\tilde{h} = A e^{i\Psi}\) with \(A = |\tilde{h}|\). Then:</p><p><div class="eq">$$
+\frac{\partial \tilde{h}}{\partial \theta^i} = \left( \frac{\partial \ln A}{\partial \theta^i} + i \frac{\partial \Psi}{\partial \theta^i} \right) \tilde{h}
+$$</div></p><p>The Fisher matrix becomes:</p><p><div class="eq">$$
+\Gamma_{ij} = 4 \int \frac{|\tilde{h}|^2}{S_n} \left[ \frac{\partial \ln A}{\partial \theta^i} \frac{\partial \ln A}{\partial \theta^j} + \frac{\partial \Psi}{\partial \theta^i} \frac{\partial \Psi}{\partial \theta^j} \right] df
+$$</div></p><p>The cross-term vanishes because it's purely imaginary and the integral takes the real part.</p><h3>4.4 Explicit Phase Derivatives (Inspiral)</h3></p><p>For the chirp mass \(\mathcal{M}_c\):</p><p><div class="eq">$$
+\frac{\partial \Psi}{\partial \mathcal{M}_c} = -\frac{5}{128} (\pi \mathcal{M}_c f)^{-8/3} \frac{1}{\mathcal{M}_c} \sum_k \psi_k \left(1 - \frac{5k}{3}\right) (\pi \mathcal{M}_c f)^{k/3}
+$$</div></p><p>Leading order (\(k=0\)):</p><p><div class="eq">$$
+\frac{\partial \Psi}{\partial \mathcal{M}_c} \approx -\frac{5}{128} (\pi \mathcal{M}_c f)^{-8/3} \frac{1}{\mathcal{M}_c}
+$$</div></p><p>For symmetric mass ratio \(\eta\):</p><p><div class="eq">$$
+\frac{\partial \Psi}{\partial \eta} = \frac{3}{128} (\pi \mathcal{M}_c f)^{-5/3} \sum_k \frac{\partial \psi_k}{\partial \eta} (\pi \mathcal{M}_c f)^{k/3}
+$$</div></p><p>For effective spin \(\chi_{\text{eff}}\):</p><p><div class="eq">$$
+\frac{\partial \Psi}{\partial \chi_{\text{eff}}} = \frac{3}{128} (\pi \mathcal{M}_c f)^{-5/3} \sum_k \frac{\partial \psi_k}{\partial \chi_{\text{eff}}} (\pi \mathcal{M}_c f)^{k/3}
+$$</div></p><p>For \(t_c\):</p><p><div class="eq">$$
+\frac{\partial \Psi}{\partial t_c} = 2\pi f
+$$</div></p><p>For \(\phi_c\):</p><p><div class="eq">$$
+\frac{\partial \Psi}{\partial \phi_c} = -1
+$$</div></p><p>For \(D_L\):</p><p><div class="eq">$$
+\frac{\partial \ln A}{\partial D_L} = -\frac{1}{D_L}, \quad \frac{\partial \Psi}{\partial D_L} = 0
+$$</div></p><p>For inclination \(\iota\):</p><p><div class="eq">$$
+\frac{\partial \ln A}{\partial \iota} = \frac{\partial \ln \mathcal{F}}{\partial \iota}
+$$</div></p><p>---</p><h2>5. SNR Integrals and Analytical Approximations</h2></p><h3>5.1 Power-Law Noise Approximation</h3></p><p>For analytical insight, approximate \(S_n(f) \propto f^\alpha\) over the sensitive band. For LIGO, \(\alpha \approx -4\) at low frequencies, \(\alpha \approx 0\) at mid-frequencies, \(\alpha \approx 4\) at high frequencies.</p><p>Define the <strong>moment integrals</strong>:</p><p><div class="eq">$$
+I_q = \int_{f_{\text{min}}}^{f_{\text{max}}} \frac{|\tilde{h}(f)|^2}{S_n(f)} f^q df
+$$</div></p><p>For inspiral \(|\tilde{h}|^2 \propto f^{-7/3}\):</p><p><div class="eq">$$
+I_q \propto \int f^{-7/3 + q - \alpha} df
+$$</div></p><h3>5.2 Analytical Fisher Matrix (Restricted PN, Single Detector)</h3></p><p>At leading PN order, the waveform depends on \(\mathcal{M}_c, \eta, t_c, \phi_c, D_L\) (and angles). The Fisher matrix has block structure:</p><p><div class="eq">$$
+\Gamma = \begin{pmatrix}
+\Gamma_{\text{phase}} & 0 \\
+0 & \Gamma_{\text{amp}}
+\end{pmatrix}
+$$</div></p><p>where \(\Gamma_{\text{phase}}\) involves \(\mathcal{M}_c, \eta, t_c, \phi_c\) and \(\Gamma_{\text{amp}}\) involves \(D_L, \iota, \psi, \alpha, \delta\).</p><p>#### Phase Parameter Submatrix</p><p>Using \(\partial \Psi/\partial \mathcal{M}_c \propto f^{-8/3}\), \(\partial \Psi/\partial \eta \propto f^{-2/3}\), \(\partial \Psi/\partial t_c \propto f\), \(\partial \Psi/\partial \phi_c = 1\):</p><p><div class="eq">$$
+\Gamma_{ij}^{\text{phase}} = 4 \int \frac{|\tilde{h}|^2}{S_n} \frac{\partial \Psi}{\partial \theta^i} \frac{\partial \Psi}{\partial \theta^j} df
+$$</div></p><p>With \(|\tilde{h}|^2/S_n \propto f^{-7/3}\) (assuming flat noise for simplicity):</p><p><div class="eq">$$
+\Gamma_{\mathcal{M}_c\mathcal{M}_c} \propto \int f^{-7/3} f^{-16/3} df = \int f^{-23/3} df \propto f_{\text{low}}^{-20/3}
+$$</div></p><p><div class="eq">$$
+\Gamma_{\eta\eta} \propto \int f^{-7/3} f^{-4/3} df = \int f^{-11/3} df \propto f_{\text{low}}^{-8/3}
+$$</div></p><p><div class="eq">$$
+\Gamma_{t_c t_c} \propto \int f^{-7/3} f^2 df = \int f^{-1/3} df \propto f_{\text{high}}^{2/3}
+$$</div></p><p><div class="eq">$$
+\Gamma_{\mathcal{M}_c \eta} \propto \int f^{-7/3} f^{-10/3} df = \int f^{-17/3} df \propto f_{\text{low}}^{-14/3}
+$$</div></p><p>This shows:
+<ul><li>\(\mathcal{M}_c\) is best measured (most negative power \(\to\) dominated by low frequencies)</li></ul>
+<ul><li>\(\eta\) is less well measured</li></ul>
+<ul><li>\(t_c\) is measured from high frequencies</li></ul></p><h3>5.3 Mass Parameter Correlations</h3></p><p>The chirp mass \(\mathcal{M}_c\) and mass ratio \(\eta\) are highly correlated. The correlation coefficient:</p><p><div class="eq">$$
+\rho_{\mathcal{M}_c \eta} \approx 0.9 - 0.99
+$$</div></p><p>This degeneracy arises because both parameters affect the phase evolution at similar PN orders.</p><p><strong>Reparameterization</strong>: Use \(\mathcal{M}_c\) and \(\delta = \mathcal{M}_c \eta^{3/5}\) (or total mass \(M\)) to reduce correlations.</p><h3>5.4 Spin Degeneracies</h3></p><p>The effective spin \(\chi_{\text{eff}}\) enters at 1.5PN order:</p><p><div class="eq">$$
+\psi_3 \propto \chi_{\text{eff}}
+$$</div></p><p>So \(\partial \Psi/\partial \chi_{\text{eff}} \propto f^{-2/3}\), same frequency dependence as \(\partial \Psi/\partial \eta\).</p><p><strong>Strong degeneracy</strong>: \(\chi_{\text{eff}}\) and \(\eta\) are highly correlated (\(\rho \sim 0.8-0.9\)).</p><p>The precessing spin \(\chi_p\) enters at higher PN orders and through amplitude modulation, breaking some degeneracies.</p><p>---</p><h2>6. Complete Fisher Matrix for BH Binaries</h2></p><h3>6.1 Parameter Set</h3></p><p>For a non-precessing binary, the intrinsic parameters are:</p><p><div class="eq">$$
+\theta_{\text{int}} = \{\mathcal{M}_c, \eta, \chi_1, \chi_2\}
+$$</div></p><p>or equivalently \(\{\mathcal{M}_c, \eta, \chi_{\text{eff}}, \chi_p\}\).</p><p>Extrinsic parameters:</p><p><div class="eq">$$
+\theta_{\text{ext}} = \{t_c, \phi_c, D_L, \iota, \psi, \alpha, \delta\}
+$$</div></p><h3>6.2 Full Fisher Matrix Expression</h3></p><p><div class="eq">$$
+\Gamma_{ij} = 4 \Re \int_{f_{\text{low}}}^{f_{\text{high}}} \frac{1}{S_n(f)} \frac{\partial \tilde{h}^*}{\partial \theta^i} \frac{\partial \tilde{h}}{\partial \theta^j} df
+$$</div></p><p>For \(\tilde{h} = A e^{i\Psi}\):</p><p><div class="eq">$$
+\Gamma_{ij} = 4 \int \frac{A^2}{S_n} \left( \frac{\partial \ln A}{\partial \theta^i} \frac{\partial \ln A}{\partial \theta^j} + \frac{\partial \Psi}{\partial \theta^i} \frac{\partial \Psi}{\partial \theta^j} \right) df
+$$</div></p><h3>6.3 Amplitude Derivatives</h3></p><p>The amplitude \(A \propto D_L^{-1} \mathcal{M}_c^{5/6} f^{-7/6} \mathcal{F}(\iota, \psi, \alpha, \delta)\):</p><p><div class="eq">$$
+\begin{aligned}
+\frac{\partial \ln A}{\partial D_L} &= -\frac{1}{D_L} \\
+\frac{\partial \ln A}{\partial \mathcal{M}_c} &= \frac{5}{6\mathcal{M}_c} \\
+\frac{\partial \ln A}{\partial \iota} &= \frac{\mathcal{F}'(\iota)}{\mathcal{F}(\iota)} \\
+\frac{\partial \ln A}{\partial \psi} &= \frac{\mathcal{F}'(\psi)}{\mathcal{F}(\psi)} \\
+\frac{\partial \ln A}{\partial \alpha} &= \frac{\mathcal{F}'(\alpha)}{\mathcal{F}(\alpha)} \\
+\frac{\partial \ln A}{\partial \delta} &= \frac{\mathcal{F}'(\delta)}{\mathcal{F}(\delta)}
+\end{aligned}
+$$</div></p><h3>6.4 Phase Derivatives (Up to 3.5PN)</h3></p><p>The phase \(\Psi(f)\) in the SPA is:</p><p><div class="eq">$$
+\Psi(f) = 2\pi f t_c - \phi_c - \frac{\pi}{4} + \frac{3}{128\eta}(\pi M f)^{-5/3} \sum_{k=0}^7 \psi_k (\pi M f)^{k/3}
+$$</div></p><p>where \(M = m_1 + m_2\) and \(\mathcal{M}_c = \eta^{3/5}M\).</p><p>The PN coefficients \(\psi_k\) depend on \(\eta\), \(\chi_{\text{eff}}\), \(\chi_p\), and higher spin combinations.</p><p>Key derivatives:</p><p><div class="eq">$$
+\begin{aligned}
+\frac{\partial \Psi}{\partial t_c} &= 2\pi f \\
+\frac{\partial \Psi}{\partial \phi_c} &= -1 \\
+\frac{\partial \Psi}{\partial \mathcal{M}_c} &= -\frac{5}{128} \frac{1}{\mathcal{M}_c} (\pi \mathcal{M}_c f)^{-8/3} \left[1 + \sum_{k=2}^7 \left(1 - \frac{5k}{3}\right) \psi_k (\pi \mathcal{M}_c f)^{k/3} \right] \\
+\frac{\partial \Psi}{\partial \eta} &= \frac{3}{128} (\pi M f)^{-5/3} \left[ -\frac{1}{\eta^2} \sum \psi_k (\pi M f)^{k/3} + \frac{1}{\eta} \sum \frac{\partial \psi_k}{\partial \eta} (\pi M f)^{k/3} + \frac{5}{3} \frac{M}{\mathcal{M}_c} \sum \psi_k (\pi M f)^{k/3} \right] \\
+\frac{\partial \Psi}{\partial \chi_{\text{eff}}} &= \frac{3}{128} (\pi M f)^{-5/3} \frac{1}{\eta} \sum \frac{\partial \psi_k}{\partial \chi_{\text{eff}}} (\pi M f)^{k/3}
+\end{aligned}
+$$</div></p><p>---</p><h2>7. Covariance Matrix and Error Estimation</h2></p><h3>7.1 Inversion and Parameter Errors</h3></p><p>The covariance matrix:</p><p><div class="eq">$$
+\Sigma = \Gamma^{-1}
+$$</div></p><p>Marginalized error on parameter \(\theta^i\):</p><p><div class="eq">$$
+\sigma_i = \sqrt{\Sigma_{ii}}
+$$</div></p><h3>7.2 Sky Localization</h3></p><p>Sky position \((\alpha, \delta)\) enters through:
+<ul><li>Time delays between detectors: \(\Delta t \approx \frac{R_\oplus}{c} \sin\theta \cos(\phi - \phi_0)\)</li></ul>
+<ul><li>Antenna pattern modulation</li></ul></p><p>For a network of \(N\) detectors, the timing information dominates:</p><p><div class="eq">$$
+\Gamma_{\alpha\alpha} \approx \sum_{I<J} \frac{(2\pi f_0)^2 \rho_I^2 \rho_J^2}{\rho^2} \left(\frac{\partial \Delta t_{IJ}}{\partial \alpha}\right)^2
+$$</div></p><p>where \(f_0\) is the effective frequency. Sky area:</p><p><div class="eq">$$
+\Delta \Omega \approx 2\pi \sqrt{\Sigma_{\alpha\alpha}\Sigma_{\delta\delta} - \Sigma_{\alpha\delta}^2}
+$$</div></p><h3>7.3 Distance-Inclination Degeneracy</h3></p><p>The amplitude depends on \(D_L\) and \(\iota\) as:</p><p><div class="eq">$$
+A \propto \frac{1}{D_L} \sqrt{F_+^2(1+\cos^2\iota)^2 + 4F_\times^2\cos^2\iota}
+$$</div></p><p>For a single detector, \(D_L\) and \(\iota\) are perfectly degenerate (only the combination \(D_L/\mathcal{F}(\iota)\) is measured). With multiple detectors, the degeneracy is broken by different antenna patterns.</p><p>---</p><h2>8. Degeneracy Analysis for BH Binary Parameters</h2></p><h3>8.1 Mass-Spin Degeneracy</h3></p><p>The phase evolution depends on combinations:</p><p><div class="eq">$$
+\Psi \sim \frac{1}{\eta} \left[ \psi_0 + \psi_2 \eta + \psi_3 \chi_{\text{eff}} + \psi_4 \eta^2 + \cdots \right]
+$$</div></p><p>At leading orders:
+<ul><li>\(\psi_0 \propto 1\) (Newtonian)</li></ul>
+<ul><li>\(\psi_2 \propto \eta\) (1PN)</li></ul>
+<ul><li>\(\psi_3 \propto \chi_{\text{eff}}\) (1.5PN spin-orbit)</li></ul>
+<ul><li>\(\psi_4 \propto \eta^2\) (2PN)</li></ul></p><p>The <strong>chirp mass</strong> \(\mathcal{M}_c\) determines the overall frequency scaling.
+The <strong>mass ratio</strong> \(\eta\) enters at 1PN and higher.
+The <strong>effective spin</strong> \(\chi_{\text{eff}}\) enters at 1.5PN.</p><p><strong>Degeneracy direction</strong>: Increasing \(\eta\) speeds up inspiral; increasing \(\chi_{\text{eff}}\) (aligned) also speeds up inspiral. They are partially degenerate.</p><h3>8.2 Quantitative Degeneracy Analysis</h3></p><p>Define the <strong>degeneracy matrix</strong> \(D_{ij} = \rho_{ij}\) (correlation matrix). Eigenvalues of \(D\) show the number of well-constrained combinations.</p><p>For a typical BBH at SNR=20:
+<ul><li>1 combination: \(\mathcal{M}_c\) (measured to \(\sim 0.1\%\))</li></ul>
+<ul><li>1 combination: \(t_c\) (measured to \(\sim 10^{-4}\) s)</li></ul>
+<ul><li>1 combination: \(\mathcal{M}_c \eta^{3/5}\) (total mass)</li></ul>
+<ul><li>1 combination: \(\chi_{\text{eff}}\) (measured to \(\sim 0.1\))</li></ul>
+<ul><li>Remaining combinations poorly constrained</li></ul></p><h3>8.3 Precession Breaks Degeneracies</h3></p><p>For precessing binaries (\(\chi_p \ne 0\)), the amplitude and phase modulate at the precession frequency. This introduces new frequency dependencies that break the \(\eta\)-\(\chi_{\text{eff}}\) degeneracy.</p><p>The precession frequency:</p><p><div class="eq">$$
+\Omega_p \sim \frac{\chi_p}{M} \left(\frac{M}{r}\right)^{5/2}
+$$</div></p><p>Modulation signatures in \(h(t)\) provide independent information about \(\chi_p\) and \(\iota\).</p><h3>8.4 Higher Modes</h3></p><p>Higher harmonics (\(\ell>2\) modes) break degeneracies because:
+<ul><li>Different mass/spin dependence</li></ul>
+<ul><li>Different angular dependence</li></ul>
+<ul><li>Different frequency scaling</li></ul></p><p>For example, the \((3,3)\) mode scales as \(\mathcal{M}_c^{5/6} f^{-7/6}\) but with different \(\eta\) dependence.</p><p>---</p><h2>9. Multi-Detector Fisher Matrix</h2></p><h3>9.1 Network Fisher Matrix</h3></p><p>For \(N\) detectors with uncorrelated noise:</p><p><div class="eq">$$
+\Gamma_{ij}^{\text{net}} = \sum_{I=1}^N \Gamma_{ij}^{(I)}
+$$</div></p><p>Each detector has its own antenna pattern \(F_{+,\times}^{(I)}\) and PSD \(S_n^{(I)}\).</p><h3>9.2 Time Delay Information</h3></p><p>The time delay between detectors \(I\) and \(J\):</p><p><div class="eq">$$
+\Delta t_{IJ} = \frac{\mathbf{x}_I - \mathbf{x}_J}{c} \cdot \hat{\mathbf{n}}
+$$</div></p><p>where \(\hat{\mathbf{n}}\) is the sky direction. The phase shift:</p><p><div class="eq">$$
+\Psi_I(f) = \Psi(f) + 2\pi f \Delta t_I
+$$</div></p><p>This adds a term \(\partial \Psi/\partial \alpha \propto f\) which significantly improves sky localization.</p><h3>9.3 Network SNR</h3></p><p>The network SNR:</p><p><div class="eq">$$
+\rho_{\text{net}}^2 = \sum_I \rho_I^2
+$$</div></p><p>Parameter errors scale as \(1/\rho_{\text{net}}\).</p><p>---</p><h2>10. Beyond Fisher: Limitations and Extensions</h2></p><h3>10.1 Fisher Matrix Limitations</h3></p><p>1. <strong>High-SNR approximation</strong>: Breaks down at low SNR
+2. <strong>Gaussian posterior assumption</strong>: Non-linearities cause non-Gaussianities
+3. <strong>Prior independence</strong>: Fisher matrix assumes flat priors
+4. <strong>Single-mode assumption</strong>: Ignores multi-modal posteriors</p><h3>10.2 Higher-Order Corrections</h3></p><p>The <strong>Edgeworth expansion</strong> includes skewness and kurtosis:</p><p><div class="eq">$$
+p(\theta) \approx \mathcal{N}(\hat{\theta}, \Gamma^{-1}) \left[1 + \frac{1}{6} \kappa_{ijk} H^{ijk} + \cdots \right]
+$$</div></p><p>where \(\kappa_{ijk}\) are third cumulants and \(H^{ijk}\) are Hermite polynomials.</p><h3>10.3 Bayesian vs Fisher</h3></p><p>The Fisher matrix is the expectation of the Hessian of the log-likelihood:</p><p><div class="eq">$$
+\Gamma_{ij} = -\left\langle \frac{\partial^2 \ln \mathcal{L}}{\partial \theta^i \partial \theta^j} \right\rangle
+$$</div></p><p>In the Bayesian framework with prior \(\pi(\theta)\), the posterior covariance is:</p><p><div class="eq">$$
+\Sigma_{\text{Bayes}}^{-1} = \Gamma + \Pi
+$$</div></p><p>where \(\Pi_{ij} = -\partial^2 \ln \pi / \partial \theta^i \partial \theta^j\) is the prior precision.</p><p>---</p><h2>11. Practical Computation</h2></p><h3>11.1 Numerical Derivatives</h3></p><p>For complex waveforms (IMRPhenom, SEOBNR), derivatives are computed numerically:</p><p><div class="eq">$$
+\frac{\partial \tilde{h}}{\partial \theta^i} \approx \frac{\tilde{h}(\theta + \Delta\theta^i \hat{e}_i) - \tilde{h}(\theta - \Delta\theta^i \hat{e}_i)}{2\Delta\theta^i}
+$$</div></p><p>Step size \(\Delta\theta^i\) must be chosen carefully (too small: numerical noise; too large: truncation error).</p><h3>11.2 Frequency Integration</h3></p><p>The integral:</p><p><div class="eq">$$
+\Gamma_{ij} = 4 \Re \int \frac{\partial \tilde{h}^*}{\partial \theta^i} \frac{\partial \tilde{h}}{\partial \theta^j} \frac{df}{S_n(f)}
+$$</div></p><p>is computed using quadrature (e.g., Simpson's rule) on a logarithmic frequency grid.</p><h3>11.3 Regularization</h3></p><p>The Fisher matrix can be ill-conditioned. Regularization techniques:
+<ul><li>Eigenvalue truncation: discard modes with \(\lambda < \epsilon \lambda_{\text{max}}\)</li></ul>
+<ul><li>Tikhonov regularization: \(\Gamma \to \Gamma + \epsilon I\)</li></ul>
+<ul><li>SVD inversion</li></ul></p><p>---</p><h2>12. Example: GW150914-like Binary</h2></p><h3>12.1 Parameters</h3></p><p>\(m_1 = 36 M_\odot\), \(m_2 = 29 M_\odot\), \(\mathcal{M}_c = 28 M_\odot\), \(\eta = 0.24\), \(D_L = 400\) Mpc, SNR = 24.</p><h3>12.2 Fisher Matrix Predictions (Order of Magnitude)</h3></p><p>| Parameter | Fisher \(\sigma\) | Notes |
+|-----------|-----------------|-------|
+| \(\mathcal{M}_c\) | \(\sim 0.1 M_\odot\) | Best measured |
+| \(M\) | \(\sim 1 M_\odot\) | |
+| \(\eta\) | \(\sim 0.02\) | Correlated with \(\chi_{\text{eff}}\) |
+| \(\chi_{\text{eff}}\) | \(\sim 0.1\) | Prior-dependent |
+| \(t_c\) | \(\sim 10^{-4}\) s | |
+| \(D_L\) | \(\sim 50\) Mpc | Degenerate with \(\iota\) |
+| \(\iota\) | \(\sim 0.3\) rad | |
+| \(\Delta \Omega\) | \(\sim 100\) deg\(^2\) | 2-detector network |</p><h3>12.3 Comparison with Bayesian Inference</h3></p><p>For GW150914, Bayesian PE gives:
+<ul><li>\(\mathcal{M}_c = 28.1^{+0.5}_{-0.5} M_\odot\)</li></ul>
+<ul><li>\(\eta = 0.24^{+0.03}_{-0.02}\)</li></ul>
+<ul><li>\(\chi_{\text{eff}} = -0.07^{+0.17}_{-0.16}\)</li></ul></p><p>Fisher matrix underestimates uncertainties at low SNR and misses prior effects.</p><p>---</p><h2>13. Advanced Topics</h2></p><h3>13.1 Fisher Matrix for Eccentric Binaries</h3></p><p>Eccentricity \(e_0\) enters at high PN orders and through harmonic structure. The Fisher matrix includes derivatives w.r.t. \(e_0\) and mean anomaly \(l_0\).</p><h3>13.2 Fisher Matrix for Tidal Deformability</h3></p><p>For neutron stars, the tidal deformability \(\Lambda\) enters at 5PN order:</p><p><div class="eq">$$
+\psi_{10} \propto -\frac{39}{2} \tilde{\Lambda}
+$$</div></p><p>where \(\tilde{\Lambda}\) is the mass-weighted tidal parameter.</p><p>The derivative \(\partial \Psi/\partial \Lambda \propto f^{5/3}\) (high frequency).</p><h3>13.3 Fisher Matrix for Modified Gravity</h3></p><p>Parametrized post-Einsteinian (ppE) framework:</p><p><div class="eq">$$
+\Psi(f) = \Psi_{\text{GR}}(f) + \beta u^b
+$$</div></p><p>where \(u = (\pi M f)^{1/3}\). Fisher matrix extended to \(\{\beta, b\}\).</p><h3>13.4 Fisher Matrix for Ringdown</h3></p><p>For the ringdown signal (quasinormal modes):</p><p><div class="eq">$$
+h(t) \propto e^{-t/\tau} \cos(2\pi f_0 t + \phi)
+$$</div></p><p>Parameters: \(\{f_0, \tau, A, \phi\}\). Fisher matrix computable analytically.</p><p>---</p><h2>14. Summary of Key Formulas</h2></p><h3>14.1 Fisher Matrix Definition</h3></p><p><div class="eq">$$
+\boxed{\Gamma_{ij} = 4 \Re \int_{f_{\text{low}}}^{f_{\text{high}}} \frac{\partial \tilde{h}^*(f)}{\partial \theta^i} \frac{\partial \tilde{h}(f)}{\partial \theta^j} \frac{df}{S_n(f)}}
+$$</div></p><h3>14.2 Waveform Derivative</h3></p><p><div class="eq">$$
+\boxed{\frac{\partial \tilde{h}}{\partial \theta^i} = \left( \frac{\partial \ln A}{\partial \theta^i} + i \frac{\partial \Psi}{\partial \theta^i} \right) \tilde{h}}
+$$</div></p><h3>14.3 Covariance Matrix</h3></p><p><div class="eq">$$
+\boxed{\Sigma^{ij} = (\Gamma^{-1})^{ij}, \quad \sigma_i = \sqrt{\Sigma^{ii}}}
+$$</div></p><h3>14.4 SNR</h3></p><p><div class="eq">$$
+\boxed{\rho = \sqrt{(h|h)} = \sqrt{4 \int \frac{|\tilde{h}(f)|^2}{S_n(f)} df}}
+$$</div></p><h3>14.5 Degeneracy Directions (Leading Order)</h3></p><p><div class="eq">$$
+\boxed{
+\begin{aligned}
+\mathcal{M}_c &\text{: best constrained (low-freq dominated)} \\
+t_c &\text{: best constrained (high-freq dominated)} \\
+\eta, \chi_{\text{eff}} &\text{: strongly degenerate (same freq scaling)} \\
+D_L, \iota &\text{: degenerate for single detector}
+\end{aligned}
+}
+$$</div></p><p>---</p><h2>15. Conclusion</h2></p><p>The Fisher information matrix provides a fast, analytical tool for forecasting parameter estimation capabilities of GW detectors. While it has limitations (high-SNR, Gaussian approximation), it correctly captures the scaling of uncertainties with SNR, the parameter degeneracies inherent in the waveform structure, and the improvement from detector networks. For precision cosmology and tests of GR, the Fisher matrix remains the workhorse for detector design and data analysis planning.</p><p>---</p><p><em>End of document. All derivations from first principles to final expressions.</em></p>
+</main>
+<footer>Exotic Compact Objects — Premium View</footer>
+</body>
+</html>

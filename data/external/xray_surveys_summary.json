@@ -1,0 +1,96 @@
+{
+  "all_sky_surveys": [
+    {
+      "name": "MAXI/GSC",
+      "band": "2-20 keV",
+      "sensitivity_mCrab": 1,
+      "cadence": "90 min",
+      "catalog": "maxi_gsc"
+    },
+    {
+      "name": "Swift/BAT",
+      "band": "14-195 keV",
+      "sensitivity_mCrab": 0.5,
+      "cadence": "daily",
+      "catalog": "swift_bat"
+    },
+    {
+      "name": "INTEGRAL/IBIS",
+      "band": "17-100 keV",
+      "sensitivity_mCrab": 1,
+      "cadence": "pointed",
+      "catalog": "integral"
+    },
+    {
+      "name": "eROSITA/eRASS",
+      "band": "0.2-8 keV",
+      "sensitivity_mCrab": 0.1,
+      "cadence": "6-month",
+      "catalog": "erosita"
+    }
+  ],
+  "pointed_observatories": [
+    {
+      "name": "NICER",
+      "band": "0.2-12 keV",
+      "area_cm2": 1900,
+      "time_res_ns": 100,
+      "catalog": "nicer"
+    },
+    {
+      "name": "XMM-Newton",
+      "band": "0.2-12 keV",
+      "area_cm2": 4500,
+      "time_res_ms": 1,
+      "catalog": "xmm"
+    },
+    {
+      "name": "Chandra",
+      "band": "0.5-7 keV",
+      "area_cm2": 800,
+      "time_res_s": 0.1,
+      "catalog": "chandra"
+    },
+    {
+      "name": "NuSTAR",
+      "band": "3-79 keV",
+      "area_cm2": 2600,
+      "time_res_us": 2,
+      "catalog": "nustar"
+    },
+    {
+      "name": "HXMT",
+      "band": "1-250 keV",
+      "area_cm2": 5000,
+      "time_res_us": 10,
+      "catalog": "hxmt"
+    }
+  ],
+  "dedicated_catalogs": [
+    {
+      "name": "Liu HMXB",
+      "type": "HMXB",
+      "count": 114,
+      "catalog": "liu_hmxb"
+    },
+    {
+      "name": "Liu LMXB",
+      "type": "LMXB",
+      "count": 187,
+      "catalog": "liu_lmxb"
+    },
+    {
+      "name": "Corbet HMXB",
+      "type": "Be/XRB",
+      "count": 80,
+      "catalog": "corbet_hmxb"
+    },
+    {
+      "name": "BlackCAT",
+      "type": "BH XRB",
+      "count": 60,
+      "catalog": "blackcat_bhxb"
+    }
+  ],
+  "total_catalogs": 12
+}

@@ -1,0 +1,13 @@
+{
+  "model": "thin_ring",
+  "diameter_uas": 51.8,
+  "width_uas": 25,
+  "flux_Jy": 2.4,
+  "asymmetry": 0.15,
+  "position_angle_deg": 150,
+  "inclination_deg": 50,
+  "scattering_major_uas": 20,
+  "scattering_minor_uas": 15,
+  "scattering_pa_deg": 80,
+  "chi2_dof": 1.1
+}

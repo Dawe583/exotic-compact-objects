@@ -1,0 +1,41 @@
+{
+  "source": "M87*",
+  "distance_Mpc": 16.8,
+  "distance_error_Mpc": 0.8,
+  "mass_Msun": 6500000000.0,
+  "mass_error_Msun": 700000000.0,
+  "spin_magnitude": 0.9,
+  "spin_error": 0.1,
+  "inclination_deg": 170,
+  "inclination_error_deg": 10,
+  "position_angle_deg": -110,
+  "position_angle_error_deg": 20,
+  "ring_diameter_uas": 42,
+  "ring_diameter_error_uas": 3,
+  "ring_width_uas": 20,
+  "ring_width_error_uas": 5,
+  "flux_density_Jy": 0.5,
+  "flux_density_error_Jy": 0.1,
+  "spectral_index": -0.5,
+  "observation_date": "2017-04-05/06/10/11",
+  "wavelength_mm": 1.3,
+  "frequency_GHz": 230,
+  "baselines_km": [
+    1000,
+    3000,
+    5000,
+    8000,
+    10000
+  ],
+  "references": [
+    "Event Horizon Telescope Collaboration et al. 2019, ApJL, 875, L1",
+    "Event Horizon Telescope Collaboration et al. 2019, ApJL, 875, L2",
+    "Event Horizon Telescope Collaboration et al. 2019, ApJL, 875, L3",
+    "Event Horizon Telescope Collaboration et al. 2019, ApJL, 875, L4",
+    "Event Horizon Telescope Collaboration et al. 2019, ApJL, 875, L5",
+    "Event Horizon Telescope Collaboration et al. 2019, ApJL, 875, L6",
+    "Event Horizon Telescope Collaboration et al. 2021, ApJ, 910, L12",
+    "Event Horizon Telescope Collaboration et al. 2022, ApJ, 930, L12",
+    "Event Horizon Telescope Collaboration et al. 2024, A&A, 681, A71"
+  ]
+}

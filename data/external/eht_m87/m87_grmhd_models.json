@@ -1,0 +1,37 @@
+[
+  {
+    "model": "SANE",
+    "spin": 0.94,
+    "Rhigh": 160,
+    "beta": 10,
+    "chi2": 1.15
+  },
+  {
+    "model": "MAD",
+    "spin": 0.94,
+    "Rhigh": 40,
+    "beta": 1,
+    "chi2": 1.08
+  },
+  {
+    "model": "SANE",
+    "spin": 0.5,
+    "Rhigh": 160,
+    "beta": 10,
+    "chi2": 1.35
+  },
+  {
+    "model": "MAD",
+    "spin": 0.5,
+    "Rhigh": 40,
+    "beta": 1,
+    "chi2": 1.25
+  },
+  {
+    "model": "MAD",
+    "spin": 0.94,
+    "Rhigh": 10,
+    "beta": 1,
+    "chi2": 1.05
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "linear_polarization_fraction": 0.05,
+  "circular_polarization_fraction": 0.01,
+  "evpa_deg": -45,
+  "evpa_error_deg": 15,
+  "rotation_measure": -500000.0,
+  "rotation_measure_error": 100000.0,
+  "faraday_rotation": true
+}

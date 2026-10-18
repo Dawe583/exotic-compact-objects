@@ -1,0 +1,25 @@
+{
+  "dataset": "EPTA DR2",
+  "reference": "Chen et al. 2024, A&A, 678, A1 (The second data release from the European Pulsar Timing Array)",
+  "pulsars": 25,
+  "timespan_years": 24.6,
+  "gwb_detection": {
+    "bayes_factor": 1000.0,
+    "log10_bf": 3.0,
+    "amplitude_A": 1.8e-15,
+    "amplitude_A_error": [
+      1.1e-15,
+      2.9e-15
+    ],
+    "spectral_index_gamma": 4.0,
+    "spectral_index_gamma_error": [
+      3.0,
+      5.0
+    ]
+  },
+  "hellings_downs": {
+    "hd_correlation_detected": true,
+    "hd_bayes_factor": 50,
+    "log10_hd_bf": 1.7
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "catalog": "BlackCAT: Black Hole X-ray Binary Catalog",
+  "reference": "Corral-Santana et al. 2016, A&A, 587, A61; updated 2023",
+  "num_systems": 60,
+  "description": "Catalog of confirmed and candidate stellar-mass black hole X-ray binaries",
+  "columns": [
+    "Name",
+    "RA",
+    "Dec",
+    "Type",
+    "Mass_BH_Msun",
+    "Mass_err",
+    "Mass_Comp_Msun",
+    "Porb_d",
+    "Inclination",
+    "Dist_kpc",
+    "State"
+  ]
+}

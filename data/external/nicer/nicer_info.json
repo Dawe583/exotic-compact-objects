@@ -1,0 +1,33 @@
+{
+  "catalog": "NICER Master Observation Log",
+  "mission": "NICER (Neutron Star Interior Composition Explorer)",
+  "instrument": "XTI (X-ray Timing Instrument)",
+  "reference": "Gendreau et al. 2016, SPIE, 9905, 99051H",
+  "energy_band": "0.2-12 keV",
+  "effective_area": "~1900 cm^2 at 1.5 keV",
+  "time_resolution": "< 100 ns",
+  "num_observations": 15000,
+  "num_targets": 500,
+  "target_types": [
+    "NS (pulsar)",
+    "NS (LMXB)",
+    "BH XRB",
+    "AGN",
+    "Magnetar",
+    "Calibration"
+  ],
+  "key_science": [
+    "NS mass-radius",
+    "Pulse profiles",
+    "Thermonuclear bursts",
+    "QPOs",
+    "Reverberation"
+  ],
+  "key_papers": [
+    "Gendreau et al. 2016, SPIE, 9905, 99051H (mission)",
+    "Miller et al. 2019, ApJL, 887, L24 (NICER J0030+0451)",
+    "Riley et al. 2019, ApJL, 887, L21 (NICER J0030+0451)",
+    "Bult et al. 2019, ApJL, 887, L23 (burst oscillations)",
+    "Ludlam et al. 2020, ApJ, 897, 1 (reverberation)"
+  ]
+}

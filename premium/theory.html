@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Theory – Exotic Compact Objects</title>
+<title>Theory</title>
 <link rel="stylesheet" href="style.css">
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -13,40 +13,20 @@
 <a href="index.html">Home</a><a href="theory.html">Theory</a><a href="data.html">Data</a><a href="models.html">Models</a><a href="geodesics.html">Geodesics</a><a href="whiteholes.html">White Holes</a><a href="advanced.html">Advanced</a>
 </nav>
 <main>
-<div class="card">
-<h2>General Relativity</h2>
-<div class="eq">$$ds^2 = g_{\mu\nu}dx^\mu dx^\nu$$</div>
-<div class="eq">$$\Gamma^\lambda_{\mu\nu} = \frac12 g^{\lambda\sigma}(\partial_\mu g_{\nu\sigma}+\partial_\nu g_{\mu\sigma}-\partial_\sigma g_{\mu\nu})$$</div>
-<div class="eq">$$G_{\mu\nu}+\Lambda g_{\mu\nu} = \frac{8\pi G}{c^4}T_{\mu\nu}$$</div>
-</div>
-<div class="card">
-<h2>Schwarzschild Black Hole</h2>
-<div class="eq">$$R_s = \frac{2GM}{c^2}$$</div>
-<div class="eq">$$T_H = \frac{\hbar c^3}{8\pi G M k_B}$$</div>
-<div class="eq">$$R_{\rm ISCO}=6R_s$$</div>
-</div>
-<div class="card">
-<h2>Kerr</h2>
-<div class="eq">$$r_+ = \frac{GM}{c^2}(1+\sqrt{1-a^2})$$</div>
-</div>
-<div class="card">
-<h2>Wormhole (Morris-Thorne)</h2>
-<div class="eq">$$ds^2 = -e^{2\Phi}dt^2 + (1-b/r)^{-1}dr^2 + r^2 d\Omega^2$$</div>
-<div class="eq">$$b(r_0)=r_0,\quad b'(r_0)<1$$</div>
-</div>
-<div class="card">
-<h2>White Hole</h2>
-<div class="eq">$$\delta(t)=\delta_0 e^{t/\tau},\quad \tau\sim GM/c^3$$</div>
-</div>
-<div class="card">
-<h2>Hawking & Thermodynamics</h2>
-<div class="eq">$$P\sim \frac{\hbar c^6}{15360\pi G^2 M^2}$$</div>
-<div class="eq">$$\tau\sim \frac{5120\pi G^2 M^3}{\hbar c^4}$$</div>
-<div class="eq">$$S = \frac{k_B c^3 A}{4G\hbar}$$</div>
-</div>
+<div class="card"><h3>Core Theory</h3>
+<ul>
+<li><a href="theory_black_holes.html">Black Hole Theory</a></li>
+<li><a href="theory_wormholes.html">Wormhole Theory</a></li>
+<li><a href="theory_white_holes.html">White Hole Theory</a></li>
+</ul></div>
+<div class="card"><h3>Advanced Theory</h3>
+<ul>
+<li><a href="theory_christoffel_kerr.html">Christoffel Symbols (Kerr)</a></li>
+<li><a href="theory_geodesic_equations.html">Geodesic Equations</a></li>
+<li><a href="theory_raychaudhuri.html">Raychaudhuri Equation</a></li>
+<li><a href="theory_fisher_matrix.html">Fisher Matrix (GW)</a></li>
+</ul></div>
 </main>
-<footer>Theory in LaTeX</footer>
+<footer>Theory index</footer>
 </body>
 </html>
-EOF
-echo done

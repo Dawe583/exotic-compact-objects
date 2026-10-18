@@ -1,0 +1,23 @@
+{
+  "note": "The SXS catalog is now a JavaScript-based web app at https://data.black-holes.org/simulations/",
+  "python_package": "sxs",
+  "installation": "pip install sxs",
+  "basic_usage": "\nimport sxs\n\n# List available simulations\nsims = sxs.BBH.catalog()\nprint(sims)\n\n# Load a specific simulation\nw = sxs.load(\"SXS:BBH:0305/Lev/rhOverM_Asymptotic_GeometricUnits_CoM.h5\")\n# Or use the sxs.Waveform class\nwaveform = sxs.Waveform(\"SXS:BBH:0305\", extrapolation_order=\"Extrapolated_N4\")\n",
+  "waveform_formats": [
+    "HDF5 files with datasets for each (l,m) mode",
+    "Extrapolation orders: N=2,3,4 + OutermostExtraction",
+    "Resolutions: Lev1, Lev2, Lev3 (higher = more accurate)",
+    "Center-of-mass corrected (CoM) versions recommended"
+  ],
+  "key_papers": [
+    "SXS Catalog 2019: arXiv:1904.04831 (PRD)",
+    "SXS Catalog 2013: arXiv:1304.6077 (PRD)",
+    "Waveform accuracy: arXiv:1509.00862, arXiv:1904.04842",
+    "Gravitational-wave memory: arXiv:2011.01309"
+  ],
+  "data_access": {
+    "website": "https://data.black-holes.org/simulations/",
+    "zenodo": "https://zenodo.org/communities/sxs-waveforms",
+    "globus": "Available for bulk download via Globus"
+  }
+}

@@ -32,7 +32,7 @@ exotic-compact-objects/
 │   ├── 16_yt_cosmology.ipynb
 │   ├── 17_gw_analysis.ipynb
 │   ├── 18_ml_astronomy.ipynb
-│   └── 19_gw_strain_analysis.ipynb
+│   ├── 19_gw_strain_analysis.ipynb
 │   ├── 20_gwtc_remnant_catalog.ipynb
 │   └── 21_agn_mass_catalog.ipynb
 ├── scripts/          # download + build scripts
@@ -68,7 +68,7 @@ Outputs: `premium/figures/gwtc_recent_20_remnants.html` and exploration notebook
 
 ## AGN reverberation-mapping mass sample
 
-`data/processed/agn_reverberation_masses.csv` normalizes the local 86-row AGN compilation; 70 entries have numeric log-mass estimates. It retains positions, redshift, original log-mass errors and converted asymmetric linear-mass offsets. Run `/home/dawe/Projects/astro-science/.venv/bin/python scripts/build_agn_reverberation_dashboard.py` to regenerate `premium/figures/agn_reverberation_catalog.html`; see `notebooks/21_agn_mass_catalog.ipynb`. Reported uncertainties are transformed as $\Delta M_-=M(1-10^{-\sigma_-})$ and $\Delta M_+=M(10^{\sigma_+}-1)$, where the catalogue error columns are dex offsets. The literature compilation is heterogeneous and not selection-corrected; use descriptive plots only unless selection and measurement systematics are modeled.
+`data/processed/agn_reverberation_masses.csv` normalizes the local 86-row AGN compilation; 70 entries have numeric log-mass estimates. It retains positions, redshift, original log-mass errors and converted asymmetric linear-mass offsets. Run `/home/dawe/Projects/astro-science/.venv/bin/python scripts/build_agn_reverberation_dashboard.py` to regenerate `premium/figures/agn_reverberation_catalog.html`; see `notebooks/21_agn_mass_catalog.ipynb`. Reported uncertainties are transformed as $\Delta M_-=M(1-10^{-\sigma_-})$ and $\Delta M_+=M(10^{\sigma_+}-1)$, where the catalogue error columns are dex offsets. The literature compilation is heterogeneous and not selection-corrected; use descriptive plots only unless selection and measurement systematics are modeled. Both processed catalogs also include Astropy-derived Schwarzschild radius, Eddington luminosity (using the conventional 1.26×10^38 erg/s per solar mass scaling), and Schwarzschild Hawking temperature. These are model-derived reference quantities, not directly observed measurements; the Hawking temperature is formal for astrophysical holes and ignores accretion/environmental effects. Recompute with `scripts/add_bh_derived_quantities.py` using the project's Astropy environment.
 
 ## Models implemented
 

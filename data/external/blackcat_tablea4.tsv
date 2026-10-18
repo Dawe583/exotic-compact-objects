@@ -1,0 +1,84 @@
+#
+#   VizieR Astronomical Server vizier.cds.unistra.fr
+#    Date: 2026-10-18T22:32:28 [V7.6.1]
+#   In case of problem, please report to:	cds-question@unistra.fr
+#
+#
+#Coosys	J2000:	eq_FK5 J2000
+#INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
+#INFO	request_date=2026-10-18T22:32:28	  Query execution date
+#INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/A%2BA/587/A61/tablea4&-out.all	  Full request URL
+#INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
+#INFO	server_software=VizieR/7.6.1	  Software version
+#INFO	publisher=CDS	  Data centre that produced the VOTable
+#INFO	MaxTuples=50000	
+
+#RESOURCE=yCat_35870061
+#Name: J/A+A/587/A61
+#Title: BlackCAT, stellar-mass BH in X-ray trans. (Corral-Santana+, 2016)
+#INFO	ivoid=ivo://cds.vizier/j/a+a/587/a61	    IVOID of underlying data collection
+#INFO	data_ivoid=ivo://cds.vizier/j/a+a/587/a61	    IVOID of underlying data collection
+#INFO	creator=Corral-Santana J.M.	    First author or institution
+#INFO	cites=bibcode:2016A&A...587A..61C	    Article or Data origin sources
+#INFO	journal=A&A	    Journal name
+#INFO	original_date=2016	    Year of the article publication
+#INFO	reference_url=https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A+A/587/A61	    Dataset landing page
+#INFO	citation=doi:10.26093/cds/vizier.35870061	    Dataset identifier that can be used for citation
+#INFO	publication_date=2017-12-22	    Date of first publication in the data centre
+#INFO	rights_uri=https://cds.unistra.fr/vizier-org/licences_vizier.html	    Licence URI
+#Table	J_A_A_587_A61_tablea4:
+#Name: J/A+A/587/A61/tablea4
+#Title: Dynamical parameters of the sample of dynamical black holes
+#Column	recno	(I8)	Record number assigned by the VizieR team. Should Not be used for identification.	[ucd=meta.record]
+#Column	Name	(a18)	Name of the dynamical black hole	[ucd=meta.id;pos.parallax.dyn]
+#Column	n_Name	(A1)	[+] Note on Name (1)	[ucd=meta.note]
+#Column	Ctp	(A10)	counterpart name	[ucd=meta.id;meta.main]
+#Column	SpType	(A7)	MK spectral type of the companion star	[ucd=src.spType]
+#Column	Porb	(F11.7)	Orbital period	[ucd=time.period]
+#Column	e_Porb	(F10.7)	rms uncertainty on Porb	[ucd=stat.error]
+#Column	l_K2	(A1)	Limit flag on K2	[ucd=meta.code.error]
+#Column	K2	(F5.1)	Secondary star's radial velocity amplitude	[ucd=spect.dopplerVeloc]
+#Column	e_K2	(F4.1)	rms uncertainty on K2	[ucd=stat.error]
+#Column	f(M1)	(F5.2)	Mass function	[ucd=phys.mass]
+#Column	e_f(M1)	(F5.2)	rms uncertainty on f(M1)	[ucd=stat.error]
+#Column	l_M1	(A2)	[=<> ~] Limit flag on M1	[ucd=meta.code.error]
+#Column	M1	(F5.2)	Mass of the black hole	[ucd=phys.mass]
+#Column	E_M1	(F4.1)	? Error on M1 (upper value)	[ucd=stat.error;stat.max]
+#Column	e_M1	(F4.1)	? Error on M1 (lower value)	[ucd=stat.error]
+#Column	M1u	(F4.1)	? Upper value of M1 interval	[ucd=phys.mass]
+#Column	l_q	(A2)	[=>< ~] Limit flag on q	[ucd=meta.code.error]
+#Column	q	(F6.3)	? Binary mass ratio	[ucd=phys.mass]
+#Column	E_q	(F6.3)	? Error on q (upper value)	[ucd=stat.error;stat.max]
+#Column	e_q	(F6.3)	? Error on q (lower value)	[ucd=stat.error]
+#Column	qu	(F6.3)	? Upper value of q interval	[ucd=phys.mass;arith.ratio]
+#Column	l_i	(A2)	[~><= ] Limit flag on i	[ucd=meta.code.error]
+#Column	i	(F4.1)	? Inclination angle of the system	[ucd=src.orbital.inclination;pos.posAng]
+#Column	e_i	(F4.1)	? rms uncertainty on i	[ucd=stat.error]
+#Column	iu	(I2)	? Upper value of i interval	[ucd=src.orbital.inclination]
+#Column	l_vrotsini	(A2)	[<= ] Limti flag on vrotsini	[ucd=meta.code.error]
+#Column	vrotsini	(F5.1)	? Rotational velocity, v_rot_*sini	[ucd=phys.veloc.rotat]
+#Column	E_vrotsini	(F4.1)	? Error on vrotsini (upper value)	[ucd=stat.error;stat.max]
+#Column	e_vrotsini	(F4.1)	? Error on vrotsini (lower value)	[ucd=stat.error]
+#Column	Ref	(a88)	References, in refs.dat file	[ucd=meta.ref;meta.file]
+recno	Name	n_Name	Ctp	SpType	Porb	e_Porb	l_K2	K2	e_K2	f(M1)	e_f(M1)	l_M1	M1	E_M1	e_M1	M1u	l_q	q	E_q	e_q	qu	l_i	i	e_i	iu	l_vrotsini	vrotsini	E_vrotsini	e_vrotsini	Ref
+ 	 	 	 	 	h	h	 	km/s	km/s	Msun	Msun	 	Msun	Msun	Msun	Msun	 	 	 	 	 	 	deg	deg	deg	 	km/s	km/s	km/s	
+--------	------------------	-	----------	-------	-----------	----------	-	-----	----	-----	-----	--	-----	----	----	----	--	------	------	------	------	--	----	----	--	--	-----	----	----	----------------------------------------------------------------------------------------
+       1	SWIFT J1357.2-0933	+	          	M2-4V  	  2.8000000	 0.3000000	 	967.0	49.0	11.00	 2.10	> 	 8.90	    	    	    	~ 	 0.040	      	      	      	~ 	90.0	    	  	  	     	    	    	Corral-Santana2013;MataSanchez2015
+       2	XTE J1650-500     	 	          	~K4V   	  7.6900000	 0.0200000	 	435.0	30.0	 2.70	 0.60	<=	 7.30	    	    	    	  	      	      	      	      	> 	47.0	    	  	  	     	    	    	Orosz2004
+       3	XTE J1118+480     	 	          	K7-M1V 	  4.0784140	 0.0000050	 	709.0	 1.0	 6.27	 0.04	  	 6.90	    	    	 8.2	  	 0.024	 0.009	 0.009	      	  	68.0	    	79	  	 96.0	 3.0	11.0	Khargharia2013;Torres2004;GonzalezHernandez2008;Calvelo2009
+       4	XTE J1859+226     	 	V406 Vul  	~K5V   	  6.5800000	 0.0500000	 	541.0	70.0	 4.50	 0.60	> 	 5.42	    	    	    	  	      	      	      	      	< 	70.0	    	  	  	     	    	    	Corral-Santana2011
+       5	SAX J1819.3-2525  	 	V4641 Sgr 	B9III  	 67.6152000	 0.0002000	 	211.0	 3.0	 2.70	 0.10	  	 6.40	 0.6	 0.6	    	  	 0.630	      	      	 0.700	  	72.0	 4.0	  	  	100.9	 0.8	 0.8	Orosz2001;MacDonald2014
+       6	XTE J1550-564     	 	          	K2-K4IV	 37.0088000	 0.0001000	 	363.0	 6.0	 7.65	 0.38	  	 7.81	    	    	15.6	~~	 0.030	      	      	      	  	75.0	 4.0	  	  	 55.0	 5.0	 5.0	Orosz2002;Orosz2011b
+       7	GRO J1655-40      	 	N.  Sco 94	F6IV   	 62.9200000	 0.0030000	 	226.1	 0.8	 2.73	 0.09	  	 6.00	 0.4	 0.4	    	  	 0.420	 0.030	 0.030	      	  	69.0	 2.0	  	  	 86.0	 3.3	 3.6	Orosz1997;VanDerHooft1998;Shahbaz1999;Shahbaz2003;Beer2002;GonzalezHernandez2008a
+       8	GRS 1009-45       	 	N.  Vel 93	K7-M0V 	  6.8449000	 0.0003000	 	475.0	 6.0	 3.20	 0.10	>~	 4.40	    	    	    	  	 0.140	 0.020	 0.020	      	  	37.0	    	80	  	     	    	    	Filippenko1999;Shahbaz1996
+       9	GRS 1915+105      	 	V1487 Aql 	K1-5III	812.0000000	 4.0000000	 	126.0	 1.0	 7.00	 0.20	  	10.10	 0.6	 0.6	    	  	 0.042	 0.024	 0.024	      	  	66.0	 2.0	  	  	 21.0	 4.0	 4.0	Harlaftis2004;Steeghs2013;Fender1999
+      10	GRO J0422+32      	 	          	M4-5V  	  5.0941850	 0.0000050	 	378.0	16.0	 1.19	 0.02	  	 2.00	    	    	15.0	  	 0.110	 0.050	 0.020	      	  	10.0	    	50	  	 90.0	22.0	27.0	Webb2000;Casares1995c;Beekman1997;Harlaftis1999
+      11	GRS 1124-684      	 	N.  Mus 91	K3-5V  	 10.3825400	 0.0000700	 	406.0	 7.0	 3.00	 0.20	  	 3.80	    	    	 7.5	  	 0.090	      	      	 0.170	  	39.0	    	65	  	106.0	13.0	13.0	Orosz1996;Shahbaz1997;Gelino2001a;Gelino2001;Casares1997
+      12	GS 2023+338       	 	V404 Cyg  	K3III  	155.3110000	 0.0020000	 	208.5	 0.7	 6.08	 0.06	  	 9.00	 0.2	 0.6	    	  	 0.055	      	      	 0.064	  	52.0	    	80	  	 39.0	 1.0	 1.0	Wagner1992;Casares1992;Casares1993;Casares1994;Shahbaz1994b;Khargharia2010
+      13	GS 2000+251       	 	QZ Vul    	K3-7V  	  8.2580950	 0.0000050	 	520.0	 5.0	 5.00	 0.10	  	 5.50	    	    	 8.8	  	 0.040	 0.010	 0.010	      	  	54.0	    	60	  	 86.0	 8.0	 8.0	Charles1991;Casares1995a;Harlaftis1996;Ioannou2004
+      14	GS 1354-64        	 	BW Cir    	G5III  	 61.0680000	 0.0020000	 	279.0	 5.0	 5.70	 0.30	>=	 7.60	 0.7	 0.7	    	  	 0.120	 0.030	 0.040	      	<=	79.0	    	  	  	 69.0	 8.0	 8.0	Casares2004;Casares2009
+      15	H 1705-250        	 	N.  Oph 77	K3-M0V 	 12.5100000	 0.0300000	 	448.0	 4.0	 4.90	 0.10	  	 4.90	    	    	 7.9	<=	 0.053	      	      	      	  	48.0	    	80	<=	 79.0	    	    	Remillard1996;Filippenko1997;Harlaftis1997;Martin1995
+      16	3A 0620-003       	 	          	K2-7V  	  7.7523372	 0.0000002	 	437.0	 2.0	 2.79	 0.04	  	 6.60	 0.3	 0.3	    	  	 0.074	 0.006	 0.006	      	  	51.0	 0.9	  	  	     	    	    	Cantrell2010;Orosz1994;GonzalezHernandez2010
+      17	1H 1659-487       	 	GX 339-4  	>GIV   	 42.1400000	 0.0100000	>	317.0	10.0	 5.80	 0.50	> 	 6.00	    	    	    	<=	 0.125	      	      	      	  	    	    	  	  	     	    	    	Hynes2003;Hynes2004; Munoz-Darias2008
+      18	4U 1543-475       	 	IL Lup    	A2V    	 26.7937700	 0.0000700	 	124.0	 4.0	 0.25	 0.01	  	 8.40	    	    	10.4	  	 3.200	      	      	 4.000	  	20.7	 1.5	  	  	 46.0	 2.0	 2.0	Orosz1998;Orosz2003
+

@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\title{Exotic Compact Objects: Black Holes, Wormholes, White Holes}
+\begin{document}
+\maketitle
+
+\section{General Relativity}
+$$ds^2 = g_{\mu\nu} dx^\mu dx^\nu$$
+$$\Gamma^\lambda_{\mu\nu} = \frac12 g^{\lambda\sigma}(\partial_\mu g_{\nu\sigma}+\partial_\nu g_{\mu\sigma}-\partial_\sigma g_{\mu\nu})$$
+$$G_{\mu\nu}+\Lambda g_{\mu\nu}=\frac{8\pi G}{c^4}T_{\mu\nu}$$
+
+\section{Schwarzschild Black Hole}
+$$R_s=\frac{2GM}{c^2}$$
+$$T_H=\frac{\hbar c^3}{8\pi G M k_B}$$
+$$R_{\rm ISCO}=6R_s$$
+
+\section{Kerr}
+$$r_+=\frac{GM}{c^2}(1+\sqrt{1-a^2})$$
+
+\section{White Holes}
+$$\delta(t)=\delta_0 e^{t/\tau},\quad \tau\sim GM/c^3$$
+
+\section{Wormholes (Morris-Thorne)}
+$$ds^2=-e^{2\Phi}dt^2+(1-b/r)^{-1}dr^2+r^2 d\Omega^2$$
+$$b(r_0)=r_0,\quad b'(r_0)<1$$
+
+\section{Hawking}
+$$P\sim \frac{\hbar c^6}{15360\pi G^2 M^2},\quad \tau\sim \frac{5120\pi G^2 M^3}{\hbar c^4}$$
+$$S=\frac{k_B c^3 A}{4G\hbar}$$
+
+\end{document}
+EOF
+git add theory.tex && git commit -m "Add theory.tex LaTeX source" && git push 2>&1 | tail -3

@@ -1,0 +1,17 @@
+:root { --bg:#0b0f1a; --card:#121826; --accent:#4f8cff; --text:#e6e9f0; --muted:#9aa4bf; }
+* { box-sizing:border-box; }
+body { margin:0; font-family: 'Inter', -apple-system, sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+header { padding:24px; background:linear-gradient(135deg,#1a2340,#0b0f1a); border-bottom:1px solid #1f2a44; }
+header h1 { margin:0; color:var(--accent); }
+nav { display:flex; gap:12px; flex-wrap:wrap; padding:12px 24px; background:#0e1322; border-bottom:1px solid #1f2a44; position:sticky; top:0; z-index:10; }
+nav a { color:var(--text); text-decoration:none; padding:8px 14px; border-radius:8px; background:#1a2340; }
+nav a:hover { background:var(--accent); color:#fff; }
+main { max-width:1100px; margin:0 auto; padding:32px 24px; }
+.card { background:var(--card); border:1px solid #1f2a44; border-radius:16px; padding:24px; margin:24px 0; box-shadow:0 8px 32px rgba(0,0,0,.35); }
+h2 { color:var(--accent); }
+h3 { color:#7cf; }
+iframe { width:100%; height:460px; border:none; border-radius:12px; }
+.eq { background:#0e1322; padding:12px 16px; border-radius:8px; overflow-x:auto; margin:12px 0; }
+footer { text-align:center; padding:24px; color:var(--muted); font-size:13px; }
+a.btn { display:inline-block; margin-top:8px; padding:8px 14px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; }
+```<|end|><|start|>write to=assistant<|channel|>analysis<|message|>Created file successfully: research/projects/exotic-compact-objects/premium/style.css

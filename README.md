@@ -48,3 +48,11 @@ python scripts/make_notebook2.py
 
 White holes and wormholes are hypothetical; no direct observational evidence. Models are pedagogical first-pass.
 ```
+## GitHub Pages (online čtení)
+
+Složka `docs/` obsahuje HTML export všech notebooků. Na GitHubu:
+1. Vytvořte nový repozitář a pushněte tento projekt.
+2. Settings → Pages → Source: `Deploy from a branch` → Branch `main` → Folder `/docs`.
+3. Po pár minutách bude dostupné na `https://<user>.github.io/<repo>/`.
+
+Lokálně lze otevřít `docs/index.html`.

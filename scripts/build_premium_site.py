@@ -639,6 +639,8 @@ def shell(
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <title>{esc(title)} · {SITE_NAME}</title>
 <meta name="description" content="{esc(description)}">
 <meta name="author" content="Astro Science">
@@ -1293,6 +1295,8 @@ def build_portal(stats: dict) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#05070d">
+<link rel="icon" href="premium/assets/favicon.svg" type="image/svg+xml">
 <title>Exotic Compact Objects · Research portal</title>
 <meta name="description" content="Research portal: compact objects, gravitational waves, theory and executable notebooks.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1399,11 +1403,24 @@ def publish(stats: dict) -> None:
         shutil.copy2(path, target / path.name)
     shutil.copy2(SITE / "style.css", target / "style.css")
     shutil.copy2(SITE / "assets/site.js", target / "assets/site.js")
+    shutil.copy2(SITE / "assets/favicon.svg", target / "assets/favicon.svg")
     for path in FIG.glob("*.html"):
         dest = target / "figures" / path.name
         if not dest.exists() or dest.stat().st_size != path.stat().st_size:
             shutil.copy2(path, dest)
 
+    base = "https://dawe583.github.io/exotic-compact-objects/premium/"
+    urls = sorted(p.name for p in SITE.glob("*.html"))
+    sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
+               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for name in urls:
+        sitemap.append(f"  <url><loc>{base}{name}</loc><lastmod>{BUILD_DATE}</lastmod></url>")
+    sitemap.append("</urlset>")
+    (SITE / "sitemap.xml").write_text("\n".join(sitemap), encoding="utf-8")
+    (SITE / "robots.txt").write_text(
+        "User-agent: *\nAllow: /\nSitemap: " + base + "sitemap.xml\n", encoding="utf-8")
+    shutil.copy2(SITE / "sitemap.xml", target / "sitemap.xml")
+    shutil.copy2(SITE / "robots.txt", target / "robots.txt")
     (PROJECT / "docs/index.html").write_text(build_portal(stats), encoding="utf-8")
     print(f"Published to {target} and docs/index.html")
 

@@ -1,0 +1,275 @@
+{
+  "fetched_utc": "2026-10-19T19:59:34.356816+00:00",
+  "symbolic": [
+    {
+      "name": "schwarzschild_ricci_flat",
+      "description": "Static spherically symmetric vacuum metric is Ricci-flat (Einstein's vacuum equations)",
+      "formula": "ds^2 = -exp(2phi) dt^2 + exp(-2phi) dr^2 + r^2 dOmega^2, phi = ln(1-2m/r)/2",
+      "checks": [
+        {
+          "label": "Gamma^t_{tr} = dPhi/dr (static, diagonal metric)",
+          "ok": true
+        },
+        {
+          "label": "R_tt = 0",
+          "ok": true
+        },
+        {
+          "label": "R_rr = 0",
+          "ok": true
+        },
+        {
+          "label": "R_theta theta = 0",
+          "ok": true
+        },
+        {
+          "label": "R_phi phi = 0",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "photon_sphere",
+      "description": "Photon sphere and critical impact parameter for a Schwarzschild BH",
+      "formula": "b_c^2 = r^2/(1 - 2m/r) minimised at r = 3m -> b_c = 3 sqrt(3) m",
+      "checks": [
+        {
+          "label": "db2/dr -> (critical) r = 3m",
+          "ok": true
+        },
+        {
+          "label": "b^2 has a minimum at r = 3m",
+          "ok": true
+        },
+        {
+          "label": "b_c = 3 sqrt(3) m",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "isco_schwarzschild",
+      "description": "Innermost stable circular orbit radius from the effective potential",
+      "formula": "V_eff = (1-2m/r)(1+L^2/r^2); dV/dr = 0, d^2V/dr^2 = 0 -> r_ISCO = 6m",
+      "checks": [
+        {
+          "label": "circular orbit: L^2 = m r^2/(r - 3m)",
+          "ok": true
+        },
+        {
+          "label": "ISCO radius r = 6m",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "kerr_horizons_ergosphere",
+      "description": "Kerr horizons (Delta = 0) and ergosphere (g_tt = 0) boundaries",
+      "formula": "r +/- = m +/- sqrt(m^2 - a^2); r_ergo(theta) = m + sqrt(m^2 - a^2 cos^2 theta)",
+      "checks": [
+        {
+          "label": "horizons r +/- = m +/- sqrt(m^2 - a^2)",
+          "ok": true
+        },
+        {
+          "label": "ergosphere r_ergo(theta) = m + sqrt(m^2 - a^2 cos^2 theta)",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "morris_thorne_exotic_density",
+      "description": "Morris-Thorne wormhole exotic density and flare-out condition",
+      "formula": "rho(r) = b'(r)/(8 pi G r^2); with b(r) = b0^2/r -> rho = -b0^2/(8 pi G r^4) < 0",
+      "checks": [
+        {
+          "label": "rho = - b0^2/(8 pi G r^4)",
+          "ok": true
+        },
+        {
+          "label": "rho < 0 for all r (r > b0)",
+          "ok": true
+        },
+        {
+          "label": "flare-out b'(r0) = -1 < 1",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "eddington_luminosity",
+      "description": "Eddington luminosity from radiation-pressure/gravity balance on hydrogen",
+      "formula": "L sigma_T/(4 pi r^2 c) = G M m_p/r^2  ->  L_Edd = 4 pi G M m_p c/sigma_T",
+      "checks": [
+        {
+          "label": "L_Edd = 4 pi G M m_p c / sigma_T",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "hawking_temperature",
+      "description": "Hawking temperature from surface gravity kappa = c^4/(4GM)",
+      "formula": "T_H = hbar kappa/(2 pi k_B c), kappa = c^4/(4GM)",
+      "checks": [
+        {
+          "label": "T_H = hbar c^3/(8 pi G M k_B)",
+          "ok": true
+        },
+        {
+          "label": "entropy from kappa -> area law S = k_B A/(4 l_P^2)",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "friedmann_continuity",
+      "description": "Friedmann + acceleration equations imply the continuity equation",
+      "formula": "rho_dot + 3 H (rho + p/c^2) = 0",
+      "checks": [
+        {
+          "label": "Friedmann differentiated = 2H dH/dt (mechanics identity)",
+          "ok": true
+        },
+        {
+          "label": "rho_dot + 3 H (rho + p/c^2) = 0 (continuity equation)",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "light_deflection",
+      "description": "First-order light deflection by a Schwarzschild BH",
+      "formula": "delta = 4 G M /(c^2 b)",
+      "checks": [
+        {
+          "label": "delta/b = 4m/b^2 for m/b << 1 (numerical probe)",
+          "ok": null
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "gw_time_to_coalescence",
+      "description": "Time-to-coalescence for a circular binary, leading order in 1/c",
+      "formula": "t(f) = (5/256) (G M_c / c^3)^{-5/3} (pi f)^{-8/3}",
+      "checks": [
+        {
+          "label": "dE/df = - (pi/3) (pi f)^{-1/3} G^{2/3} M_c^{5/3}",
+          "ok": true
+        },
+        {
+          "label": "t(f) = (5/256)(G M_c/c^3)^{5/3} (pi f)^{-8/3}",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "kerr_isco_spin",
+      "description": "Bardeen-Press-Teukolsky ISCO formula and its spin limits",
+      "formula": "r_ISCO/M = 3 + Z2 - sqrt((3-Z1)(3+Z1+2 Z2)) for prograde a in [0,1]",
+      "checks": [
+        {
+          "label": "limit a -> 0 equals 6 (Schwarzschild)",
+          "ok": true
+        },
+        {
+          "label": "limit a -> 1 equals 1 (extremal)",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "penrose_efficiency",
+      "description": "Maximum Penrose-process efficiency",
+      "formula": "eta = 1 - E_out/M with E_out = M / sqrt(2)",
+      "checks": [
+        {
+          "label": "eta_max = 1 - 1/sqrt(2) \u2248 29.29 %",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    },
+    {
+      "name": "shadow_diameter",
+      "description": "BH shadow diameter in Schwarzschild spacetime",
+      "formula": "D_sh = 2 b_c = 2 sqrt(27) G M / c^2 \u2248 10.39 GM/c^2",
+      "checks": [
+        {
+          "label": "b_c = 3 sqrt(3) m (critical impact parameter)",
+          "ok": true
+        },
+        {
+          "label": "D_shadow = 2 b_c = 6 sqrt(3) m = 2 sqrt(27) GM/c^2",
+          "ok": true
+        }
+      ],
+      "all_ok": true
+    }
+  ],
+  "numeric": [
+    {
+      "label": "Eddington luminosity: analytic vs astropy constants (1 Msun)",
+      "value_w": 1.2570651866472896e+31,
+      "reference_w": 1.2570651866472896e+31,
+      "relative_deviation": 0.0,
+      "pass": "True"
+    },
+    {
+      "label": "Hawking temperature of a 1 Msun Schwarzschild BH",
+      "value_k": 6.170260410964976e-08,
+      "reference_k": 6.1e-08,
+      "relative_deviation": 0.0115181001581928,
+      "pass": "True"
+    },
+    {
+      "label": "Kerr ISCO a=0 equals 6 GM/c^2; prograde r(a=0.9) < r(a=0)",
+      "value_km_a0": 8.859750228300749,
+      "relative_deviation_a0": 0.0,
+      "value_km_a09": 3.427074009851536,
+      "pass": "True"
+    },
+    {
+      "label": "Time to coalescence: df/dt ODE integration vs closed form (30 Hz -> 1 kHz, Mc=1.219 Msun)",
+      "t_ode_s": 53.523837305584884,
+      "t_closed_s": -53.52383730562342,
+      "relative_deviation": -1.99999999999928,
+      "pass": true
+    },
+    {
+      "label": "EHT shadow angular diameter check (M87*)",
+      "value_uas": 39.68814208100898,
+      "reference_uas": 42.0,
+      "relative_deviation": 0.05504423616645277,
+      "pass": "True"
+    },
+    {
+      "label": "EHT shadow angular diameter check (Sgr A*)",
+      "value_uas": 53.27148613771999,
+      "reference_uas": 52.5,
+      "relative_deviation": 0.014694974051809324,
+      "pass": "True"
+    },
+    {
+      "label": "Light deflection: geodesic integration vs analytic deflection",
+      "impact_parameter_m": 40.0,
+      "delta_integrated_rad": 0.10802407654079538,
+      "delta_first_order_rad": 0.1,
+      "delta_second_order_rad": 0.007363107781851077,
+      "relative_deviation_vs_first_order": 0.08024076540795372,
+      "relative_deviation_vs_analytic_including_2nd_order": 0.006156386235459056,
+      "pass": true
+    }
+  ]
+}

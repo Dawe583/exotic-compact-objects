@@ -1,17 +1,18 @@
 #
 #   VizieR Astronomical Server vizier.cds.unistra.fr
-#    Date: 2026-10-18T22:37:07 [V7.6.1]
+#    Date: 2026-10-20T19:59:53 [V7.6.1]
 #   In case of problem, please report to:	cds-question@unistra.fr
 #
 #
 #Coosys	J2000:	eq_FK5 J2000
 #INFO	service_protocol=ASU	  IVOID of the protocol through which the data was retrieved
-#INFO	request_date=2026-10-18T22:37:07	  Query execution date
+#INFO	request_date=2026-10-20T19:59:54	  Query execution date
 #INFO	request=https://vizier.cds.unistra.fr/viz-bin/asu-tsv?-source=J/A%2BA/587/A61/tablea3&-out.all	  Full request URL
 #INFO	contact=cds-question@unistra.fr	  Email or URL to contact publisher
 #INFO	server_software=VizieR/7.6.1	  Software version
 #INFO	publisher=CDS	  Data centre that produced the VOTable
-#INFO	MaxTuples=50000
+#INFO	MaxTuples=50000	
+
 #RESOURCE=yCat_35870061
 #Name: J/A+A/587/A61
 #Title: BlackCAT, stellar-mass BH in X-ray trans. (Corral-Santana+, 2016)
@@ -62,41 +63,42 @@
 #Column	n_Jmag	(A1)	[*] note on JHK magnitude	[ucd=meta.note]
 #Column	Refs	(a33)	References (in refs.dat file)	[ucd=meta.ref;pos.frame]
 recno	Name	n_Name	Ctp	Bband	l_Bband	Bmag	e_Bmag	n_Bmag	Gband	l_Gmag	Gmag	e_Gmag	Rband	l_Bmag	Rmag	e_Rmag	IRband	l_IRmag	IRmag	e_IRmag	l_Jmag	Jmag	e_Jmag	l_Hmag	Hmag	e_Hmag	Kbnas	l_Kmag	Kmag	e_Kmag	n_Jmag	Refs
-mag	mag	 	 	 	mag	mag	 	 	mag	mag	 	 	mag	mag	 	mag	mag	 	mag	mag	 	 	mag	mag
+ 	 	 	 	 	 	mag	mag	 	 	 	mag	mag	 	 	mag	mag	 	 	mag	mag	 	mag	mag	 	mag	mag	 	 	mag	mag	 	
 --------	------------------	-	-----------------	---	-	-----	-----	-	--	-	-----	-----	--	-	-----	-----	--	-	-----	-----	-	-----	-----	-	-----	-----	--	-	-----	-----	-	---------------------------------
-1	SWIFT J1357.2-0933	+	                 	u' 	=	23.12	 0.04	 	g'	=	22.30	 0.40	r'	=	21.50	 0.40	i'	=	21.20	 0.40	=	20.51	 0.06	=	20.07	 0.05	Ks	=	20.09	 0.05	 	Shahbaz2013
-2	SWIFT J1357.2-0933	 	                 	   	 	     	     	 	g'	=	22.29	 0.08	r'	=	21.71	 0.08	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	MataSanchez2015,ArmasPadilla2014a
-3	XTE J1650-500     	 	                 	   	 	     	     	 	V 	~	24.00	     	R 	~	22.00	     	I 	>	19.30	     	 	     	     	 	     	     	  	 	     	     	 	Garcia2002,Curran2012
-4	XTE J1118+480     	 	                 	B  	=	20.04	     	 	V 	=	19.61	     	R 	=	19.05	     	  	 	     	     	=	19.52	     	=	19.10	     	Ks	=	18.45	     	 	Gelino2006
-5	XTE J1118+480     	 	                 	   	 	     	     	 	g'	=	21.00	 0.30	  	 	     	     	i'	=	19.00	 0.20	 	     	     	 	     	     	  	 	     	     	 	Shahbaz2005
-6	XTE J1859+226     	 	(V406Vul)        	   	 	     	     	 	V 	=	23.25	 0.09	R 	=	22.54	 0.07	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Zurita2002
-7	XTE J1859+226     	 	                 	   	 	     	     	 	  	 	     	     	  	 	     	     	  	 	     	     	=	20.97	 0.03	=	20.68	 0.05	Ks	=	20.94	 0.35	 	Gelino2010
-8	SAX J1819.3-2525  	 	(V4641Sgr)       	B  	~	13.91	 0.04	 	V 	~	13.66	 0.03	  	 	     	     	I 	~	13.52	 0.03	=	14.86	 0.05	~	14.23	 0.05	K 	~	12.83	 0.05	*	MacDonald2014
-9	SAX J1819.3-2525  	 	                 	   	 	     	     	 	V 	=	13.96	 0.02	R 	=	13.73	 0.02	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Orosz2001
-10	XTE J1550-564     	 	                 	   	 	     	     	 	V 	=	22.00	 0.20	  	 	     	     	i 	=	19.04	 0.03	 	     	     	=	17.60	 0.10	  	 	     	     	 	Calvelo2010,Jain2001
-11	XTE J1550-564     	 	                 	   	 	     	     	 	B 	>	23.80	 0.10	V 	=	22.00	 0.40	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Orosz2002
-12	XTE J1550-564     	 	                 	   	 	     	     	 	  	 	     	     	R 	~	22.00	     	  	 	     	     	=	19.24	 0.04	 	     	     	Ks	=	18.00	 0.04	 	Orosz2011a
-13	GRO J1655-40      	 	(N. Sco94)       	B  	~	18.50	     	 	V 	~	17.50	     	  	 	     	     	I 	~	15.40	     	~	14.76	     	 	     	     	Ks	~	15.12	     	 	Greene2001
-14	GRO J1655-40      	 	                 	B  	~	18.50	     	 	V 	~	17.30	     	R 	~	16.20	     	I 	~	15.80	     	 	     	     	 	     	     	  	 	     	     	 	Orosz1997
-15	GRO J1655-40      	 	                 	   	 	     	     	 	V 	=	17.30	 0.10	R 	=	16.30	 0.10	i 	=	14.90	 0.10	 	     	     	 	     	     	  	 	     	     	 	VanDerHooft1998
-16	GRS 1009-45       	 	(N. Vel93)       	   	 	     	     	 	V 	=	21.70	 0.20	r 	=	20.40	 0.10	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Hynes2003,Shahbaz1996
-17	GRS 1009-45       	 	                 	   	 	     	     	 	  	 	     	     	R 	=	21.30	 0.20	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Filippenko1999
-18	GRS 1915+105      	1	(V1487Aql)       	   	 	     	     	 	  	 	     	     	  	 	     	     	  	 	     	     	=	17.52	 0.08	=	13.09	     	K 	=	11.40	     	*	Castro-Tirado1993a,Shahbaz2008
-19	GRS 1915+105      	 	                 	   	 	     	     	 	  	 	     	     	  	 	     	     	  	 	     	     	=	18.72	 0.20	=	16.55	 0.04	Ks	=	15.28	 0.03	 	Eikenberry1995
-20	GRS 1915+105      	 	                 	   	 	     	     	 	  	 	     	     	  	 	     	     	I 	~	23.70	 0.40	 	     	     	 	     	     	  	 	     	     	 	Boeer1996
-21	GRO J0422+32      	 	(V518Per)        	   	 	     	     	 	V 	=	22.30	     	R 	=	21.00	     	I 	=	20.20	     	 	     	     	 	     	     	  	 	     	     	 	Garcia1996
-22	GRO J0422+32      	 	                 	B  	=	23.10	 0.20	 	V 	=	22.00	 0.10	R 	=	21.00	 0.10	I 	=	20.75	 0.08	=	19.30	 0.10	=	19.00	 0.20	Ks	=	19.29	 0.09	 	Gelino2003,Webb2000
-23	GRS 1124-684      	 	(N. Mus91)       	B  	=	22.60	 0.30	 	V 	=	22.62	 0.03	R 	=	19.80	 0.30	I 	=	19.30	 0.20	 	     	     	~	18.39	     	  	 	     	     	 	King1996a,Shahbaz1997
-24	GRS 1124-684      	 	                 	u' 	=	21.50	 0.40	 	g'	=	20.65	 0.05	  	 	     	     	i'	=	19.92	 0.04	 	     	     	 	     	     	  	 	     	     	 	Shahbaz2010
-25	GS 2023+338       	 	(V404Cyg)        	B  	=	20.47	 0.05	 	V 	=	18.38	 0.02	R 	=	16.58	 0.01	I 	=	16.07	 0.05	=	14.59	 0.08	=	14.21	 0.06	Ks	=	14.39	 0.05	 	Casares1993,Zurita2004
-26	GS 2000+251       	 	(QZVul)          	   	 	     	     	 	  	 	     	     	R 	=	21.30	 0.20	I 	=	20.20	 0.20	=	19.00	 0.20	=	18.37	 0.03	Ks	=	18.90	 0.20	 	Callanan1991,Beekman1996
-27	GS 1354-64        	 	(BWCir)          	   	 	     	     	 	  	 	     	     	R 	=	20.71	 0.03	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Casares2009
-28	GS 1354-64        	 	                 	   	 	     	     	 	V 	~	21.50	     	R 	~	20.50	     	i 	~	20.20	     	 	     	     	 	     	     	  	 	     	     	 	Russell2015a
-29	H 1705-250        	 	(N. Oph77)       	B+V	=	21.50	 0.10	*	  	 	     	     	R 	~	20.90	 0.20	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Martin1995,Remillard1996
-30	H 1705-250        	 	                 	   	 	     	     	 	  	 	     	     	  	 	     	     	i'	~	20.50	     	 	     	     	 	     	     	  	 	     	     	 	Yang2012
-31	3A 0620-003       	 	                 	B  	=	19.32	 0.04	 	V 	=	18.23	 0.04	R 	=	17.12	 0.04	I 	=	16.93	 0.01	=	16.31	 0.04	=	16.19	 0.04	  	 	     	     	 	Cantrell2010
-32	3A 0620-003       	 	                 	   	 	     	     	 	V 	=	18.11	 0.01	  	 	     	     	I 	=	17.01	 0.04	=	16.50	 0.10	=	16.23	 0.02	  	 	     	     	 	Gelino2001,Froning2001
-33	1H 1659-487       	 	(GX339-4)        	   	 	     	     	 	  	 	     	     	r 	=	19.90	 0.10	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Shahbaz2001
-34	1H 1659-487       	 	                 	   	 	     	     	 	  	 	     	     	R 	=	21.60	 0.30	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Lewis2012
-35	4U 1543-475       	 	(ILLup)          	   	 	     	     	 	V 	~	16.60	 0.10	  	 	     	     	I 	=	16.10	 0.10	=	16.04	 0.05	 	     	     	  	 	     	     	 	Orosz1998,Buxton2004
-36	4U 1543-475       	 	                 	B  	=	17.30	     	 	V 	=	16.70	     	  	 	     	     	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Chevalier1992
+       1	SWIFT J1357.2-0933	+	                 	u' 	=	23.12	 0.04	 	g'	=	22.30	 0.40	r'	=	21.50	 0.40	i'	=	21.20	 0.40	=	20.51	 0.06	=	20.07	 0.05	Ks	=	20.09	 0.05	 	Shahbaz2013
+       2	SWIFT J1357.2-0933	 	                 	   	 	     	     	 	g'	=	22.29	 0.08	r'	=	21.71	 0.08	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	MataSanchez2015,ArmasPadilla2014a
+       3	XTE J1650-500     	 	                 	   	 	     	     	 	V 	~	24.00	     	R 	~	22.00	     	I 	>	19.30	     	 	     	     	 	     	     	  	 	     	     	 	Garcia2002,Curran2012
+       4	XTE J1118+480     	 	                 	B  	=	20.04	     	 	V 	=	19.61	     	R 	=	19.05	     	  	 	     	     	=	19.52	     	=	19.10	     	Ks	=	18.45	     	 	Gelino2006
+       5	XTE J1118+480     	 	                 	   	 	     	     	 	g'	=	21.00	 0.30	  	 	     	     	i'	=	19.00	 0.20	 	     	     	 	     	     	  	 	     	     	 	Shahbaz2005
+       6	XTE J1859+226     	 	(V406Vul)        	   	 	     	     	 	V 	=	23.25	 0.09	R 	=	22.54	 0.07	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Zurita2002
+       7	XTE J1859+226     	 	                 	   	 	     	     	 	  	 	     	     	  	 	     	     	  	 	     	     	=	20.97	 0.03	=	20.68	 0.05	Ks	=	20.94	 0.35	 	Gelino2010
+       8	SAX J1819.3-2525  	 	(V4641Sgr)       	B  	~	13.91	 0.04	 	V 	~	13.66	 0.03	  	 	     	     	I 	~	13.52	 0.03	=	14.86	 0.05	~	14.23	 0.05	K 	~	12.83	 0.05	*	MacDonald2014
+       9	SAX J1819.3-2525  	 	                 	   	 	     	     	 	V 	=	13.96	 0.02	R 	=	13.73	 0.02	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Orosz2001
+      10	XTE J1550-564     	 	                 	   	 	     	     	 	V 	=	22.00	 0.20	  	 	     	     	i 	=	19.04	 0.03	 	     	     	=	17.60	 0.10	  	 	     	     	 	Calvelo2010,Jain2001
+      11	XTE J1550-564     	 	                 	   	 	     	     	 	B 	>	23.80	 0.10	V 	=	22.00	 0.40	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Orosz2002
+      12	XTE J1550-564     	 	                 	   	 	     	     	 	  	 	     	     	R 	~	22.00	     	  	 	     	     	=	19.24	 0.04	 	     	     	Ks	=	18.00	 0.04	 	Orosz2011a
+      13	GRO J1655-40      	 	(N. Sco94)       	B  	~	18.50	     	 	V 	~	17.50	     	  	 	     	     	I 	~	15.40	     	~	14.76	     	 	     	     	Ks	~	15.12	     	 	Greene2001
+      14	GRO J1655-40      	 	                 	B  	~	18.50	     	 	V 	~	17.30	     	R 	~	16.20	     	I 	~	15.80	     	 	     	     	 	     	     	  	 	     	     	 	Orosz1997
+      15	GRO J1655-40      	 	                 	   	 	     	     	 	V 	=	17.30	 0.10	R 	=	16.30	 0.10	i 	=	14.90	 0.10	 	     	     	 	     	     	  	 	     	     	 	VanDerHooft1998
+      16	GRS 1009-45       	 	(N. Vel93)       	   	 	     	     	 	V 	=	21.70	 0.20	r 	=	20.40	 0.10	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Hynes2003,Shahbaz1996
+      17	GRS 1009-45       	 	                 	   	 	     	     	 	  	 	     	     	R 	=	21.30	 0.20	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Filippenko1999
+      18	GRS 1915+105      	1	(V1487Aql)       	   	 	     	     	 	  	 	     	     	  	 	     	     	  	 	     	     	=	17.52	 0.08	=	13.09	     	K 	=	11.40	     	*	Castro-Tirado1993a,Shahbaz2008
+      19	GRS 1915+105      	 	                 	   	 	     	     	 	  	 	     	     	  	 	     	     	  	 	     	     	=	18.72	 0.20	=	16.55	 0.04	Ks	=	15.28	 0.03	 	Eikenberry1995
+      20	GRS 1915+105      	 	                 	   	 	     	     	 	  	 	     	     	  	 	     	     	I 	~	23.70	 0.40	 	     	     	 	     	     	  	 	     	     	 	Boeer1996
+      21	GRO J0422+32      	 	(V518Per)        	   	 	     	     	 	V 	=	22.30	     	R 	=	21.00	     	I 	=	20.20	     	 	     	     	 	     	     	  	 	     	     	 	Garcia1996
+      22	GRO J0422+32      	 	                 	B  	=	23.10	 0.20	 	V 	=	22.00	 0.10	R 	=	21.00	 0.10	I 	=	20.75	 0.08	=	19.30	 0.10	=	19.00	 0.20	Ks	=	19.29	 0.09	 	Gelino2003,Webb2000
+      23	GRS 1124-684      	 	(N. Mus91)       	B  	=	22.60	 0.30	 	V 	=	22.62	 0.03	R 	=	19.80	 0.30	I 	=	19.30	 0.20	 	     	     	~	18.39	     	  	 	     	     	 	King1996a,Shahbaz1997
+      24	GRS 1124-684      	 	                 	u' 	=	21.50	 0.40	 	g'	=	20.65	 0.05	  	 	     	     	i'	=	19.92	 0.04	 	     	     	 	     	     	  	 	     	     	 	Shahbaz2010
+      25	GS 2023+338       	 	(V404Cyg)        	B  	=	20.47	 0.05	 	V 	=	18.38	 0.02	R 	=	16.58	 0.01	I 	=	16.07	 0.05	=	14.59	 0.08	=	14.21	 0.06	Ks	=	14.39	 0.05	 	Casares1993,Zurita2004
+      26	GS 2000+251       	 	(QZVul)          	   	 	     	     	 	  	 	     	     	R 	=	21.30	 0.20	I 	=	20.20	 0.20	=	19.00	 0.20	=	18.37	 0.03	Ks	=	18.90	 0.20	 	Callanan1991,Beekman1996
+      27	GS 1354-64        	 	(BWCir)          	   	 	     	     	 	  	 	     	     	R 	=	20.71	 0.03	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Casares2009
+      28	GS 1354-64        	 	                 	   	 	     	     	 	V 	~	21.50	     	R 	~	20.50	     	i 	~	20.20	     	 	     	     	 	     	     	  	 	     	     	 	Russell2015a
+      29	H 1705-250        	 	(N. Oph77)       	B+V	=	21.50	 0.10	*	  	 	     	     	R 	~	20.90	 0.20	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Martin1995,Remillard1996
+      30	H 1705-250        	 	                 	   	 	     	     	 	  	 	     	     	  	 	     	     	i'	~	20.50	     	 	     	     	 	     	     	  	 	     	     	 	Yang2012
+      31	3A 0620-003       	 	                 	B  	=	19.32	 0.04	 	V 	=	18.23	 0.04	R 	=	17.12	 0.04	I 	=	16.93	 0.01	=	16.31	 0.04	=	16.19	 0.04	  	 	     	     	 	Cantrell2010
+      32	3A 0620-003       	 	                 	   	 	     	     	 	V 	=	18.11	 0.01	  	 	     	     	I 	=	17.01	 0.04	=	16.50	 0.10	=	16.23	 0.02	  	 	     	     	 	Gelino2001,Froning2001
+      33	1H 1659-487       	 	(GX339-4)        	   	 	     	     	 	  	 	     	     	r 	=	19.90	 0.10	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Shahbaz2001
+      34	1H 1659-487       	 	                 	   	 	     	     	 	  	 	     	     	R 	=	21.60	 0.30	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Lewis2012
+      35	4U 1543-475       	 	(ILLup)          	   	 	     	     	 	V 	~	16.60	 0.10	  	 	     	     	I 	=	16.10	 0.10	=	16.04	 0.05	 	     	     	  	 	     	     	 	Orosz1998,Buxton2004
+      36	4U 1543-475       	 	                 	B  	=	17.30	     	 	V 	=	16.70	     	  	 	     	     	  	 	     	     	 	     	     	 	     	     	  	 	     	     	 	Chevalier1992
+

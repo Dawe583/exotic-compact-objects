@@ -1,0 +1,143 @@
+{
+  "fetched_utc": "2026-10-19T20:15:25.774159+00:00",
+  "gwtc": {
+    "n_total": 391,
+    "chirp_mass_reconciliation": {
+      "n_with_masses": 282,
+      "n_catalog_chirp_too": 282,
+      "median_rel_dev": 0.00903839475843828,
+      "max_rel_dev": 0.1615999406032986
+    },
+    "cosmology_check": {
+      "n_events": 282,
+      "median_rel_dev_z": 0.00699396825172308,
+      "p90_rel_dev_z": 0.023122207168257986,
+      "max_z_catalog": 1.18
+    },
+    "mass_gap_candidates": {
+      "n": 2,
+      "events": [
+        {
+          "event_id": "GW190814",
+          "mass_1_source": 23.3,
+          "mass_2_source": 2.6,
+          "chi_eff": 0.0
+        },
+        {
+          "event_id": "GW200210_092254",
+          "mass_1_source": 24.1,
+          "mass_2_source": 2.83,
+          "chi_eff": 0.02
+        }
+      ]
+    },
+    "remnant_radiation_physics": {
+      "n_with_final_mass": 279,
+      "final_mass_range_msun": [
+        2.8,
+        222.0
+      ],
+      "isco_range_km": [
+        24.807300639242097,
+        1966.8645506827663
+      ],
+      "hawking_T_min_max_k": [
+        2.2036644324874917e-08,
+        2.779396581515755e-10
+      ]
+    }
+  },
+  "strain": {
+    "GW170817": {
+      "event": "GW170817",
+      "gps": 1187008882.4,
+      "detectors": {
+        "H1": {
+          "status": "ok",
+          "file": "H-H1_GWOSC_4KHZ_R1-1187008867-32.hdf5",
+          "tf_peak_time_offset_s": -0.18125009536743164,
+          "tf_power_max_over_median": 1.5079653663807884
+        },
+        "L1": {
+          "status": "ok",
+          "file": "L-L1_GWOSC_4KHZ_R1-1187008867-32.hdf5",
+          "tf_peak_time_offset_s": -1.0093750953674316,
+          "tf_power_max_over_median": 859.5551708102194
+        },
+        "V1": {
+          "status": "ok",
+          "file": "V-V1_GWOSC_4KHZ_R1-1187008867-32.hdf5",
+          "tf_peak_time_offset_s": 0.05312490463256836,
+          "tf_power_max_over_median": 2.2982766438970272
+        }
+      },
+      "chirp_like_signal_seen": true
+    },
+    "GW190814": {
+      "event": "GW190814",
+      "gps": 1249852257.0,
+      "detectors": {
+        "H1": {
+          "status": "ok",
+          "file": "H-H1_GWOSC_4KHZ_R1-1249852241-32.hdf5",
+          "tf_peak_time_offset_s": -0.140625,
+          "tf_power_max_over_median": 1.981885085143674
+        },
+        "L1": {
+          "status": "ok",
+          "file": "L-L1_GWOSC_4KHZ_R1-1249852241-32.hdf5",
+          "tf_peak_time_offset_s": -0.03125,
+          "tf_power_max_over_median": 2.3867461347557097
+        },
+        "V1": {
+          "status": "ok",
+          "file": "V-V1_GWOSC_4KHZ_R1-1249852241-32.hdf5",
+          "tf_peak_time_offset_s": -3.1875,
+          "tf_power_max_over_median": 1.4090368348126756
+        }
+      },
+      "chirp_like_signal_seen": false
+    },
+    "GW190521": {
+      "event": "GW190521",
+      "gps": 1242442967.4,
+      "detectors": {
+        "H1": {
+          "status": "ok",
+          "file": "H-H1_GWOSC_4KHZ_R1-1242442952-32.hdf5",
+          "tf_peak_time_offset_s": 0.03749990463256836,
+          "tf_power_max_over_median": 1.7548513677956226
+        },
+        "L1": {
+          "status": "ok",
+          "file": "L-L1_GWOSC_4KHZ_R1-1242442952-32.hdf5",
+          "tf_peak_time_offset_s": 0.03749990463256836,
+          "tf_power_max_over_median": 2.5757044892098633
+        },
+        "V1": {
+          "status": "ok",
+          "file": "V-V1_GWOSC_4KHZ_R1-1242442952-32.hdf5",
+          "tf_peak_time_offset_s": -2.6031250953674316,
+          "tf_power_max_over_median": 1.5765284270435165
+        }
+      },
+      "chirp_like_signal_seen": false
+    }
+  },
+  "sxs_synthetic": {
+    "n_waveforms": 245,
+    "config_label_consistent": 245,
+    "q_range": [
+      1.0,
+      10.0
+    ],
+    "spearman_q_vs_f_peak_inst": 0.1261943526581116,
+    "spearman_chieff_vs_f_peak_inst": 0.9386711935243363,
+    "spearman_q_vs_amp_peak": -0.8268660214924035,
+    "n_nonspinning_waveforms": 4,
+    "median_f_peak_M_inst": 0.10488254831094124,
+    "median_f_peak_M_fft": 0.009090454545464397,
+    "median_f_peak_over_f_ring": 12.031141696062473,
+    "note": "These are project-synthetic surrogate-style waveforms (config q/chi), not numerical-relativity catalogues; trends characterise the dataset."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "fetched_utc": "2026-10-19T19:29:01.262694+00:00",
+  "total_events": 391,
+  "by_catalog": {
+    "GWTC-1-confident": 1,
+    "GWTC-2.1-confident": 54,
+    "GWTC-3-confident": 35,
+    "GWTC-4.1": 140,
+    "GWTC-5.0": 161
+  },
+  "with_mass_1_source": 282,
+  "with_luminosity_distance": 282,
+  "with_redshift": 282,
+  "csv_sha256": "fcf7c22dc8ac0be3",
+  "source_api": "https://gwosc.org/eventapi/json/GWTC/"
+}

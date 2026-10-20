@@ -134,7 +134,31 @@ These are constraints on specific phenomenological signatures, not detections of
 - **GRB 090510:** Fermi detected a $31\,\mathrm{GeV}$ photon during the first second from a burst at $z=0.903\pm0.003$. Using the one-sigma conservative photon-energy and redshift values ($28.0\,\mathrm{GeV}$ and $z=0.900$), the authors' most conservative emission-start choice gives $E_{QG,1}/E_P>1.19$ for a **linear** energy-dependent photon-propagation model. Less conservative emission-time choices give stronger limits, but depend more heavily on associating the high-energy photon with lower-energy emission. This does not constrain all quantum-gravity models; the source's intrinsic emission time is a central assumption ([Fermi LAT/GBM Collaboration, *Nature* 462, 331 (2009)](https://arxiv.org/abs/0908.1832)).
 - **GW170817 / GRB 170817A:** the measured gamma-ray delay was $(1.74\pm0.05)\,\mathrm{s}$. The published interval for the relative gravitational-wave and light propagation speeds is $-3\times10^{-15}<(v_g-v_\gamma)/c<7\times10^{-16}$. This tests relative propagation in that event, with interpretation conditional on the source-emission timing; it is not a direct measurement of Planck-scale spacetime structure ([LIGO Scientific Collaboration et al., *Phys. Rev. Lett.* 119, 161101 (2017)](https://arxiv.org/abs/1710.05834)).
 
-The notebook reproduces these published intervals in separate panels because they constrain different quantities. Its companion theoretical curve remains a toy model, not a fit to either event.
+The notebook now reconstructs the conservative GRB bound from the paper's event inputs, numerically integrates the cosmological propagation kernel, checks the quadrature with an independent trapezoidal calculation, and compares the result with the authors' value. It also recomputes the same event under Planck18 parameters; that value is a cosmology-sensitivity check, not a replacement for the published result.
+ 
+For linear energy-dependent propagation in a flat expanding cosmology, with the source-frame photon energy redshifting along the path,
+
+$$
+\Delta t_{\rm LIV}\simeq\frac{\Delta E_{\rm obs}}{E_{QG,1}H_0}\mathbin{\cdot}
+\int_0^z\frac{1+z'}{\sqrt{\Omega_m(1+z')^3+\Omega_\Lambda}}\,dz',
+\qquad
+E_{QG,1}\geq\frac{\Delta E_{\rm obs}}{\Delta t_{\max}H_0}\mathbin{\cdot}
+\int_0^z\frac{1+z'}{\sqrt{\Omega_m(1+z')^3+\Omega_\Lambda}}\,dz'.
+$$
+
+Using the source paper's flat cosmology ($H_0=71\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$, $\Omega_m=0.27$, $\Omega_\Lambda=0.73$), conservative energy/redshift inputs ($28.0\,\mathrm{GeV}$, $z=0.900$), $\Delta t_{\max}=0.859\,\mathrm{s}$, and a $0.1\,\mathrm{MeV}$ reference photon, the notebook recovers $E_{QG,1}/E_P\simeq1.190$, consistent with the published $>1.19$. Replacing only the cosmology with Astropy Planck18 gives approximately $1.217$; the difference illustrates model/cosmology dependence rather than a more precise measurement. The detected $31\,\mathrm{GeV}$ photon itself has $E/E_P\simeq2.54\times10^{-18}$; a quadratic EFT-size estimate would be $\sim6.45\times10^{-36}$ only for a unit Wilson coefficient and should not be mistaken for a universal correction.
+
+| Fermi Table 2 case | Timing assumption or method | Published timing input | Conditional linear bound |
+|---|---|---:|---:|
+| (a) | Any onset of emission below $1\,\mathrm{MeV}$ | $\Delta t<859\,\mathrm{ms}$ | $E_{QG,1}/E_P>1.19$ |
+| (b) | Main emission below $1\,\mathrm{MeV}$ | $\Delta t<299\,\mathrm{ms}$ | $E_{QG,1}/E_P>3.42$ |
+| (c) | Main emission above $0.1\,\mathrm{GeV}$ | $\Delta t<181\,\mathrm{ms}$ | $E_{QG,1}/E_P>5.63$ |
+| (d) | Onset above $1\,\mathrm{GeV}$ | $\Delta t<99\,\mathrm{ms}$ | $E_{QG,1}/E_P>10.0$ |
+| (e) | Associate the high-energy photon with a contemporaneous low-energy spike | $\Delta t<10\,\mathrm{ms}$ | $E_{QG,1}/E_P>102$ |
+| (f) | Associate a $0.75\,\mathrm{GeV}$ photon with the first spike; opposite-sign delay | $\Delta t<19\,\mathrm{ms}$ | $E_{QG,1}/E_P>1.33$ |
+| (g) | Dispersion of high-energy spikes, not one assigned lag | $|\Delta t/\Delta E|<30\,\mathrm{ms\,GeV^{-1}}$ at $99\%$ | $E_{QG,1}/E_P>1.22$ |
+
+Cases (a)–(g) are alternative analyses of one burst and are correlated, not seven independent constraints. The strongest limits depend most on the assignment of intrinsic emission times. The sensitivity plot retains those assumptions separately instead of pooling them.
 
 ## Observational status and unsolved questions
 

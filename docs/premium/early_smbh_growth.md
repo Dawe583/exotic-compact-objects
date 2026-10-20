@@ -1,6 +1,6 @@
 # Early supermassive black-hole growth: observations, timescales, and seed constraints
 
-**Scope.** This section accompanies [`notebooks/22_early_smbh_growth.ipynb`](../notebooks/22_early_smbh_growth.ipynb), a runnable analysis of a deliberately selected—not complete or statistically representative—set of high-redshift black-hole observations. It includes luminous quasars, JWST spectroscopic AGN, the Chandra/JWST X-ray source UHZ1, and a recently reported resolved dynamical mass in Abell 2744-QSO1. The notebook calculates Planck-2018 cosmic ages, checks the growth algebra symbolically, explores seed-growth scenarios, and generates time-context, growth-track, seed-feasibility, and Eddington-ratio plots.
+**Scope.** This page accompanies the rendered analysis [notebook](../23_early_smbh_growth.html) and its runnable [source notebook](../../notebooks/23_early_smbh_growth.ipynb). It separates measurement uncertainties from analyst-selected growth scenarios, shows conditional seed-feasibility curves, and uses a low-redshift reverberation-mass compilation for method context only—not as an early-universe sample.
 
 ## Evidence ledger and interpretation
 

@@ -3,3 +3,8 @@ __pycache__/
 .ipynb_checkpoints/
 *.zip
 phone_view/
+
+# large raw strain data (downloaded, not committed)
+data/raw/strain/
+*.hdf5
+*.h5

@@ -3,23 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Theory Raychaudhuri</title>
+<meta name="color-scheme" content="dark">
+<title>Raychaudhuri Equation for Null and Timelike Congruences · Astro Science</title>
+<meta name="description" content="Raychaudhuri Equation for Null and Timelike Congruences — a self-contained derivation from first principles.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="Raychaudhuri Equation for Null and Timelike Congruences">
+<meta property="og:description" content="Raychaudhuri Equation for Null and Timelike Congruences — a self-contained derivation from first principles.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
-<header><h1>Theory Raychaudhuri</h1></header>
-<nav>
-<a href="index.html">Home</a>
-<a href="theory.html">Theory</a>
-<a href="data.html">Data</a>
-<a href="models.html">Models</a>
-<a href="geodesics.html">Geodesics</a>
-<a href="whiteholes.html">White Holes</a>
-<a href="advanced.html">Advanced</a>
-</nav>
-<main>
-<h1>Raychaudhuri Equation for Null and Timelike Congruences</h1></p><h2>Derivation from Geodesic Deviation, Expansion/Shear/Vorticity, Focusing Theorem, Singularity Theorems Connection</h2></p><p>---</p><h2>1. Introduction</h2></p><p>The Raychaudhuri equation describes the evolution of a congruence of geodesics (timelike or null) in spacetime. It governs the rate of change of the cross-sectional volume (expansion), shape distortion (shear), and rotation (vorticity) of the congruence. This equation is fundamental to the singularity theorems of Penrose and Hawking, gravitational lensing, and the thermodynamics of black holes.</p><p>This document provides a complete step-by-step derivation of the Raychaudhuri equation for both timelike and null congruences, starting from the geodesic deviation equation, and discusses its physical implications including the focusing theorem and connection to singularity theorems.</p><p>---</p><h2>2. Congruences and the Deviation Vector</h2></p><h3>2.1 Timelike Congruences</h3></p><p>Consider a congruence of timelike curves (not necessarily geodesics initially) with tangent vector field \(u^\mu\), normalized as:</p><p><div class="eq">$$
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>Compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="theory.html">Theory</a><span class="sep">/</span><span>Raychaudhuri Equation for Null and Timelike Congruences</span></nav></div>
+<div class="wrap"><div class="prose-layout"><article class="prose" id="prose">
+<h1>Raychaudhuri Equation for Null and Timelike Congruences</h1></p><h2>Derivation from Geodesic Deviation, Expansion/Shear/Vorticity, Focusing Theorem, Singularity Theorems Connection</h2></p><hr class="soft"><h2>1. Introduction</h2></p><p>The Raychaudhuri equation describes the evolution of a congruence of geodesics (timelike or null) in spacetime. It governs the rate of change of the cross-sectional volume (expansion), shape distortion (shear), and rotation (vorticity) of the congruence. This equation is fundamental to the singularity theorems of Penrose and Hawking, gravitational lensing, and the thermodynamics of black holes.</p><p>This document provides a complete step-by-step derivation of the Raychaudhuri equation for both timelike and null congruences, starting from the geodesic deviation equation, and discusses its physical implications including the focusing theorem and connection to singularity theorems.</p><hr class="soft"><h2>2. Congruences and the Deviation Vector</h2></p><h3>2.1 Timelike Congruences</h3></p><p>Consider a congruence of timelike curves (not necessarily geodesics initially) with tangent vector field \(u^\mu\), normalized as:</p><p><div class="eq">$$
 u^\mu u_\mu = -1
 $$</div></p><p>The curves are parametrized by proper time \(\tau\): \(u^\mu = dx^\mu/d\tau\).</p><h3>2.2 Null Congruences</h3></p><p>For null curves, the tangent vector \(k^\mu\) satisfies:</p><p><div class="eq">$$
 k^\mu k_\mu = 0
@@ -29,7 +67,7 @@ $$</div></p><p>It connects points of equal parameter value on neighboring curves
 \frac{D^2 \xi^\mu}{D\tau^2} = R^\mu_{\nu\rho\sigma} u^\nu u^\rho \xi^\sigma \quad \text{(timelike)}
 $$</div></p><p><div class="eq">$$
 \frac{D^2 \xi^\mu}{D\lambda^2} = R^\mu_{\nu\rho\sigma} k^\nu k^\rho \xi^\sigma \quad \text{(null)}
-$$</div></p><p>---</p><h2>3. Kinematical Decomposition</h2></p><h3>3.1 Timelike Case: Projection Tensor</h3></p><p>The projection tensor onto the 3-space orthogonal to \(u^\mu\):</p><p><div class="eq">$$
+$$</div></p><hr class="soft"><h2>3. Kinematical Decomposition</h2></p><h3>3.1 Timelike Case: Projection Tensor</h3></p><p>The projection tensor onto the 3-space orthogonal to \(u^\mu\):</p><p><div class="eq">$$
 h_{\mu\nu} = g_{\mu\nu} + u_\mu u_\nu
 $$</div></p><p>Properties:
 <ul><li>\(h_{\mu\nu} u^\nu = 0\)</li></ul>
@@ -68,7 +106,7 @@ $$</div></p><p>where \(\kappa\) is the <strong>non-affinity</strong> parameter (
 \sigma_{\mu\nu} &= \frac{1}{2}h_\mu^\rho h_\nu^\sigma(\nabla_\rho k_\sigma + \nabla_\sigma k_\rho) - \frac{1}{2}\theta h_{\mu\nu} \\
 \omega_{\mu\nu} &= \frac{1}{2}h_\mu^\rho h_\nu^\sigma(\nabla_\rho k_\sigma - \nabla_\sigma k_\rho)
 \end{aligned}
-$$</div></p><p>---</p><h2>4. Derivation of Raychaudhuri Equation: Timelike Case</h2></p><h3>4.1 Starting Point: Geodesic Deviation</h3></p><p>For a timelike geodesic congruence (\(a_\mu = 0\)), the deviation vector \(\xi^\mu\) (with \(u_\mu \xi^\mu = 0\)) satisfies:</p><p><div class="eq">$$
+$$</div></p><hr class="soft"><h2>4. Derivation of Raychaudhuri Equation: Timelike Case</h2></p><h3>4.1 Starting Point: Geodesic Deviation</h3></p><p>For a timelike geodesic congruence (\(a_\mu = 0\)), the deviation vector \(\xi^\mu\) (with \(u_\mu \xi^\mu = 0\)) satisfies:</p><p><div class="eq">$$
 \frac{D^2 \xi^\mu}{D\tau^2} = R^\mu_{\nu\rho\sigma} u^\nu u^\rho \xi^\sigma
 $$</div></p><p>The first derivative gives the relative velocity:</p><p><div class="eq">$$
 \frac{D\xi^\mu}{D\tau} = (\nabla_\nu u^\mu) \xi^\nu = B^\mu_\nu \xi^\nu
@@ -99,7 +137,7 @@ $$</div></p><h3>4.4 Final Timelike Raychaudhuri Equation</h3></p><p>Assembling:<
 \boxed{\frac{d\theta}{d\tau} = -\frac{1}{3}\theta^2 - \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu} - R_{\mu\nu}u^\mu u^\nu}
 $$</div></p><p>Using \(\sigma^2 = \frac{1}{2}\sigma_{\mu\nu}\sigma^{\mu\nu} \ge 0\) and \(\omega^2 = -\frac{1}{2}\omega_{\mu\nu}\omega^{\mu\nu} \ge 0\):</p><p><div class="eq">$$
 \boxed{\frac{d\theta}{d\tau} = -\frac{1}{3}\theta^2 - 2\sigma^2 + 2\omega^2 - R_{\mu\nu}u^\mu u^\nu}
-$$</div></p><p>This is the <strong>Raychaudhuri equation for timelike geodesic congruences</strong>.</p><p>---</p><h2>5. Derivation of Raychaudhuri Equation: Null Case</h2></p><h3>5.1 Geodesic Deviation for Null Congruences</h3></p><p>For affinely parametrized null geodesics (\(k^\nu\nabla_\nu k^\mu = 0\)), the deviation vector \(\eta^\mu\) (with \(k_\mu\eta^\mu = 0\), \(\ell_\mu\eta^\mu = 0\)) satisfies:</p><p><div class="eq">$$
+$$</div></p><p>This is the <strong>Raychaudhuri equation for timelike geodesic congruences</strong>.</p><hr class="soft"><h2>5. Derivation of Raychaudhuri Equation: Null Case</h2></p><h3>5.1 Geodesic Deviation for Null Congruences</h3></p><p>For affinely parametrized null geodesics (\(k^\nu\nabla_\nu k^\mu = 0\)), the deviation vector \(\eta^\mu\) (with \(k_\mu\eta^\mu = 0\), \(\ell_\mu\eta^\mu = 0\)) satisfies:</p><p><div class="eq">$$
 \frac{D^2 \eta^\mu}{D\lambda^2} = R^\mu_{\nu\rho\sigma} k^\nu k^\rho \eta^\sigma
 $$</div></p><p>The relative velocity is:</p><p><div class="eq">$$
 \frac{D\eta^\mu}{D\lambda} = (\nabla_\nu k^\mu) \eta^\nu = B^\mu_\nu \eta^\nu
@@ -115,13 +153,13 @@ $$</div></p><p>(since \(R_{\mu\rho\nu\sigma}k^\mu k^\rho k^\nu k^\sigma = 0\)).<
 \boxed{\frac{d\theta}{d\lambda} = -\frac{1}{2}\theta^2 - \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu} - R_{\mu\nu}k^\mu k^\nu}
 $$</div></p><p>With \(\sigma^2 = \frac{1}{2}\sigma_{\mu\nu}\sigma^{\mu\nu} \ge 0\), \(\omega^2 = -\frac{1}{2}\omega_{\mu\nu}\omega^{\mu\nu} \ge 0\):</p><p><div class="eq">$$
 \boxed{\frac{d\theta}{d\lambda} = -\frac{1}{2}\theta^2 - 2\sigma^2 + 2\omega^2 - R_{\mu\nu}k^\mu k^\nu}
-$$</div></p><p>This is the <strong>Raychaudhuri equation for null geodesic congruences</strong>.</p><p>---</p><h2>6. Physical Interpretation of Terms</h2></p><p>| Term | Name | Effect | Sign |
+$$</div></p><p>This is the <strong>Raychaudhuri equation for null geodesic congruences</strong>.</p><hr class="soft"><h2>6. Physical Interpretation of Terms</h2></p><p>| Term | Name | Effect | Sign |
 |------|------|--------|------|
 | \(-\frac{1}{3}\theta^2\) (timelike) | Expansion self-gravity | Focusing | Negative |
 | \(-\frac{1}{2}\theta^2\) (null) | Expansion self-gravity | Focusing | Negative |
 | \(-\sigma_{\mu\nu}\sigma^{\mu\nu}\) | Shear | Focusing | Negative |
 | \(+\omega_{\mu\nu}\omega^{\mu\nu}\) | Vorticity | Defocusing | Positive |
-| \(-R_{\mu\nu}u^\mu u^\nu\) | Ricci curvature | Depends on matter | — |</p><p><strong>Key insight</strong>: For congruences that are initially hypersurface-orthogonal (vorticity-free, \(\omega_{\mu\nu}=0\)), the vorticity term vanishes. By Frobenius' theorem, if \(\omega_{\mu\nu}=0\) initially, it remains zero.</p><p>---</p><h2>7. Focusing Theorem</h2></p><h3>7.1 Timelike Focusing Theorem</h3></p><p><strong>Assumptions</strong>:
+| \(-R_{\mu\nu}u^\mu u^\nu\) | Ricci curvature | Depends on matter | — |</p><p><strong>Key insight</strong>: For congruences that are initially hypersurface-orthogonal (vorticity-free, \(\omega_{\mu\nu}=0\)), the vorticity term vanishes. By Frobenius' theorem, if \(\omega_{\mu\nu}=0\) initially, it remains zero.</p><hr class="soft"><h2>7. Focusing Theorem</h2></p><h3>7.1 Timelike Focusing Theorem</h3></p><p><strong>Assumptions</strong>:
 1. Timelike geodesic congruence
 2. Vorticity-free: \(\omega_{\mu\nu} = 0\) (hypersurface-orthogonal)
 3. Strong Energy Condition (SEC): \(R_{\mu\nu}u^\mu u^\nu \ge 0\) for all timelike \(u^\mu\)</p><p>Then the Raychaudhuri equation gives:</p><p><div class="eq">$$
@@ -137,13 +175,13 @@ $$</div></p><p><strong>Result</strong>: \(\theta \to -\infty\) within finite pro
 \frac{d\theta}{d\lambda} \le -\frac{1}{2}\theta^2
 $$</div></p><p>Solution:</p><p><div class="eq">$$
 \theta(\lambda) \le \frac{\theta_0}{1 + \frac{1}{2}\theta_0 \lambda}
-$$</div></p><p>If \(\theta_0 < 0\), caustic forms within affine parameter \(\lambda \le 2/|\theta_0|\).</p><p>---</p><h2>8. Connection to Singularity Theorems</h2></p><h3>8.1 Penrose Singularity Theorem (1965)</h3></p><p><strong>Theorem</strong>: A spacetime \((\mathcal{M}, g_{\mu\nu})\) with:
+$$</div></p><p>If \(\theta_0 < 0\), caustic forms within affine parameter \(\lambda \le 2/|\theta_0|\).</p><hr class="soft"><h2>8. Connection to Singularity Theorems</h2></p><h3>8.1 Penrose Singularity Theorem (1965)</h3></p><p><strong>Theorem</strong>: A spacetime \((\mathcal{M}, g_{\mu\nu})\) with:
 1. Non-compact Cauchy surface
 2. Null energy condition: \(R_{\mu\nu}k^\mu k^\nu \ge 0\)
 3. A trapped surface (closed 2-surface with \(\theta_+ < 0\), \(\theta_- < 0\) for both null normals)</p><p>contains incomplete null geodesics (singularity).</p><p><strong>Role of Raychaudhuri</strong>: The null focusing theorem shows that null geodesics emanating from a trapped surface must converge and form caustics. The existence of a Cauchy surface and global structure then implies these caustics are not just coordinate artifacts but indicate geodesic incompleteness.</p><h3>8.2 Hawking Singularity Theorem (1966)</h3></p><p><strong>Theorem</strong>: A spacetime with:
 1. Strong energy condition: \(R_{\mu\nu}u^\mu u^\nu \ge 0\)
 2. Timelike geodesic congruence with \(\theta < 0\) on a Cauchy surface
-3. Generic condition (curvature not specially aligned)</p><p>contains incomplete timelike geodesics.</p><p><strong>Role of Raychaudhuri</strong>: The timelike focusing theorem forces timelike geodesics to converge to a caustic. If the congruence is hypersurface-orthogonal (vorticity-free), this caustic forms in finite proper time. The generic condition ensures the caustic is a genuine singularity, not a coordinate crossing.</p><h3>8.3 Hawking-Penrose Theorem (1970)</h3></p><p>Combines both: If SEC holds and there exists a trapped surface or a point with reconverging light cones, singularity is inevitable.</p><p>---</p><h2>9. Applications</h2></p><h3>9.1 Gravitational Lensing</h3></p><p>The expansion \(\theta\) of a null congruence describes the cross-sectional area of a light bundle:</p><p><div class="eq">$$
+3. Generic condition (curvature not specially aligned)</p><p>contains incomplete timelike geodesics.</p><p><strong>Role of Raychaudhuri</strong>: The timelike focusing theorem forces timelike geodesics to converge to a caustic. If the congruence is hypersurface-orthogonal (vorticity-free), this caustic forms in finite proper time. The generic condition ensures the caustic is a genuine singularity, not a coordinate crossing.</p><h3>8.3 Hawking-Penrose Theorem (1970)</h3></p><p>Combines both: If SEC holds and there exists a trapped surface or a point with reconverging light cones, singularity is inevitable.</p><hr class="soft"><h2>9. Applications</h2></p><h3>9.1 Gravitational Lensing</h3></p><p>The expansion \(\theta\) of a null congruence describes the cross-sectional area of a light bundle:</p><p><div class="eq">$$
 \frac{d}{d\lambda}\ln A = \theta
 $$</div></p><p>where \(A\) is the cross-sectional area. The Raychaudhuri equation gives:</p><p><div class="eq">$$
 \frac{d^2\sqrt{A}}{d\lambda^2} = -\left(\sigma^2 + \frac{1}{2}R_{\mu\nu}k^\mu k^\nu\right)\sqrt{A}
@@ -151,13 +189,13 @@ $$</div></p><p>This is the <strong>optical scalar equation</strong> used in lens
 \frac{dA}{d\lambda} = \int \theta dA = 0 \quad \text{(equilibrium)}
 $$</div></p><p>Under perturbation, \(\theta\) becomes positive, and the area increases (Second Law).</p><h3>9.3 Cosmology</h3></p><p>In FLRW, the timelike congruence of comoving observers has \(u^\mu = (1,0,0,0)\), \(\theta = 3H\), \(\sigma = \omega = 0\). The Raychaudhuri equation reduces to:</p><p><div class="eq">$$
 \dot{H} + H^2 = -\frac{1}{6}(\rho + 3p)
-$$</div></p><p>which is the acceleration equation (equivalent to Friedmann equations).</p><p>---</p><h2>10. Generalizations and Extensions</h2></p><h3>10.1 Non-Geodesic Congruences</h3></p><p>For non-geodesic timelike congruences (\(a_\mu \ne 0\)):</p><p><div class="eq">$$
+$$</div></p><p>which is the acceleration equation (equivalent to Friedmann equations).</p><hr class="soft"><h2>10. Generalizations and Extensions</h2></p><h3>10.1 Non-Geodesic Congruences</h3></p><p>For non-geodesic timelike congruences (\(a_\mu \ne 0\)):</p><p><div class="eq">$$
 \frac{d\theta}{d\tau} = -\frac{1}{3}\theta^2 - \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu} - R_{\mu\nu}u^\mu u^\nu + \nabla_\mu a^\mu
 $$</div></p><p>The acceleration divergence term can prevent focusing.</p><h3>10.2 Higher Dimensions</h3></p><p>In \(D\) dimensions:
 <ul><li>Timelike: \(d\theta/d\tau = -\frac{1}{D-1}\theta^2 - \sigma^2 + \omega^2 - R_{\mu\nu}u^\mu u^\nu\)</li></ul>
-<ul><li>Null: \(d\theta/d\lambda = -\frac{1}{D-2}\theta^2 - \sigma^2 + \omega^2 - R_{\mu\nu}k^\mu k^\nu\)</li></ul></p><h3>10.3 Torsion and Non-Metricity</h3></p><p>In Einstein-Cartan or metric-affine gravity, additional terms appear from torsion and non-metricity.</p><h3>10.4 Quantum Corrections</h3></p><p>In semi-classical gravity, \(R_{\mu\nu}\) is replaced by \(\langle T_{\mu\nu}\rangle\), and quantum focusing conjectures generalize the theorem.</p><p>---</p><h2>11. Mathematical Rigor: Conjugate Points and Caustics</h2></p><h3>11.1 Jacobi Fields</h3></p><p>The deviation vector \(\xi^\mu\) is a Jacobi field. The expansion is the logarithmic derivative of the cross-sectional volume \(V\):</p><p><div class="eq">$$
+<ul><li>Null: \(d\theta/d\lambda = -\frac{1}{D-2}\theta^2 - \sigma^2 + \omega^2 - R_{\mu\nu}k^\mu k^\nu\)</li></ul></p><h3>10.3 Torsion and Non-Metricity</h3></p><p>In Einstein-Cartan or metric-affine gravity, additional terms appear from torsion and non-metricity.</p><h3>10.4 Quantum Corrections</h3></p><p>In semi-classical gravity, \(R_{\mu\nu}\) is replaced by \(\langle T_{\mu\nu}\rangle\), and quantum focusing conjectures generalize the theorem.</p><hr class="soft"><h2>11. Mathematical Rigor: Conjugate Points and Caustics</h2></p><h3>11.1 Jacobi Fields</h3></p><p>The deviation vector \(\xi^\mu\) is a Jacobi field. The expansion is the logarithmic derivative of the cross-sectional volume \(V\):</p><p><div class="eq">$$
 \theta = \frac{1}{V}\frac{dV}{d\tau}, \quad V \propto \sqrt{\det(h_{\mu\nu})}
-$$</div></p><h3>11.2 Conjugate Points</h3></p><p>A point \(q\) is conjugate to \(p\) along a geodesic \(\gamma\) if there exists a non-zero Jacobi field vanishing at \(p\) and \(q\). The focusing theorem guarantees conjugate points within finite affine parameter if \(\theta_0 < 0\) and energy conditions hold.</p><h3>11.3 Morse Index Theorem</h3></p><p>The number of conjugate points along a geodesic segment equals the Morse index (number of negative eigenvalues of the second variation of proper time).</p><p>---</p><h2>12. Summary of Key Equations</h2></p><h3>12.1 Timelike Geodesic Congruence</h3></p><p><div class="eq">$$
+$$</div></p><h3>11.2 Conjugate Points</h3></p><p>A point \(q\) is conjugate to \(p\) along a geodesic \(\gamma\) if there exists a non-zero Jacobi field vanishing at \(p\) and \(q\). The focusing theorem guarantees conjugate points within finite affine parameter if \(\theta_0 < 0\) and energy conditions hold.</p><h3>11.3 Morse Index Theorem</h3></p><p>The number of conjugate points along a geodesic segment equals the Morse index (number of negative eigenvalues of the second variation of proper time).</p><hr class="soft"><h2>12. Summary of Key Equations</h2></p><h3>12.1 Timelike Geodesic Congruence</h3></p><p><div class="eq">$$
 \boxed{
 \begin{aligned}
 \frac{d\theta}{d\tau} &= -\frac{1}{3}\theta^2 - \sigma_{\mu\nu}\sigma^{\mu\nu} + \omega_{\mu\nu}\omega^{\mu\nu} - R_{\mu\nu}u^\mu u^\nu \\
@@ -178,8 +216,49 @@ $$</div></p><h3>12.2 Null Geodesic Congruence (affine)</h3></p><p><div class="eq
 $$</div></p><h3>12.3 Focusing Theorems</h3></p><p>| Case | Condition | Inequality | Caustic Time |
 |------|-----------|------------|--------------|
 | Timelike | SEC, \(\omega=0\), \(\theta_0<0\) | \(d\theta/d\tau \le -\theta^2/3\) | \(\tau \le 3/|\theta_0|\) |
-| Null | NEC, \(\omega=0\), \(\theta_0<0\) | \(d\theta/d\lambda \le -\theta^2/2\) | \(\lambda \le 2/|\theta_0|\) |</p><p>---</p><h2>13. Conclusion</h2></p><p>The Raychaudhuri equation is a purely geometric identity that becomes a powerful physical tool when combined with energy conditions. It demonstrates that gravity is universally attractive (focusing) for vorticity-free congruences, leading inevitably to caustics and, under global conditions, to singularities. This underpins the singularity theorems, black hole thermodynamics, and gravitational lensing theory.</p><p>---</p><p><em>End of derivation. All steps shown from geodesic deviation to final equations.</em></p>
-</main>
-<footer>Exotic Compact Objects — Premium View</footer>
+| Null | NEC, \(\omega=0\), \(\theta_0<0\) | \(d\theta/d\lambda \le -\theta^2/2\) | \(\lambda \le 2/|\theta_0|\) |</p><hr class="soft"><h2>13. Conclusion</h2></p><p>The Raychaudhuri equation is a purely geometric identity that becomes a powerful physical tool when combined with energy conditions. It demonstrates that gravity is universally attractive (focusing) for vorticity-free congruences, leading inevitably to caustics and, under global conditions, to singularities. This underpins the singularity theorems, black hole thermodynamics, and gravitational lensing theory.</p><hr class="soft"><p><em>End of derivation. All steps shown from geodesic deviation to final equations.</em></p>
+</article><aside class="toc" id="toc" aria-label="Table of contents"></aside></div></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Built 2026-10-20</span>
+      <span>Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
 </body>
 </html>

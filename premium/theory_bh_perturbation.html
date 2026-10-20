@@ -3,22 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Theory Bh Perturbation</title>
+<meta name="color-scheme" content="dark">
+<title>Black Hole Perturbation Theory: Complete Theoretical Derivation · Astro Science</title>
+<meta name="description" content="Black Hole Perturbation Theory: Complete Theoretical Derivation — a self-contained derivation from first principles.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="Black Hole Perturbation Theory: Complete Theoretical Derivation">
+<meta property="og:description" content="Black Hole Perturbation Theory: Complete Theoretical Derivation — a self-contained derivation from first principles.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
-<header><h1>Theory Bh Perturbation</h1></header>
-<nav>
-<a href="index.html">Home</a>
-<a href="theory.html">Theory</a>
-<a href="data.html">Data</a>
-<a href="models.html">Models</a>
-<a href="geodesics.html">Geodesics</a>
-<a href="whiteholes.html">White Holes</a>
-<a href="advanced.html">Advanced</a>
-</nav>
-<main>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>Compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="theory.html">Theory</a><span class="sep">/</span><span>Black Hole Perturbation Theory: Complete Theoretical Derivat</span></nav></div>
+<div class="wrap"><div class="prose-layout"><article class="prose" id="prose">
 <h1>Black Hole Perturbation Theory: Complete Theoretical Derivation</h1></p><h2>1. Introduction and Setup</h2></p><p>Black hole perturbation theory studies linearized fluctuations around a black hole background. For Schwarzschild and Kerr black holes, the perturbations separate into decoupled master equations governing gravitational, electromagnetic, and scalar perturbations.</p><h3>1.1 Background Metric</h3></p><p>Schwarzschild metric:
 \begin{equation}
 ds^2 = -f(r) dt^2 + \frac{dr^2}{f(r)} + r^2 d\Omega^2, \quad f(r) = 1 - \frac{2M}{r}
@@ -29,7 +67,7 @@ ds^2 &= -\frac{\Delta - a^2\sin^2\theta}{\Sigma} dt^2 - \frac{2a\sin^2\theta(r^2
 \end{align}
 with \(\Delta = r^2 - 2Mr + a^2\), \(\Sigma = r^2 + a^2\cos^2\theta\).</p><h3>1.2 Perturbation Ansatz</h3></p><p>Metric perturbation: \(g_{\mu\nu} \to g_{\mu\nu} + h_{\mu\nu}\).
 Electromagnetic perturbation: \(F_{\mu\nu} \to F_{\mu\nu} + \delta F_{\mu\nu}\).
-Scalar perturbation: \(\Phi \to \Phi + \delta\Phi\).</p><p>Decompose into tensor spherical harmonics (Schwarzschild) or spin-weighted spheroidal harmonics (Kerr).</p><p>---</p><h2>2. Schwarzschild Perturbations: Regge-Wheeler-Zerilli Formalism</h2></p><h3>2.1 Tensor Harmonic Decomposition</h3></p><p>Perturbations split into <strong>axial (odd)</strong> and <strong>polar (even)</strong> sectors under parity \(\theta \to \pi-\theta\), \(\phi \to \phi+\pi\).</p><p>#### Axial (Odd) Perturbations
+Scalar perturbation: \(\Phi \to \Phi + \delta\Phi\).</p><p>Decompose into tensor spherical harmonics (Schwarzschild) or spin-weighted spheroidal harmonics (Kerr).</p><hr class="soft"><h2>2. Schwarzschild Perturbations: Regge-Wheeler-Zerilli Formalism</h2></p><h3>2.1 Tensor Harmonic Decomposition</h3></p><p>Perturbations split into <strong>axial (odd)</strong> and <strong>polar (even)</strong> sectors under parity \(\theta \to \pi-\theta\), \(\phi \to \phi+\pi\).</p><p>#### Axial (Odd) Perturbations
 \begin{equation}
 h_{\mu\nu}^{\text{odd}} = \sum_{\ell m} \begin{pmatrix}
 0 & 0 & -h_0 \csc\theta \partial_\phi Y_{\ell m} & h_0 \sin\theta \partial_\theta Y_{\ell m} \\
@@ -68,7 +106,7 @@ V_{\text{Z}}(r) = \frac{2f(r)}{r^3} \frac{9M^3 + 3\Lambda M^2 r + \Lambda^2(\Lam
 \end{equation}</p><h3>2.4 Isospectrality</h3></p><p>Remarkably, \(V_{\text{RW}}\) and \(V_{\text{Z}}\) are isospectral: they have the same quasi-normal mode spectrum. They are related by a Darboux transformation:
 \begin{equation}
 V_{\text{Z}} = V_{\text{RW}} + \frac{2f}{r} \frac{d}{dr} \left( \frac{12Mr - 6M^2}{r(3M+\Lambda r)} \right)
-\end{equation}</p><p>---</p><h2>3. Electromagnetic and Scalar Perturbations on Schwarzschild</h2></p><h3>3.1 Scalar Field</h3></p><p>Massless scalar field \(\Phi\):
+\end{equation}</p><hr class="soft"><h2>3. Electromagnetic and Scalar Perturbations on Schwarzschild</h2></p><h3>3.1 Scalar Field</h3></p><p>Massless scalar field \(\Phi\):
 \begin{equation}
 \Box \Phi = 0 \Rightarrow \frac{d^2 \Psi}{dr_*^2} + \left[ \omega^2 - V_{\text{scalar}}(r) \right] \Psi = 0
 \end{equation}
@@ -80,7 +118,7 @@ V_{\text{scalar}}(r) = f(r) \frac{\ell(\ell+1)}{r^2}
 \end{equation}
 \begin{equation}
 V_{\text{EM}}(r) = f(r) \frac{\ell(\ell+1)}{r^2}
-\end{equation}</p><p>Same as scalar! (For Schwarzschild, EM and scalar potentials coincide.)</p><p>---</p><h2>4. Kerr Perturbations: Teukolsky Formalism</h2></p><h3>4.1 Newman-Penrose Formalism</h3></p><p>Use Kinnersley null tetrad:
+\end{equation}</p><p>Same as scalar! (For Schwarzschild, EM and scalar potentials coincide.)</p><hr class="soft"><h2>4. Kerr Perturbations: Teukolsky Formalism</h2></p><h3>4.1 Newman-Penrose Formalism</h3></p><p>Use Kinnersley null tetrad:
 \begin{align}
 l^\mu &= \frac{1}{\Delta}(r^2+a^2, \Delta, 0, a) \\
 n^\mu &= \frac{1}{2\Sigma}(r^2+a^2, -\Delta, 0, a) \\
@@ -104,7 +142,7 @@ Solutions: spin-weighted spheroidal harmonics \({}_sS_{\ell m}(\theta; a\omega)\
 \begin{equation}
 \Delta^{-s} \frac{d}{dr} \left( \Delta^{s+1} \frac{dR}{dr} \right) + \left[ \frac{K^2 - 2is(r-M)K}{\Delta} + 4is\omega r - {}_s\lambda_{\ell m} \right] R = 0
 \end{equation}
-where \(K = (r^2+a^2)\omega - am\).</p><p>---</p><h2>5. Quasi-Normal Modes (QNMs)</h2></p><h3>5.1 Boundary Conditions</h3></p><p>QNMs are solutions to the master equation with:
+where \(K = (r^2+a^2)\omega - am\).</p><hr class="soft"><h2>5. Quasi-Normal Modes (QNMs)</h2></p><h3>5.1 Boundary Conditions</h3></p><p>QNMs are solutions to the master equation with:
 <ul><li><strong>Ingoing</strong> at horizon: \(\Psi \sim e^{-i\omega r_<em>}\) as \(r_</em> \to -\infty\)</li></ul>
 <ul><li><strong>Outgoing</strong> at infinity: \(\Psi \sim e^{+i\omega r_<em>}\) as \(r_</em> \to +\infty\)</li></ul></p><h3>5.2 QNM Frequency Spectrum</h3></p><p>The frequencies \(\omega_n\) are complex: \(\omega_n = \omega_R - i\omega_I\) with \(\omega_I > 0\) (damping).</p><p>For Schwarzschild (\(a=0\)), \(\ell=2\) gravitational modes (\(s=-2\)):
 \begin{align}
@@ -115,7 +153,7 @@ where \(K = (r^2+a^2)\omega - am\).</p><p>---</p><h2>5. Quasi-Normal Modes (QNMs
 \end{align}</p><p>For Kerr (\(a \neq 0\)), frequencies depend on \(a/M\) and \(m\). Prograde modes (\(m>0\)) have higher frequency; retrograde modes have lower.</p><h3>5.3 QNM Excitation and Ringdown</h3></p><p>A perturbed black hole rings down as a superposition of QNMs:
 \begin{equation}
 \Psi(t,r_<em>) = \sum_n A_n e^{-i\omega_n t} \psi_n(r_</em>) + \text{branch cut (late-time tail)}
-\end{equation}</p><p>The ringdown signal from a binary merger is dominated by the fundamental \(\ell=2\) mode.</p><p>---</p><h2>6. Green's Functions</h2></p><h3>6.1 Retarded Green's Function</h3></p><p>The retarded Green's function satisfies:
+\end{equation}</p><p>The ringdown signal from a binary merger is dominated by the fundamental \(\ell=2\) mode.</p><hr class="soft"><h2>6. Green's Functions</h2></p><h3>6.1 Retarded Green's Function</h3></p><p>The retarded Green's function satisfies:
 \begin{equation}
 \left[ \frac{d^2}{dr_<em>^2} + \omega^2 - V(r) \right] G_\omega(r_</em>, r_<em>') = \delta(r_</em> - r_*')
 \end{equation}</p><p>With boundary conditions: \(G \sim e^{i\omega r_<em>}\) as \(r_</em> \to +\infty\), \(G \sim e^{-i\omega r_<em>}\) as \(r_</em> \to -\infty\).</p><h3>6.2 Construction from Homogeneous Solutions</h3></p><p>Let \(\psi_{\text{in}}(r_<em>)\) satisfy ingoing BC at horizon, \(\psi_{\text{up}}(r_</em>)\) satisfy outgoing BC at infinity.</p><p>Wronskian: \(W = \psi_{\text{in}} \psi_{\text{up}}' - \psi_{\text{in}}' \psi_{\text{up}} = \text{const}\).</p><p>Then:
@@ -134,7 +172,7 @@ G(t, r_<em>, r_</em>') = \sum_n \text{Res}(\omega_n) e^{-i\omega_n t} \psi_n(r_<
 \begin{equation}
 \Psi(t, r_*) \sim t^{-(2\ell+3)} \quad \text{(Schwarzschild, Price's law)}
 \end{equation}
-For Kerr, the tail is more complicated due to superradiance and ergoregion.</p><p>---</p><h2>7. Superradiance</h2></p><h3>7.1 Superradiant Condition</h3></p><p>For a wave with frequency \(\omega\) and azimuthal number \(m\) incident on a Kerr black hole:</p><p>\begin{equation}
+For Kerr, the tail is more complicated due to superradiance and ergoregion.</p><hr class="soft"><h2>7. Superradiance</h2></p><h3>7.1 Superradiant Condition</h3></p><p>For a wave with frequency \(\omega\) and azimuthal number \(m\) incident on a Kerr black hole:</p><p>\begin{equation}
 \boxed{0 < \omega < m \Omega_H}
 \end{equation}</p><p>where \(\Omega_H = a/(r_+^2 + a^2)\) is the horizon angular velocity.</p><p>In this regime, the reflection coefficient \(|R|^2 > 1\): the wave is amplified.</p><h3>7.2 Energy Extraction</h3></p><p>The amplified wave extracts rotational energy from the black hole. The rate of energy extraction:</p><p>\begin{equation}
 \frac{dE}{dt} = \frac{1}{2\pi} \int_0^\infty d\omega \sum_{\ell m} (\omega - m\Omega_H) |\mathcal{A}_{\ell m}(\omega)|^2
@@ -142,7 +180,7 @@ For Kerr, the tail is more complicated due to superradiance and ergoregion.</p><
 \begin{equation}
 \omega \approx \mu - \frac{\mu^3 M^2}{2(\ell+1)^2} + i \Gamma
 \end{equation}
-Growth rate \(\Gamma > 0\) for \(\mu M \ll 1\).</p><p>---</p><h2>8. Gravitational Wave Generation: Teukolsky-Sasaki-Nakamura</h2></p><h3>8.1 Source Term</h3></p><p>For a point particle of mass \(\mu\) on a geodesic, the stress-energy tensor:
+Growth rate \(\Gamma > 0\) for \(\mu M \ll 1\).</p><hr class="soft"><h2>8. Gravitational Wave Generation: Teukolsky-Sasaki-Nakamura</h2></p><h3>8.1 Source Term</h3></p><p>For a point particle of mass \(\mu\) on a geodesic, the stress-energy tensor:
 \begin{equation}
 T^{\mu\nu} = \mu \int \frac{u^\mu u^\nu}{\sqrt{-g}} \delta^4(x - x_p(\tau)) d\tau
 \end{equation}</p><p>The Teukolsky equation with source:
@@ -162,7 +200,7 @@ with \(F(r) \to 0\), \(U(r) \to \omega^2\) as \(r \to \infty\), and \(U(r) \to \
 \end{equation}</p><p>The energy flux:
 \begin{equation}
 \frac{dE}{dt} = \sum_{\ell m} \frac{|Z_{\ell m}|^2}{4\pi \omega^2}
-\end{equation}</p><p>---</p><h2>9. Self-Force and Radiation Reaction</h2></p><h3>9.1 Self-Force Problem</h3></p><p>A point particle of mass \(\mu\) moving in a background black hole creates a metric perturbation \(h_{\mu\nu}\). The particle's motion deviates from a geodesic due to its own field.</p><p>The equation of motion:
+\end{equation}</p><hr class="soft"><h2>9. Self-Force and Radiation Reaction</h2></p><h3>9.1 Self-Force Problem</h3></p><p>A point particle of mass \(\mu\) moving in a background black hole creates a metric perturbation \(h_{\mu\nu}\). The particle's motion deviates from a geodesic due to its own field.</p><p>The equation of motion:
 \begin{equation}
 \mu \frac{D u^\mu}{d\tau} = F^\mu_{\text{self}}
 \end{equation}</p><h3>9.2 Regularization</h3></p><p>The self-force diverges at the particle's location. Regularization schemes:
@@ -174,33 +212,33 @@ F^r_{\text{self}} = \mu^2 \left[ -\frac{1}{3} \frac{M}{r^3} + \cdots \right] \qu
 \end{equation}
 \begin{equation}
 F^t_{\text{self}} = \mu^2 \left[ \frac{32}{5} \frac{M^3}{r^5} \dot{r} + \cdots \right] \quad \text{(dissipative)}
-\end{equation}</p><p>---</p><h2>10. Green's Functions in Kerr: MST Method</h2></p><h3>10.1 Mano-Suzuki-Takasugi (MST) Method</h3></p><p>Analytic solution of the Teukolsky radial equation using:
+\end{equation}</p><hr class="soft"><h2>10. Green's Functions in Kerr: MST Method</h2></p><h3>10.1 Mano-Suzuki-Takasugi (MST) Method</h3></p><p>Analytic solution of the Teukolsky radial equation using:
 <ul><li>Hypergeometric functions near horizon</li></ul>
 <ul><li>Coulomb wave functions at infinity</li></ul>
-<ul><li>Series of hypergeometric functions (convergent everywhere)</li></ul></p><h3>10.2 Renormalized Angular Momentum</h3></p><p>Introduce \(\nu\) such that the angular eigenvalue \({}_s\lambda_{\ell m}\) is expressed as a continued fraction in \(\nu\). The parameter \(\nu\) is determined by a continued fraction equation.</p><h3>10.3 Connection Formulae</h3></p><p>The MST method provides explicit connection coefficients between horizon and infinity solutions, enabling high-precision QNM calculations and waveform generation.</p><p>---</p><h2>11. Black Hole Spectroscopy</h2></p><h3>11.1 No-Hair Theorem Tests</h3></p><p>QNM frequencies depend only on \(M\) and \(a\) (and \(Q\) for KN). Measuring multiple QNMs tests the Kerr hypothesis.</p><h3>11.2 Ringdown Overtones</h3></p><p>The ringdown signal:
+<ul><li>Series of hypergeometric functions (convergent everywhere)</li></ul></p><h3>10.2 Renormalized Angular Momentum</h3></p><p>Introduce \(\nu\) such that the angular eigenvalue \({}_s\lambda_{\ell m}\) is expressed as a continued fraction in \(\nu\). The parameter \(\nu\) is determined by a continued fraction equation.</p><h3>10.3 Connection Formulae</h3></p><p>The MST method provides explicit connection coefficients between horizon and infinity solutions, enabling high-precision QNM calculations and waveform generation.</p><hr class="soft"><h2>11. Black Hole Spectroscopy</h2></p><h3>11.1 No-Hair Theorem Tests</h3></p><p>QNM frequencies depend only on \(M\) and \(a\) (and \(Q\) for KN). Measuring multiple QNMs tests the Kerr hypothesis.</p><h3>11.2 Ringdown Overtones</h3></p><p>The ringdown signal:
 \begin{equation}
 h(t) = \sum_{n=0}^{N-1} A_n e^{-i\omega_n t} + \text{noise}
-\end{equation}</p><p>Bayesian inference on \(A_n, \omega_n\) constrains \(M, a\).</p><h3>11.3 Parametrized Ringdown</h3></p><p>Introduce deviations \(\delta \omega_n / \omega_n^{\text{Kerr}}\) to test alternative theories.</p><p>---</p><h2>12. Perturbations of Reissner-Nordström and Kerr-Newman</h2></p><h3>12.1 Coupled Gravitational-EM Perturbations</h3></p><p>For RN, gravitational and electromagnetic perturbations couple. The master equations are a system of two coupled ODEs.</p><h3>12.2 Moncrief's Formalism</h3></p><p>Define gauge-invariant master variables for coupled system. The equations decouple into two independent master equations.</p><h3>12.3 Kerr-Newman: Separation of Variables</h3></p><p>The Teukolsky equation for KN includes charge \(Q\). The separation works identically to Kerr, with \(\Delta = r^2 - 2Mr + a^2 + Q^2\).</p><p>---</p><h2>13. Numerical Methods</h2></p><h3>13.1 Frequency Domain</h3></p><p><ul><li><strong>Direct integration</strong>: Integrate from horizon and infinity, match at a point.</li></ul>
+\end{equation}</p><p>Bayesian inference on \(A_n, \omega_n\) constrains \(M, a\).</p><h3>11.3 Parametrized Ringdown</h3></p><p>Introduce deviations \(\delta \omega_n / \omega_n^{\text{Kerr}}\) to test alternative theories.</p><hr class="soft"><h2>12. Perturbations of Reissner-Nordström and Kerr-Newman</h2></p><h3>12.1 Coupled Gravitational-EM Perturbations</h3></p><p>For RN, gravitational and electromagnetic perturbations couple. The master equations are a system of two coupled ODEs.</p><h3>12.2 Moncrief's Formalism</h3></p><p>Define gauge-invariant master variables for coupled system. The equations decouple into two independent master equations.</p><h3>12.3 Kerr-Newman: Separation of Variables</h3></p><p>The Teukolsky equation for KN includes charge \(Q\). The separation works identically to Kerr, with \(\Delta = r^2 - 2Mr + a^2 + Q^2\).</p><hr class="soft"><h2>13. Numerical Methods</h2></p><h3>13.1 Frequency Domain</h3></p><p><ul><li><strong>Direct integration</strong>: Integrate from horizon and infinity, match at a point.</li></ul>
 <ul><li><strong>Shooting method</strong>: Vary \(\omega\) to satisfy boundary conditions.</li></ul>
 <ul><li><strong>MST method</strong>: Analytic continuation with hypergeometric series.</li></ul>
 <ul><li><strong>Leaver's continued fraction</strong>: For QNMs, express solution as series with continued fraction condition.</li></ul></p><h3>13.2 Time Domain</h3></p><p><ul><li><strong>Characteristic evolution</strong>: Integrate 1+1D wave equation on \(r_*\)-\(t\) grid.</li></ul>
 <ul><li><strong>Finite difference</strong>: Discretize \(\partial_t^2 - \partial_{r_*}^2 + V\).</li></ul>
 <ul><li><strong>Pseudospectral</strong>: Expand in Chebyshev polynomials.</li></ul></p><h3>13.3 Self-Force Codes</h3></p><p><ul><li><strong>Lorenz gauge</strong>: Solve \(\Box \bar{h}_{\mu\nu} = -16\pi T_{\mu\nu}\) with \(\nabla^\mu \bar{h}_{\mu\nu}=0\).</li></ul>
-<ul><li><strong>Radiation gauge</strong>: Use Teukolsky + Hertz potential reconstruction.</li></ul></p><p>---</p><h2>14. Effective One Body (EOB) and Phenomenological Models</h2></p><h3>14.1 EOB Formalism</h3></p><p>Maps two-body problem to a test particle in a deformed Schwarzschild/Kerr metric.</p><p>Hamiltonian:
+<ul><li><strong>Radiation gauge</strong>: Use Teukolsky + Hertz potential reconstruction.</li></ul></p><hr class="soft"><h2>14. Effective One Body (EOB) and Phenomenological Models</h2></p><h3>14.1 EOB Formalism</h3></p><p>Maps two-body problem to a test particle in a deformed Schwarzschild/Kerr metric.</p><p>Hamiltonian:
 \begin{equation}
 H_{\text{EOB}} = M \sqrt{1 + 2\nu \left( \frac{H_{\text{eff}}}{\mu} - 1 \right)}
 \end{equation}</p><p>Radiation reaction from resummed PN flux + QNM ringdown.</p><h3>14.2 Phenomenological Waveforms (IMRPhenom)</h3></p><p>Fit numerical relativity waveforms with analytic expressions:
 \begin{equation}
 h(f) = A(f) e^{i\psi(f)}
 \end{equation}
-where \(A(f)\) and \(\psi(f)\) are calibrated to NR simulations.</p><p>---</p><h2>15. Gauge Invariance and Master Variables</h2></p><h3>15.1 Gauge Transformations</h3></p><p>Under \(x^\mu \to x^\mu + \xi^\mu\):
+where \(A(f)\) and \(\psi(f)\) are calibrated to NR simulations.</p><hr class="soft"><h2>15. Gauge Invariance and Master Variables</h2></p><h3>15.1 Gauge Transformations</h3></p><p>Under \(x^\mu \to x^\mu + \xi^\mu\):
 \begin{equation}
 h_{\mu\nu} \to h_{\mu\nu} - \nabla_\mu \xi_\nu - \nabla_\nu \xi_\mu
 \end{equation}</p><h3>15.2 Gauge-Invariant Variables (Schwarzschild)</h3></p><p>For axial: \(k_1 = h_1 - \frac{r}{2} \partial_r h_0 + \frac{1}{2r} h_0\) (Regge-Wheeler).
 For polar: Zerilli variable \(\Psi_Z\).</p><p>For Kerr: The Teukolsky scalars \(\Psi_0\) and \(\Psi_4\) are gauge-invariant (for \(s=\pm 2\)).</p><h3>15.3 Hertz Potential Reconstruction</h3></p><p>From \(\Psi_0\) or \(\Psi_4\), reconstruct the metric perturbation via a Hertz potential \(\Psi_H\):
 \begin{equation}
 h_{\mu\nu} = \mathcal{O}_{\mu\nu} \Psi_H
-\end{equation}</p><p>---</p><h2>16. Summary of Master Equations</h2></p><p>\begin{center}
+\end{equation}</p><hr class="soft"><h2>16. Summary of Master Equations</h2></p><p>\begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
 \textbf{Background} & \textbf{Field} & \textbf{Master Eq} & \textbf{Potential} \\
@@ -213,7 +251,7 @@ Kerr (\(a\neq0\)) & All \(s\) & Teukolsky & Angular + radial \\
 Kerr-Newman & All \(s\) & Teukolsky (with \(Q\)) & Angular + radial \\
 \hline
 \end{tabular}
-\end{center}</p><p>---</p><h2>17. Key Formulas Reference</h2></p><p>\begin{flalign}
+\end{center}</p><hr class="soft"><h2>17. Key Formulas Reference</h2></p><p>\begin{flalign}
 &\text{Tortoise coordinate:} & dr_* = \frac{dr}{f(r)} & \quad f(r) = 1 - \frac{2M}{r} \\
 &\text{Regge-Wheeler potential:} & V_{\text{RW}} = f(r) \left[ \frac{\ell(\ell+1)}{r^2} - \frac{6M}{r^3} \right] & \\
 &\text{Zerilli potential:} & V_{\text{Z}} = \frac{2f}{r^3} \frac{9M^3 + 3\Lambda M^2 r + \Lambda^2(\Lambda+1) M r^2 + \Lambda^2(\Lambda+1) r^3/3}{(3M + \Lambda r)^2} & \\
@@ -225,7 +263,7 @@ Kerr-Newman & All \(s\) & Teukolsky (with \(Q\)) & Angular + radial \\
 &\text{Price's law (late tail):} & \Psi \sim t^{-(2\ell+3)} & \\
 &\text{Christodoulou mass:} & M^2 = \left(M_{\text{irr}} + \frac{Q^2}{4GM_{\text{irr}}}\right)^2 + \frac{J^2}{4G^2 M_{\text{irr}}^2} & \\
 \hline
-\end{flalign}</p><p>---</p><h2>18. Appendices</h2></p><h3>18.1 Derivation of Regge-Wheeler Equation</h3></p><p>Start with linearized Einstein equations \(\delta G_{\mu\nu} = 0\) for axial perturbations.</p><p>The \((t,\theta)\) and \((t,\phi)\) components give:
+\end{flalign}</p><hr class="soft"><h2>18. Appendices</h2></p><h3>18.1 Derivation of Regge-Wheeler Equation</h3></p><p>Start with linearized Einstein equations \(\delta G_{\mu\nu} = 0\) for axial perturbations.</p><p>The \((t,\theta)\) and \((t,\phi)\) components give:
 \begin{align}
 \partial_t h_1 - \partial_r h_0 + \frac{2}{r} h_0 &= 0 \\
 \partial_t \partial_r \left( \frac{h_0}{r} \right) - \frac{f}{r} \partial_r (r h_1) + \frac{\ell(\ell+1)}{r^2} f h_0 &= 0
@@ -237,7 +275,7 @@ Kerr-Newman & All \(s\) & Teukolsky (with \(Q\)) & Angular + radial \\
 \begin{equation}
 X = \frac{\Delta^2}{r^4} \left[ \frac{r^4}{\Delta^2} \left( \alpha R + \beta \frac{dR}{dr} \right) \right]
 \end{equation}
-where \(\alpha, \beta\) are chosen so that \(X\) satisfies a short-range potential equation.</p><p>---</p><h2>19. References</h2></p><p>\begin{enumerate}
+where \(\alpha, \beta\) are chosen so that \(X\) satisfies a short-range potential equation.</p><hr class="soft"><h2>19. References</h2></p><p>\begin{enumerate}
 \item Regge, T., \& Wheeler, J. A. (1957). \"Stability of a Schwarzschild Singularity.\" \textit{Physical Review}, 108(4), 1063–1069.
 \item Zerilli, F. J. (1970). \"Effective Potential for Even-Parity Regge-Wheeler Gravitational Perturbations.\" \textit{Physical Review Letters}, 24(13), 737–738.
 \item Teukolsky, S. A. (1973). \"Perturbations of a Rotating Black Hole. I. Fundamental Equations for Gravitational, Electromagnetic, and Neutrino-Field Perturbations.\" \textit{Astrophysical Journal}, 185, 635–648.
@@ -249,7 +287,48 @@ where \(\alpha, \beta\) are chosen so that \(X\) satisfies a short-range potenti
 \item Buonanno, A., \& Damour, T. (1999). \"Effective One-Body Approach to General Relativistic Two-Body Dynamics.\" \textit{Physical Review D}, 59(8), 084006.
 \item Berti, E., Cardoso, V., \& Starinets, A. O. (2009). \"Quasinormal Modes of Black Holes and Black Branes.\" \textit{Classical and Quantum Gravity}, 26(16), 163001.
 \end{enumerate}</p>
-</main>
-<footer>Exotic Compact Objects — Premium View</footer>
+</article><aside class="toc" id="toc" aria-label="Table of contents"></aside></div></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Built 2026-10-20</span>
+      <span>Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
 </body>
 </html>

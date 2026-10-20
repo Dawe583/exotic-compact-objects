@@ -3,26 +3,178 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Data</title>
+<meta name="color-scheme" content="dark">
+<title>Data catalogue · Astro Science</title>
+<meta name="description" content="Curated astronomy catalogues with row counts, provenance and interactive views.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="Data catalogue">
+<meta property="og:description" content="Curated astronomy catalogues with row counts, provenance and interactive views.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
-<header><h1>Data Explorer</h1></header>
-<nav>
-<a href="index.html">Home</a><a href="theory.html">Theory</a><a href="data.html">Data</a><a href="models.html">Models</a><a href="geodesics.html">Geodesics</a><a href="whiteholes.html">White Holes</a><a href="advanced.html">Advanced</a>
-</nav>
-<main>
-<div class="card"><h2>GWTC total mass</h2><iframe src="figures/gw_mass.html"></iframe></div>
-<div class="card"><h2>AGN black hole masses</h2><iframe src="figures/agn_mass.html"></iframe></div>
-<div class="card"><h2>Schwarzschild radius vs mass</h2><iframe src="figures/rs_mass.html"></iframe></div>
-<div class="card"><h2>BH mass distributions (combined)</h2><iframe src="figures/bh_mass_dist.html"></iframe></div>
-<div class="card"><h2>PTA SNR distributions</h2><iframe src="figures/pta_snr.html"></iframe></div>
-<div class="card"><h2>Gaia DR3 BH candidates sky map</h2><iframe src="figures/gaia_sky.html"></iframe></div>
-<div class="card"><h2>CMB TT power spectra</h2><iframe src="figures/planck_spectra.html"></iframe></div>
-<div class="card"><h2>Corbet diagram: X-ray binaries</h2><iframe src="figures/corbet.html"></iframe></div>
-<div class="card"><h2>SXS waveform modes</h2><iframe src="figures/sxs_modes.html"></iframe></div>
-</main>
-<footer>Data visualizations</footer>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>Compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="data.html">Data</a></nav></div>
+<div class="wrap"><main class="page">
+
+<div class="page-head">
+  <span class="eyebrow">Data</span>
+  <h1>Catalogues with provenance.</h1>
+  <p class="lede">Every dataset is traceable to a public archive or a named compilation. Row counts are measured at build time — this page cannot go stale.</p>
+</div>
+
+<section class="section" style="border-top:none;padding-top:32px">
+  <div class="stat-band reveal"><div class="stat"><div class="k">22</div><div class="l">Curated catalogues</div></div><div class="stat"><div class="k">83 568</div><div class="l">Total rows</div></div><div class="stat"><div class="k">391</div><div class="l">GW events</div></div><div class="stat"><div class="k">86</div><div class="l">AGN masses</div></div><div class="stat"><div class="k">14</div><div class="l">HEASARC tables</div></div></div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">Catalogue inventory</span><h2>22 datasets</h2>
+    <p>Counts exclude the header row. Derived tables are produced by the analysis pipeline and carry their generating notebook.</p></div>
+    <a class="more" href="https://github.com/Dawe583/exotic-compact-objects/tree/main/data/processed">Processed data →</a>
+  </div>
+  <div class="table-wrap"><table class="data">
+    <thead><tr><th>Dataset</th><th>Category</th><th>Rows</th><th>Cols</th><th>Description</th><th>Source</th><th>Status</th></tr></thead>
+    <tbody><tr><td class="name">GWTC compact-binary events</td><td>Gravitational waves</td><td class="num">391</td><td class="num">17</td><td>Merging compact binaries from GWTC-1/2/3 and O4 with masses, distances, SNR and false-alarm rates.<br><span class="muted mono" style="font-size:.72rem">data/processed/gwosc_gwtc.csv</span></td><td>GWOSC</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">GWTC recent remnants</td><td>Gravitational waves</td><td class="num">20</td><td class="num">19</td><td>The twenty most recent detected mergers with remnant mass, spin and radiated energy.<br><span class="muted mono" style="font-size:.72rem">data/processed/gwtc_recent_20_remnants.csv</span></td><td>GWOSC</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">Remnant ISCO &amp; Hawking table</td><td>Theory outputs</td><td class="num">279</td><td class="num">4</td><td>Derived remnant quantities: Kerr ISCO (BPT), horizon area, Hawking temperature and evaporation time.<br><span class="muted mono" style="font-size:.72rem">results/gwtc_remnant_isco_hawking.csv</span></td><td>Derived</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">SXS characterisation</td><td>Gravitational waves</td><td class="num">245</td><td class="num">9</td><td>Simulation-extracted waveform characteristics for the SXS catalogue.<br><span class="muted mono" style="font-size:.72rem">results/sxs_characterization.csv</span></td><td>SXS</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">SXS BBH catalogue</td><td>Gravitational waves</td><td class="num">28</td><td class="num">9</td><td>Binary black-hole initial data and remnant parameters from the SXS collaboration.<br><span class="muted mono" style="font-size:.72rem">data/external/sxs_catalog/sxs_bbh_catalog.csv</span></td><td>SXS</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">AGN reverberation masses</td><td>AGN &amp; SMBH</td><td class="num">86</td><td class="num">15</td><td>Supermassive black-hole masses from reverberation mapping with line widths and time delays.<br><span class="muted mono" style="font-size:.72rem">data/processed/agn_reverberation_masses.csv</span></td><td>Literature</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">AGN BH mass compilation</td><td>AGN &amp; SMBH</td><td class="num">88</td><td class="num">1</td><td>Compiled AGN black-hole masses across redshift used for demographic comparisons.<br><span class="muted mono" style="font-size:.72rem">data/external/agn_bh_mass.csv</span></td><td>Literature</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">BlackCAT dynamical BHs</td><td>Black holes</td><td class="num">18</td><td class="num">51</td><td>Dynamically confirmed stellar-mass black holes with orbital and distance measurements.<br><span class="muted mono" style="font-size:.72rem">data/processed/blackcat_dynamical.csv</span></td><td>BlackCAT</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">Known compact objects</td><td>Black holes</td><td class="num">10</td><td class="num">5</td><td>Curated compact-object landmarks spanning stellar-mass BHs, neutron stars and SMBHs.<br><span class="muted mono" style="font-size:.72rem">data/processed/known_compact_objects.csv</span></td><td>Curated</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">XRBCAT X-ray binaries</td><td>X-ray binaries</td><td class="num">229</td><td class="num">16</td><td>X-ray binary catalogue with companion type, orbital period and X-ray properties.<br><span class="muted mono" style="font-size:.72rem">data/external/xrbcat.csv</span></td><td>XRBCAT</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">Corbet HMXB diagram</td><td>X-ray binaries</td><td class="num">80</td><td class="num">5</td><td>High-mass X-ray binaries underlying the Corbet spin-period versus orbital-period diagram.<br><span class="muted mono" style="font-size:.72rem">data/external/xray_binary_catalogs/corbet_hmxb.csv</span></td><td>Corbet</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">Swift-BAT hard X-ray sources</td><td>X-ray binaries</td><td class="num">1 000</td><td class="num">11</td><td>Swift-BAT all-sky hard X-ray survey sources.<br><span class="muted mono" style="font-size:.72rem">data/external/swift_bat/swift_bat_sources.csv</span></td><td>Swift-BAT</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">ATNF pulsars</td><td>Stellar remnants</td><td class="num">4 503</td><td class="num">147</td><td>The ATNF pulsar catalogue: spin periods, dispersion measures and Galactic positions.<br><span class="muted mono" style="font-size:.72rem">data/external/atnfpulsar.csv</span></td><td>ATNF</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">Gaia DR3 wide binaries</td><td>Gaia</td><td class="num">50 000</td><td class="num">22</td><td>Wide binary candidates used for astrometric black-hole searches in Gaia DR3.<br><span class="muted mono" style="font-size:.72rem">data/external/gaia_dr3_wide_binaries.csv</span></td><td>Gaia DR3</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">Gaia DR3 BH candidates</td><td>Gaia</td><td class="num">20 000</td><td class="num">20</td><td>Astrometric black-hole candidate sample from Gaia DR3.<br><span class="muted mono" style="font-size:.72rem">data/external/gaia_dr3_bh_candidates.csv</span></td><td>Gaia DR3</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">MAXI/GSC sources</td><td>X-ray binaries</td><td class="num">500</td><td class="num">10</td><td>MAXI/GSC X-ray source catalogue used for transient and persistent accretor studies.<br><span class="muted mono" style="font-size:.72rem">data/external/maxi_gsc/maxi_gsc_sources.csv</span></td><td>MAXI</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">NICER observations</td><td>X-ray binaries</td><td class="num">5 000</td><td class="num">11</td><td>NICER observation log for neutron-star and black-hole X-ray binaries.<br><span class="muted mono" style="font-size:.72rem">data/external/nicer/nicer_observations.csv</span></td><td>NICER</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">Sgr A* region catalogue</td><td>Galactic centre</td><td class="num">318</td><td class="num">22</td><td>Chandra catalogue of X-ray sources in the Sgr A* region.<br><span class="muted mono" style="font-size:.72rem">data/external/sgraregcsc.csv</span></td><td>Chandra</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">M87 X-ray sources</td><td>Galactic centre</td><td class="num">174</td><td class="num">13</td><td>Chandra X-ray point sources in the M87 field.<br><span class="muted mono" style="font-size:.72rem">data/external/m87cxo.csv</span></td><td>Chandra</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">ULX catalogues</td><td>X-ray binaries</td><td class="num">229</td><td class="num">25</td><td>Ultraluminous X-ray source catalogue with fluxes and host-galaxy associations.<br><span class="muted mono" style="font-size:.72rem">data/external/ulxrbcat.csv</span></td><td>ULX</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">GW theoretical spectra</td><td>Gravitational waves</td><td class="num">100</td><td class="num">6</td><td>Theoretical stochastic gravitational-wave background spectra across source populations.<br><span class="muted mono" style="font-size:.72rem">data/external/gwb_spectra/gwb_theoretical_spectra.csv</span></td><td>Derived</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">Remnant energetics (Kerr)</td><td>Theory outputs</td><td class="num">270</td><td class="num">17</td><td>Inferred remnant spin, exact Kerr ISCO, radiative efficiency and rotational energy for 270 GWTC events.<br><span class="muted mono" style="font-size:.72rem">results/remnant_energetics.csv</span></td><td>Derived</td><td><span class="badge ok">ready</span></td></tr></tbody>
+  </table></div>
+  <p class="note">Row counts are computed from the CSV files at build time. The table is a curated subset: the full archive contains 40+ files including X-ray, pulsar and Gaia compilations.</p>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">Visual exploration</span><h2>Interactive data views</h2>
+    <p>Each figure is a self-contained Plotly document generated from the catalogue it visualises.</p></div>
+  </div>
+  <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/gw_mass.html" title="GWTC mass distribution" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>GWTC mass distribution</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/gwtc_recent_20_remnants.html" title="Twenty most recent remnants" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Twenty most recent remnants</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/agn_mass.html" title="AGN black-hole masses" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>AGN black-hole masses</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/corbet.html" title="Corbet diagram" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Corbet diagram</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/kerr_isco.html" title="Kerr ISCO" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Kerr ISCO</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/gaia_sky.html" title="Gaia DR3 sky map" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Gaia DR3 sky map</h3><span>interactive</span></figcaption>
+</figure></div>
+</section>
+
+</main></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Built 2026-10-20</span>
+      <span>Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
 </body>
 </html>

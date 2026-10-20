@@ -3,22 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Theory Kerr Newman Adm</title>
+<meta name="color-scheme" content="dark">
+<title>ADM Mass, Angular Momentum, and Charge for Kerr-Newman: Complete Derivation · Astro Science</title>
+<meta name="description" content="ADM Mass, Angular Momentum, and Charge for Kerr-Newman: Complete Derivation — a self-contained derivation from first principles.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="ADM Mass, Angular Momentum, and Charge for Kerr-Newman: Complete Derivation">
+<meta property="og:description" content="ADM Mass, Angular Momentum, and Charge for Kerr-Newman: Complete Derivation — a self-contained derivation from first principles.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
-<header><h1>Theory Kerr Newman Adm</h1></header>
-<nav>
-<a href="index.html">Home</a>
-<a href="theory.html">Theory</a>
-<a href="data.html">Data</a>
-<a href="models.html">Models</a>
-<a href="geodesics.html">Geodesics</a>
-<a href="whiteholes.html">White Holes</a>
-<a href="advanced.html">Advanced</a>
-</nav>
-<main>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>Compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="theory.html">Theory</a><span class="sep">/</span><span>ADM Mass, Angular Momentum, and Charge for Kerr-Newman: Comp</span></nav></div>
+<div class="wrap"><div class="prose-layout"><article class="prose" id="prose">
 <h1>ADM Mass, Angular Momentum, and Charge for Kerr-Newman: Complete Derivation</h1></p><h2>1. Hamiltonian Formulation of General Relativity</h2></p><h3>1.1 ADM Decomposition</h3></p><p>The spacetime metric is decomposed as:</p><p>\begin{equation}
 ds^2 = -N^2 dt^2 + \gamma_{ij} (dx^i + N^i dt)(dx^j + N^j dt)
 \end{equation}</p><p>where:
@@ -32,13 +70,13 @@ S = \int dt d^3x \left( \pi^{ij} \dot{\gamma}_{ij} - N \mathcal{H} - N_i \mathca
 \end{align}</p><p>where \(\pi^{ij}\) is the momentum conjugate to \(\gamma_{ij}\), and \({}^{(3)}\!R\) is the 3D Ricci scalar.</p><h3>1.2 Electromagnetic Contribution</h3></p><p>For the electromagnetic field, with \(F_{ij}\) and \(\Pi^i = \sqrt{\gamma} F^{0i}\):</p><p>\begin{align}
 \mathcal{H}_{\text{EM}} &= \frac{1}{2\sqrt{\gamma}} \left( \Pi^i \Pi_i + \frac{1}{4} \gamma_{ij} \gamma_{kl} F^{ik} F^{jl} \sqrt{\gamma} \right) \\
 \mathcal{H}_{i}^{\text{EM}} &= \Pi^j F_{ij}
-\end{align}</p><p>---</p><h2>2. ADM Charges as Surface Integrals</h2></p><h3>2.1 ADM Mass</h3></p><p>For asymptotically flat spacetimes, the ADM mass is:</p><p>\begin{equation}
+\end{align}</p><hr class="soft"><h2>2. ADM Charges as Surface Integrals</h2></p><h3>2.1 ADM Mass</h3></p><p>For asymptotically flat spacetimes, the ADM mass is:</p><p>\begin{equation}
 \boxed{M_{\text{ADM}} = \frac{1}{16\pi G} \lim_{r\to\infty} \oint_{S_r} (\partial_j \gamma_{ij} - \partial_i \gamma_{jj}) n^i dA}
 \end{equation}</p><p>where \(S_r\) is a 2-sphere of radius \(r\), \(n^i\) is the outward unit normal, and \(dA = r^2 d\Omega\).</p><h3>2.2 ADM Angular Momentum</h3></p><p>\begin{equation}
 \boxed{J_{\text{ADM}} = \frac{1}{8\pi G} \lim_{r\to\infty} \oint_{S_r} (\pi^{ij} \xi_j^{\text{(rot)}}) n_i dA}
 \end{equation}</p><p>where \(\xi^{\text{(rot)}} = \partial_\phi\) is the rotational Killing vector.</p><h3>2.3 ADM Electric Charge</h3></p><p>\begin{equation}
 \boxed{Q_{\text{ADM}} = \frac{1}{4\pi} \lim_{r\to\infty} \oint_{S_r} \Pi^i n_i dA}
-\end{equation}</p><p>---</p><h2>3. Asymptotic Expansion of Kerr-Newman Metric</h2></p><h3>3.1 Boyer-Lindquist to Asymptotically Cartesian</h3></p><p>For large \(r\), the Kerr-Newman metric in Boyer-Lindquist coordinates:</p><p>\begin{align}
+\end{equation}</p><hr class="soft"><h2>3. Asymptotic Expansion of Kerr-Newman Metric</h2></p><h3>3.1 Boyer-Lindquist to Asymptotically Cartesian</h3></p><p>For large \(r\), the Kerr-Newman metric in Boyer-Lindquist coordinates:</p><p>\begin{align}
 g_{tt} &= -1 + \frac{2GM}{r} - \frac{GQ^2}{r^2} + O(r^{-3}) \\
 g_{t\phi} &= -\frac{2GMa\sin^2\theta}{r} + O(r^{-2}) \\
 g_{rr} &= 1 + \frac{2GM}{r} + O(r^{-2}) \\
@@ -48,7 +86,7 @@ g_{\phi\phi} &= r^2\sin^2\theta + O(r)
 x &= r\sin\theta\cos\phi, \quad y = r\sin\theta\sin\phi, \quad z = r\cos\theta
 \end{align}</p><p>The spatial metric \(\gamma_{ij}\) at large \(r\):</p><p>\begin{equation}
 \gamma_{ij} = \delta_{ij} + \frac{2GM}{r} \delta_{ij} + \frac{2G}{r^3} \left[ J_{ik} x^k x^j + J_{jk} x^k x^i - \delta_{ij} J_{kl} x^k x^l \right] + O(r^{-3})
-\end{equation}</p><p>where \(J_{ij}\) is the angular momentum tensor: \(J_{ij} = \epsilon_{ijk} J^k\).</p><p>---</p><h2>4. Direct Computation of ADM Mass for Kerr-Newman</h2></p><h3>4.1 Spatial Metric Components</h3></p><p>At constant \(t\), the Kerr-Newman spatial metric:</p><p>\begin{align}
+\end{equation}</p><p>where \(J_{ij}\) is the angular momentum tensor: \(J_{ij} = \epsilon_{ijk} J^k\).</p><hr class="soft"><h2>4. Direct Computation of ADM Mass for Kerr-Newman</h2></p><h3>4.1 Spatial Metric Components</h3></p><p>At constant \(t\), the Kerr-Newman spatial metric:</p><p>\begin{align}
 \gamma_{rr} &= \frac{\Sigma}{\Delta} = 1 + \frac{2GM}{r} + \frac{4G^2M^2 - a^2 - GQ^2}{r^2} + O(r^{-3}) \\
 \gamma_{\theta\theta} &= \Sigma = r^2 + a^2\cos^2\theta \\
 \gamma_{\phi\phi} &= \frac{(r^2+a^2)^2 - \Delta a^2\sin^2\theta}{\Sigma} \sin^2\theta = r^2\sin^2\theta + a^2\sin^2\theta + 2GMa^2\frac{\sin^4\theta}{r} + O(1)
@@ -73,7 +111,7 @@ n^i (\partial_j \gamma_{ij} - \partial_i \gamma_{jj}) = \partial_r \gamma_{rr} +
 M_{\text{ADM}} = \frac{1}{16\pi G} \lim_{r\to\infty} \oint \sqrt{\gamma_{\theta\theta}\gamma_{\phi\phi}} \left( \frac{\gamma_{\theta\theta,r}}{\gamma_{\theta\theta}} + \frac{\gamma_{\phi\phi,r}}{\gamma_{\phi\phi}} - \frac{\gamma_{rr,r}}{\gamma_{rr}} - 2\frac{\sqrt{\gamma_{\theta\theta}\gamma_{\phi\phi}}}{r\sqrt{\gamma_{rr}}} \right) d\Omega
 \end{equation}</p><p>Let's use the simpler approach: the mass is the coefficient of \(1/r\) in \(g_{tt}\).</p><p>From \(g_{tt} = -1 + \frac{2GM}{r} + O(r^{-2})\), we read off:</p><p>\begin{equation}
 \boxed{M_{\text{ADM}} = M}
-\end{equation}</p><p>---</p><h2>5. Komar Integrals</h2></p><h3>5.1 Komar Mass</h3></p><p>For a timelike Killing vector \(\xi^\mu = (\partial_t)^\mu\), the Komar mass is:</p><p>\begin{equation}
+\end{equation}</p><hr class="soft"><h2>5. Komar Integrals</h2></p><h3>5.1 Komar Mass</h3></p><p>For a timelike Killing vector \(\xi^\mu = (\partial_t)^\mu\), the Komar mass is:</p><p>\begin{equation}
 M_{\text{Komar}} = -\frac{1}{8\pi G} \oint_{S_\infty} \nabla^\mu \xi^\nu dS_{\mu\nu}
 \end{equation}</p><p>where \(dS_{\mu\nu} = \frac{1}{2} (n_\mu m_\nu - n_\nu m_\mu) dA\) for a 2-sphere with normals \(n^\mu\) (timelike) and \(m^\mu\) (spacelike radial).</p><p>In Boyer-Lindquist coordinates, \(\xi^\mu = (1,0,0,0)\):</p><p>\begin{equation}
 \nabla^\mu \xi^\nu = \Gamma^\mu_{0\nu} = \frac{1}{2} g^{\mu\alpha} (\partial_\alpha g_{0\nu} + \partial_\nu g_{0\alpha} - \partial_0 g_{\alpha\nu})
@@ -129,7 +167,7 @@ Q = \frac{1}{4\pi} \oint *F
 <ul><li>\(f = 1 - 2GM/r + GQ^2/r^2\) for RN</li></ul>
 <ul><li>For KN: \(\Delta = r^2 - 2GMr + a^2 + GQ^2\)</li></ul>
 <ul><li>\(A_t = -Qr/\Sigma\) (no \(G\))</li></ul>
-<ul><li>\(F_{tr} = Q(r^2 - a^2\cos^2\theta)/\Sigma^2\)</li></ul></p><p>Then \(Q_{\text{Komar}} = \frac{1}{4\pi} \oint F = Q\).</p><p>I'll use this convention: \(Q\) is physical charge, \(A_t = -Qr/\Sigma\).</p><p>---</p><h2>6. ADM Charges from Hamiltonian Formalism</h2></p><h3>6.1 Regge-Teitelboim Approach</h3></p><p>The Hamiltonian for GR with boundary terms:</p><p>\begin{equation}
+<ul><li>\(F_{tr} = Q(r^2 - a^2\cos^2\theta)/\Sigma^2\)</li></ul></p><p>Then \(Q_{\text{Komar}} = \frac{1}{4\pi} \oint F = Q\).</p><p>I'll use this convention: \(Q\) is physical charge, \(A_t = -Qr/\Sigma\).</p><hr class="soft"><h2>6. ADM Charges from Hamiltonian Formalism</h2></p><h3>6.1 Regge-Teitelboim Approach</h3></p><p>The Hamiltonian for GR with boundary terms:</p><p>\begin{equation}
 H = \int_\Sigma (N\mathcal{H} + N^i\mathcal{H}_i) d^3x + B_\infty
 \end{equation}</p><p>The boundary term \(B_\infty\) makes the variational principle well-defined and gives the charges.</p><p>For asymptotic Killing vectors \(\xi^\mu\):</p><p>\begin{equation}
 \delta H_\xi = \oint_{S_\infty} \delta Q_\xi - \xi \cdot \Theta
@@ -139,7 +177,7 @@ M_{\text{ADM}} = \frac{1}{16\pi G} \oint (\partial_j \gamma_{ij} - \partial_i \g
 J_{\text{ADM}} = \frac{1}{8\pi G} \oint \pi^{ij} \xi_j n_i dA
 \end{equation}</p><p>The momentum conjugate \(\pi^{ij}\) for KN:</p><p>\begin{equation}
 \pi^{ij} = \frac{\sqrt{\gamma}}{16\pi G} (K^{ij} - \gamma^{ij} K)
-\end{equation}</p><p>where \(K_{ij}\) is the extrinsic curvature. For stationary spacetimes, \(K_{ij} = \frac{1}{2N}(D_i N_j + D_j N_i)\) with \(N_i = g_{i\phi} \Omega_H\).</p><p>Computing gives \(J_{\text{ADM}} = Ma\).</p><p>---</p><h2>7. Wald's Noether Charge Formalism</h2></p><h3>7.1 General Formula</h3></p><p>For a diffeomorphism invariant theory with Lagrangian \(n\)-form \(L\), the Noether current for a vector field \(\xi\) is:</p><p>\begin{equation}
+\end{equation}</p><p>where \(K_{ij}\) is the extrinsic curvature. For stationary spacetimes, \(K_{ij} = \frac{1}{2N}(D_i N_j + D_j N_i)\) with \(N_i = g_{i\phi} \Omega_H\).</p><p>Computing gives \(J_{\text{ADM}} = Ma\).</p><hr class="soft"><h2>7. Wald's Noether Charge Formalism</h2></p><h3>7.1 General Formula</h3></p><p>For a diffeomorphism invariant theory with Lagrangian \(n\)-form \(L\), the Noether current for a vector field \(\xi\) is:</p><p>\begin{equation}
 J_\xi = \Theta(\phi, \mathcal{L}_\xi \phi) - \xi \cdot L
 \end{equation}</p><p>where \(\Theta\) is the symplectic potential. On-shell, \(J_\xi = dQ_\xi\).</p><p>The charge associated with \(\xi\) is:</p><p>\begin{equation}
 H_\xi = \oint_{\partial \Sigma} Q_\xi
@@ -151,7 +189,7 @@ H_\xi = \oint Q_\xi = -\frac{1}{16\pi G} \oint \nabla^\rho \xi^\sigma dS_{\rho\s
 \delta M = \frac{\kappa}{8\pi G} \delta A + \Omega_H \delta J + \Phi_+ \delta Q
 \end{equation}</p><p>This comes from the identity:</p><p>\begin{equation}
 \delta H_{\partial_t} = \oint_{\partial \Sigma} \delta Q_{\partial_t} - \partial_t \cdot \Theta
-\end{equation}</p><p>and evaluating the horizon contribution.</p><p>---</p><h2>8. Smarr Formula from Scaling</h2></p><h3>8.1 Scaling Dimensions</h3></p><p>Under \(g_{\mu\nu} \to \lambda^2 g_{\mu\nu}\) (or \(r \to \lambda r\)):</p><p>\begin{align}
+\end{equation}</p><p>and evaluating the horizon contribution.</p><hr class="soft"><h2>8. Smarr Formula from Scaling</h2></p><h3>8.1 Scaling Dimensions</h3></p><p>Under \(g_{\mu\nu} \to \lambda^2 g_{\mu\nu}\) (or \(r \to \lambda r\)):</p><p>\begin{align}
 M &\to \lambda M \\
 J &\to \lambda^2 J \\
 Q &\to \lambda Q \\
@@ -167,7 +205,7 @@ M = 2\frac{\partial M}{\partial A} A + 2\frac{\partial M}{\partial J} J + \frac{
 \frac{\partial M}{\partial A} = \frac{\kappa}{8\pi G}, \quad \frac{\partial M}{\partial J} = \Omega_H, \quad \frac{\partial M}{\partial Q} = \Phi_+
 \end{equation}</p><p>Thus:</p><p>\begin{equation}
 \boxed{M = \frac{\kappa A}{4\pi G} + 2\Omega_H J + \Phi_+ Q = 2T_H S + 2\Omega_H J + \Phi_+ Q}
-\end{equation}</p><p>---</p><h2>9. First Law with Charge: Detailed Derivation</h2></p><h3>9.1 Horizon Geometry</h3></p><p>The horizon is a null surface generated by \(\chi^\mu = \xi^\mu + \Omega_H \psi^\mu\), where \(\xi = \partial_t\), \(\psi = \partial_\phi\).</p><p>The horizon area: \(A = \int \sqrt{\gamma_{\theta\theta}\gamma_{\phi\phi}} \big|_{r_+} d\theta d\phi = 4\pi(r_+^2 + a^2)\).</p><p>Surface gravity: \(\chi^\mu \nabla_\mu \chi^\nu = \kappa \chi^\nu\).</p><p>Electric potential: \(\Phi_+ = -\chi^\mu A_\mu|_{r_+}\).</p><h3>9.2 Variation of Horizon Parameters</h3></p><p>From \(\Delta(r_+) = 0\): \(r_+^2 - 2GMr_+ + a^2 + GQ^2 = 0\).</p><p>Vary:</p><p>\begin{equation}
+\end{equation}</p><hr class="soft"><h2>9. First Law with Charge: Detailed Derivation</h2></p><h3>9.1 Horizon Geometry</h3></p><p>The horizon is a null surface generated by \(\chi^\mu = \xi^\mu + \Omega_H \psi^\mu\), where \(\xi = \partial_t\), \(\psi = \partial_\phi\).</p><p>The horizon area: \(A = \int \sqrt{\gamma_{\theta\theta}\gamma_{\phi\phi}} \big|_{r_+} d\theta d\phi = 4\pi(r_+^2 + a^2)\).</p><p>Surface gravity: \(\chi^\mu \nabla_\mu \chi^\nu = \kappa \chi^\nu\).</p><p>Electric potential: \(\Phi_+ = -\chi^\mu A_\mu|_{r_+}\).</p><h3>9.2 Variation of Horizon Parameters</h3></p><p>From \(\Delta(r_+) = 0\): \(r_+^2 - 2GMr_+ + a^2 + GQ^2 = 0\).</p><p>Vary:</p><p>\begin{equation}
 2r_+ dr_+ - 2G(M dr_+ + r_+ dM) + 2a da + 2GQ dQ = 0
 \end{equation}</p><p>Using \(a = J/M\), \(da = (M dJ - J dM)/M^2\):</p><p>\begin{equation}
 (r_+ - GM) dr_+ = G r_+ dM - a da - GQ dQ
@@ -183,11 +221,11 @@ r_+ dr_+ = G M dr_+ + G r_+ dM - a da - GQ dQ
 \text{RHS} = dM
 \end{equation}</p><p>Thus the first law holds:</p><p>\begin{equation}
 \boxed{dM = T_H dS + \Omega_H dJ + \Phi_+ dQ}
-\end{equation}</p><p>---</p><h2>10. Thermodynamic Geometry</h2></p><h3>10.1 Ruppeiner Metric</h3></p><p>The thermodynamic metric on the space of equilibrium states:</p><p>\begin{equation}
+\end{equation}</p><hr class="soft"><h2>10. Thermodynamic Geometry</h2></p><h3>10.1 Ruppeiner Metric</h3></p><p>The thermodynamic metric on the space of equilibrium states:</p><p>\begin{equation}
 ds^2 = - \frac{\partial^2 S}{\partial X^i \partial X^j} dX^i dX^j
 \end{equation}</p><p>where \(X^i = (M, J, Q)\).</p><p>For KN:</p><p>\begin{equation}
 S = \pi (r_+^2 + a^2) = \pi \left( 2GM r_+ - GQ^2 \right)
-\end{equation}</p><p>with \(r_+ = GM + \sqrt{G^2M^2 - a^2 - GQ^2}\).</p><h3>10.2 Curvature Singularities</h3></p><p>The Ruppeiner curvature scalar \(R\) diverges at phase transitions (where heat capacities diverge). For KN, \(R\) diverges when \(C_{J,Q} \to \infty\).</p><p>---</p><h2>11. Christodoulou-Ruffini Mass Formula</h2></p><h3>11.1 Irreducible Mass</h3></p><p>The irreducible mass \(M_{\text{irr}}\) is defined by:</p><p>\begin{equation}
+\end{equation}</p><p>with \(r_+ = GM + \sqrt{G^2M^2 - a^2 - GQ^2}\).</p><h3>10.2 Curvature Singularities</h3></p><p>The Ruppeiner curvature scalar \(R\) diverges at phase transitions (where heat capacities diverge). For KN, \(R\) diverges when \(C_{J,Q} \to \infty\).</p><hr class="soft"><h2>11. Christodoulou-Ruffini Mass Formula</h2></p><h3>11.1 Irreducible Mass</h3></p><p>The irreducible mass \(M_{\text{irr}}\) is defined by:</p><p>\begin{equation}
 M_{\text{irr}}^2 = \frac{A}{16\pi G^2} = \frac{r_+^2 + a^2}{4G^2}
 \end{equation}</p><p>It satisfies \(M \geq M_{\text{irr}}\).</p><h3>11.2 Mass Formula</h3></p><p>Solving for \(M\):</p><p>\begin{equation}
 M^2 = \left( M_{\text{irr}} + \frac{Q^2}{4G M_{\text{irr}}} \right)^2 + \frac{J^2}{4G^2 M_{\text{irr}}^2}
@@ -198,22 +236,22 @@ r_+^2 + a^2 &= 2GMr_+ - GQ^2 \\
 M_{\text{irr}}^2 &= \frac{2GMr_+ - GQ^2}{4G^2} = \frac{Mr_+}{2G} - \frac{Q^2}{4G}
 \end{align}</p><p>Solve for \(M\):</p><p>\begin{equation}
 M = \frac{2G M_{\text{irr}}^2 + Q^2/2}{G r_+}
-\end{equation}</p><p>Using \(r_+ = GM + \sqrt{G^2M^2 - a^2 - GQ^2}\) and eliminating \(r_+\) yields the Christodoulou formula.</p><p>---</p><h2>12. Comparison: ADM vs Komar vs Wald</h2></p><p>| Quantity | ADM | Komar | Wald (Noether) |
+\end{equation}</p><p>Using \(r_+ = GM + \sqrt{G^2M^2 - a^2 - GQ^2}\) and eliminating \(r_+\) yields the Christodoulou formula.</p><hr class="soft"><h2>12. Comparison: ADM vs Komar vs Wald</h2></p><p>| Quantity | ADM | Komar | Wald (Noether) |
 |----------|-----|-------|----------------|
 | Mass | \(M\) | \(M\) | \(M\) |
 | Angular Momentum | \(J\) | \(J\) | \(J\) |
 | Charge | \(Q\) | \(Q\) | \(Q\) |
 | First Law | ✓ (via \(\delta H\)) | ✓ (via \(\delta Q\)) | ✓ (general) |
 | Gauge Invariant | Yes | Yes | Yes (with \(\Lambda\)) |
-| Applicability | Asymptotically flat | Stationary | General |</p><p>For Kerr-Newman, all three agree. For non-stationary spacetimes, only ADM/Wald apply.</p><p>---</p><h2>13. Bondi Mass and Mass Loss</h2></p><h3>13.1 Bondi-Sachs Framework</h3></p><p>At null infinity \(\mathscr{I}^+\), use retarded time \(u = t - r\) and Bondi coordinates \((u, r, \theta, \phi)\).</p><p>The Bondi mass aspect \(m_B(u, \theta, \phi)\):</p><p>\begin{equation}
+| Applicability | Asymptotically flat | Stationary | General |</p><p>For Kerr-Newman, all three agree. For non-stationary spacetimes, only ADM/Wald apply.</p><hr class="soft"><h2>13. Bondi Mass and Mass Loss</h2></p><h3>13.1 Bondi-Sachs Framework</h3></p><p>At null infinity \(\mathscr{I}^+\), use retarded time \(u = t - r\) and Bondi coordinates \((u, r, \theta, \phi)\).</p><p>The Bondi mass aspect \(m_B(u, \theta, \phi)\):</p><p>\begin{equation}
 M_{\text{Bondi}}(u) = \frac{1}{4\pi} \oint m_B(u, \theta, \phi) d\Omega
 \end{equation}</p><h3>13.2 Mass Loss Formula</h3></p><p>\begin{equation}
 \frac{dM_{\text{Bondi}}}{du} = -\frac{1}{4\pi G} \oint \left( |\dot{\sigma}|^2 + 4\pi G |\dot{\Phi}|^2 \right) d\Omega \leq 0
-\end{equation}</p><p>where \(\sigma\) is the shear of null geodesics (gravitational radiation) and \(\Phi\) is the electromagnetic radiation field.</p><p>For Kerr-Newman, \(\dot{\sigma} = 0\), \(\dot{\Phi} = 0\), so \(M_{\text{Bondi}} = M = \text{const}\).</p><p>---</p><h2>14. Quasi-Local Mass</h2></p><h3>14.1 Brown-York Quasi-Local Energy</h3></p><p>For a 2-sphere boundary \(B\) of a spatial region:</p><p>\begin{equation}
+\end{equation}</p><p>where \(\sigma\) is the shear of null geodesics (gravitational radiation) and \(\Phi\) is the electromagnetic radiation field.</p><p>For Kerr-Newman, \(\dot{\sigma} = 0\), \(\dot{\Phi} = 0\), so \(M_{\text{Bondi}} = M = \text{const}\).</p><hr class="soft"><h2>14. Quasi-Local Mass</h2></p><h3>14.1 Brown-York Quasi-Local Energy</h3></p><p>For a 2-sphere boundary \(B\) of a spatial region:</p><p>\begin{equation}
 E_{\text{BY}} = \frac{1}{8\pi G} \oint_B (k - k_0) dA
 \end{equation}</p><p>where \(k\) is the trace of extrinsic curvature of \(B\) embedded in \(\Sigma_t\), and \(k_0\) is the reference value in flat space.</p><h3>14.2 Evaluation for Kerr-Newman</h3></p><p>For a sphere at constant \(r > r_+\):</p><p>\begin{equation}
 E_{\text{BY}}(r) = r \left( 1 - \sqrt{f(r)} \right) + \text{rotation corrections}
-\end{equation}</p><p>As \(r \to \infty\), \(E_{\text{BY}} \to M\). As \(r \to r_+\), \(E_{\text{BY}} \to 2M_{\text{irr}}\).</p><p>---</p><h2>15. Summary of Key Results</h2></p><p>\begin{center}
+\end{equation}</p><p>As \(r \to \infty\), \(E_{\text{BY}} \to M\). As \(r \to r_+\), \(E_{\text{BY}} \to 2M_{\text{irr}}\).</p><hr class="soft"><h2>15. Summary of Key Results</h2></p><p>\begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{Quantity} & \textbf{Value} & \textbf{Method} \\
@@ -229,7 +267,7 @@ Smarr Formula & \(M = 2TS + 2\Omega J + \Phi Q\) & Scaling \\
 Christodoulou Formula & \(M^2 = (M_{\text{irr}} + Q^2/4GM_{\text{irr}})^2 + J^2/4G^2M_{\text{irr}}^2\) & Area relation \\
 \hline
 \end{tabular}
-\end{center}</p><p>---</p><h2>16. Appendix: Detailed Komar Integral Calculation</h2></p><h3>16.1 Komar Mass Integral</h3></p><p>\begin{align}
+\end{center}</p><hr class="soft"><h2>16. Appendix: Detailed Komar Integral Calculation</h2></p><h3>16.1 Komar Mass Integral</h3></p><p>\begin{align}
 M_K &= -\frac{1}{8\pi G} \oint_{S^2_\infty} \nabla^\mu \xi^\nu dS_{\mu\nu} \\
 &= -\frac{1}{8\pi G} \lim_{r\to\infty} \int_0^{2\pi} \int_0^\pi \nabla^r \xi^t \sqrt{-g} d\theta d\phi \\
 \xi^\mu &= (1,0,0,0) \\
@@ -257,7 +295,7 @@ J = \frac{1}{16\pi G} \oint (\nabla^\mu \psi^\nu - 2\psi^\mu A^\nu F_{\rho\sigma
 \end{equation}</p><p>Actually, the Komar integral for angular momentum in Einstein-Maxwell is:</p><p>\begin{equation}
 J = \frac{1}{16\pi G} \oint \nabla^\mu \psi^\nu dS_{\mu\nu} + \frac{1}{4\pi} \oint \psi^\mu A^\nu F_{\mu\nu} dS_{\mu\nu} \text{?}
 \end{equation}</p><p>No, the total angular momentum is just the gravitational Komar integral. The electromagnetic field carries angular momentum, but it's included in the geometry.</p><p>Let's check a reference: For Kerr-Newman, \(J = aM\) is the total angular momentum (gravitational + electromagnetic). The Komar integral of the Killing vector \(\partial_\phi\) gives exactly this.</p><p>The factor issue is resolved by noting that \(dS_{\mu\nu} = \frac{1}{2} (n_\mu m_\nu - n_\nu m_\mu) dA\) with \(n^\mu\) timelike unit normal to \(t=\text{const}\), \(m^\mu\) spacelike unit normal to \(r=\text{const}\) within \(t=\text{const}\).</p><p>\(n^\mu = (1/\sqrt{-g_{tt}}, 0,0,0) \sim (1,0,0,0)\).
-\(m^\mu = (0, \sqrt{g^{rr}}, 0, 0) \sim (0,1,0,0)\).</p><p>\(n_t = g_{tt} n^t \sim -1\), \(m_r = g_{rr} m^r \sim 1\).</p><p>\(dS_{tr} = \frac{1}{2}(n_t m_r - n_r m_t) \sqrt{\gamma_{\theta\theta}\gamma_{\phi\phi}} d\theta d\phi = \frac{1}{2}(-1)(1) r^2 \sin\theta d\theta d\phi = -\frac{1}{2} r^2 \sin\theta d\theta d\phi\).</p><p>Then \(M = -\frac{1}{8\pi G} \oint \nabla^t \xi^r dS_{tr} = -\frac{1}{8\pi G} \oint \nabla^r \xi^t (-dS_{tr})\)... This is getting bogged down in conventions.</p><p><strong>Bottom line</strong>: All standard references (Wald, Poisson, Townsend) give \(M_{\text{ADM}} = M_{\text{Komar}} = M\), \(J_{\text{ADM}} = J_{\text{Komar}} = Ma\), \(Q_{\text{ADM}} = Q\) for Kerr-Newman.</p><p>---</p><h2>17. References</h2></p><p>\begin{enumerate}
+\(m^\mu = (0, \sqrt{g^{rr}}, 0, 0) \sim (0,1,0,0)\).</p><p>\(n_t = g_{tt} n^t \sim -1\), \(m_r = g_{rr} m^r \sim 1\).</p><p>\(dS_{tr} = \frac{1}{2}(n_t m_r - n_r m_t) \sqrt{\gamma_{\theta\theta}\gamma_{\phi\phi}} d\theta d\phi = \frac{1}{2}(-1)(1) r^2 \sin\theta d\theta d\phi = -\frac{1}{2} r^2 \sin\theta d\theta d\phi\).</p><p>Then \(M = -\frac{1}{8\pi G} \oint \nabla^t \xi^r dS_{tr} = -\frac{1}{8\pi G} \oint \nabla^r \xi^t (-dS_{tr})\)... This is getting bogged down in conventions.</p><p><strong>Bottom line</strong>: All standard references (Wald, Poisson, Townsend) give \(M_{\text{ADM}} = M_{\text{Komar}} = M\), \(J_{\text{ADM}} = J_{\text{Komar}} = Ma\), \(Q_{\text{ADM}} = Q\) for Kerr-Newman.</p><hr class="soft"><h2>17. References</h2></p><p>\begin{enumerate}
 \item Arnowitt, R., Deser, S., \& Misner, C. W. (1962). \"The Dynamics of General Relativity.\" In \textit{Gravitation: An Introduction to Current Research}, ed. L. Witten, 227–265.
 \item Komar, A. (1959). \"Covariant Conservation Laws in General Relativity.\" \textit{Physical Review}, 113(3), 934–936.
 \item Wald, R. M. (1993). \"Black Hole Entropy is the Noether Charge.\" \textit{Physical Review D}, 48(8), R3427–R3431.
@@ -266,7 +304,48 @@ J = \frac{1}{16\pi G} \oint \nabla^\mu \psi^\nu dS_{\mu\nu} + \frac{1}{4\pi} \oi
 \item Brown, J. D., \& York, J. W. (1993). \"Quasilocal Energy and Conserved Charges Derived from the Gravitational Action.\" \textit{Physical Review D}, 47(4), 1407–1419.
 \item Ashtekar, A., \& Magnon-Ashtekar, A. (1979). \"On Conserved Quantities in General Relativity.\" \textit{Journal of Mathematical Physics}, 20(5), 793–800.
 \end{enumerate}</p>
-</main>
-<footer>Exotic Compact Objects — Premium View</footer>
+</article><aside class="toc" id="toc" aria-label="Table of contents"></aside></div></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Built 2026-10-20</span>
+      <span>Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
 </body>
 </html>

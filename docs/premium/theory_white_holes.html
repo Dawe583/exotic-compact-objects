@@ -3,25 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Theory White Holes</title>
+<meta name="color-scheme" content="dark">
+<title>White Holes: A Complete Theoretical Treatment · Astro Science</title>
+<meta name="description" content="White Holes: A Complete Theoretical Treatment — a self-contained derivation from first principles.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="White Holes: A Complete Theoretical Treatment">
+<meta property="og:description" content="White Holes: A Complete Theoretical Treatment — a self-contained derivation from first principles.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
-<header><h1>Theory White Holes</h1></header>
-<nav>
-<a href="index.html">Home</a>
-<a href="theory.html">Theory</a>
-<a href="data.html">Data</a>
-<a href="models.html">Models</a>
-<a href="geodesics.html">Geodesics</a>
-<a href="whiteholes.html">White Holes</a>
-<a href="advanced.html">Advanced</a>
-</nav>
-<main>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>Compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="theory.html">Theory</a><span class="sep">/</span><span>White Holes: A Complete Theoretical Treatment</span></nav></div>
+<div class="wrap"><div class="prose-layout"><article class="prose" id="prose">
 <h1>White Holes: A Complete Theoretical Treatment</h1></p><p><strong>Author:</strong> GR Theory Working Group  
 <strong>Date:</strong> October 2026  
-<strong>Status:</strong> Self-contained theoretical review with full derivations  </p><p>---</p><h2>1. Definition: The Time-Reversed Schwarzschild Solution</h2></p><h3>1.1 Schwarzschild Metric and Time Reversal</h3></p><p>The Schwarzschild metric in standard coordinates \((t, r, \theta, \phi)\) is:</p><p>\begin{equation}
+<strong>Status:</strong> Self-contained theoretical review with full derivations  </p><hr class="soft"><h2>1. Definition: The Time-Reversed Schwarzschild Solution</h2></p><h3>1.1 Schwarzschild Metric and Time Reversal</h3></p><p>The Schwarzschild metric in standard coordinates \((t, r, \theta, \phi)\) is:</p><p>\begin{equation}
 ds^2 = -\left(1 - \frac{r_s}{r}\right) c^2 dt^2 + \left(1 - \frac{r_s}{r}\right)^{-1} dr^2 + r^2 d\Omega^2
 \label{eq:schwarzschild}
 \end{equation}</p><p>where \(r_s = 2GM/c^2\) is the Schwarzschild radius and \(d\Omega^2 = d\theta^2 + \sin^2\theta \, d\phi^2\) is the metric on the unit 2-sphere.</p><p>Under time reversal \(t \to -t\), the metric \eqref{eq:schwarzschild} is invariant, since \(g_{tt}\) depends only on \(r\). This symmetry is deceptive: while the \emph{metric tensor} is invariant, the \emph{causal structure} distinguishes the black hole (BH) from the white hole (WH) regions. The time-reversed interpretation emerges when we consider which region of the maximal extension we are describing.</p><p>The Schwarzschild solution is a vacuum solution (\(R_{\mu\nu} = 0\)) of the Einstein field equations:</p><p>\begin{equation}
@@ -62,7 +100,7 @@ r = r_s \iff u^2 - v^2 = 0 \iff u = \pm v
 \xi^\mu = \left(\frac{c}{2r_s}\right)(u \partial_u + v \partial_v)
 \end{equation}</p><p>On the future horizon (\(U = 0\)), \(\xi\) is null and generates the horizon. On the past horizon (\(V = 0\)), \(\xi\) is also null, but the flow is \emph{outward}---this is the white hole horizon.</p><p>The surface gravity of the white hole horizon has the same magnitude but opposite sign in the sense that the horizon generators are past-directed. This can be seen by computing the norm:</p><p>\begin{equation}
 \|\xi\|^2 = g_{\mu\nu} \xi^\mu \xi^\nu = -\frac{r_s}{r}\left(1 - \frac{r_s}{r}\right) \cdot \frac{1}{4} (u^2 - v^2) \cdot \frac{4}{r_s^2} \cdot \frac{r}{r_s} e^{-r/r_s}
-\end{equation}</p><p>Evaluating on \(r = r_s\): \(\|\xi\|^2 = 0\), confirming the null character.</p><p>---</p><h2>2. Metric in Kruskal Coordinates and the White Hole Region</h2></p><h3>2.1 Explicit Metric Components</h3></p><p>From \eqref{eq:kruskal_null}, the metric in \((U, V, \theta, \phi)\) coordinates is:</p><p>\begin{equation}
+\end{equation}</p><p>Evaluating on \(r = r_s\): \(\|\xi\|^2 = 0\), confirming the null character.</p><hr class="soft"><h2>2. Metric in Kruskal Coordinates and the White Hole Region</h2></p><h3>2.1 Explicit Metric Components</h3></p><p>From \eqref{eq:kruskal_null}, the metric in \((U, V, \theta, \phi)\) coordinates is:</p><p>\begin{equation}
 ds^2 = -\frac{4r_s^3}{r} e^{-r/r_s} c^2 dU\, dV + r^2 (d\theta^2 + \sin^2\theta \, d\phi^2)
 \end{equation}</p><p>where \(r = r(U, V)\) is determined implicitly by:</p><p>\begin{equation}
 \frac{r}{r_s} e^{r/r_s} = \frac{r}{r_s} e^{r/r_s} = UV + \frac{r_s}{r} e^{r/r_s} \cdot r_s \quad \text{with} \quad \frac{r}{r_s}e^{r/r_s} = 1 + \frac{UV}{r_s} e^{1}
@@ -89,7 +127,7 @@ R_{\mu\nu\rho\sigma} R^{\mu\nu\rho\sigma} = \frac{48 G^2 M^2}{c^4 r^6} = \frac{3
 \Delta\tau_{IV} = \frac{2}{3} \frac{r_s}{c} \approx 1.05 \times 10^{-5} \left(\frac{M}{M_\odot}\right) \text{ s}
 \end{equation}</p><p>For a solar-mass white hole, the total lifetime of Region IV is \(\sim 10^{-5}\) s. For a supermassive white hole of \(10^9 M_\odot\):</p><p>\begin{equation}
 \Delta\tau_{IV} \approx 1.05 \times 10^{-5} \times 10^9 \text{ s} \approx 10^4 \text{ s} \approx 3 \text{ hours}
-\end{equation}</p><p>---</p><h2>3. Instability Analysis</h2></p><h3>3.1 Perturbation Equations</h3></p><p>Consider scalar perturbations \(\Phi\) on the Schwarzschild background. The Regge-Wheeler equation for odd-parity perturbations (and the Zerilli equation for even-parity) takes the form of a Schrödinger-like equation:</p><p>\begin{equation}
+\end{equation}</p><hr class="soft"><h2>3. Instability Analysis</h2></p><h3>3.1 Perturbation Equations</h3></p><p>Consider scalar perturbations \(\Phi\) on the Schwarzschild background. The Regge-Wheeler equation for odd-parity perturbations (and the Zerilli equation for even-parity) takes the form of a Schrödinger-like equation:</p><p>\begin{equation}
 \frac{d^2\Psi}{dr_*^2} + \left(\omega^2 - V_{\text{eff}}(r)\right) \Psi = 0
 \label{eq:regge_wheeler}
 \end{equation}</p><p>where \(r_* = r + r_s \ln|r/r_s - 1|\) is the tortoise coordinate and \(V_{\text{eff}}\) is an effective potential.</p><p>For the white hole, the boundary conditions are reversed: instead of requiring purely ingoing waves at the horizon (black hole) and outgoing waves at infinity, we require purely \emph{outgoing} waves at the white hole horizon and \emph{ingoing} waves at infinity (since time is reversed).</p><h3>3.2 Growth vs Damping: The QNM Spectrum</h3></p><p>The quasi-normal mode (QNM) frequencies \(\omega_n = \omega_n^{(R)} + i\omega_n^{(I)}\) satisfy:</p><p>\begin{equation}
@@ -118,7 +156,7 @@ m(v) \sim m_0 e^{\kappa v}
 \text{QNM e-folding time:} \quad & \tau_{\text{QNM}} \sim \frac{2\pi}{3\sqrt{3}} \frac{r_s}{c} \sim 10^{-4} \left(\frac{M}{M_\odot}\right) \text{ s} \\
 \text{Mass inflation time:} \quad & \tau_{\text{MI}} \sim \frac{2r_s}{c} \sim 10^{-5} \left(\frac{M}{M_\odot}\right) \text{ s} \\
 \text{Hawking evaporation time:} \quad & \tau_{\text{evap}} \sim \frac{5120\pi G^2 M^3}{\hbar c^4} \sim 10^{67} \left(\frac{M}{M_\odot}\right)^3 \text{ yr}
-\end{align}</p><p>The white hole is catastrophically unstable on astrophysical timescales, unless stabilized by exotic physics.</p><p>---</p><h2>4. Can White Holes Exist?</h2></p><h3>4.1 Classical Arguments Against</h3></p><p>The classical argument against white holes rests on several pillars:</p><p>\textbf{(i) Thermodynamic Arrow.} The second law of thermodynamics states \(dS/dt \geq 0\). A white hole \emph{decreases} the total entropy of the universe when it ejects matter, since the matter inside has low entropy (it came from a singularity) and the ejection process is irreversible. More precisely, the entropy of a white hole is:</p><p>\begin{equation}
+\end{align}</p><p>The white hole is catastrophically unstable on astrophysical timescales, unless stabilized by exotic physics.</p><hr class="soft"><h2>4. Can White Holes Exist?</h2></p><h3>4.1 Classical Arguments Against</h3></p><p>The classical argument against white holes rests on several pillars:</p><p>\textbf{(i) Thermodynamic Arrow.} The second law of thermodynamics states \(dS/dt \geq 0\). A white hole \emph{decreases} the total entropy of the universe when it ejects matter, since the matter inside has low entropy (it came from a singularity) and the ejection process is irreversible. More precisely, the entropy of a white hole is:</p><p>\begin{equation}
 S_{\text{WH}} = \frac{k_B c^3 A}{4 G \hbar} = \frac{4\pi k_B G M^2}{\hbar c}
 \end{equation}</p><p>When the white hole ejects mass \(\delta M\), its entropy changes by \(\delta S = \frac{8\pi k_B G M}{\hbar c} \delta M < 0\) (since \(\delta M < 0\)). The ejected matter carries entropy \(S_{\text{matter}} > 0\). For the second law to hold:</p><p>\begin{equation}
 \delta S_{\text{total}} = \delta S_{\text{WH}} + \delta S_{\text{matter}} \geq 0
@@ -130,7 +168,7 @@ S_{\text{WH}} = \frac{k_B c^3 A}{4 G \hbar} = \frac{4\pi k_B G M^2}{\hbar c}
 \begin{enumerate}
 \item \emph{Emergent:} determined by boundary conditions (low entropy past), or
 \item \emph{Fundamental:} determined by a time-asymmetric law.
-\end{enumerate}</p><p>If the arrow is emergent, white holes are as natural as black holes, and the universe could contain both. If the arrow is fundamental (e.g., due to the quantum measurement postulate or decoherence), white holes are forbidden.</p><p>The Page curve and the information paradox suggest that black hole evaporation is unitary, which is compatible with a white hole interpretation: the black hole evaporates and transitions to a white hole that releases the information.</p><p>---</p><h2>5. Hypothesized Observational Signatures</h2></p><h3>5.1 Gamma-Ray Bursts (GRBs)</h3></p><p>The most discussed signature is the white hole explosion. If a white hole of mass \(M\) exists, it would eject its entire mass-energy on a timescale \(\tau \sim r_s/c\). The luminosity would be:</p><p>\begin{equation}
+\end{enumerate}</p><p>If the arrow is emergent, white holes are as natural as black holes, and the universe could contain both. If the arrow is fundamental (e.g., due to the quantum measurement postulate or decoherence), white holes are forbidden.</p><p>The Page curve and the information paradox suggest that black hole evaporation is unitary, which is compatible with a white hole interpretation: the black hole evaporates and transitions to a white hole that releases the information.</p><hr class="soft"><h2>5. Hypothesized Observational Signatures</h2></p><h3>5.1 Gamma-Ray Bursts (GRBs)</h3></p><p>The most discussed signature is the white hole explosion. If a white hole of mass \(M\) exists, it would eject its entire mass-energy on a timescale \(\tau \sim r_s/c\). The luminosity would be:</p><p>\begin{equation}
 L \sim \frac{Mc^2}{\tau} \sim \frac{Mc^3}{r_s} = \frac{c^5}{2G} \approx 1.81 \times 10^{52} \text{ W}
 \end{equation}</p><p>This is independent of mass and is of order \(10^{52}\) W, comparable to the Eddington luminosity of a \(10^9 M_\odot\) object. The total energy is \(E \sim Mc^2\), which for \(M \sim 10^{12}\) kg (asteroid mass) is \(E \sim 10^{29}\) J, comparable to a GRB.</p><p>The observed GRB rate is \(\sim 1\) per day per sky. If white holes are responsible, the number density is:</p><p>\begin{equation}
 n_{\text{WH}} \sim \frac{1}{\tau_{\text{obs}} \cdot V_{\text{obs}}} \sim \frac{1}{1 \text{ Gpc}^3 \text{ yr}}
@@ -144,7 +182,7 @@ H = \frac{\dot{a}}{a} = \frac{1}{2t} \quad \text{(radiation-dominated)}
 M \sim \frac{c^3 H^{-1}}{2G} \sim \frac{(3 \times 10^8)^3 \times 4.35 \times 10^{17}}{2 \times 6.674 \times 10^{-11}} \sim 10^{54} \text{ kg} \sim 10^{24} M_\odot
 \end{equation}</p><p>This is roughly the mass of the observable universe, providing a suggestive numerical coincidence.</p><h3>5.4 High-Energy Neutrinos</h3></p><p>A white hole explosion would produce a burst of high-energy neutrinos via \(p\gamma\) and \(pp\) interactions in the ejecta. The neutrino energy is:</p><p>\begin{equation}
 E_\nu \sim 0.05 \times \gamma_{\text{rel}} m_p c^2 \sim 0.05 \times 100 \times 938 \text{ MeV} \sim 5 \text{ TeV}
-\end{equation}</p><p>IceCube and KM3NeT could detect such neutrinos, providing a distinctive signature.</p><p>---</p><h2>6. White Holes in Cosmology: LQG and Planck Stars</h2></p><h3>6.1 Loop Quantum Gravity Framework</h3></p><p>In LQG, area and volume are quantized. The area spectrum is:</p><p>\begin{equation}
+\end{equation}</p><p>IceCube and KM3NeT could detect such neutrinos, providing a distinctive signature.</p><hr class="soft"><h2>6. White Holes in Cosmology: LQG and Planck Stars</h2></p><h3>6.1 Loop Quantum Gravity Framework</h3></p><p>In LQG, area and volume are quantized. The area spectrum is:</p><p>\begin{equation}
 A = 8\pi \gamma \ell_P^2 \sum_i \sqrt{j_i(j_i + 1)}
 \end{equation}</p><p>where \(\gamma\) is the Barbero-Immirzi parameter, \(\ell_P = \sqrt{\hbar G/c^3}\) is the Planck length, and \(j_i\) are half-integer spins.</p><p>The black hole interior, described by the Kantowski-Sachs metric:</p><p>\begin{equation}
 ds^2 = -N^2 dt^2 + a^2(t) dr^2 + b^2(t) d\Omega^2
@@ -172,7 +210,7 @@ ds^2 = -\left(1 - \frac{2GM}{c^2 r} + \frac{\alpha \ell_P^2}{r^2}\right) c^2 dt^
 r_{\pm} = \frac{GM}{c^2} \pm \sqrt{\left(\frac{GM}{c^2}\right)^2 - \alpha \ell_P^2}
 \end{equation}</p><p>The inner horizon \(r_-\) is the white hole horizon. The bounce occurs at \(r = r_-\).</p><h3>6.4 Cosmological Implications</h3></p><p>If every black hole transitions to a white hole, the universe contains a population of white holes with masses ranging from Planck mass to supermassive. The white hole explosion rate is:</p><p>\begin{equation}
 \Gamma_{\text{WH}} \sim \frac{1}{t_{\text{Hawking}}(M)} \cdot n_{\text{BH}}(M)
-\end{equation}</p><p>For \(M \sim 10^{12}\) kg (primordial black holes), \(t_{\text{Hawking}} \sim 10^{10}\) yr \(\sim\) age of universe. These would be exploding now, producing GRBs. The non-observation of such explosions constrains the abundance of primordial black holes.</p><p>---</p><h2>7. Constraints and Null Results</h2></p><h3>7.1 GRB Constraints</h3></p><p>If white holes produce GRBs, the GRB luminosity function must match the white hole mass function. The GRB rate density is:</p><p>\begin{equation}
+\end{equation}</p><p>For \(M \sim 10^{12}\) kg (primordial black holes), \(t_{\text{Hawking}} \sim 10^{10}\) yr \(\sim\) age of universe. These would be exploding now, producing GRBs. The non-observation of such explosions constrains the abundance of primordial black holes.</p><hr class="soft"><h2>7. Constraints and Null Results</h2></p><h3>7.1 GRB Constraints</h3></p><p>If white holes produce GRBs, the GRB luminosity function must match the white hole mass function. The GRB rate density is:</p><p>\begin{equation}
 \rho_{\text{GRB}} \sim 10^{-8} \text{ Mpc}^{-3} \text{ yr}^{-1}
 \end{equation}</p><p>The white hole model requires:</p><p>\begin{equation}
 \rho_{\text{WH}} \sim \frac{\rho_{\text{GRB}}}{\tau_{\text{WH}}} \sim \frac{10^{-8} \text{ Mpc}^{-3} \text{ yr}^{-1}}{10^{-5} \text{ s}} \sim 10^{-3} \text{ Mpc}^{-3} \text{ s}^{-1}
@@ -201,7 +239,7 @@ h \sim \frac{6.674 \times 10^{-11}}{(3 \times 10^8)^4} \cdot \frac{10^{-5} \time
 \item \emph{Quantum mechanically possible} but exponentially suppressed for macroscopic masses.
 \item \emph{Observationally constrained} to be extremely rare or non-existent in the present universe.
 \item \emph{Quantum gravity motivated} through the LQG black hole to white hole transition.
-\end{enumerate}</p><p>The most promising avenue is the LQG Planck star scenario, where black holes transition to white holes on timescales \(\sim (M/m_P)^{4/3} t_P\). For stellar-mass black holes, this is far longer than the age of the universe, but for primordial black holes of mass \(\sim 10^{12}\) kg, the transition occurs now, producing observable explosions.</p><p>The search for white holes continues through multi-messenger observations of GRBs, FRBs, and high-energy neutrinos, as well as gravitational wave astronomy.</p><p>---</p><h2>Appendix A: Key Equations Summary</h2></p><p>\begin{align}
+\end{enumerate}</p><p>The most promising avenue is the LQG Planck star scenario, where black holes transition to white holes on timescales \(\sim (M/m_P)^{4/3} t_P\). For stellar-mass black holes, this is far longer than the age of the universe, but for primordial black holes of mass \(\sim 10^{12}\) kg, the transition occurs now, producing observable explosions.</p><p>The search for white holes continues through multi-messenger observations of GRBs, FRBs, and high-energy neutrinos, as well as gravitational wave astronomy.</p><hr class="soft"><h2>Appendix A: Key Equations Summary</h2></p><p>\begin{align}
 \text{Schwarzschild radius:} \quad & r_s = \frac{2GM}{c^2} \\
 \text{Surface gravity:} \quad & \kappa = \frac{c^4}{4GM} \\
 \text{Hawking temperature:} \quad & T_H = \frac{\hbar c^3}{8\pi G M k_B} \\
@@ -221,7 +259,7 @@ r_s(M_\odot) &= 2.95 \text{ km} \\
 t_P &= 5.391 \times 10^{-44} \text{ s} \\
 m_P &= 2.176 \times 10^{-8} \text{ kg} \\
 \rho_P &= 5.16 \times 10^{96} \text{ kg/m}^3
-\end{align}</p><p>---</p><h2>References</h2></p><p>1. Schwarzschild, K. (1916). "Über das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie." <em>Sitzungsberichte der Königlich Preussischen Akademie der Wissenschaften</em>, 189-196.
+\end{align}</p><hr class="soft"><h2>References</h2></p><p>1. Schwarzschild, K. (1916). "Über das Gravitationsfeld eines Massenpunktes nach der Einsteinschen Theorie." <em>Sitzungsberichte der Königlich Preussischen Akademie der Wissenschaften</em>, 189-196.
 2. Kruskal, M. D. (1960). "Maximal Extension of Schwarzschild Metric." <em>Physical Review</em>, 119, 1743.
 3. Szekeres, G. (1960). "On the Singularities of a Riemannian Manifold." <em>Publ. Math. Debrecen</em>, 7, 285.
 4. Penrose, R. (1965). "Gravitational Collapse and Space-Time Singularities." <em>Physical Review Letters</em>, 14, 57.
@@ -232,7 +270,48 @@ m_P &= 2.176 \times 10^{-8} \text{ kg} \\
 9. Haggard, H. M. and Rovelli, C. (2015). "Quantum-gravity effects outside the horizon spark black to white hole tunneling." <em>Physical Review D</em>, 92, 104020.
 10. Christodoulou, M. and D'Ambrosio, F. (2024). "White holes as remnants: An exploding scenario." <em>Physical Review D</em>, 110, 064011.
 </p>
-</main>
-<footer>Exotic Compact Objects — Premium View</footer>
+</article><aside class="toc" id="toc" aria-label="Table of contents"></aside></div></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Built 2026-10-20</span>
+      <span>Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
 </body>
 </html>

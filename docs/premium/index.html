@@ -1,64 +1,262 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exotic Compact Objects – Premium Research</title>
+<meta name="color-scheme" content="dark">
+<title>Extreme compact objects &amp; gravitational waves · Astro Science</title>
+<meta name="description" content="A reproducible research programme on black holes, wormholes, white holes and gravitational-wave remnants.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="Extreme compact objects &amp; gravitational waves">
+<meta property="og:description" content="A reproducible research programme on black holes, wormholes, white holes and gravitational-wave remnants.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
-<header><h1>Exotic Compact Objects</h1><p>Premium research view: black holes, wormholes, white holes.</p></header>
-<nav>
-<a href="index.html">Home</a>
-<a href="theory.html">Theory</a>
-<a href="data.html">Data</a>
-<a href="models.html">Models</a>
-<a href="geodesics.html">Geodesics</a>
-<a href="whiteholes.html">White Holes</a>
-<a href="advanced.html">Advanced</a>
-</nav>
-<main>
-<div class="card">
-<h2>Vítejte</h2>
-<p>Tento web je prémiový přehled výzkumu černých, červích a bílých děr. Obsahuje teorii, rovnice v LaTeXu, interaktivní grafy a vizualizace. Kód je skrytý – vidíte jen výsledky a vysvětlení.</p>
-<a class="btn" href="theory.html">Začít teorií</a>
-</div>
-<div class="card">
-<h3>Rychlé odkazy</h3>
-<ul>
-<li><a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repo</a></li>
-<li><a href="https://dawe583.github.io/exotic-compact-objects/">Notebook HTML view</a></li>
-</ul>
-</div>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>Compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
 
-<div class="card">
-<h3>Theory Deep Dives</h3>
-<ul>
-<li><a href="theory_black_holes.html">Black Hole Theory</a></li>
-<li><a href="theory_wormholes.html">Wormhole Theory</a></li>
-<li><a href="theory_white_holes.html">White Hole Theory</a></li>
-</ul>
-</div>
+<div class="wrap"><main class="page">
 
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><span class="dot"></span> Research programme · 2026</span>
+      <h1>Mapping the <span class="accent">extreme universe</span>.</h1>
+      <p class="lede">A reproducible, open research programme on black holes, wormholes, white holes and the compact-object remnants of gravitational-wave mergers — from first-principles relativity to catalogue-scale inference.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="research.html">Explore the research <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="theory.html">Read the theory</a>
+        <a class="btn btn-ghost" href="gallery.html">Interactive figures</a>
+      </div>
+    </div>
+    <div class="console" aria-label="Programme metrics">
+      <div class="console-head"><span class="pulse"></span> Programme status · live inventory</div>
+      <div class="metrics">
+        <div class="metric cyan"><div class="label">GW events</div><div class="value">391</div></div>
+        <div class="metric amber"><div class="label">AGN masses</div><div class="value">86</div></div>
+        <div class="metric violet"><div class="label">Notebooks</div><div class="value">26</div></div>
+        <div class="metric cyan"><div class="label">Datasets</div><div class="value">22</div></div>
+      </div>
+      <div class="console-foot"><span>theory docs: 11</span><span>figures: 30</span></div>
+    </div>
+  </div>
+</section>
 
-<div class="card">
-<h3>Advanced Theory</h3>
-<ul>
-<li><a href="theory_christoffel_kerr.html">Christoffel Symbols (Kerr)</a></li>
-<li><a href="theory_geodesic_equations.html">Geodesic Equations</a></li>
-<li><a href="theory_raychaudhuri.html">Raychaudhuri Equation</a></li>
-<li><a href="theory_fisher_matrix.html">Fisher Matrix (GW)</a></li>
-</ul>
-</div>
+<section class="section">
+  <div class="wrap">
+    <div class="stat-band reveal"><div class="stat"><div class="k">391</div><div class="l">GWTC events</div></div><div class="stat"><div class="k">279</div><div class="l">Remnant models</div></div><div class="stat"><div class="k">83 568</div><div class="l">Catalogue rows</div></div><div class="stat"><div class="k">26</div><div class="l">Executable notebooks</div></div><div class="stat"><div class="k">30</div><div class="l">Interactive figures</div></div></div>
+  </div>
+</section>
 
-<div class="card">
-<h3>Open research problems</h3>
-<ul>
-<li><a href="../23_early_smbh_growth.html">Early supermassive black-hole growth: observations, uncertainty, and seed constraints</a></li>
-<li><a href="../24_quantum_gravity.html">Quantum gravity: sourced propagation bounds and reproducible scale calculations</a></li>
-</ul>
-</div>
-</main>
-<footer>Exotic Compact Objects research</footer>
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">01 · Research streams</span>
+        <h2>Four questions, one relativistic framework</h2>
+        <p>Each stream pairs analytic geometry with catalogue-scale computation, and every result is reproducible from a notebook in the repository.</p>
+      </div>
+      <a class="more" href="research.html">All research →</a>
+    </div>
+    <div class="grid cols-2"><a class="card reveal" href="theory_wormholes.html">
+  <span class="tag violet">Geometry</span>
+  <span class="arrow" aria-hidden="true">↗</span>
+  <h3>Exotic compact objects</h3>
+  <p>Horizons, throats and the boundary between black holes, wormholes and white holes.</p>
+  <div class="meta">4 theory documents</div>
+</a>
+<a class="card reveal" href="data.html">
+  <span class="tag cyan">Catalogue</span>
+  <span class="arrow" aria-hidden="true">↗</span>
+  <h3>Gravitational-wave remnants</h3>
+  <p>What mergers leave behind: remnant mass, spin, ISCO and the Hawking lifetime.</p>
+  <div class="meta">391 events · 279 remnants</div>
+</a>
+<a class="card reveal" href="data.html">
+  <span class="tag amber">Demographics</span>
+  <span class="arrow" aria-hidden="true">↗</span>
+  <h3>AGN & early SMBH growth</h3>
+  <p>Reverberation masses, Eddington ratios and the seeding problem at high redshift.</p>
+  <div class="meta">86 reverberation masses</div>
+</a>
+<a class="card reveal" href="models.html">
+  <span class="tag green">Dynamics</span>
+  <span class="arrow" aria-hidden="true">↗</span>
+  <h3>Relativistic dynamics</h3>
+  <p>Geodesics, precession, the Penrose process and numerical-relativity waveforms.</p>
+  <div class="meta">6 canonical models</div>
+</a></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">02 · Latest results</span>
+        <h2>What the pipeline is producing</h2>
+        <p>Deterministic data refresh, notebook execution and graph drift checks keep these numbers current.</p>
+      </div>
+      <a class="more" href="data.html">Data catalogue →</a>
+    </div>
+    <div class="grid cols-2">
+      <article class="card reveal">
+        <span class="tag cyan">Validation</span>
+        <h3>Kerr ISCO: a factor-of-two error found and fixed</h3>
+        <p>The original Schwarzschild ISCO implementation used 12GM/c² instead of 6GM/c². The exact Bardeen–Press–Teukolsky solution now matches the Schwarzschild limit and reproduces prograde and retrograde branches across spin.</p>
+        <div class="meta"><span>6.0 r<sub>s</sub></span><span>error &lt; 1e-6</span><span>tests: pass</span></div>
+      </article>
+      <article class="card reveal">
+        <span class="tag amber">Catalogue</span>
+        <h3>Remnant population across 391 events</h3>
+        <p>For every merger we derive remnant mass and spin, the Kerr ISCO, horizon area, Hawking temperature and evaporation time — the input table for population-level tests of exotic alternatives.</p>
+        <div class="meta"><span>391 events</span><span>279 remnants</span><span>9 derived columns</span></div>
+      </article>
+      <article class="card reveal">
+        <span class="tag violet">AGN</span>
+        <h3>Reverberation-mapped mass sample</h3>
+        <p>86 supermassive black holes with line widths and time delays. The sample anchors the Eddington-ratio distribution used in the early-SMBH growth analysis.</p>
+        <div class="meta"><span>86 sources</span><span>M–σ cross-check</span><span>z &lt; 0.1</span></div>
+      </article>
+      <article class="card reveal">
+        <span class="tag green">Energetics</span>
+        <h3>How much rotational energy survives a merger?</h3>
+        <p>Across 270 remnants with complete masses and effective spin, the median inferred spin is 0.69 and the thin-disc efficiency 0.10 — far below the Kerr bound of 0.42. A Schwarzschild ISCO overestimates the true radius by 1.76× on average.</p>
+        <div class="meta"><span>270 remnants</span><span>η<sub>med</sub> = 0.102</span><span>1.76× overshoot</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">03 · Interactive figures</span>
+        <h2>Computed, not illustrated</h2>
+        <p>Every visualisation is generated from the same data and model code that produces the tables. Open a figure to explore the underlying values.</p>
+      </div>
+      <a class="more" href="gallery.html">Full gallery →</a>
+    </div>
+    <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/gw_mass.html" title="GWTC mass distribution" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>GWTC mass distribution</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/kerr_isco.html" title="Kerr ISCO" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Kerr ISCO</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/agn_mass.html" title="AGN black-hole masses" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>AGN black-hole masses</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/wormhole_3d.html" title="Wormhole embedding" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Wormhole embedding</h3><span>interactive</span></figcaption>
+</figure></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">04 · Method</span>
+        <h2>From observation to a defensible claim</h2>
+      </div>
+    </div>
+    <div class="grid cols-4">
+      <div class="card reveal"><span class="tag cyan">01</span><h3>Acquire</h3><p>GWOSC, HEASARC, BlackCAT, Gaia, SXS and literature compilations, with provenance recorded per file.</p></div>
+      <div class="card reveal"><span class="tag violet">02</span><h3>Derive</h3><p>Analytic geometry and numerical integration in Python/SymPy; units and sign conventions stated explicitly.</p></div>
+      <div class="card reveal"><span class="tag amber">03</span><h3>Validate</h3><p>Every formula is checked against a known limit, an independent implementation or an executed notebook.</p></div>
+      <div class="card reveal"><span class="tag green">04</span><h3>Publish</h3><p>Reports, tables and interactive figures are rebuilt from source, never edited by hand.</p></div>
+    </div>
+  </div>
+</section>
+
+</main></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Built 2026-10-20</span>
+      <span>Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
 </body>
 </html>

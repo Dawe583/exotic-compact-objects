@@ -3,23 +3,61 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Theory Fisher Matrix</title>
+<meta name="color-scheme" content="dark">
+<title>Fisher Information Matrix for Gravitational Wave Parameter Estimation · Astro Science</title>
+<meta name="description" content="Fisher Information Matrix for Gravitational Wave Parameter Estimation — a self-contained derivation from first principles.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="Fisher Information Matrix for Gravitational Wave Parameter Estimation">
+<meta property="og:description" content="Fisher Information Matrix for Gravitational Wave Parameter Estimation — a self-contained derivation from first principles.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
-<body>
-<header><h1>Theory Fisher Matrix</h1></header>
-<nav>
-<a href="index.html">Home</a>
-<a href="theory.html">Theory</a>
-<a href="data.html">Data</a>
-<a href="models.html">Models</a>
-<a href="geodesics.html">Geodesics</a>
-<a href="whiteholes.html">White Holes</a>
-<a href="advanced.html">Advanced</a>
-</nav>
-<main>
-<h1>Fisher Information Matrix for Gravitational Wave Parameter Estimation</h1></p><h2>Derivatives of Waveform w.r.t. Masses/Spins, SNR Integrals, Covariance Matrix, Degeneracy Analysis for BH Binary Parameters</h2></p><p>---</p><h2>1. Introduction</h2></p><p>The Fisher information matrix (FIM) provides a powerful analytical framework for estimating parameter uncertainties in gravitational wave (GW) observations. In the high signal-to-noise ratio (SNR) limit, the posterior distribution for signal parameters \(\theta^i\) is well-approximated by a multivariate Gaussian with covariance matrix given by the inverse Fisher matrix. This document provides a complete derivation of the FIM for compact binary coalescence signals, including waveform derivatives, inner products, SNR integrals, and degeneracy analysis for black hole binary parameters.</p><p>---</p><h2>2. GW Data Analysis Framework</h2></p><h3>2.1 Signal Model</h3></p><p>The GW strain from a compact binary inspiral-merger-ringdown is:</p><p><div class="eq">$$
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>Compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="theory.html">Theory</a><span class="sep">/</span><span>Fisher Information Matrix for Gravitational Wave Parameter E</span></nav></div>
+<div class="wrap"><div class="prose-layout"><article class="prose" id="prose">
+<h1>Fisher Information Matrix for Gravitational Wave Parameter Estimation</h1></p><h2>Derivatives of Waveform w.r.t. Masses/Spins, SNR Integrals, Covariance Matrix, Degeneracy Analysis for BH Binary Parameters</h2></p><hr class="soft"><h2>1. Introduction</h2></p><p>The Fisher information matrix (FIM) provides a powerful analytical framework for estimating parameter uncertainties in gravitational wave (GW) observations. In the high signal-to-noise ratio (SNR) limit, the posterior distribution for signal parameters \(\theta^i\) is well-approximated by a multivariate Gaussian with covariance matrix given by the inverse Fisher matrix. This document provides a complete derivation of the FIM for compact binary coalescence signals, including waveform derivatives, inner products, SNR integrals, and degeneracy analysis for black hole binary parameters.</p><hr class="soft"><h2>2. GW Data Analysis Framework</h2></p><h3>2.1 Signal Model</h3></p><p>The GW strain from a compact binary inspiral-merger-ringdown is:</p><p><div class="eq">$$
 h(t; \theta) = h_+(t; \theta) F_+(\alpha, \delta, \psi) + h_\times(t; \theta) F_\times(\alpha, \delta, \psi)
 $$</div></p><p>where \(\theta = \{M_c, \eta, \chi_1, \chi_2, t_c, \phi_c, D_L, \alpha, \delta, \psi, \iota\}\) are the parameters, and \(F_{+,\times}\) are antenna pattern functions.</p><p>In frequency domain (stationary phase approximation for inspiral):</p><p><div class="eq">$$
 \tilde{h}(f; \theta) = \mathcal{A}(f; \theta) e^{i\Psi(f; \theta)}
@@ -30,7 +68,7 @@ $$</div></p><h3>2.3 Inner Product</h3></p><p>The noise-weighted inner product be
 $$</div></p><p>Properties:
 <ul><li>Real and symmetric: \((a|b) = (b|a)\)</li></ul>
 <ul><li>Positive definite: \((h|h) > 0\) for \(h \ne 0\)</li></ul>
-<ul><li>SNR: \(\rho = \sqrt{(h|h)}\)</li></ul></p><p>---</p><h2>3. Fisher Information Matrix</h2></p><h3>3.1 Definition</h3></p><p>For a signal \(h(\theta)\) with parameters \(\theta^i\), the Fisher matrix is:</p><p><div class="eq">$$
+<ul><li>SNR: \(\rho = \sqrt{(h|h)}\)</li></ul></p><hr class="soft"><h2>3. Fisher Information Matrix</h2></p><h3>3.1 Definition</h3></p><p>For a signal \(h(\theta)\) with parameters \(\theta^i\), the Fisher matrix is:</p><p><div class="eq">$$
 \boxed{\Gamma_{ij} = \left( \frac{\partial h}{\partial \theta^i} \middle| \frac{\partial h}{\partial \theta^j} \right)}
 $$</div></p><h3>3.2 Gaussian Approximation</h3></p><p>In the high-SNR limit, the likelihood is:</p><p><div class="eq">$$
 \mathcal{L}(\theta) \propto \exp\left[-\frac{1}{2}(\Delta h | \Delta h)\right] \approx \exp\left[-\frac{1}{2}\Gamma_{ij} \Delta\theta^i \Delta\theta^j\right]
@@ -40,7 +78,7 @@ $$</div></p><p>The 1-\(\sigma\) uncertainty on parameter \(\theta^i\):</p><p><di
 \sigma_{\theta^i} = \sqrt{\Sigma^{ii}}
 $$</div></p><p>Correlation coefficient:</p><p><div class="eq">$$
 \rho_{ij} = \frac{\Sigma^{ij}}{\sqrt{\Sigma^{ii}\Sigma^{jj}}}
-$$</div></p><p>---</p><h2>4. Waveform Derivatives</h2></p><h3>4.1 Frequency-Domain Waveform (SPA)</h3></p><p>For non-precessing binaries in the inspiral regime (post-Newtonian):</p><p><div class="eq">$$
+$$</div></p><hr class="soft"><h2>4. Waveform Derivatives</h2></p><h3>4.1 Frequency-Domain Waveform (SPA)</h3></p><p>For non-precessing binaries in the inspiral regime (post-Newtonian):</p><p><div class="eq">$$
 \tilde{h}(f) = \mathcal{A} f^{-7/6} e^{i\Psi(f)}
 $$</div></p><p>Amplitude:</p><p><div class="eq">$$
 \mathcal{A} = \frac{1}{D_L} \sqrt{\frac{5}{24}} \pi^{-2/3} \mathcal{M}_c^{5/6} \mathcal{F}(\iota, \psi)
@@ -75,7 +113,7 @@ $$</div></p><p>For \(D_L\):</p><p><div class="eq">$$
 \frac{\partial \ln A}{\partial D_L} = -\frac{1}{D_L}, \quad \frac{\partial \Psi}{\partial D_L} = 0
 $$</div></p><p>For inclination \(\iota\):</p><p><div class="eq">$$
 \frac{\partial \ln A}{\partial \iota} = \frac{\partial \ln \mathcal{F}}{\partial \iota}
-$$</div></p><p>---</p><h2>5. SNR Integrals and Analytical Approximations</h2></p><h3>5.1 Power-Law Noise Approximation</h3></p><p>For analytical insight, approximate \(S_n(f) \propto f^\alpha\) over the sensitive band. For LIGO, \(\alpha \approx -4\) at low frequencies, \(\alpha \approx 0\) at mid-frequencies, \(\alpha \approx 4\) at high frequencies.</p><p>Define the <strong>moment integrals</strong>:</p><p><div class="eq">$$
+$$</div></p><hr class="soft"><h2>5. SNR Integrals and Analytical Approximations</h2></p><h3>5.1 Power-Law Noise Approximation</h3></p><p>For analytical insight, approximate \(S_n(f) \propto f^\alpha\) over the sensitive band. For LIGO, \(\alpha \approx -4\) at low frequencies, \(\alpha \approx 0\) at mid-frequencies, \(\alpha \approx 4\) at high frequencies.</p><p>Define the <strong>moment integrals</strong>:</p><p><div class="eq">$$
 I_q = \int_{f_{\text{min}}}^{f_{\text{max}}} \frac{|\tilde{h}(f)|^2}{S_n(f)} f^q df
 $$</div></p><p>For inspiral \(|\tilde{h}|^2 \propto f^{-7/3}\):</p><p><div class="eq">$$
 I_q \propto \int f^{-7/3 + q - \alpha} df
@@ -101,7 +139,7 @@ $$</div></p><p>This shows:
 \rho_{\mathcal{M}_c \eta} \approx 0.9 - 0.99
 $$</div></p><p>This degeneracy arises because both parameters affect the phase evolution at similar PN orders.</p><p><strong>Reparameterization</strong>: Use \(\mathcal{M}_c\) and \(\delta = \mathcal{M}_c \eta^{3/5}\) (or total mass \(M\)) to reduce correlations.</p><h3>5.4 Spin Degeneracies</h3></p><p>The effective spin \(\chi_{\text{eff}}\) enters at 1.5PN order:</p><p><div class="eq">$$
 \psi_3 \propto \chi_{\text{eff}}
-$$</div></p><p>So \(\partial \Psi/\partial \chi_{\text{eff}} \propto f^{-2/3}\), same frequency dependence as \(\partial \Psi/\partial \eta\).</p><p><strong>Strong degeneracy</strong>: \(\chi_{\text{eff}}\) and \(\eta\) are highly correlated (\(\rho \sim 0.8-0.9\)).</p><p>The precessing spin \(\chi_p\) enters at higher PN orders and through amplitude modulation, breaking some degeneracies.</p><p>---</p><h2>6. Complete Fisher Matrix for BH Binaries</h2></p><h3>6.1 Parameter Set</h3></p><p>For a non-precessing binary, the intrinsic parameters are:</p><p><div class="eq">$$
+$$</div></p><p>So \(\partial \Psi/\partial \chi_{\text{eff}} \propto f^{-2/3}\), same frequency dependence as \(\partial \Psi/\partial \eta\).</p><p><strong>Strong degeneracy</strong>: \(\chi_{\text{eff}}\) and \(\eta\) are highly correlated (\(\rho \sim 0.8-0.9\)).</p><p>The precessing spin \(\chi_p\) enters at higher PN orders and through amplitude modulation, breaking some degeneracies.</p><hr class="soft"><h2>6. Complete Fisher Matrix for BH Binaries</h2></p><h3>6.1 Parameter Set</h3></p><p>For a non-precessing binary, the intrinsic parameters are:</p><p><div class="eq">$$
 \theta_{\text{int}} = \{\mathcal{M}_c, \eta, \chi_1, \chi_2\}
 $$</div></p><p>or equivalently \(\{\mathcal{M}_c, \eta, \chi_{\text{eff}}, \chi_p\}\).</p><p>Extrinsic parameters:</p><p><div class="eq">$$
 \theta_{\text{ext}} = \{t_c, \phi_c, D_L, \iota, \psi, \alpha, \delta\}
@@ -128,7 +166,7 @@ $$</div></p><p>where \(M = m_1 + m_2\) and \(\mathcal{M}_c = \eta^{3/5}M\).</p><
 \frac{\partial \Psi}{\partial \eta} &= \frac{3}{128} (\pi M f)^{-5/3} \left[ -\frac{1}{\eta^2} \sum \psi_k (\pi M f)^{k/3} + \frac{1}{\eta} \sum \frac{\partial \psi_k}{\partial \eta} (\pi M f)^{k/3} + \frac{5}{3} \frac{M}{\mathcal{M}_c} \sum \psi_k (\pi M f)^{k/3} \right] \\
 \frac{\partial \Psi}{\partial \chi_{\text{eff}}} &= \frac{3}{128} (\pi M f)^{-5/3} \frac{1}{\eta} \sum \frac{\partial \psi_k}{\partial \chi_{\text{eff}}} (\pi M f)^{k/3}
 \end{aligned}
-$$</div></p><p>---</p><h2>7. Covariance Matrix and Error Estimation</h2></p><h3>7.1 Inversion and Parameter Errors</h3></p><p>The covariance matrix:</p><p><div class="eq">$$
+$$</div></p><hr class="soft"><h2>7. Covariance Matrix and Error Estimation</h2></p><h3>7.1 Inversion and Parameter Errors</h3></p><p>The covariance matrix:</p><p><div class="eq">$$
 \Sigma = \Gamma^{-1}
 $$</div></p><p>Marginalized error on parameter \(\theta^i\):</p><p><div class="eq">$$
 \sigma_i = \sqrt{\Sigma_{ii}}
@@ -140,7 +178,7 @@ $$</div></p><p>where \(f_0\) is the effective frequency. Sky area:</p><p><div cl
 \Delta \Omega \approx 2\pi \sqrt{\Sigma_{\alpha\alpha}\Sigma_{\delta\delta} - \Sigma_{\alpha\delta}^2}
 $$</div></p><h3>7.3 Distance-Inclination Degeneracy</h3></p><p>The amplitude depends on \(D_L\) and \(\iota\) as:</p><p><div class="eq">$$
 A \propto \frac{1}{D_L} \sqrt{F_+^2(1+\cos^2\iota)^2 + 4F_\times^2\cos^2\iota}
-$$</div></p><p>For a single detector, \(D_L\) and \(\iota\) are perfectly degenerate (only the combination \(D_L/\mathcal{F}(\iota)\) is measured). With multiple detectors, the degeneracy is broken by different antenna patterns.</p><p>---</p><h2>8. Degeneracy Analysis for BH Binary Parameters</h2></p><h3>8.1 Mass-Spin Degeneracy</h3></p><p>The phase evolution depends on combinations:</p><p><div class="eq">$$
+$$</div></p><p>For a single detector, \(D_L\) and \(\iota\) are perfectly degenerate (only the combination \(D_L/\mathcal{F}(\iota)\) is measured). With multiple detectors, the degeneracy is broken by different antenna patterns.</p><hr class="soft"><h2>8. Degeneracy Analysis for BH Binary Parameters</h2></p><h3>8.1 Mass-Spin Degeneracy</h3></p><p>The phase evolution depends on combinations:</p><p><div class="eq">$$
 \Psi \sim \frac{1}{\eta} \left[ \psi_0 + \psi_2 \eta + \psi_3 \chi_{\text{eff}} + \psi_4 \eta^2 + \cdots \right]
 $$</div></p><p>At leading orders:
 <ul><li>\(\psi_0 \propto 1\) (Newtonian)</li></ul>
@@ -158,7 +196,7 @@ The <strong>effective spin</strong> \(\chi_{\text{eff}}\) enters at 1.5PN.</p><p
 $$</div></p><p>Modulation signatures in \(h(t)\) provide independent information about \(\chi_p\) and \(\iota\).</p><h3>8.4 Higher Modes</h3></p><p>Higher harmonics (\(\ell>2\) modes) break degeneracies because:
 <ul><li>Different mass/spin dependence</li></ul>
 <ul><li>Different angular dependence</li></ul>
-<ul><li>Different frequency scaling</li></ul></p><p>For example, the \((3,3)\) mode scales as \(\mathcal{M}_c^{5/6} f^{-7/6}\) but with different \(\eta\) dependence.</p><p>---</p><h2>9. Multi-Detector Fisher Matrix</h2></p><h3>9.1 Network Fisher Matrix</h3></p><p>For \(N\) detectors with uncorrelated noise:</p><p><div class="eq">$$
+<ul><li>Different frequency scaling</li></ul></p><p>For example, the \((3,3)\) mode scales as \(\mathcal{M}_c^{5/6} f^{-7/6}\) but with different \(\eta\) dependence.</p><hr class="soft"><h2>9. Multi-Detector Fisher Matrix</h2></p><h3>9.1 Network Fisher Matrix</h3></p><p>For \(N\) detectors with uncorrelated noise:</p><p><div class="eq">$$
 \Gamma_{ij}^{\text{net}} = \sum_{I=1}^N \Gamma_{ij}^{(I)}
 $$</div></p><p>Each detector has its own antenna pattern \(F_{+,\times}^{(I)}\) and PSD \(S_n^{(I)}\).</p><h3>9.2 Time Delay Information</h3></p><p>The time delay between detectors \(I\) and \(J\):</p><p><div class="eq">$$
 \Delta t_{IJ} = \frac{\mathbf{x}_I - \mathbf{x}_J}{c} \cdot \hat{\mathbf{n}}
@@ -166,7 +204,7 @@ $$</div></p><p>where \(\hat{\mathbf{n}}\) is the sky direction. The phase shift:
 \Psi_I(f) = \Psi(f) + 2\pi f \Delta t_I
 $$</div></p><p>This adds a term \(\partial \Psi/\partial \alpha \propto f\) which significantly improves sky localization.</p><h3>9.3 Network SNR</h3></p><p>The network SNR:</p><p><div class="eq">$$
 \rho_{\text{net}}^2 = \sum_I \rho_I^2
-$$</div></p><p>Parameter errors scale as \(1/\rho_{\text{net}}\).</p><p>---</p><h2>10. Beyond Fisher: Limitations and Extensions</h2></p><h3>10.1 Fisher Matrix Limitations</h3></p><p>1. <strong>High-SNR approximation</strong>: Breaks down at low SNR
+$$</div></p><p>Parameter errors scale as \(1/\rho_{\text{net}}\).</p><hr class="soft"><h2>10. Beyond Fisher: Limitations and Extensions</h2></p><h3>10.1 Fisher Matrix Limitations</h3></p><p>1. <strong>High-SNR approximation</strong>: Breaks down at low SNR
 2. <strong>Gaussian posterior assumption</strong>: Non-linearities cause non-Gaussianities
 3. <strong>Prior independence</strong>: Fisher matrix assumes flat priors
 4. <strong>Single-mode assumption</strong>: Ignores multi-modal posteriors</p><h3>10.2 Higher-Order Corrections</h3></p><p>The <strong>Edgeworth expansion</strong> includes skewness and kurtosis:</p><p><div class="eq">$$
@@ -175,14 +213,14 @@ $$</div></p><p>where \(\kappa_{ijk}\) are third cumulants and \(H^{ijk}\) are He
 \Gamma_{ij} = -\left\langle \frac{\partial^2 \ln \mathcal{L}}{\partial \theta^i \partial \theta^j} \right\rangle
 $$</div></p><p>In the Bayesian framework with prior \(\pi(\theta)\), the posterior covariance is:</p><p><div class="eq">$$
 \Sigma_{\text{Bayes}}^{-1} = \Gamma + \Pi
-$$</div></p><p>where \(\Pi_{ij} = -\partial^2 \ln \pi / \partial \theta^i \partial \theta^j\) is the prior precision.</p><p>---</p><h2>11. Practical Computation</h2></p><h3>11.1 Numerical Derivatives</h3></p><p>For complex waveforms (IMRPhenom, SEOBNR), derivatives are computed numerically:</p><p><div class="eq">$$
+$$</div></p><p>where \(\Pi_{ij} = -\partial^2 \ln \pi / \partial \theta^i \partial \theta^j\) is the prior precision.</p><hr class="soft"><h2>11. Practical Computation</h2></p><h3>11.1 Numerical Derivatives</h3></p><p>For complex waveforms (IMRPhenom, SEOBNR), derivatives are computed numerically:</p><p><div class="eq">$$
 \frac{\partial \tilde{h}}{\partial \theta^i} \approx \frac{\tilde{h}(\theta + \Delta\theta^i \hat{e}_i) - \tilde{h}(\theta - \Delta\theta^i \hat{e}_i)}{2\Delta\theta^i}
 $$</div></p><p>Step size \(\Delta\theta^i\) must be chosen carefully (too small: numerical noise; too large: truncation error).</p><h3>11.2 Frequency Integration</h3></p><p>The integral:</p><p><div class="eq">$$
 \Gamma_{ij} = 4 \Re \int \frac{\partial \tilde{h}^*}{\partial \theta^i} \frac{\partial \tilde{h}}{\partial \theta^j} \frac{df}{S_n(f)}
 $$</div></p><p>is computed using quadrature (e.g., Simpson's rule) on a logarithmic frequency grid.</p><h3>11.3 Regularization</h3></p><p>The Fisher matrix can be ill-conditioned. Regularization techniques:
 <ul><li>Eigenvalue truncation: discard modes with \(\lambda < \epsilon \lambda_{\text{max}}\)</li></ul>
 <ul><li>Tikhonov regularization: \(\Gamma \to \Gamma + \epsilon I\)</li></ul>
-<ul><li>SVD inversion</li></ul></p><p>---</p><h2>12. Example: GW150914-like Binary</h2></p><h3>12.1 Parameters</h3></p><p>\(m_1 = 36 M_\odot\), \(m_2 = 29 M_\odot\), \(\mathcal{M}_c = 28 M_\odot\), \(\eta = 0.24\), \(D_L = 400\) Mpc, SNR = 24.</p><h3>12.2 Fisher Matrix Predictions (Order of Magnitude)</h3></p><p>| Parameter | Fisher \(\sigma\) | Notes |
+<ul><li>SVD inversion</li></ul></p><hr class="soft"><h2>12. Example: GW150914-like Binary</h2></p><h3>12.1 Parameters</h3></p><p>\(m_1 = 36 M_\odot\), \(m_2 = 29 M_\odot\), \(\mathcal{M}_c = 28 M_\odot\), \(\eta = 0.24\), \(D_L = 400\) Mpc, SNR = 24.</p><h3>12.2 Fisher Matrix Predictions (Order of Magnitude)</h3></p><p>| Parameter | Fisher \(\sigma\) | Notes |
 |-----------|-----------------|-------|
 | \(\mathcal{M}_c\) | \(\sim 0.1 M_\odot\) | Best measured |
 | \(M\) | \(\sim 1 M_\odot\) | |
@@ -194,13 +232,13 @@ $$</div></p><p>is computed using quadrature (e.g., Simpson's rule) on a logarith
 | \(\Delta \Omega\) | \(\sim 100\) deg\(^2\) | 2-detector network |</p><h3>12.3 Comparison with Bayesian Inference</h3></p><p>For GW150914, Bayesian PE gives:
 <ul><li>\(\mathcal{M}_c = 28.1^{+0.5}_{-0.5} M_\odot\)</li></ul>
 <ul><li>\(\eta = 0.24^{+0.03}_{-0.02}\)</li></ul>
-<ul><li>\(\chi_{\text{eff}} = -0.07^{+0.17}_{-0.16}\)</li></ul></p><p>Fisher matrix underestimates uncertainties at low SNR and misses prior effects.</p><p>---</p><h2>13. Advanced Topics</h2></p><h3>13.1 Fisher Matrix for Eccentric Binaries</h3></p><p>Eccentricity \(e_0\) enters at high PN orders and through harmonic structure. The Fisher matrix includes derivatives w.r.t. \(e_0\) and mean anomaly \(l_0\).</p><h3>13.2 Fisher Matrix for Tidal Deformability</h3></p><p>For neutron stars, the tidal deformability \(\Lambda\) enters at 5PN order:</p><p><div class="eq">$$
+<ul><li>\(\chi_{\text{eff}} = -0.07^{+0.17}_{-0.16}\)</li></ul></p><p>Fisher matrix underestimates uncertainties at low SNR and misses prior effects.</p><hr class="soft"><h2>13. Advanced Topics</h2></p><h3>13.1 Fisher Matrix for Eccentric Binaries</h3></p><p>Eccentricity \(e_0\) enters at high PN orders and through harmonic structure. The Fisher matrix includes derivatives w.r.t. \(e_0\) and mean anomaly \(l_0\).</p><h3>13.2 Fisher Matrix for Tidal Deformability</h3></p><p>For neutron stars, the tidal deformability \(\Lambda\) enters at 5PN order:</p><p><div class="eq">$$
 \psi_{10} \propto -\frac{39}{2} \tilde{\Lambda}
 $$</div></p><p>where \(\tilde{\Lambda}\) is the mass-weighted tidal parameter.</p><p>The derivative \(\partial \Psi/\partial \Lambda \propto f^{5/3}\) (high frequency).</p><h3>13.3 Fisher Matrix for Modified Gravity</h3></p><p>Parametrized post-Einsteinian (ppE) framework:</p><p><div class="eq">$$
 \Psi(f) = \Psi_{\text{GR}}(f) + \beta u^b
 $$</div></p><p>where \(u = (\pi M f)^{1/3}\). Fisher matrix extended to \(\{\beta, b\}\).</p><h3>13.4 Fisher Matrix for Ringdown</h3></p><p>For the ringdown signal (quasinormal modes):</p><p><div class="eq">$$
 h(t) \propto e^{-t/\tau} \cos(2\pi f_0 t + \phi)
-$$</div></p><p>Parameters: \(\{f_0, \tau, A, \phi\}\). Fisher matrix computable analytically.</p><p>---</p><h2>14. Summary of Key Formulas</h2></p><h3>14.1 Fisher Matrix Definition</h3></p><p><div class="eq">$$
+$$</div></p><p>Parameters: \(\{f_0, \tau, A, \phi\}\). Fisher matrix computable analytically.</p><hr class="soft"><h2>14. Summary of Key Formulas</h2></p><h3>14.1 Fisher Matrix Definition</h3></p><p><div class="eq">$$
 \boxed{\Gamma_{ij} = 4 \Re \int_{f_{\text{low}}}^{f_{\text{high}}} \frac{\partial \tilde{h}^*(f)}{\partial \theta^i} \frac{\partial \tilde{h}(f)}{\partial \theta^j} \frac{df}{S_n(f)}}
 $$</div></p><h3>14.2 Waveform Derivative</h3></p><p><div class="eq">$$
 \boxed{\frac{\partial \tilde{h}}{\partial \theta^i} = \left( \frac{\partial \ln A}{\partial \theta^i} + i \frac{\partial \Psi}{\partial \theta^i} \right) \tilde{h}}
@@ -217,8 +255,49 @@ t_c &\text{: best constrained (high-freq dominated)} \\
 D_L, \iota &\text{: degenerate for single detector}
 \end{aligned}
 }
-$$</div></p><p>---</p><h2>15. Conclusion</h2></p><p>The Fisher information matrix provides a fast, analytical tool for forecasting parameter estimation capabilities of GW detectors. While it has limitations (high-SNR, Gaussian approximation), it correctly captures the scaling of uncertainties with SNR, the parameter degeneracies inherent in the waveform structure, and the improvement from detector networks. For precision cosmology and tests of GR, the Fisher matrix remains the workhorse for detector design and data analysis planning.</p><p>---</p><p><em>End of document. All derivations from first principles to final expressions.</em></p>
-</main>
-<footer>Exotic Compact Objects — Premium View</footer>
+$$</div></p><hr class="soft"><h2>15. Conclusion</h2></p><p>The Fisher information matrix provides a fast, analytical tool for forecasting parameter estimation capabilities of GW detectors. While it has limitations (high-SNR, Gaussian approximation), it correctly captures the scaling of uncertainties with SNR, the parameter degeneracies inherent in the waveform structure, and the improvement from detector networks. For precision cosmology and tests of GR, the Fisher matrix remains the workhorse for detector design and data analysis planning.</p><hr class="soft"><p><em>End of document. All derivations from first principles to final expressions.</em></p>
+</article><aside class="toc" id="toc" aria-label="Table of contents"></aside></div></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Built 2026-10-20</span>
+      <span>Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
 </body>
 </html>

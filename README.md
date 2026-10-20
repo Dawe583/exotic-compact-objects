@@ -43,6 +43,24 @@ exotic-compact-objects/
 └── reports/
 ```
 
+## Research website
+
+The GitHub Pages site (`docs/`) is generated from the catalogues and figures:
+
+- **Portal:** https://dawe583.github.io/exotic-compact-objects/
+- **Research site:** https://dawe583.github.io/exotic-compact-objects/premium/
+
+Rebuild and publish:
+
+```bash
+cd /home/dawe/Projects/astro-science/research/projects/exotic-compact-objects
+/home/dawe/Projects/astro-science/.venv/bin/python scripts/build_premium_site.py --publish
+```
+
+The build reads row counts directly from the CSVs, so the data page cannot go
+stale. Authored theory pages are re-wrapped in the shared shell and are never
+regenerated from scratch.
+
 ## Setup / data
 
 ```bash
@@ -79,7 +97,7 @@ Published BlackCAT VizieR tables are mirrored at `data/external/blackcat_tablea1
 
 ## Open research problems
 
-- [Early supermassive black-hole growth](premium/early_smbh_growth.md) — high-redshift observations, Eddington-growth derivations, and conditional seed-mass scenarios ([notebook](notebooks/22_early_smbh_growth.ipynb)).
+- [Early supermassive black-hole growth](premium/early_smbh_growth.md) — high-redshift observations, Eddington-growth derivations, and conditional seed-mass scenarios ([notebook](notebooks/23_early_smbh_growth.ipynb)).
 - [Quantum gravity](premium/quantum_gravity.md) — Planck-scale derivations, low-energy effective theory, candidate approaches, and model-dependent tests ([notebook](notebooks/24_quantum_gravity.ipynb)).
 
 ## Models implemented

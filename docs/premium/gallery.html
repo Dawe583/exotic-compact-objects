@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Visualisations · Astro Science</title>
+<meta name="description" content="Interactive Plotly figures and animations across the research programme.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="Visualisations">
+<meta property="og:description" content="Interactive Plotly figures and animations across the research programme.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>Compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="gallery.html">Visualisations</a></nav></div>
+<div class="wrap"><main class="page">
+
+<div class="page-head">
+  <span class="eyebrow">Visualisations</span>
+  <h1>Interactive figures, generated from source.</h1>
+  <p class="lede">Plotly documents are lazy-loaded as you scroll. Animations are rendered from the same simulation output as the static figures.</p>
+</div>
+
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">Gravitational waves</span><h2>6 visualisations</h2></div>
+  </div>
+  <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/gw_mass.html" title="GWTC mass distribution" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>GWTC mass distribution</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/gwtc_recent_20_remnants.html" title="Twenty most recent remnants" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Twenty most recent remnants</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/pta_snr.html" title="Pulsar-timing array sensitivity" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Pulsar-timing array sensitivity</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/sxs_modes.html" title="SXS waveform modes" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>SXS waveform modes</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/gw_memory_effect.html" title="Gravitational-wave memory" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Gravitational-wave memory</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/bh_merger_animation.html" title="Binary black-hole merger" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Binary black-hole merger</h3><span>interactive</span></figcaption>
+</figure></div>
+</section>
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">Black holes</span><h2>12 visualisations</h2></div>
+  </div>
+  <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/kerr_isco.html" title="Kerr ISCO" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Kerr ISCO</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/rs_mass.html" title="Schwarzschild radius vs mass" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Schwarzschild radius vs mass</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/bh_mass_dist.html" title="Black-hole mass spectrum" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Black-hole mass spectrum</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/orbit_schw.html" title="Schwarzschild orbit" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Schwarzschild orbit</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/pericenter_advance.html" title="Pericenter advance" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Pericenter advance</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/geodesic_potential.html" title="Effective potential" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Effective potential</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/penrose_eff.html" title="Penrose efficiency" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Penrose efficiency</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/penrose_process.html" title="Penrose process" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Penrose process</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/kerr_ergosphere_precession.html" title="Kerr ergosphere &amp; precession" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Kerr ergosphere &amp; precession</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/christoffel_pattern.html" title="Kerr Christoffel symbols" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Kerr Christoffel symbols</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/fisher_corr.html" title="Fisher-matrix correlations" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Fisher-matrix correlations</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/blackcat_dynamical.html" title="Dynamically confirmed BHs" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Dynamically confirmed BHs</h3><span>interactive</span></figcaption>
+</figure></div>
+</section>
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">AGN &amp; SMBH</span><h2>2 visualisations</h2></div>
+  </div>
+  <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/agn_mass.html" title="AGN black-hole masses" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>AGN black-hole masses</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/agn_reverberation_catalog.html" title="Reverberation catalog" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Reverberation catalog</h3><span>interactive</span></figcaption>
+</figure></div>
+</section>
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">X-ray binaries</span><h2>1 visualisations</h2></div>
+  </div>
+  <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/corbet.html" title="Corbet diagram" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Corbet diagram</h3><span>interactive</span></figcaption>
+</figure></div>
+</section>
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">Gaia</span><h2>1 visualisations</h2></div>
+  </div>
+  <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/gaia_sky.html" title="Gaia DR3 sky map" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Gaia DR3 sky map</h3><span>interactive</span></figcaption>
+</figure></div>
+</section>
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">Cosmology</span><h2>2 visualisations</h2></div>
+  </div>
+  <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/planck_spectra.html" title="CMB power spectra" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>CMB power spectra</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/cmb_evolution.html" title="CMB evolution" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>CMB evolution</h3><span>interactive</span></figcaption>
+</figure></div>
+</section>
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">Wormholes</span><h2>2 visualisations</h2></div>
+  </div>
+  <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/wormhole_3d.html" title="Wormhole embedding" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Wormhole embedding</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/wormhole_traversal.html" title="Wormhole traversal" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Wormhole traversal</h3><span>interactive</span></figcaption>
+</figure></div>
+</section>
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">White holes</span><h2>2 visualisations</h2></div>
+  </div>
+  <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/white_hole_explosion.html" title="White-hole outburst" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>White-hole outburst</h3><span>interactive</span></figcaption>
+</figure>
+<figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/wh_decay.html" title="White-hole decay" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>White-hole decay</h3><span>interactive</span></figcaption>
+</figure></div>
+</section>
+<section class="section">
+  <div class="section-head">
+    <div><span class="eyebrow">Advanced theory</span><h2>1 visualisations</h2></div>
+  </div>
+  <div class="figure-grid"><figure class="figure-card reveal">
+  <div class="frame"><iframe data-src="figures/raychaudhuri_focusing.html" title="Raychaudhuri focusing" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Raychaudhuri focusing</h3><span>interactive</span></figcaption>
+</figure></div>
+</section>
+
+</main></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Built 2026-10-20</span>
+      <span>Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

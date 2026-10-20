@@ -952,8 +952,7 @@ def build_research(stats: dict) -> str:
         card(tag, tone, title, body, href, meta)
         for title, tone, tag, body, href, meta in RESEARCH_STREAMS
     )
-    notebooks = sorted(set(list(PROJECT.glob("notebooks/*.ipynb")) + \
-        (list((WORKSPACE / "research/projects").glob("*/notebooks/*.ipynb")) if (WORKSPACE / "research/projects").exists() else [])))
+    notebooks = sorted(PROJECT.glob("notebooks/*.ipynb"))
     nb_rows = []
     for p in notebooks:
         render = PROJECT / "docs" / f"{p.stem}.html"
@@ -1308,8 +1307,7 @@ def rewrite_content_pages() -> list[str]:
 # GitHub Pages portal (docs/index.html) and publishing
 # --------------------------------------------------------------------------
 def build_portal(stats: dict) -> str:
-    notebooks = sorted(set(list(PROJECT.glob("notebooks/*.ipynb")) + \
-        (list((WORKSPACE / "research/projects").glob("*/notebooks/*.ipynb")) if (WORKSPACE / "research/projects").exists() else [])))
+    notebooks = sorted(PROJECT.glob("notebooks/*.ipynb"))
     nb_cards = "\n".join(
         f'<a class="card reveal" href="{p.name.replace(".ipynb", ".html")}">'
         f'<span class="tag cyan">Notebook</span>'
@@ -1491,9 +1489,7 @@ def main() -> None:
         "gw_events": row_count(gw),
         "agn_masses": row_count(agn),
         "remnants": row_count(PROJECT / "results/gwtc_remnant_isco_hawking.csv"),
-        "notebooks": len(
-            list((WORKSPACE / "research/projects").glob("*/notebooks/*.ipynb"))
-        ),
+        "notebooks": len(list(PROJECT.glob("notebooks/*.ipynb"))),
         "datasets": len(CATALOGS),
         "theory_docs": len(THEORY_DOCS),
         "figures": len(list(FIG.glob("*.html"))),

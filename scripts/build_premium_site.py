@@ -18,7 +18,6 @@ import csv
 import html
 import json
 import re
-from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,7 +33,6 @@ GITHUB = "https://github.com/Dawe583/exotic-compact-objects"
 NOTEBOOKS_URL = "https://dawe583.github.io/exotic-compact-objects/"
 REPO_BLOB = GITHUB + "/blob/main/"
 REPO_TREE = GITHUB + "/tree/main/"
-BUILD_DATE = date.today().isoformat()
 
 NAV = [
     ("index.html", "Home"),
@@ -354,6 +352,21 @@ FIGURES = {
         "Raychaudhuri focusing",
         "Geodesic convergence and caustic formation.",
         "Advanced theory",
+    ),
+    "remnant_energetics": (
+        "Remnant energetics",
+        "Radiative efficiency and rotational energy of 270 GWTC remnants.",
+        "Gravitational waves",
+    ),
+    "exotic_discrimination": (
+        "Exotic discrimination",
+        "Margin of the remnant population to the Kerr efficiency bound.",
+        "Gravitational waves",
+    ),
+    "agn_demographics": (
+        "AGN mass demographics",
+        "Reverberation-mapped supermassive black-hole masses vs redshift.",
+        "AGN & SMBH",
     ),
 }
 
@@ -727,8 +740,7 @@ window.MathJax = {{
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© {date.today().year} {SITE_NAME} · Built {BUILD_DATE}</span>
-      <span>Static site · reproducible notebooks · open data</span>
+      <span>© 2026 {SITE_NAME} · Static site · reproducible notebooks · open data</span>
     </div>
   </div>
 </footer>
@@ -1410,7 +1422,7 @@ def build_portal(stats: dict) -> str:
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-bottom" style="margin-top:0;border-top:none">
-      <span>© {date.today().year} Astro Science · built {BUILD_DATE}</span>
+      <span>© 2026 Astro Science · Static site · reproducible notebooks · open data</span>
       <span><a href="premium/index.html">Research site</a> · <a href="{GITHUB}">GitHub</a></span>
     </div>
   </div>
@@ -1445,7 +1457,7 @@ def publish(stats: dict) -> None:
     sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
                '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for name in urls:
-        sitemap.append(f"  <url><loc>{base}{name}</loc><lastmod>{BUILD_DATE}</lastmod></url>")
+        sitemap.append(f"  <url><loc>{base}{name}</loc></url>")
     sitemap.append("</urlset>")
     (SITE / "sitemap.xml").write_text("\n".join(sitemap), encoding="utf-8")
     (SITE / "robots.txt").write_text(

@@ -944,7 +944,7 @@ def build_research(stats: dict) -> str:
     nb_rows = []
     for p in notebooks:
         render = PROJECT / "docs" / f"{p.stem}.html"
-        link = (f'<a href="../{p.stem}.html">rendered ↗</a>' if render.exists()
+        link = (f'<a href="{NOTEBOOKS_URL}{p.stem}.html">rendered ↗</a>' if render.exists()
                 else f'<a href="{REPO_BLOB}notebooks/{p.name}">source ↗</a>')
         nb_rows.append(
             f'<tr><td class="name">{esc(p.stem)}</td><td>{esc(p.parent.parent.name)}</td>'

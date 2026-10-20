@@ -1370,6 +1370,33 @@ def build_portal(stats: dict) -> str:
     </div>
   </section>
 
+  <section class="section">
+    <div class="section-head">
+      <div><span class="eyebrow">Latest results</span><h2>Three things worth reading</h2>
+      <p>Every claim links to the derivation, the catalogue or the executable notebook behind it.</p></div>
+    </div>
+    <div class="grid cols-3">
+      <a class="card reveal" href="premium/theory_black_holes.html">
+        <span class="tag cyan">Validation</span>
+        <h3>Kerr ISCO, corrected</h3>
+        <p>The legacy implementation used 12GM/c² instead of 6GM/c². The exact Bardeen–Press–Teukolsky solution now reproduces the Schwarzschild limit and both spin branches.</p>
+        <div class="meta"><span>error &lt; 1e-6</span><span>prograde + retrograde</span></div>
+      </a>
+      <a class="card reveal" href="premium/data.html">
+        <span class="tag amber">Catalogue</span>
+        <h3>391 events, 279 remnants</h3>
+        <p>Masses, spins, distances and derived remnant quantities for the GWTC population, rebuilt from GWOSC with provenance per row.</p>
+        <div class="meta"><span>GWTC-1…O4</span><span>9 derived columns</span></div>
+      </a>
+      <a class="card reveal" href="premium/gallery.html">
+        <span class="tag violet">New analysis</span>
+        <h3>Rotational energy budget</h3>
+        <p>For 270 remnants with complete data the median inferred spin is 0.69 and the thin-disc efficiency 0.10 — far below the Kerr bound of 0.42.</p>
+        <div class="meta"><span>η<sub>med</sub> = 0.102</span><span>1.76× ISCO overshoot</span></div>
+      </a>
+    </div>
+  </section>
+
   <section class="section" id="notebooks">
     <div class="section-head">
       <div><span class="eyebrow">Notebooks</span><h2>Executable research record</h2>

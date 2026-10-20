@@ -952,7 +952,8 @@ def build_research(stats: dict) -> str:
         card(tag, tone, title, body, href, meta)
         for title, tone, tag, body, href, meta in RESEARCH_STREAMS
     )
-    notebooks = sorted((WORKSPACE / "research/projects").glob("*/notebooks/*.ipynb"))
+    notebooks = sorted(set(list(PROJECT.glob("notebooks/*.ipynb")) + \
+        (list((WORKSPACE / "research/projects").glob("*/notebooks/*.ipynb")) if (WORKSPACE / "research/projects").exists() else [])))
     nb_rows = []
     for p in notebooks:
         render = PROJECT / "docs" / f"{p.stem}.html"
@@ -963,7 +964,10 @@ def build_research(stats: dict) -> str:
             f'<td class="num">{p.stat().st_size // 1024} kB</td><td>{link}</td></tr>'
         )
     nb_rows = "\n".join(nb_rows)
-    reports = sorted(x for x in (WORKSPACE / "research/projects").glob("*/reports/*.md") if x.is_relative_to(PROJECT))
+    _rep = list(PROJECT.glob("reports/*.md"))
+    if (WORKSPACE / "research/projects").exists():
+        _rep += [x for x in (WORKSPACE / "research/projects").glob("*/reports/*.md") if x.is_relative_to(PROJECT)]
+    reports = sorted(set(_rep))
     rep_rows = "\n".join(
         f'<tr><td class="name">{esc(p.stem)}</td><td>{esc(p.parent.parent.name)}</td>'
         f'<td class="num">{p.stat().st_size // 1024} kB</td>'
@@ -1296,7 +1300,8 @@ def rewrite_content_pages() -> list[str]:
 # GitHub Pages portal (docs/index.html) and publishing
 # --------------------------------------------------------------------------
 def build_portal(stats: dict) -> str:
-    notebooks = sorted((WORKSPACE / "research/projects").glob("*/notebooks/*.ipynb"))
+    notebooks = sorted(set(list(PROJECT.glob("notebooks/*.ipynb")) + \
+        (list((WORKSPACE / "research/projects").glob("*/notebooks/*.ipynb")) if (WORKSPACE / "research/projects").exists() else [])))
     nb_cards = "\n".join(
         f'<a class="card reveal" href="{p.name.replace(".ipynb", ".html")}">'
         f'<span class="tag cyan">Notebook</span>'

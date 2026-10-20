@@ -941,12 +941,16 @@ def build_research(stats: dict) -> str:
         for title, tone, tag, body, href, meta in RESEARCH_STREAMS
     )
     notebooks = sorted((WORKSPACE / "research/projects").glob("*/notebooks/*.ipynb"))
-    nb_rows = "\n".join(
-        f'<tr><td class="name">{esc(p.stem)}</td><td>{esc(p.parent.parent.name)}</td>'
-        f'<td class="num">{p.stat().st_size // 1024} kB</td>'
-        f'<td><a href="{NOTEBOOKS_URL}">rendered ↗</a></td></tr>'
-        for p in notebooks
-    )
+    nb_rows = []
+    for p in notebooks:
+        render = PROJECT / "docs" / f"{p.stem}.html"
+        link = (f'<a href="../{p.stem}.html">rendered ↗</a>' if render.exists()
+                else f'<a href="{REPO_BLOB}notebooks/{p.name}">source ↗</a>')
+        nb_rows.append(
+            f'<tr><td class="name">{esc(p.stem)}</td><td>{esc(p.parent.parent.name)}</td>'
+            f'<td class="num">{p.stat().st_size // 1024} kB</td><td>{link}</td></tr>'
+        )
+    nb_rows = "\n".join(nb_rows)
     reports = sorted(x for x in (WORKSPACE / "research/projects").glob("*/reports/*.md") if x.is_relative_to(PROJECT))
     rep_rows = "\n".join(
         f'<tr><td class="name">{esc(p.stem)}</td><td>{esc(p.parent.parent.name)}</td>'
@@ -1369,7 +1373,7 @@ def build_portal(stats: dict) -> str:
   <section class="section" id="notebooks">
     <div class="section-head">
       <div><span class="eyebrow">Notebooks</span><h2>Executable research record</h2>
-      <p>HTML renders of every notebook that passes the health loop. The source notebooks live in the repository.</p></div>
+      <p>Selected HTML renders. The complete set of source notebooks lives in the repository and is executed by the health loop.</p></div>
       <a class="more" href="{GITHUB}/tree/main/notebooks">Source notebooks →</a>
     </div>
     <div class="grid cols-3">{nb_cards}</div>

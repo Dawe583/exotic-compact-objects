@@ -1,0 +1,291 @@
+/* ============================================================
+   Astro Science — dark theme for nbconvert notebook renders
+   Loaded after the Jupyter stylesheet, so it overrides it.
+   ============================================================ */
+
+:root{
+  --nb-bg:#05070d;
+  --nb-surface:#0b1220;
+  --nb-surface-2:#0f1828;
+  --nb-line:#1b2740;
+  --nb-line-strong:#2a3a5c;
+  --nb-text:#dbe6f5;
+  --nb-muted:#94a6c2;
+  --nb-dim:#6b7f9f;
+  --nb-cyan:#58d3ff;
+  --nb-amber:#ffb26b;
+  --nb-violet:#a78bfa;
+}
+
+/* Remap the JupyterLab light theme variables to the site palette. */
+:root, body{
+  --jp-layout-color0:#05070d;
+  --jp-layout-color1:#0b1220;
+  --jp-layout-color2:#0f1828;
+  --jp-layout-color3:#1b2740;
+  --jp-layout-color4:#2a3a5c;
+  --jp-ui-font-color0:#e7eefb;
+  --jp-ui-font-color1:#dbe6f5;
+  --jp-ui-font-color2:#94a6c2;
+  --jp-ui-font-color3:#6b7f9f;
+  --jp-content-font-color0:#e7eefb;
+  --jp-content-font-color1:#dbe6f5;
+  --jp-content-font-color2:#94a6c2;
+  --jp-content-font-color3:#6b7f9f;
+  --jp-content-link-color:#58d3ff;
+  --jp-border-color0:#1b2740;
+  --jp-border-color1:#1b2740;
+  --jp-border-color2:#2a3a5c;
+  --jp-cell-editor-background:#0b1220;
+  --jp-cell-editor-border-color:#1b2740;
+  --jp-cell-editor-active-background:#0f1828;
+  --jp-cell-editor-box-shadow:inset 0 0 2px rgba(88,211,255,.25);
+  --jp-mirror-editor-keyword-color:#c792ea;
+  --jp-mirror-editor-atom-color:#f78c6c;
+  --jp-mirror-editor-number-color:#ffb26b;
+  --jp-mirror-editor-def-color:#58d3ff;
+  --jp-mirror-editor-variable-color:#dbe6f5;
+  --jp-mirror-editor-comment-color:#6b7f9f;
+  --jp-mirror-editor-string-color:#a5e075;
+  --jp-mirror-editor-operator-color:#89ddff;
+  --jp-mirror-editor-punctuation-color:#c3d2e8;
+  --jp-mirror-editor-error-color:#ff6b6b;
+  --jp-mirror-editor-builtin-color:#58d3ff;
+  --jp-mirror-editor-variable-2-color:#a78bfa;
+  --jp-mirror-editor-variable-3-color:#ffb26b;
+  --jp-mirror-editor-property-color:#58d3ff;
+  --jp-mirror-editor-meta-color:#a78bfa;
+  --jp-mirror-editor-qualifier-color:#c3d2e8;
+  --jp-mirror-editor-tag-color:#58d3ff;
+  --jp-mirror-editor-attribute-color:#a5e075;
+  --jp-mirror-editor-header-color:#a78bfa;
+  --jp-mirror-editor-quote-color:#6b7f9f;
+  --jp-mirror-editor-link-color:#58d3ff;
+  --jp-mirror-editor-bracket-color:#c3d2e8;
+}
+
+html, body{
+  background:var(--nb-bg) !important;
+  color:var(--nb-text) !important;
+  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif !important;
+}
+
+/* The highlighter and its container must not repaint a light background. */
+.highlight,
+.highlight pre,
+.cm-editor,
+.cm-s-jupyter,
+.jp-InputArea-editor,
+.jp-CodeMirrorEditor{
+  background:var(--nb-surface) !important;
+  color:#cfe6ff !important;
+}
+body.jp-Notebook{
+  background:var(--nb-bg) !important;
+  padding:0 0 60px 0 !important;
+  margin:0 !important;
+}
+
+/* top bar */
+.asp-nb-bar{
+  position:sticky; top:0; z-index:1000;
+  display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  padding:12px 22px; margin-bottom:18px;
+  background:rgba(5,7,13,.88);
+  backdrop-filter:blur(14px) saturate(140%);
+  -webkit-backdrop-filter:blur(14px) saturate(140%);
+  border-bottom:1px solid var(--nb-line);
+  font-size:.9rem;
+}
+.asp-nb-bar .asp-brand{
+  display:flex; align-items:center; gap:10px; color:#fff !important;
+  font-weight:750; letter-spacing:-.02em; text-decoration:none !important;
+}
+.asp-nb-bar .asp-brand svg{width:22px;height:22px}
+.asp-nb-bar .asp-title{
+  color:var(--nb-muted); font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.78rem; padding-left:16px; border-left:1px solid var(--nb-line-strong);
+}
+.asp-nb-bar .asp-links{margin-left:auto; display:flex; gap:8px}
+.asp-nb-bar .asp-links a{
+  color:var(--nb-muted) !important; text-decoration:none !important;
+  padding:7px 12px; border-radius:8px; font-size:.82rem; font-weight:600;
+  border:1px solid transparent;
+}
+.asp-nb-bar .asp-links a:hover{color:#fff !important; background:rgba(255,255,255,.06)}
+.asp-nb-bar .asp-links a.primary{
+  color:var(--nb-cyan) !important; border-color:rgba(88,211,255,.3);
+  background:rgba(88,211,255,.08);
+}
+
+/* notebook container */
+.jp-Notebook{
+  background:transparent !important;
+  max-width:980px !important;
+  margin:0 auto !important;
+  padding:0 22px !important;
+}
+
+/* cells */
+.jp-Cell{
+  background:transparent !important;
+  border:none !important;
+  margin:0 0 14px 0 !important;
+  padding:10px 14px !important;
+  border-radius:12px;
+}
+.jp-Cell:hover{background:rgba(255,255,255,.015) !important}
+.jp-InputArea{
+  background:var(--nb-surface) !important;
+  border:1px solid var(--nb-line) !important;
+  border-radius:12px !important;
+  overflow:hidden;
+}
+.jp-InputArea-editor, .jp-InputArea-editor .cm-editor, .jp-InputArea-editor .CodeMirror{
+  background:var(--nb-surface) !important;
+  color:#cfe6ff !important;
+}
+.jp-InputPrompt, .jp-OutputPrompt{
+  color:var(--nb-dim) !important;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace !important;
+  font-size:.72rem !important;
+}
+.jp-OutputArea-output, .jp-RenderedText, .jp-RenderedHTMLCommon{
+  background:transparent !important;
+  color:var(--nb-text) !important;
+}
+.jp-OutputArea-output pre{
+  background:var(--nb-surface-2) !important;
+  color:#cfe6ff !important;
+  border:1px solid var(--nb-line);
+  border-radius:10px;
+  padding:10px 12px !important;
+}
+
+/* markdown */
+.jp-RenderedHTMLCommon h1,
+.jp-RenderedHTMLCommon h2,
+.jp-RenderedHTMLCommon h3,
+.jp-RenderedHTMLCommon h4{
+  color:#fff !important;
+  border-bottom:1px solid var(--nb-line);
+  padding-bottom:.25em;
+  margin-top:1.4em;
+  font-weight:750;
+  letter-spacing:-.015em;
+}
+.jp-RenderedHTMLCommon h1{font-size:1.8rem !important}
+.jp-RenderedHTMLCommon h2{font-size:1.4rem !important}
+.jp-RenderedHTMLCommon p,
+.jp-RenderedHTMLCommon li,
+.jp-RenderedHTMLCommon dd{color:#c3d2e8 !important}
+.jp-RenderedHTMLCommon strong{color:#fff !important}
+.jp-RenderedHTMLCommon a{color:var(--nb-cyan) !important}
+.jp-RenderedHTMLCommon code{
+  background:rgba(88,211,255,.08) !important;
+  color:#bfeaff !important;
+  border:1px solid rgba(88,211,255,.14);
+  border-radius:5px;
+  padding:.1em .35em;
+}
+.jp-RenderedHTMLCommon pre code{background:none !important;border:none;padding:0}
+
+/* tables */
+.jp-RenderedHTMLCommon table{
+  border-collapse:collapse !important;
+  color:var(--nb-text) !important;
+  font-size:.88rem;
+  margin:1em 0;
+}
+.jp-RenderedHTMLCommon table th,
+.jp-RenderedHTMLCommon table td{
+  border:1px solid var(--nb-line) !important;
+  padding:7px 11px !important;
+  background:transparent !important;
+  color:var(--nb-text) !important;
+}
+.jp-RenderedHTMLCommon table th{
+  background:var(--nb-surface-2) !important;
+  color:var(--nb-muted) !important;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+/* outputs: images, plotly */
+.jp-OutputArea-output img{
+  border-radius:12px;
+  border:1px solid var(--nb-line);
+  background:#fff;
+  max-width:100%;
+  height:auto;
+}
+.jp-OutputArea-output .plotly-graph-div,
+.jp-OutputArea-output iframe{border-radius:12px; overflow:hidden}
+
+/* pandas / dataframe */
+.dataframe, table.dataframe{
+  background:var(--nb-surface) !important;
+  color:var(--nb-text) !important;
+  border:1px solid var(--nb-line) !important;
+}
+table.dataframe th{background:var(--nb-surface-2) !important;color:var(--nb-muted) !important}
+table.dataframe td{background:transparent !important;color:var(--nb-text) !important}
+
+/* warnings / stderr */
+.jp-RenderedText[data-mime-type="application/vnd.jupyter.stderr"]{
+  background:rgba(255,107,107,.06) !important;
+  border-left:3px solid #ff6b6b;
+  border-radius:0 10px 10px 0;
+  padding:8px 12px !important;
+}
+
+/* math */
+mjx-container{color:var(--nb-text) !important}
+mjx-container[jax="CHTML"][display="true"]{margin:.8em 0 !important}
+
+/* prompts layout */
+.jp-Cell-inputWrapper, .jp-Cell-outputWrapper{padding-left:0 !important}
+
+/* footer nav */
+.asp-nb-foot{
+  max-width:980px; margin:40px auto 0; padding:18px 22px 0;
+  border-top:1px solid var(--nb-line);
+  display:flex; flex-wrap:wrap; gap:14px; justify-content:space-between;
+  color:var(--nb-dim); font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  font-size:.75rem;
+}
+.asp-nb-foot a{color:var(--nb-muted) !important}
+
+@media (max-width:700px){
+  .asp-nb-bar{padding:10px 14px}
+  .asp-nb-bar .asp-title{display:none}
+  .asp-nb-bar .asp-links a{padding:6px 9px;font-size:.76rem}
+  .jp-Notebook{padding:0 12px !important}
+}
+
+@media print{
+  .asp-nb-bar,.asp-nb-foot{display:none !important}
+  body.jp-Notebook{background:#fff !important;color:#111 !important}
+  .jp-RenderedHTMLCommon p,.jp-RenderedHTMLCommon li{color:#111 !important}
+}
+
+/* Explicit token colours (the bundled light theme wins on specificity). */
+.highlight .k,.highlight .kn,.highlight .kd,.highlight .kr,.highlight .ow{color:#c792ea !important;font-weight:600}
+.highlight .nn,.highlight .nc,.highlight .nf{color:#58d3ff !important}
+.highlight .nb{color:#58d3ff !important}
+.highlight .n,.highlight .na,.highlight .nv{color:#dbe6f5 !important}
+.highlight .s,.highlight .s1,.highlight .s2,.highlight .sd,.highlight .se,.highlight .si{color:#a5e075 !important}
+.highlight .mi,.highlight .mf,.highlight .m,.highlight .mh,.highlight .il{color:#ffb26b !important}
+.highlight .c,.highlight .c1,.highlight .cm,.highlight .ch{color:#6b7f9f !important;font-style:italic}
+.highlight .o{color:#89ddff !important}
+.highlight .p{color:#c3d2e8 !important}
+
+/* long code lines scroll instead of being clipped */
+.highlight pre,.jp-InputArea{overflow-x:auto}
+
+/* thin dark scrollbars for long code lines */
+.highlight pre,.jp-InputArea{scrollbar-color:#2a3a5c transparent;scrollbar-width:thin}
+.highlight pre::-webkit-scrollbar,.jp-InputArea::-webkit-scrollbar{height:8px}
+.highlight pre::-webkit-scrollbar-thumb,.jp-InputArea::-webkit-scrollbar-thumb{background:#2a3a5c;border-radius:4px}
+.highlight pre::-webkit-scrollbar-track,.jp-InputArea::-webkit-scrollbar-track{background:transparent}

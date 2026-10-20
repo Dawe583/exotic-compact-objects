@@ -1,0 +1,93 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: "0 3 * * 0"
+
+permissions:
+  contents: read
+
+jobs:
+  build-site:
+    name: Build and verify the research site
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Install dependencies
+        run: pip install pandas numpy matplotlib plotly
+      - name: Build and publish the site
+        run: python scripts/build_premium_site.py --publish
+      - name: Verify the published mirror is up to date
+        run: |
+          if ! git diff --exit-code docs/; then
+            echo "The committed docs/ mirror is stale. Run 'python scripts/build_premium_site.py --publish' and commit."
+            exit 1
+          fi
+      - name: Link check
+        run: |
+          python - <<'PY'
+          import re, html
+          from pathlib import Path
+          root = Path("docs").resolve()
+          pages = [root / "index.html"] + list((root / "premium").glob("*.html"))
+          bad = []
+          for p in pages:
+              text = p.read_text(encoding="utf-8", errors="replace")
+              for attr in ("href", "src"):
+                  for m in re.finditer(rf'{attr}="([^"]+)"', text):
+                      u = html.unescape(m.group(1))
+                      if u.startswith(("http", "#", "mailto:", "data:", "javascript:")) or not u:
+                          continue
+                      if not (p.parent / u.split("#")[0].split("?")[0]).exists():
+                          bad.append((str(p.relative_to(root)), u))
+          if bad:
+              print("Broken links:")
+              for b in bad[:20]:
+                  print(" ", b)
+              raise SystemExit(1)
+          print(f"Link check passed ({len(pages)} pages).")
+          PY
+
+  smoke-tests:
+    name: Smoke-test the analysis scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Install dependencies
+        run: pip install pandas numpy matplotlib plotly
+      - name: Run remnant energetics
+        run: python scripts/remnant_energetics.py
+      - name: Run exotic discrimination
+        run: python scripts/exotic_discrimination.py
+      - name: Run AGN demographics
+        run: python scripts/agn_demographics.py
+      - name: Execute the reproducibility notebook
+        run: |
+          pip install nbformat nbconvert jupyter_client ipykernel
+          python -m ipykernel install --user --name python3
+          jupyter nbconvert --to notebook --execute --inplace notebooks/27_remnant_energetics.ipynb
+
+  notebook-health:
+    name: Notebook health (weekly)
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Install dependencies
+        run: pip install pandas numpy matplotlib plotly scipy astropy nbformat nbconvert jupyter_client ipykernel
+      - name: Run health loop
+        run: bash .opencode/loops/notebook-health.sh

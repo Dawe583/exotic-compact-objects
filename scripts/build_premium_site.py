@@ -964,9 +964,20 @@ def build_research(stats: dict) -> str:
             f'<td class="num">{p.stat().st_size // 1024} kB</td><td>{link}</td></tr>'
         )
     nb_rows = "\n".join(nb_rows)
-    _rep = list(PROJECT.glob("reports/*.md"))
+    # Only tracked reports, so the page is identical in a clean checkout (CI)
+    # and locally. Untracked/generated reports never leak into the site.
+    try:
+        import subprocess as _sp
+        _tracked = _sp.check_output(
+            ["git", "-C", str(PROJECT), "ls-files", "reports/*.md"],
+            text=True, stderr=_sp.DEVNULL,
+        ).split()
+        _rep = [PROJECT / r for r in _tracked]
+    except Exception:
+        _rep = list(PROJECT.glob("reports/*.md"))
     if (WORKSPACE / "research/projects").exists():
-        _rep += [x for x in (WORKSPACE / "research/projects").glob("*/reports/*.md") if x.is_relative_to(PROJECT)]
+        _rep += [x for x in (WORKSPACE / "research/projects").glob("*/reports/*.md")
+                 if x.is_relative_to(PROJECT)]
     reports = sorted(set(_rep))
     rep_rows = "\n".join(
         f'<tr><td class="name">{esc(p.stem)}</td><td>{esc(p.parent.parent.name)}</td>'

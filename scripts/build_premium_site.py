@@ -975,9 +975,6 @@ def build_research(stats: dict) -> str:
         _rep = [PROJECT / r for r in _tracked]
     except Exception:
         _rep = list(PROJECT.glob("reports/*.md"))
-    if (WORKSPACE / "research/projects").exists():
-        _rep += [x for x in (WORKSPACE / "research/projects").glob("*/reports/*.md")
-                 if x.is_relative_to(PROJECT)]
     reports = sorted(set(_rep))
     rep_rows = "\n".join(
         f'<tr><td class="name">{esc(p.stem)}</td><td>{esc(p.parent.parent.name)}</td>'

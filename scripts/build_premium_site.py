@@ -1459,7 +1459,7 @@ def publish(stats: dict) -> None:
     for name in urls:
         sitemap.append(f"  <url><loc>{base}{name}</loc></url>")
     sitemap.append("</urlset>")
-    (SITE / "sitemap.xml").write_text("\n".join(sitemap), encoding="utf-8")
+    (SITE / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
     (SITE / "robots.txt").write_text(
         "User-agent: *\nAllow: /\nSitemap: " + base + "sitemap.xml\n", encoding="utf-8")
     shutil.copy2(SITE / "sitemap.xml", target / "sitemap.xml")

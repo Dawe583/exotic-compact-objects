@@ -373,9 +373,20 @@ FIGURES = {
         "Numerical-relativity peak and ringdown frequencies vs inferred spin.",
         "Gravitational waves",
     ),
+    "exoplanet_mass_radius": (
+        "Exoplanet mass-radius",
+        "Confirmed exoplanets on the mass-radius diagram with rocky composition line.",
+        "Exoplanets",
+    ),
+    "exoplanet_hz": (
+        "Habitable zone",
+        "Planet orbital distance vs stellar Teff with the Sun's conservative HZ.",
+        "Exoplanets",
+    ),
 }
 
 FIGURE_GROUPS = [
+    "Exoplanets",
     "Gravitational waves",
     "Black holes",
     "AGN & SMBH",

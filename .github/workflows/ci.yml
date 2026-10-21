@@ -71,6 +71,12 @@ jobs:
         run: python scripts/exotic_discrimination.py
       - name: Run AGN demographics
         run: python scripts/agn_demographics.py
+      - name: Run SXS waveform analysis
+        run: python scripts/sxs_waveform_analysis.py
+      - name: Run unit tests
+        run: |
+          pip install pytest
+          pytest tests/ -q
       - name: Execute the reproducibility notebook
         run: |
           pip install nbformat nbconvert jupyter_client ipykernel

@@ -368,6 +368,11 @@ FIGURES = {
         "Reverberation-mapped supermassive black-hole masses vs redshift.",
         "AGN & SMBH",
     ),
+    "sxs_waveform_analysis": (
+        "SXS waveform peak and ringdown",
+        "Numerical-relativity peak and ringdown frequencies vs inferred spin.",
+        "Gravitational waves",
+    ),
 }
 
 FIGURE_GROUPS = [
@@ -662,9 +667,6 @@ def shell(
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script>
 window.MathJax = {{
@@ -1326,8 +1328,6 @@ def build_portal(stats: dict) -> str:
 <link rel="icon" href="premium/assets/favicon.svg" type="image/svg+xml">
 <title>Exotic Compact Objects · Research portal</title>
 <meta name="description" content="Research portal: compact objects, gravitational waves, theory and executable notebooks.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="premium/style.css">
 </head>
 <body>

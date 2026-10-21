@@ -67,7 +67,7 @@
 html, body{
   background:var(--nb-bg) !important;
   color:var(--nb-text) !important;
-  font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif !important;
+  font-family:"Times New Roman",Times,"Liberation Serif",serif !important;
 }
 
 /* The highlighter and its container must not repaint a light background. */

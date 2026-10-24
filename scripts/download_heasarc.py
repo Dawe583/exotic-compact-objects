@@ -32,6 +32,7 @@ def tap(query):
 
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
+    failed = []
     for name, q in TABLES.items():
         try:
             t = tap(q)
@@ -41,7 +42,6 @@ def main():
             df = t.to_pandas()
             csv_path = OUT / f"{name}.csv"
             df.to_csv(csv_path, index=False)
-            # Also save as parquet if pyarrow available
             try:
                 df.to_parquet(OUT / f"{name}.parquet", index=False)
             except Exception:
@@ -49,6 +49,10 @@ def main():
             print(f"{name}: {len(df)} rows -> {csv_path}")
         except Exception as e:
             print(f"{name}: FAILED {e}")
+            failed.append(name)
+    if failed:
+        print(f"HEASARC download: {len(failed)}/{len(TABLES)} tables failed: {failed}")
+        raise SystemExit(1)
 
 if __name__ == "__main__":
     main()

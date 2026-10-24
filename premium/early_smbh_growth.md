@@ -55,3 +55,7 @@ A final mass and observation epoch constrain the integrated growth budget, not t
 - Natarajan et al. (2023), *First Detection of an Over-Massive Black Hole Galaxy UHZ1*, ApJL 958, L20. [arXiv:2308.02654](https://arxiv.org/abs/2308.02654).
 - Wang et al. (2021), *A Luminous Quasar at Redshift 7.642*, ApJL 907, L1. [https://doi.org/10.3847/2041-8213/abd8c6](https://doi.org/10.3847/2041-8213/abd8c6); [arXiv:2101.03179](https://arxiv.org/abs/2101.03179).
 - Juodžbalis et al. (2026), resolved dynamical black-hole mass in Abell 2744-QSO1, Nature 653, 1017–1021. [https://doi.org/10.1038/s41586-026-10579-4](https://doi.org/10.1038/s41586-026-10579-4).
+
+## Data provenance
+
+See `docs/DATA_PROVENANCE.md` (workspace root) for the real/derived/synthetic classification of every dataset used here.

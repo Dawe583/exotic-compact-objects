@@ -174,3 +174,7 @@ Gravitational waves, black-hole shadow images, precision tests of GR, and cosmol
 6. J. Ambjørn et al., “Quantum gravity as the sum over spacetimes,” [arXiv:1203.3591](https://arxiv.org/abs/1203.3591).
 7. S. Liberati and L. Maccione, “Quantum gravity phenomenology: achievements and challenges,” *J. Phys. Conf. Ser.* **314**, 012007 (2011), [arXiv:0906.0681](https://arxiv.org/abs/0906.0681).
 8. CODATA/NIST constants via Astropy's constants package, [Astropy constants documentation](https://docs.astropy.org/en/stable/constants/index.html); fundamental SI constants are defined exactly where applicable, while $G$ has measurement uncertainty.
+
+## Data provenance
+
+See `docs/DATA_PROVENANCE.md` (workspace root) for the real/derived/synthetic classification of every dataset used here.

@@ -129,3 +129,9 @@ BH shadow diameter in Schwarzschild spacetime
 - relative_deviation_vs_analytic_including_2nd_order: 0.006156386235459056
 
 Total: ALL CHECKS PASS (1.5 s)
+
+
+### kepler_third_law — PASS
+Kepler's third law for exoplanet orbital period
+- formula: `P = 2 pi sqrt(a^3 / (G M))`
+- check: **P^2 proportional to a^3** — verified via symbolic simplification

@@ -1,6 +1,6 @@
 # Formula derivations and verification
 
-Generated (UTC): 2026-10-19T19:59:34.356806+00:00
+Generated (UTC): 2026-10-24T20:09:29.960195+00:00
 
 Every entry: symbolic derivation in `models/derivations.py` executed with Sympy,
 each check simplifies to an identity (0) or strict inequality; then numeric
@@ -128,4 +128,4 @@ BH shadow diameter in Schwarzschild spacetime
 - relative_deviation_vs_first_order: 0.08024076540795372
 - relative_deviation_vs_analytic_including_2nd_order: 0.006156386235459056
 
-Total: ALL CHECKS PASS (1.6 s)
+Total: ALL CHECKS PASS (1.5 s)

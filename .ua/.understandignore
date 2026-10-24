@@ -7,3 +7,19 @@ reports/remnant_energetics.md
 scripts/build_premium_site.py
 scripts/remnant_energetics.py
 scripts/style_notebook_renders.py
+
+# data inputs/outputs excluded from knowledge-graph scan (2026-10-21)
+data/
+figures/
+results/
+*.png
+*.csv
+*.tsv
+*.sqlite
+*.npz
+*.npy
+*.parquet
+
+# Understand-Anything scratch (transient, regenerated each refresh)
+.ua/intermediate/
+.ua/tmp/

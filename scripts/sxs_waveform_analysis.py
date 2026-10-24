@@ -22,10 +22,10 @@ def remnant_spin(q, chi1, chi2):
         q = 1.0 / q
         chi1, chi2 = chi2, chi1
     eta = q / (1 + q) ** 2
-    ell = 2 * np.sqrt(3) - 3.517 * eta + 2.576 * eta ** 2
-    a = ((1 + q ** 2) * 0 + q * ell) / (1 + q) ** 2  # placeholder if no spins
+    ell = 2 * np.sqrt(3) - 3.517 * eta + 2.576 * eta**2
+    a = ((1 + q**2) * 0 + q * ell) / (1 + q) ** 2  # placeholder if no spins
     # use actual spins
-    a = (chi1 + chi2 * q ** 2 + q * ell) / (1 + q) ** 2
+    a = (chi1 + chi2 * q**2 + q * ell) / (1 + q) ** 2
     return float(np.clip(a, 0.0, 0.998))
 
 
@@ -38,7 +38,7 @@ def isco_radius(a):
 
 def isco_frequency(a):
     r = isco_radius(a)
-    omega = 1.0 / (r ** 1.5 + a)  # geometric units, M=1
+    omega = 1.0 / (r**1.5 + a)  # geometric units, M=1
     return omega / (2 * np.pi)
 
 
@@ -54,22 +54,24 @@ def build() -> pd.DataFrame:
     for _, r in df.iterrows():
         q = float(r.q)
         a = remnant_spin(q, float(r.chi1z), float(r.chi2z))
-        rows.append({
-            "file": r.file,
-            "q": q,
-            "chi1z": float(r.chi1z),
-            "chi2z": float(r.chi2z),
-            "chi_eff": float(r.chi_eff),
-            "a_fit": a,
-            "r_isco": isco_radius(a),
-            "f_isco": isco_frequency(a),
-            "f_peak_M_fft": float(r.f_peak_M_fft),
-            "f_peak_M_inst": float(r.f_peak_M_inst),
-            "f_ring_M": float(r.f_ring_M),
-            "amp_peak": float(r.amp_peak),
-            "ratio_peak_over_isco": float(r.f_peak_M_fft) / isco_frequency(a),
-            "ratio_ring_over_qnm": float(r.f_ring_M) / qnm_frequency(a),
-        })
+        rows.append(
+            {
+                "file": r.file,
+                "q": q,
+                "chi1z": float(r.chi1z),
+                "chi2z": float(r.chi2z),
+                "chi_eff": float(r.chi_eff),
+                "a_fit": a,
+                "r_isco": isco_radius(a),
+                "f_isco": isco_frequency(a),
+                "f_peak_M_fft": float(r.f_peak_M_fft),
+                "f_peak_M_inst": float(r.f_peak_M_inst),
+                "f_ring_M": float(r.f_ring_M),
+                "amp_peak": float(r.amp_peak),
+                "ratio_peak_over_isco": float(r.f_peak_M_fft) / isco_frequency(a),
+                "ratio_ring_over_qnm": float(r.f_ring_M) / qnm_frequency(a),
+            }
+        )
     return pd.DataFrame(rows)
 
 
@@ -106,11 +108,23 @@ def plot(t: pd.DataFrame, s: dict) -> None:
         ax.grid(color="#1b2740", lw=0.7, alpha=0.9)
 
     ax = axes[0]
-    sc = ax.scatter(t.a_fit, t.f_peak_M_fft, c=t.q, cmap="plasma",
-                    s=24, alpha=0.9, edgecolors="none")
+    sc = ax.scatter(
+        t.a_fit,
+        t.f_peak_M_fft,
+        c=t.q,
+        cmap="plasma",
+        s=24,
+        alpha=0.9,
+        edgecolors="none",
+    )
     aa = np.linspace(0, 0.998, 200)
-    ax.plot(aa, [isco_frequency(a) for a in aa], color="#58d3ff", lw=2,
-            label="ISCO frequency")
+    ax.plot(
+        aa,
+        [isco_frequency(a) for a in aa],
+        color="#58d3ff",
+        lw=2,
+        label="ISCO frequency",
+    )
     ax.set_xlabel("inferred remnant spin a*")
     ax.set_ylabel("peak GW frequency [1/M]")
     ax.set_title("Waveform peak vs ISCO frequency")
@@ -123,11 +137,18 @@ def plot(t: pd.DataFrame, s: dict) -> None:
     cb.outline.set_edgecolor("#2a3a5c")
 
     ax = axes[1]
-    sc2 = ax.scatter(t.a_fit, t.f_ring_M, c=t.q, cmap="plasma",
-                     s=24, alpha=0.9, edgecolors="none")
+    sc2 = ax.scatter(
+        t.a_fit, t.f_ring_M, c=t.q, cmap="plasma", s=24, alpha=0.9, edgecolors="none"
+    )
     aa = np.linspace(0, 0.998, 200)
-    ax.plot(aa, [qnm_frequency(a) for a in aa], color="#ffb26b", lw=2,
-            ls="--", label="QNM fit (rough)")
+    ax.plot(
+        aa,
+        [qnm_frequency(a) for a in aa],
+        color="#ffb26b",
+        lw=2,
+        ls="--",
+        label="QNM fit (rough)",
+    )
     ax.set_xlabel("inferred remnant spin a*")
     ax.set_ylabel("ringdown frequency [1/M]")
     ax.set_title("Ringdown vs quasinormal mode")
@@ -150,47 +171,98 @@ def plotly_html(t: pd.DataFrame, s: dict) -> None:
 
     aa = np.linspace(0, 0.998, 200)
     fig = make_subplots(
-        rows=1, cols=2,
-        subplot_titles=("Waveform peak vs ISCO frequency",
-                        "Ringdown vs quasinormal mode"),
+        rows=1,
+        cols=2,
+        subplot_titles=(
+            "Waveform peak vs ISCO frequency",
+            "Ringdown vs quasinormal mode",
+        ),
         horizontal_spacing=0.10,
     )
     fig.add_trace(
-        go.Scatter(x=aa, y=[isco_frequency(a) for a in aa], mode="lines",
-                   name="ISCO frequency", line=dict(color="#58d3ff", width=2)),
-        row=1, col=1,
+        go.Scatter(
+            x=aa,
+            y=[isco_frequency(a) for a in aa],
+            mode="lines",
+            name="ISCO frequency",
+            line=dict(color="#58d3ff", width=2),
+        ),
+        row=1,
+        col=1,
     )
     fig.add_trace(
-        go.Scatter(x=t.a_fit, y=t.f_peak_M_fft, mode="markers", name="SXS peak",
-                   marker=dict(size=6, color=t.q, colorscale="Plasma",
-                               colorbar=dict(title="q", x=1.02, len=0.45, y=0.78),
-                               line=dict(width=0)),
-                   text=t.file,
-                   hovertemplate="%{text}<br>a*=%{x:.3f}<br>f_peak=%{y:.4f}<extra></extra>"),
-        row=1, col=1,
+        go.Scatter(
+            x=t.a_fit,
+            y=t.f_peak_M_fft,
+            mode="markers",
+            name="SXS peak",
+            marker=dict(
+                size=6,
+                color=t.q,
+                colorscale="Plasma",
+                colorbar=dict(title="q", x=1.02, len=0.45, y=0.78),
+                line=dict(width=0),
+            ),
+            text=t.file,
+            hovertemplate="%{text}<br>a*=%{x:.3f}<br>f_peak=%{y:.4f}<extra></extra>",
+        ),
+        row=1,
+        col=1,
     )
     fig.add_trace(
-        go.Scatter(x=aa, y=[qnm_frequency(a) for a in aa], mode="lines",
-                   name="QNM fit", line=dict(color="#ffb26b", width=2, dash="dash")),
-        row=1, col=2,
+        go.Scatter(
+            x=aa,
+            y=[qnm_frequency(a) for a in aa],
+            mode="lines",
+            name="QNM fit",
+            line=dict(color="#ffb26b", width=2, dash="dash"),
+        ),
+        row=1,
+        col=2,
     )
     fig.add_trace(
-        go.Scatter(x=t.a_fit, y=t.f_ring_M, mode="markers", name="SXS ringdown",
-                   marker=dict(size=6, color=t.q, colorscale="Plasma",
-                               colorbar=dict(title="q", x=1.02, len=0.45, y=0.22),
-                               line=dict(width=0)),
-                   text=t.file,
-                   hovertemplate="%{text}<br>a*=%{x:.3f}<br>f_ring=%{y:.4f}<extra></extra>"),
-        row=1, col=2,
+        go.Scatter(
+            x=t.a_fit,
+            y=t.f_ring_M,
+            mode="markers",
+            name="SXS ringdown",
+            marker=dict(
+                size=6,
+                color=t.q,
+                colorscale="Plasma",
+                colorbar=dict(title="q", x=1.02, len=0.45, y=0.22),
+                line=dict(width=0),
+            ),
+            text=t.file,
+            hovertemplate="%{text}<br>a*=%{x:.3f}<br>f_ring=%{y:.4f}<extra></extra>",
+        ),
+        row=1,
+        col=2,
     )
-    fig.update_xaxes(title_text="inferred spin a*", row=1, col=1,
-                     gridcolor="#1b2740", color="#94a6c2")
-    fig.update_yaxes(title_text="frequency [1/M]", row=1, col=1,
-                     gridcolor="#1b2740", color="#94a6c2")
-    fig.update_xaxes(title_text="inferred spin a*", row=1, col=2,
-                     gridcolor="#1b2740", color="#94a6c2")
-    fig.update_yaxes(title_text="ringdown frequency [1/M]", row=1, col=2,
-                     gridcolor="#1b2740", color="#94a6c2")
+    fig.update_xaxes(
+        title_text="inferred spin a*",
+        row=1,
+        col=1,
+        gridcolor="#1b2740",
+        color="#94a6c2",
+    )
+    fig.update_yaxes(
+        title_text="frequency [1/M]", row=1, col=1, gridcolor="#1b2740", color="#94a6c2"
+    )
+    fig.update_xaxes(
+        title_text="inferred spin a*",
+        row=1,
+        col=2,
+        gridcolor="#1b2740",
+        color="#94a6c2",
+    )
+    fig.update_yaxes(
+        title_text="ringdown frequency [1/M]",
+        row=1,
+        col=2,
+        gridcolor="#1b2740",
+        color="#94a6c2",
+    )
     fig.update_layout(
         template="plotly_dark",
         paper_bgcolor="#0b1220",
@@ -202,8 +274,12 @@ def plotly_html(t: pd.DataFrame, s: dict) -> None:
         height=520,
         showlegend=False,
     )
-    fig.write_html(OUT_HTML, include_plotlyjs="cdn", full_html=True,
-                   config={"displayModeBar": True, "responsive": True})
+    fig.write_html(
+        OUT_HTML,
+        include_plotlyjs="cdn",
+        full_html=True,
+        config={"displayModeBar": True, "responsive": True},
+    )
 
 
 def report(t: pd.DataFrame, s: dict) -> str:
@@ -247,6 +323,10 @@ ringdown is compared to a rough linear QNM fit (reference only).
 
 ## Caveats
 
+- **Data provenance:** the waveforms are **synthetic/model data** generated by
+  `download_sxs.py` for testing and pipeline validation; they are NOT real
+  SXS numerical-relativity simulations. Do not treat the resulting numbers as
+  measurements.
 - Remnant spin is a fit, not a measured final spin.
 - The QNM comparison uses a rough linear fit, not a proper QNM table.
 - f_peak_M_fft and f_peak_M_inst are FFT-based and instantaneous estimates.
@@ -258,9 +338,16 @@ ringdown is compared to a rough linear QNM fit (reference only).
 Outputs: results/sxs_waveform_analysis.csv, results/sxs_waveform_analysis.png,
 premium/figures/sxs_waveform_analysis.html.
 """ % (
-        s["n"], s["q_median"], s["q_range"][0], s["q_range"][1],
-        s["a_median"], s["chi_eff_median"], s["f_peak_median"], s["f_ring_median"],
-        s["ratio_peak_isco_median"], s["ratio_ring_qnm_median"],
+        s["n"],
+        s["q_median"],
+        s["q_range"][0],
+        s["q_range"][1],
+        s["a_median"],
+        s["chi_eff_median"],
+        s["f_peak_median"],
+        s["f_ring_median"],
+        s["ratio_peak_isco_median"],
+        s["ratio_ring_qnm_median"],
     )
 
 
@@ -270,11 +357,18 @@ def main() -> None:
     t.to_csv(OUT_CSV, index=False)
     plot(t, s)
     plotly_html(t, s)
-    (PROJECT / "reports" / "sxs_waveform_analysis.md").write_text(report(t, s), encoding="utf-8")
+    (PROJECT / "reports" / "sxs_waveform_analysis.md").write_text(
+        report(t, s), encoding="utf-8"
+    )
     print("simulations: %d" % s["n"])
     print("median q: %.2f  a*: %.3f" % (s["q_median"], s["a_median"]))
-    print("median f_peak: %.4f  f_ring: %.4f" % (s["f_peak_median"], s["f_ring_median"]))
-    print("wrote %s, %s, %s, reports/sxs_waveform_analysis.md" % (OUT_CSV.name, OUT_PNG.name, OUT_HTML.name))
+    print(
+        "median f_peak: %.4f  f_ring: %.4f" % (s["f_peak_median"], s["f_ring_median"])
+    )
+    print(
+        "wrote %s, %s, %s, reports/sxs_waveform_analysis.md"
+        % (OUT_CSV.name, OUT_PNG.name, OUT_HTML.name)
+    )
 
 
 if __name__ == "__main__":

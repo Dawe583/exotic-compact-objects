@@ -383,6 +383,11 @@ FIGURES = {
         "Planet orbital distance vs stellar Teff with the Sun's conservative HZ.",
         "Exoplanets",
     ),
+    "qnm_kerr": (
+        "Kerr quasinormal modes",
+        "QNM frequency and quality factor vs spin (eikonal approximation).",
+        "Black holes",
+    ),
 }
 
 FIGURE_GROUPS = [
@@ -536,18 +541,38 @@ MODELS = [
 ]
 
 RESEARCH_STREAMS = [
-    ("Exotic compact objects", "violet", "Geometry",
-     "Horizons, throats and the boundary between black holes, wormholes and white holes.",
-     "theory_wormholes.html", "4 theory documents"),
-    ("Gravitational-wave remnants", "cyan", "Catalogue",
-     "What mergers leave behind: remnant mass, spin, ISCO and the Hawking lifetime.",
-     "data.html", "391 events · 279 remnants"),
-    ("AGN & early SMBH growth", "amber", "Demographics",
-     "Reverberation masses, Eddington ratios and the seeding problem at high redshift.",
-     "data.html", "86 reverberation masses"),
-    ("Relativistic dynamics", "green", "Dynamics",
-     "Geodesics, precession, the Penrose process and numerical-relativity waveforms.",
-     "models.html", "6 canonical models"),
+    (
+        "Exotic compact objects",
+        "violet",
+        "Geometry",
+        "Horizons, throats and the boundary between black holes, wormholes and white holes.",
+        "theory_wormholes.html",
+        "4 theory documents",
+    ),
+    (
+        "Gravitational-wave remnants",
+        "cyan",
+        "Catalogue",
+        "What mergers leave behind: remnant mass, spin, ISCO and the Hawking lifetime.",
+        "data.html",
+        "391 events · 279 remnants",
+    ),
+    (
+        "AGN & early SMBH growth",
+        "amber",
+        "Demographics",
+        "Reverberation masses, Eddington ratios and the seeding problem at high redshift.",
+        "data.html",
+        "86 reverberation masses",
+    ),
+    (
+        "Relativistic dynamics",
+        "green",
+        "Dynamics",
+        "Geodesics, precession, the Penrose process and numerical-relativity waveforms.",
+        "models.html",
+        "6 canonical models",
+    ),
 ]
 
 
@@ -969,8 +994,11 @@ def build_research(stats: dict) -> str:
     nb_rows = []
     for p in notebooks:
         render = PROJECT / "docs" / f"{p.stem}.html"
-        link = (f'<a href="{NOTEBOOKS_URL}{p.stem}.html">rendered ↗</a>' if render.exists()
-                else f'<a href="{REPO_BLOB}notebooks/{p.name}">source ↗</a>')
+        link = (
+            f'<a href="{NOTEBOOKS_URL}{p.stem}.html">rendered ↗</a>'
+            if render.exists()
+            else f'<a href="{REPO_BLOB}notebooks/{p.name}">source ↗</a>'
+        )
         nb_rows.append(
             f'<tr><td class="name">{esc(p.stem)}</td><td>{esc(p.parent.parent.name)}</td>'
             f'<td class="num">{p.stat().st_size // 1024} kB</td><td>{link}</td></tr>'
@@ -980,9 +1008,11 @@ def build_research(stats: dict) -> str:
     # and locally. Untracked/generated reports never leak into the site.
     try:
         import subprocess as _sp
+
         _tracked = _sp.check_output(
             ["git", "-C", str(PROJECT), "ls-files", "reports/*.md"],
-            text=True, stderr=_sp.DEVNULL,
+            text=True,
+            stderr=_sp.DEVNULL,
         ).split()
         _rep = [PROJECT / r for r in _tracked]
     except Exception:
@@ -1057,16 +1087,30 @@ def build_research(stats: dict) -> str:
 def build_data(stats: dict) -> str:
     rows = []
     total = 0
+    SYNTHETIC = {
+        "data/external/xray_binary_catalogs/corbet_hmxb.csv",
+        "data/external/swift_bat/swift_bat_sources.csv",
+        "data/external/maxi_gsc/maxi_gsc_sources.csv",
+        "data/external/nicer/nicer_observations.csv",
+    }
     for label, rel, category, desc, source in CATALOGS:
         path = PROJECT / rel
         n = row_count(path)
         c = col_count(path)
         total += n
         exists = path.exists()
-        badge = (
-            '<span class="badge ok">ready</span>'
-            if exists
-            else '<span class="badge warn">missing</span>'
+        if rel in SYNTHETIC:
+            badge = '<span class="badge warn">synthetic (test)</span>'
+        else:
+            badge = (
+                '<span class="badge ok">ready</span>'
+                if exists
+                else '<span class="badge warn">missing</span>'
+            )
+        desc = (
+            desc + " [SYNTHETIC TEST DATA — not a real measurement]"
+            if rel in SYNTHETIC
+            else desc
         )
         rows.append(
             f'<tr><td class="name">{esc(label)}</td><td>{esc(category)}</td>'
@@ -1324,8 +1368,8 @@ def build_portal(stats: dict) -> str:
     nb_cards = "\n".join(
         f'<a class="card reveal" href="{p.name.replace(".ipynb", ".html")}">'
         f'<span class="tag cyan">Notebook</span>'
-        f'<h3>{esc(p.stem.replace("_", " "))}</h3>'
-        f'<p>{esc(p.parent.parent.name)} · {p.stat().st_size // 1024} kB</p></a>'
+        f"<h3>{esc(p.stem.replace('_', ' '))}</h3>"
+        f"<p>{esc(p.parent.parent.name)} · {p.stat().st_size // 1024} kB</p></a>"
         for p in notebooks
         if (SITE.parent / "docs" / p.name.replace(".ipynb", ".html")).exists()
     )
@@ -1371,7 +1415,7 @@ def build_portal(stats: dict) -> str:
       <div>
         <span class="eyebrow"><span class="dot"></span> Research portal · GitHub Pages</span>
         <h1>Exotic compact objects, <span class="accent">from first principles</span>.</h1>
-        <p class="lede">Black holes, wormholes and white holes — analytic geometry, catalogue-scale inference and {stats['notebooks']} executable notebooks. Start with the research site, or read the notebooks directly.</p>
+        <p class="lede">Black holes, wormholes and white holes — analytic geometry, catalogue-scale inference and {stats["notebooks"]} executable notebooks. Start with the research site, or read the notebooks directly.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="premium/index.html">Open the research site <span aria-hidden="true">→</span></a>
           <a class="btn btn-ghost" href="premium/theory.html">Theory</a>
@@ -1381,12 +1425,12 @@ def build_portal(stats: dict) -> str:
       <div class="console">
         <div class="console-head"><span class="pulse"></span> Repository inventory</div>
         <div class="metrics">
-          <div class="metric cyan"><div class="label">GW events</div><div class="value">{fmt_int(stats['gw_events'])}</div></div>
-          <div class="metric amber"><div class="label">Datasets</div><div class="value">{fmt_int(stats['datasets'])}</div></div>
-          <div class="metric violet"><div class="label">Notebooks</div><div class="value">{fmt_int(stats['notebooks'])}</div></div>
-          <div class="metric cyan"><div class="label">Figures</div><div class="value">{fmt_int(stats['figures'])}</div></div>
+          <div class="metric cyan"><div class="label">GW events</div><div class="value">{fmt_int(stats["gw_events"])}</div></div>
+          <div class="metric amber"><div class="label">Datasets</div><div class="value">{fmt_int(stats["datasets"])}</div></div>
+          <div class="metric violet"><div class="label">Notebooks</div><div class="value">{fmt_int(stats["notebooks"])}</div></div>
+          <div class="metric cyan"><div class="label">Figures</div><div class="value">{fmt_int(stats["figures"])}</div></div>
         </div>
-        <div class="console-foot"><span>theory docs: {stats['theory_docs']}</span><span>rows: {fmt_int(stats['catalog_rows'])}</span></div>
+        <div class="console-foot"><span>theory docs: {stats["theory_docs"]}</span><span>rows: {fmt_int(stats["catalog_rows"])}</span></div>
       </div>
     </div>
   </section>
@@ -1397,10 +1441,10 @@ def build_portal(stats: dict) -> str:
       <p>The polished view: dashboard, catalogues, models, interactive figures and derivations.</p></div>
     </div>
     <div class="grid cols-4">
-      <a class="card reveal" href="premium/data.html"><span class="tag cyan">Data</span><h3>Data catalogue</h3><p>{stats['datasets']} curated catalogues with measured row counts and provenance.</p></a>
+      <a class="card reveal" href="premium/data.html"><span class="tag cyan">Data</span><h3>Data catalogue</h3><p>{stats["datasets"]} curated catalogues with measured row counts and provenance.</p></a>
       <a class="card reveal" href="premium/models.html"><span class="tag violet">Models</span><h3>Models</h3><p>Schwarzschild, Kerr, wormholes, white holes and Fisher-matrix inference.</p></a>
-      <a class="card reveal" href="premium/gallery.html"><span class="tag amber">Figures</span><h3>Visualisations</h3><p>{stats['figures']} interactive Plotly figures and animations, lazy-loaded.</p></a>
-      <a class="card reveal" href="premium/theory.html"><span class="tag green">Theory</span><h3>Theory</h3><p>{stats['theory_docs']} self-contained derivations with equations and references.</p></a>
+      <a class="card reveal" href="premium/gallery.html"><span class="tag amber">Figures</span><h3>Visualisations</h3><p>{stats["figures"]} interactive Plotly figures and animations, lazy-loaded.</p></a>
+      <a class="card reveal" href="premium/theory.html"><span class="tag green">Theory</span><h3>Theory</h3><p>{stats["theory_docs"]} self-contained derivations with equations and references.</p></a>
     </div>
   </section>
 
@@ -1476,14 +1520,17 @@ def publish(stats: dict) -> None:
 
     base = "https://dawe583.github.io/exotic-compact-objects/premium/"
     urls = sorted(p.name for p in SITE.glob("*.html"))
-    sitemap = ['<?xml version="1.0" encoding="UTF-8"?>',
-               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    sitemap = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ]
     for name in urls:
         sitemap.append(f"  <url><loc>{base}{name}</loc></url>")
     sitemap.append("</urlset>")
     (SITE / "sitemap.xml").write_text("\n".join(sitemap) + "\n", encoding="utf-8")
     (SITE / "robots.txt").write_text(
-        "User-agent: *\nAllow: /\nSitemap: " + base + "sitemap.xml\n", encoding="utf-8")
+        "User-agent: *\nAllow: /\nSitemap: " + base + "sitemap.xml\n", encoding="utf-8"
+    )
     shutil.copy2(SITE / "sitemap.xml", target / "sitemap.xml")
     shutil.copy2(SITE / "robots.txt", target / "robots.txt")
     (PROJECT / "docs/index.html").write_text(build_portal(stats), encoding="utf-8")

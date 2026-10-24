@@ -8,3 +8,8 @@ phone_view/
 data/raw/strain/
 *.hdf5
 *.h5
+
+# Understand-Anything scratch
+.ua/intermediate/
+.ua/tmp/
+.ua/.trash-*/

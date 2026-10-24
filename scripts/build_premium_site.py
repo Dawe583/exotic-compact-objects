@@ -105,6 +105,20 @@ CATALOGS = [
         "BlackCAT",
     ),
     (
+        "Exoplanet catalog (confirmed)",
+        "../../exoplanets/data/raw/exoplanets_confirmed.csv",
+        "Exoplanets",
+        "Confirmed exoplanets from NASA Exoplanet Archive (real measurements).",
+        "NASA Exoplanet Archive",
+    ),
+    (
+        "Exoplanet processed sample",
+        "../../exoplanets/data/processed/exoplanets.csv",
+        "Exoplanets",
+        "Processed exoplanet sample used by the exoplanets notebooks and theory docs.",
+        "Exoplanets project",
+    ),
+    (
         "Known compact objects",
         "data/processed/known_compact_objects.csv",
         "Black holes",

@@ -592,8 +592,8 @@ RESEARCH_STREAMS = [
         "cyan",
         "Demographics",
         "Detection methods, habitable zones, atmospheric escape and occurrence rates.",
-        "https://github.com/Dawe583/astro-science/tree/master/research/projects/exoplanets",
-        "11 notebooks · 5 theory docs",
+        "https://github.com/Dawe583/astro-science/tree/main/research/projects/exoplanets/theory",
+        "11 notebooks · 5 theory docs (atmospheric escape, demographics, detection methods, habitability, orbital dynamics)",
     ),
 ]
 

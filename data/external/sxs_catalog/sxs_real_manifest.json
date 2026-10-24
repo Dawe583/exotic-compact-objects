@@ -1,0 +1,22 @@
+[
+  {
+    "id": "SXS:BBH:0001",
+    "meta": "/home/dawe/Projects/astro-science/research/projects/exotic-compact-objects/data/external/sxs_catalog/SXS_BBH_0001.json"
+  },
+  {
+    "id": "SXS:BBH:0002",
+    "meta": "/home/dawe/Projects/astro-science/research/projects/exotic-compact-objects/data/external/sxs_catalog/SXS_BBH_0002.json"
+  },
+  {
+    "id": "SXS:BBH:0004",
+    "meta": "/home/dawe/Projects/astro-science/research/projects/exotic-compact-objects/data/external/sxs_catalog/SXS_BBH_0004.json"
+  },
+  {
+    "id": "SXS:BBH:0010",
+    "meta": "/home/dawe/Projects/astro-science/research/projects/exotic-compact-objects/data/external/sxs_catalog/SXS_BBH_0010.json"
+  },
+  {
+    "id": "SXS:BBH:0017",
+    "meta": "/home/dawe/Projects/astro-science/research/projects/exotic-compact-objects/data/external/sxs_catalog/SXS_BBH_0017.json"
+  }
+]

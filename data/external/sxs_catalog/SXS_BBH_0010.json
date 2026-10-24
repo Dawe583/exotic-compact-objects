@@ -1,0 +1,164 @@
+{
+  "id": "SXS:BBH:0010",
+  "deprecated": true,
+  "available_levels": [
+    "L",
+    "e",
+    "v",
+    "5"
+  ],
+  "default_extrapolation": "N2",
+  "catalog_row": {
+    "deprecated": true,
+    "reference_mass_ratio": 1.5006935311406624,
+    "reference_chi_eff": -0.2596037592965076,
+    "reference_chi1_perp": 0.2498622969991506,
+    "reference_chi2_perp": 5.688517089832341e-08,
+    "reference_eccentricity": 0.0004385,
+    "reference_eccentricity_bound": 0.0004385,
+    "reference_time": 170.0,
+    "reference_dimensionless_spin1_x": 0.247781870677,
+    "reference_dimensionless_spin1_y": 0.0284336026317,
+    "reference_dimensionless_spin1_z": -0.432855310902,
+    "reference_dimensionless_spin1_mag": 0.4995678586247098,
+    "reference_dimensionless_spin1": [
+      0.247781870677,
+      0.0284336026317,
+      -0.432855310902
+    ],
+    "reference_dimensionless_spin2_x": -4.26715742858e-08,
+    "reference_dimensionless_spin2_y": 3.38011905263e-08,
+    "reference_dimensionless_spin2_z": 3.7780496391e-07,
+    "reference_dimensionless_spin2_mag": 3.817066602615943e-07,
+    "reference_dimensionless_spin2": [
+      -4.26715742858e-08,
+      3.38011905263e-08,
+      3.7780496391e-07
+    ],
+    "reference_mean_anomaly": 0.378232,
+    "reference_orbital_frequency_x": 2.7751936262e-05,
+    "reference_orbital_frequency_y": -0.000114983920285,
+    "reference_orbital_frequency_z": 0.0145547639547,
+    "reference_orbital_frequency_mag": 0.014555244595984115,
+    "reference_orbital_frequency": [
+      2.7751936262e-05,
+      -0.000114983920285,
+      0.0145547639547
+    ],
+    "reference_separation": 15.976563673188577,
+    "reference_position1": [
+      -5.00746860432,
+      4.03897665244,
+      0.0359088568252
+    ],
+    "reference_position2": [
+      7.41996109006,
+      -6.0008922021,
+      -0.0671026878134
+    ],
+    "reference_mass1": 0.600277912813,
+    "reference_mass2": 0.400000333417,
+    "reference_chi1_mag": 0.4995678586247098,
+    "reference_chi2_mag": 3.817066602615943e-07,
+    "relaxation_time": 170.0,
+    "common_horizon_time": 5682.18772285,
+    "remnant_mass": 0.961575097951,
+    "remnant_dimensionless_spin_x": 0.0616856550754,
+    "remnant_dimensionless_spin_y": 0.0107823070908,
+    "remnant_dimensionless_spin_z": 0.559801700166,
+    "remnant_dimensionless_spin_mag": 0.5632932821337616,
+    "remnant_dimensionless_spin": [
+      0.0616856550754,
+      0.0107823070908,
+      0.559801700166
+    ],
+    "remnant_velocity_x": -5.36196404466e-05,
+    "remnant_velocity_y": 0.000586411454911,
+    "remnant_velocity_z": 0.00130490247818,
+    "remnant_velocity_mag": 0.001431615848561605,
+    "remnant_velocity": [
+      -5.36196404466e-05,
+      0.000586411454911,
+      0.00130490247818
+    ],
+    "EOS": NaN,
+    "disk_mass": NaN,
+    "ejecta_mass": NaN,
+    "object_types": "BHBH",
+    "initial_data_type": "BBH_CFMS",
+    "initial_separation": 16.0,
+    "initial_orbital_frequency": 0.01448157,
+    "initial_adot": -5.119e-05,
+    "initial_ADM_energy": 0.9936853807131598,
+    "initial_ADM_linear_momentum_x": 1.02073358e-08,
+    "initial_ADM_linear_momentum_y": 5.948664e-10,
+    "initial_ADM_linear_momentum_z": 3.32243515548e-05,
+    "initial_ADM_linear_momentum_mag": 3.322435312809734e-05,
+    "initial_ADM_linear_momentum": [
+      1.02073358e-08,
+      5.948664e-10,
+      3.32243515548e-05
+    ],
+    "initial_ADM_angular_momentum_x": 0.090107276195909,
+    "initial_ADM_angular_momentum_y": -0.0002896338226621,
+    "initial_ADM_angular_momentum_z": 0.9428692211055186,
+    "initial_ADM_angular_momentum_mag": 0.9471651245793019,
+    "initial_ADM_angular_momentum": [
+      0.090107276195909,
+      -0.0002896338226621,
+      0.9428692211055186
+    ],
+    "initial_mass1": 0.599999999928208,
+    "initial_mass2": 0.400000000002064,
+    "initial_mass_ratio": 1.49999999981278,
+    "initial_dimensionless_spin1_x": 0.249999999994,
+    "initial_dimensionless_spin1_y": -3.40980000001e-12,
+    "initial_dimensionless_spin1_z": -0.43299999999,
+    "initial_dimensionless_spin1_mag": 0.4999889998673371,
+    "initial_dimensionless_spin1": [
+      0.249999999994,
+      -3.40980000001e-12,
+      -0.43299999999
+    ],
+    "initial_dimensionless_spin2_x": -3.264029e-10,
+    "initial_dimensionless_spin2_y": 4.232688e-10,
+    "initial_dimensionless_spin2_z": 1.20750753e-08,
+    "initial_dimensionless_spin2_mag": 1.2086899471363694e-08,
+    "initial_dimensionless_spin2": [
+      -3.264029e-10,
+      4.232688e-10,
+      1.20750753e-08
+    ],
+    "initial_position1": [
+      6.39240015766443,
+      0.0095513830466901,
+      0.0
+    ],
+    "initial_position2": [
+      -9.60759984233557,
+      0.0095513830466901,
+      0.0
+    ],
+    "number_of_orbits": 19.4002995234,
+    "number_of_orbits_from_start": NaN,
+    "number_of_orbits_from_reference_time": NaN,
+    "DOI_versions": [
+      "",
+      "v1.1",
+      "v1.2",
+      "v1.3",
+      "v1.4",
+      "v1.5",
+      "v2.0"
+    ],
+    "keywords": [
+      "Precessing-Spins",
+      "ManyMergers-QuasiCircular",
+      "deprecated"
+    ],
+    "date_link_earliest": "2012-08-07 19:02:51",
+    "date_run_earliest": "2012-08-17 06:21:29",
+    "date_run_latest": "2012-08-22 13:59:12",
+    "date_postprocessing": "2019-03-30 13:41:50"
+  }
+}

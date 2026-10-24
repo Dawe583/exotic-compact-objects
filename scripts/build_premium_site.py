@@ -573,6 +573,14 @@ RESEARCH_STREAMS = [
         "models.html",
         "6 canonical models",
     ),
+    (
+        "Exoplanets",
+        "cyan",
+        "Demographics",
+        "Detection methods, habitable zones, atmospheric escape and occurrence rates.",
+        "https://github.com/Dawe583/astro-science/tree/master/research/projects/exoplanets",
+        "11 notebooks · 5 theory docs",
+    ),
 ]
 
 

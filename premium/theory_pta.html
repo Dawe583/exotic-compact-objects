@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#04070b">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Pulsar timing arrays and gravitational-wave detection · Astro Science</title>
+<meta name="description" content="Pulsar timing arrays and gravitational-wave detection — a self-contained derivation from first principles.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="Pulsar timing arrays and gravitational-wave detection">
+<meta property="og:description" content="Pulsar timing arrays and gravitational-wave detection — a self-contained derivation from first principles.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="theory.html">Theory</a><span class="sep">/</span><span>Pulsar timing arrays and gravitational-wave detection</span></nav></div>
+<div class="wrap"><div class="prose-layout"><article class="prose" id="prose">
+<h1>Pulsar timing arrays and gravitational-wave detection</h1>
+<p class="lead">A pulsar timing array (PTA) uses millisecond pulsars as a galaxy-scale gravitational-wave detector. This page derives the timing residual, the single-pulsar SNR, and shows which real pulsars are the best targets.</p>
+
+<h2>1. The signal: a timing residual</h2>
+<p>A gravitational wave of strain h and frequency f propagating through the Earth-pulsar baseline modulates the arrival times of pulses. The induced timing residual has amplitude</p>
+<div class="eq">$$ \delta t \;\sim\; \frac{h}{2\pi f} $$</div>
+<p>For a fiducial h = 10<sup>-15</sup> at f = 1 nHz (the PTA band), δt ≈ 160 ns — comparable to the best timing precisions (~100 ns).</p>
+
+<h2>2. Single-pulsar SNR</h2>
+<p>For a pulsar timed with precision σ<sub>t</sub> over a span T<sub>obs</sub> with cadence Δt, the SNR is approximately</p>
+<div class="eq">$$ {\rm SNR} \;\approx\; \frac{\delta t}{\sigma_{t}}\sqrt{\frac{T_{\rm obs}}{\Delta t}} $$</div>
+<p>The figure of merit is therefore δt/σ<sub>t</sub>: closer pulsars (larger geometric factor) and brighter pulsars (smaller σ<sub>t</sub>) are preferred.</p>
+
+<h2>3. The Hellings-Downs curve</h2>
+<p>For a gravitational-wave background, the correlation between the timing residuals of two pulsars depends only on their angular separation ζ on the sky:</p>
+<div class="eq">$$ \Gamma(\zeta) = \frac{1}{2} - \frac{1}{4}\frac{1-\cos\zeta}{2} + \frac{3}{2}\left(\frac{1-\cos\zeta}{2}\right)\ln\left(\frac{1-\cos\zeta}{2}\right) $$</div>
+<p>This quadrupolar pattern is the smoking gun of a gravitational-wave origin (as opposed to clock or ephemeris errors, which give monopolar/dipolar correlations). The 2023 NANOGrav/PPTE/EPTA/CPTA detections all report a Hellings-Downs correlation.</p>
+
+<h2>4. Best targets (real ATNF data)</h2>
+<p>The figure below plots all 856 millisecond pulsars (P &lt; 30 ms) with a measured distance, coloured by a proxy SNR. The top target is PSR J0437-4715 — the closest and brightest MSP, the anchor of the PPTA.</p>
+<div class="figure" style="margin:1.4em 0"><iframe src="figures/pta_targets.html" title="PTA targets" loading="lazy" style="width:100%;aspect-ratio:16/9;background:#030509;border:1px solid var(--line);border-radius:8px"></iframe></div>
+
+<h2>5. Assumptions and caveats</h2>
+<ul>
+  <li>The timing precision σ<sub>t</sub> is not in the ATNF catalog; the SNR proxy uses a flux-based scaling and is indicative only.</li>
+  <li>The residual formula ignores the geometric (antenna) factor, which varies from 0 to ~0.5 depending on the GW propagation direction relative to the pulsar.</li>
+  <li>The stochastic background is assumed isotropic; anisotropies or individual supermassive binaries would change the correlation pattern.</li>
+  <li>Real PTA analyses use a full Bayesian likelihood over all pulsars jointly, not single-pulsar SNRs.</li>
+</ul>
+
+<h2>6. References</h2>
+<ul>
+  <li>Hellings R. W., Downs G. S., 1983, <em>ApJ</em> 265, L39 — the correlation curve.</li>
+  <li>NANOGrav Collaboration, 2023, <em>ApJL</em> 951, L8 — 15-yr stochastic background.</li>
+  <li>EPTA Collaboration, 2023, <em>A&amp;A</em> 678, A50 — DR2New.</li>
+  <li>CPTA Collaboration, 2023, <em>Res. Astron. Astrophys.</em> 23, 075024.</li>
+</ul>
+</article><aside class="toc" id="toc" aria-label="Table of contents"></aside></div></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

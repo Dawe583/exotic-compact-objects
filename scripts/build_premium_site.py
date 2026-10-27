@@ -209,6 +209,11 @@ FIGURES = {
         "Signal-to-noise distribution for a stochastic background search.",
         "Gravitational waves",
     ),
+    "pta_targets": (
+        "PTA targets",
+        "Millisecond pulsars as PTA targets from real ATNF data, ranked by SNR proxy.",
+        "Gravitational waves",
+    ),
     "sxs_modes": (
         "SXS waveform modes",
         "Higher harmonics in numerical-relativity waveforms.",
@@ -506,6 +511,20 @@ THEORY_DOCS = [
         "Energy extraction from rotating BHs",
         "Ergosphere, negative-energy fragments, efficiency up to 20.7% and Blandford-Znajek analogue.",
         "amber",
+    ),
+    (
+        "theory_gw_memory.html",
+        "GW memory",
+        "Permanent displacement from GWs",
+        "Christodoulou nonlinear memory, order-of-magnitude estimates and detectability.",
+        "rose",
+    ),
+    (
+        "theory_pta.html",
+        "Pulsar timing arrays",
+        "PTA detection of gravitational waves",
+        "Timing residuals, Hellings-Downs correlation and best targets from real ATNF data.",
+        "cyan",
     ),
 ]
 

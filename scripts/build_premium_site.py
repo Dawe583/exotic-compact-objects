@@ -403,6 +403,13 @@ THEORY_DOCS = [
         "cyan",
     ),
     (
+        "theory_bh_thermodynamics.html",
+        "BH thermodynamics",
+        "Hawking radiation and evaporation",
+        "Hawking temperature, Bekenstein-Hawking entropy, evaporation timescale and the information paradox.",
+        "cyan",
+    ),
+    (
         "theory_wormholes.html",
         "Wormholes",
         "Morris-Thorne geometry and traversability",
@@ -421,6 +428,13 @@ THEORY_DOCS = [
         "WH instability",
         "Instability and evaporation",
         "Classical instability timescale, Hawking evaporation and the Planck-luminosity bound.",
+        "amber",
+    ),
+    (
+        "theory_white_hole_cosmology.html",
+        "WH cosmology",
+        "White holes in cosmology",
+        "Primordial white holes, the Big Bang as a white hole, and observational signatures.",
         "amber",
     ),
     (
@@ -485,6 +499,13 @@ THEORY_DOCS = [
         "Photon rings and the Kerr shadow",
         "Shadow size formula, EHT measurements of M87* and Sgr A*, and the strong-field test.",
         "cyan",
+    ),
+    (
+        "theory_penrose_process.html",
+        "Penrose process",
+        "Energy extraction from rotating BHs",
+        "Ergosphere, negative-energy fragments, efficiency up to 20.7% and Blandford-Znajek analogue.",
+        "amber",
     ),
 ]
 

@@ -229,6 +229,11 @@ FIGURES = {
         "Innermost stable circular orbit as a function of spin, prograde and retrograde.",
         "Black holes",
     ),
+    "eht_shadow": (
+        "EHT shadow comparison",
+        "Predicted Schwarzschild/Kerr shadow vs measured EHT ring for M87* and Sgr A* (real parameters).",
+        "Black holes",
+    ),
     "rs_mass": (
         "Schwarzschild radius vs mass",
         "Horizon radius across stellar to supermassive black holes.",
@@ -412,6 +417,13 @@ THEORY_DOCS = [
         "amber",
     ),
     (
+        "theory_white_hole_instability.html",
+        "WH instability",
+        "Instability and evaporation",
+        "Classical instability timescale, Hawking evaporation and the Planck-luminosity bound.",
+        "amber",
+    ),
+    (
         "theory_reissner_nordstrom.html",
         "Reissner-Nordstrom",
         "Charged black holes",
@@ -468,11 +480,11 @@ THEORY_DOCS = [
         "violet",
     ),
     (
-        "theory_gw_memory.html",
-        "GW memory",
-        "Permanent displacement from gravitational waves",
-        "Christodoulou nonlinear memory, order-of-magnitude estimates for mergers and detectability in LISA and PTAs.",
-        "rose",
+        "theory_eht_shadow.html",
+        "EHT shadows",
+        "Photon rings and the Kerr shadow",
+        "Shadow size formula, EHT measurements of M87* and Sgr A*, and the strong-field test.",
+        "cyan",
     ),
 ]
 

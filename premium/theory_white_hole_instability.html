@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#04070b">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>White-hole instability and evaporation · Astro Science</title>
+<meta name="description" content="White-hole instability and evaporation — a self-contained derivation from first principles.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="White-hole instability and evaporation">
+<meta property="og:description" content="White-hole instability and evaporation — a self-contained derivation from first principles.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="theory.html">Theory</a><span class="sep">/</span><span>White-hole instability and evaporation</span></nav></div>
+<div class="wrap"><div class="prose-layout"><article class="prose" id="prose">
+<h1>White-hole instability and evaporation</h1>
+<p class="lead">A white hole is not just a black hole run backwards in time — it is an unstable, transient configuration. This page derives the two timescales that govern its life: the classical instability and the quantum evaporation.</p>
+
+<h2>1. Classical instability</h2>
+<p>The white-hole horizon is a past horizon: matter and radiation can only exit, never enter. Any realistic perturbation — a single infalling particle, a photon, or a quantum fluctuation — seeds an instability that converts the white hole into a black hole on a timescale of order the light-crossing time of the hole:</p>
+<div class="eq">$$ t_{\rm inst} \;\sim\; \frac{GM}{c^{3}} $$</div>
+<p>Numerically, for a mass M:</p>
+<ul>
+  <li>M = 1 M<sub>⊙</sub>: t<sub>inst</sub> ≈ 4.9 × 10<sup>-6</sup> s.</li>
+  <li>M = 10<sup>6</sup> M<sub>⊙</sub>: t<sub>inst</sub> ≈ 4.9 s.</li>
+  <li>M = 10<sup>9</sup> M<sub>⊙</sub> (M87*-like): t<sub>inst</sub> ≈ 1.4 h.</li>
+</ul>
+<p>This is why white holes, if they ever form, are not long-lived astrophysical objects: the instability is exponential and operates on the dynamical time of the spacetime itself.</p>
+
+<h2>2. Quantum evaporation (time-reversed Hawking)</h2>
+<p>By time reversal of the Hawking process, a white hole emits radiation from its past horizon with the same temperature as a black hole of the same mass:</p>
+<div class="eq">$$ T_{\rm H} = \frac{\hbar c^{3}}{8\pi G M k_{\rm B}} \approx 6.17\times10^{-8}\,\frac{M_{\odot}}{M}\ {\rm K} $$</div>
+<p>The evaporation timescale is identical to the black-hole one:</p>
+<div class="eq">$$ t_{\rm evap} = \frac{5120\pi G^{2} M^{3}}{\hbar c^{4}} \approx 2.1\times10^{67}\left(\frac{M}{M_{\odot}}\right)^{3}\ {\rm yr} $$</div>
+<p>For stellar-mass white holes this dwarfs the age of the universe; for Planck-mass holes it is ~10<sup>-43</sup> s. The classical instability (§1) always dominates for astrophysical masses, so a white hole would decay classically long before it could evaporate.</p>
+
+<h2>3. Mass ejection and luminosity</h2>
+<p>If a white hole of mass M ejects its mass in a burst of duration t<sub>inst</sub>, the characteristic luminosity is</p>
+<div class="eq">$$ L \sim \frac{M c^{2}}{t_{\rm inst}} \sim \frac{c^{5}}{G} \approx 3.6\times10^{52}\ {\rm W} $$</div>
+<p>Remarkably this is the <strong>Planck luminosity</strong>, independent of mass — a universal upper bound on the power of any gravitational process. Real bursts would be beamed and spectrally distributed, but the total cannot exceed this.</p>
+
+<h2>4. Comparison with black holes</h2>
+<table>
+  <thead><tr><th>Property</th><th>Black hole</th><th>White hole</th></tr></thead>
+  <tbody>
+    <tr><td>Horizon type</td><td>Future (matter enters)</td><td>Past (matter exits)</td></tr>
+    <tr><td>Stability</td><td>Stable (for M ≳ M<sub>Planck</sub>)</td><td>Unstable (t<sub>inst</sub> ~ GM/c<sup>3</sup>)</td></tr>
+    <tr><td>Hawking temperature</td><td>T<sub>H</sub> = ℏc<sup>3</sup>/(8πGMk<sub>B</sub>)</td><td>Same (time-reversed)</td></tr>
+    <tr><td>Evaporation time</td><td>t<sub>evap</sub> ~ M<sup>3</sup></td><td>Same (never reached)</td></tr>
+    <tr><td>Astrophysical status</td><td>Observed (mergers, shadows, XRBs)</td><td>Hypothetical; no confirmed detection</td></tr>
+  </tbody>
+</table>
+
+<h2>5. Assumptions and caveats</h2>
+<ul>
+  <li>The classical instability timescale is an order-of-magnitude estimate; the exact coefficient depends on the perturbation spectrum and the equation of state of any matter present.</li>
+  <li>The Planck-luminosity bound assumes the entire mass is converted in one dynamical time; realistic ejection is likely slower and beamed.</li>
+  <li>White holes are not a prediction of standard astrophysics; they appear only in the maximal (Kruskal) extension and require exotic initial conditions or quantum gravity.</li>
+  <li>All quantities here are model-derived or theoretical; no white hole has been observed.</li>
+</ul>
+
+<h2>6. References</h2>
+<ul>
+  <li>Hawking S. W., 1974, <em>Nature</em> 248, 30 — Hawking radiation.</li>
+  <li>Eardley D. M., 1974, <em>Phys. Rev. Lett.</em> 33, 442 — white-hole instability.</li>
+  <li>Novikov I. D., 1979 — white holes and their instability.</li>
+  <li>Bardeen J. M., Carter B., Hawking S. W., 1973, <em>Commun. Math. Phys.</em> 31, 161 — laws of black-hole mechanics.</li>
+</ul>
+</article><aside class="toc" id="toc" aria-label="Table of contents"></aside></div></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

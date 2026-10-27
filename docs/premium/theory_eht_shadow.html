@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#04070b">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Black-hole shadows and the EHT measurements · Astro Science</title>
+<meta name="description" content="Black-hole shadows and the EHT measurements — a self-contained derivation from first principles.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="Black-hole shadows and the EHT measurements">
+<meta property="og:description" content="Black-hole shadows and the EHT measurements — a self-contained derivation from first principles.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="theory.html">Theory</a><span class="sep">/</span><span>Black-hole shadows and the EHT measurements</span></nav></div>
+<div class="wrap"><div class="prose-layout"><article class="prose" id="prose">
+<h1>Black-hole shadows and the EHT measurements</h1>
+<p class="lead">The Event Horizon Telescope images of M87* and Sgr A* are not pictures of the hole itself but of the photon ring around it. The size of that ring is a clean test of the Kerr metric in the strong-field regime.</p>
+
+<h2>1. Why a black hole casts a shadow</h2>
+<p>Photons that pass too close to a black hole are captured; those that pass slightly farther away are strongly deflected and can orbit. The boundary between capture and escape defines a <strong>critical impact parameter</strong> b<sub>crit</sub>, and the set of directions on the sky from which photons reach the observer forms a dark disk — the <strong>shadow</strong>. Its angular size is determined entirely by the mass, spin and distance of the hole; the plasma physics only affects brightness, not the outline.</p>
+
+<h2>2. Schwarzschild shadow (exact)</h2>
+<p>For a non-spinning hole the critical impact parameter is</p>
+<div class="eq">$$ b_{\rm crit} = 3\sqrt{3}\,\frac{GM}{c^{2}} \approx 5.196\,\frac{GM}{c^{2}} $$</div>
+<p>The shadow is a disk of angular radius b<sub>crit</sub>/D<sub>L</sub>, so its angular <strong>diameter</strong> is</p>
+<div class="eq">$$ \theta_{\rm sh} = 2 b_{\rm crit}/D_{L} = \frac{6\sqrt{3}\,GM}{c^{2} D_{L}} $$</div>
+<p>This is a pure strong-field prediction: no free parameters once M and D<sub>L</sub> are measured independently.</p>
+
+<h2>3. Kerr correction</h2>
+<p>Spin breaks spherical symmetry. The shadow becomes slightly non-circular and its size depends on the inclination i and spin a:</p>
+<ul>
+  <li>Prograde (observer on the spin axis side) the shadow shrinks by a few percent for a = 0.9.</li>
+  <li>Retrograde it grows by a comparable amount.</li>
+  <li>The shape acquires a horizontal offset (the "crescent") of order a/M.</li>
+</ul>
+<p>A convenient first-order approximation used below is θ<sub>Kerr</sub> ≈ θ<sub>Schw</sub> (1 − 0.05 a) for a prograde view, accurate to ~1% for a ≲ 0.9.</p>
+
+<h2>4. Predictions vs EHT measurements (real parameters)</h2>
+<p>The table uses the masses and distances reported by the EHT collaborations, not fitted to the ring size.</p>
+<table>
+  <thead><tr><th>Source</th><th>M (M<sub>⊙</sub>)</th><th>D (Mpc)</th><th>θ<sub>Schw</sub> (μas)</th><th>θ<sub>Kerr, a=0.9</sub> (μas)</th><th>EHT ring (μas)</th><th>Ratio meas/Schw</th></tr></thead>
+  <tbody>
+    <tr><td>M87*</td><td>6.5 × 10<sup>9</sup></td><td>16.8</td><td>39.7</td><td>37.9</td><td>42.0</td><td>1.06</td></tr>
+    <tr><td>Sgr A*</td><td>4.3 × 10<sup>6</sup></td><td>0.0083</td><td>53.3</td><td>50.9</td><td>51.8</td><td>0.97</td></tr>
+  </tbody>
+</table>
+<p>The EHT "ring" is a bright photon ring, slightly larger than the shadow edge, so a ratio of ~1.0–1.1 is expected. Both sources are consistent with Kerr at the ~5% level — a genuine strong-field test.</p>
+<div class="figure" style="margin:1.4em 0"><iframe src="figures/eht_shadow.html" title="EHT shadow comparison" loading="lazy" style="width:100%;aspect-ratio:16/9;background:#030509;border:1px solid var(--line);border-radius:8px"></iframe></div>
+
+<h2>5. What this does and does not test</h2>
+<ul>
+  <li><strong>Tests:</strong> the relation M–D–θ in the strong field; the existence of an event horizon (no surface); spin magnitude and orientation.</li>
+  <li><strong>Does not test:</strong> the detailed spacetime multipole structure (needs higher-resolution imaging); alternative theories that predict the same shadow size at leading order.</li>
+  <li><strong>Caveats:</strong> the mass of M87* comes from stellar dynamics (Gebhardt et al. 2011) and is independent of the EHT image; the distance is from the M87* jet (16.8 Mpc). For Sgr A* the mass and distance come from stellar orbits (GRAVITY). The ring diameter is a model-dependent extraction from the visibilities, with ~10% systematic uncertainty.</li>
+</ul>
+
+<h2>6. Assumptions</h2>
+<ul>
+  <li>Asymptotically flat Kerr metric; the hole is isolated (no significant accretion-disk back-reaction on the metric).</li>
+  <li>Observer at infinity; the shadow edge is well approximated by the critical impact parameter even for rotating holes (Bardeen 1973).</li>
+  <li>The EHT ring diameter is taken as the reported value; no re-fitting of the visibilities is performed here.</li>
+  <li>All quantities are derived from public EHT summary parameters, not from a full GRMHD fit.</li>
+</ul>
+
+<h2>7. References</h2>
+<ul>
+  <li>Event Horizon Telescope Collaboration, 2019, <em>ApJL</em> 875, L1 — M87*.</li>
+  <li>Event Horizon Telescope Collaboration, 2022, <em>ApJL</em> 930, L12 — Sgr A*.</li>
+  <li>Bardeen J. M., 1973, in <em>Black Holes</em> (Les Houches) — shadow formula.</li>
+  <li>Falcke H., Melia F., Agol E., 2000, <em>ApJL</em> 528, L13 — original shadow prediction.</li>
+</ul>
+</article><aside class="toc" id="toc" aria-label="Table of contents"></aside></div></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

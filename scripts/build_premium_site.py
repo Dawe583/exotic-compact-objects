@@ -434,6 +434,13 @@ THEORY_DOCS = [
         "violet",
     ),
     (
+        "theory_wormhole_bh_transition.html",
+        "WH-BH transition",
+        "Topology change and ER=EPR",
+        "Black-hole to wormhole transitions, quantum effects and observational discriminants.",
+        "violet",
+    ),
+    (
         "theory_white_holes.html",
         "White holes",
         "Time-reversed horizons and instability",

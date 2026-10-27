@@ -294,6 +294,11 @@ FIGURES = {
         "Reverberation-mapped black-hole mass distribution.",
         "AGN & SMBH",
     ),
+    "agn_mass_distribution": (
+        "AGN mass distribution",
+        "Reverberation-mapped AGN masses and Eddington luminosities (real data).",
+        "AGN & SMBH",
+    ),
     "agn_reverberation_catalog": (
         "Reverberation catalog",
         "Time-delay versus line-width measurements.",
@@ -413,6 +418,13 @@ THEORY_DOCS = [
         "Hawking radiation and evaporation",
         "Hawking temperature, Bekenstein-Hawking entropy, evaporation timescale and the information paradox.",
         "cyan",
+    ),
+    (
+        "theory_early_smbh_growth.html",
+        "Early SMBH growth",
+        "Eddington-limited growth and seeds",
+        "Growth model, seed constraints, Soltan argument and AGN mass anchors.",
+        "amber",
     ),
     (
         "theory_wormholes.html",

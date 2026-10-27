@@ -1,6 +1,6 @@
 # Formula derivations and verification
 
-Generated (UTC): 2026-10-27T23:00:37.190065+00:00
+Generated (UTC): 2026-10-27T23:14:18.167102+00:00
 
 Every entry: symbolic derivation in `models/derivations.py` executed with Sympy,
 each check simplifies to an identity (0) or strict inequality; then numeric
@@ -128,4 +128,10 @@ BH shadow diameter in Schwarzschild spacetime
 - relative_deviation_vs_first_order: 0.08024076540795372
 - relative_deviation_vs_analytic_including_2nd_order: 0.006156386235459056
 
-Total: ALL CHECKS PASS (1.5 s)
+### EHT shadow diameter M87* (Schwarzschild) ~ 40 uas — PASS
+- value_uas: 39.68934225250342
+
+### White-hole instability timescale 1 Msun ~ 5e-6 s — PASS
+- value_s: 4.925639893961039e-06
+
+Total: ALL CHECKS PASS (1.4 s)

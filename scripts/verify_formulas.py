@@ -200,6 +200,31 @@ def numerical_checks():
         }
     )
 
+    # Shadow: Schwarzschild angular diameter for M87* parameters ~ 40 uas
+    G = 6.67430e-11
+    c = 2.99792458e8
+    Msun = 1.98847e30
+    pc = 3.085677581e16
+    M = 6.5e9 * Msun
+    D = 16.8e6 * pc
+    theta = (6 * np.sqrt(3) * G * M / (c**2 * D)) * (180 / np.pi) * 3600 * 1e6
+    out.append(
+        {
+            "label": "EHT shadow diameter M87* (Schwarzschild) ~ 40 uas",
+            "value_uas": float(theta),
+            "pass": bool(38 < theta < 42),
+        }
+    )
+    # White-hole instability timescale for 1 Msun ~ 5e-6 s
+    t_inst = (6.67430e-11 * 1.98847e30) / (2.99792458e8**3)
+    out.append(
+        {
+            "label": "White-hole instability timescale 1 Msun ~ 5e-6 s",
+            "value_s": float(t_inst),
+            "pass": bool(4e-6 < t_inst < 6e-6),
+        }
+    )
+
     return out
 
 

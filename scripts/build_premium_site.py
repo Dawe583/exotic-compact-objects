@@ -106,14 +106,14 @@ CATALOGS = [
     ),
     (
         "Exoplanet catalog (confirmed)",
-        "../../exoplanets/data/raw/exoplanets_confirmed.csv",
+        "../exoplanets/data/raw/exoplanets_confirmed.csv",
         "Exoplanets",
         "Confirmed exoplanets from NASA Exoplanet Archive (real measurements).",
         "NASA Exoplanet Archive",
     ),
     (
         "Exoplanet processed sample",
-        "../../exoplanets/data/processed/exoplanets.csv",
+        "../exoplanets/data/processed/exoplanets.csv",
         "Exoplanets",
         "Processed exoplanet sample used by the exoplanets notebooks and theory docs.",
         "Exoplanets project",
@@ -131,20 +131,6 @@ CATALOGS = [
         "X-ray binaries",
         "X-ray binary catalogue with companion type, orbital period and X-ray properties.",
         "XRBCAT",
-    ),
-    (
-        "Corbet HMXB diagram",
-        "data/external/xray_binary_catalogs/corbet_hmxb.csv",
-        "X-ray binaries",
-        "High-mass X-ray binaries underlying the Corbet spin-period versus orbital-period diagram.",
-        "Corbet",
-    ),
-    (
-        "Swift-BAT hard X-ray sources",
-        "data/external/swift_bat/swift_bat_sources.csv",
-        "X-ray binaries",
-        "Swift-BAT all-sky hard X-ray survey sources.",
-        "Swift-BAT",
     ),
     (
         "ATNF pulsars",
@@ -166,20 +152,6 @@ CATALOGS = [
         "Gaia",
         "Astrometric black-hole candidate sample from Gaia DR3.",
         "Gaia DR3",
-    ),
-    (
-        "MAXI/GSC sources",
-        "data/external/maxi_gsc/maxi_gsc_sources.csv",
-        "X-ray binaries",
-        "MAXI/GSC X-ray source catalogue used for transient and persistent accretor studies.",
-        "MAXI",
-    ),
-    (
-        "NICER observations",
-        "data/external/nicer/nicer_observations.csv",
-        "X-ray binaries",
-        "NICER observation log for neutron-star and black-hole X-ray binaries.",
-        "NICER",
     ),
     (
         "Sgr A* region catalogue",
@@ -323,8 +295,8 @@ FIGURES = {
         "Black holes",
     ),
     "corbet": (
-        "Corbet diagram",
-        "Spin period versus orbital period for high-mass X-ray binaries.",
+        "Corbet diagram (synthetic demonstration)",
+        "Spin period versus orbital period for high-mass X-ray binaries. Demonstration data only — synthetic, not real astronomy.",
         "X-ray binaries",
     ),
     "gaia_sky": (
@@ -715,7 +687,7 @@ def shell(
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#05070d">
+<meta name="theme-color" content="#04070b">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <title>{esc(title)} · {SITE_NAME}</title>
 <meta name="description" content="{esc(description)}">
@@ -725,6 +697,9 @@ def shell(
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(description)}">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
 <link rel="stylesheet" href="style.css">
 <script>
 window.MathJax = {{
@@ -740,13 +715,13 @@ window.MathJax = {{
   <div class="wrap header-inner">
     <a class="brand" href="index.html" aria-label="{SITE_NAME} home">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6">
-          <circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/>
           <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
           <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
         </svg>
       </span>
-      <span>{SITE_NAME}<small>Compact-object research</small></span>
+      <span>{SITE_NAME}<small>compact-object research</small></span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
@@ -770,7 +745,7 @@ window.MathJax = {{
       <div>
         <a class="brand" href="index.html" style="margin-bottom:14px">
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
           </span>
           <span>{SITE_NAME}<small>Compact-object research</small></span>
         </a>
@@ -859,6 +834,186 @@ def stat_band(items: list[tuple[str, str]]) -> str:
 
 
 # --------------------------------------------------------------------------
+# Hero data — every number and dot below is computed from the real GWOSC
+# snapshot at build time. Observing-run boundaries are UTC instants that
+# astropy converts to GPS seconds; events are bucketed by their "gps" value.
+# Offline windows between runs deliberately stay unassigned.
+# --------------------------------------------------------------------------
+def hero_data() -> dict:
+    import pandas as pd
+    from astropy.time import Time
+
+    path = PROJECT / "data/processed/gwosc_gwtc.csv"
+    df = pd.read_csv(path)
+    rem = df[df["final_mass_source_msun"].notna() & df["gps"].notna()].copy()
+
+    ranges = [
+        ("O1", "2015-09-12T00:00:00", "2016-01-19T16:00:00", "#3a5480"),
+        ("O2", "2016-11-30T15:00:00", "2017-08-25T22:00:00", "#3a5480"),
+        ("O3a", "2019-04-01T15:00:00", "2019-10-01T15:00:00", "#4fb7fb"),
+        ("O3b", "2019-10-01T15:00:00", "2020-03-27T00:00:00", "#4fb7fb"),
+        ("O4a", "2023-05-24T15:00:00", "2024-01-16T17:00:00", "#2fe3ac"),
+        ("O4b", "2024-04-10T00:00:00", "2100-01-01T00:00:00", "#ff8073"),
+    ]
+    runs = []
+    for name, t0, t1, colour in ranges:
+        lo = int(Time(t0, scale="utc").gps)
+        hi = int(Time(t1, scale="utc").gps)
+        n = int(((rem["gps"] >= lo) & (rem["gps"] < hi)).sum())
+        runs.append((name, n, colour))
+
+    pts = []
+    for r in rem.sort_values("gps").itertuples():
+        dist = (
+            float(r.luminosity_distance_mpc)
+            if pd.notna(r.luminosity_distance_mpc)
+            else None
+        )
+        pts.append(
+            {
+                "gps": float(r.gps),
+                "date": Time(float(r.gps), format="gps", scale="utc").iso[:10],
+                "id": str(r.event_id),
+                "mass": float(r.final_mass_source_msun),
+                "dist": dist,
+            }
+        )
+
+    fetched = ""
+    if "fetched_utc" in df.columns and df["fetched_utc"].notna().any():
+        fetched = str(df["fetched_utc"].dropna().max())[:19]
+    return {"points": pts, "runs": runs, "fetched": fetched, "n_events": int(len(df))}
+
+
+def _nice_ticks(lo: float, hi: float, count: int = 4) -> list[float]:
+    import math
+
+    if hi <= lo:
+        return [lo]
+    raw = (hi - lo) / count
+    mag = 10 ** math.floor(math.log10(raw))
+    for m in (1, 2, 2.5, 5, 10):
+        step = m * mag
+        if step >= raw:
+            break
+    start = math.ceil(lo / step) * step
+    ticks, t = [], start
+    while t <= hi + 1e-9:
+        ticks.append(round(t, 6))
+        t += step
+    return ticks
+
+
+def remnant_plot_svg(points: list[dict]) -> str:
+    """A decade of history as an SVG: remnant mass (M☉, real GWTC) vs UTC time."""
+    if not points:
+        return ""
+    xs = [p["gps"] for p in points]
+    ys = [p["mass"] for p in points]
+    x0, x1 = min(xs), max(xs)
+    if x1 == x0:
+        x1 += 1
+    y_hi = max(ys) * 1.06
+    W, H = 480, 150
+    L, R, T, B = 36, 8, 8, 16
+    inner_w, inner_h = W - L - R, H - T - B
+    px = lambda g: L + (g - x0) / (x1 - x0) * inner_w
+    py = lambda m: T + inner_h - (m / y_hi) * inner_h if m > 0 else T + inner_h
+
+    ticks_y = _nice_ticks(0, y_hi)
+    ticks_x = _nice_ticks(x0, x1, 5)
+    from datetime import datetime, timezone
+
+    grid = "".join(
+        f'<line class="frame-line" x1="{L}" y1="{py(t):.1f}" x2="{W - R}" y2="{py(t):.1f}" stroke-dasharray="1 3" opacity=".6"/>'
+        f'<text x="{L - 5}" y="{py(t) + 3:.1f}" text-anchor="end">{t:g}</text>'
+        for t in ticks_y
+    )
+    xlab = "".join(
+        f'<text x="{px(t):.1f}" y="{H - 3}" text-anchor="middle">'
+        f"{datetime.utcfromtimestamp(t + 315_964_800).strftime('%y')}</text>"
+        f'<line class="frame-line" x1="{px(t):.1f}" y1="{T + inner_h}" x2="{px(t):.1f}" y2="{T + inner_h - 3}" />'
+        for t in ticks_x
+    )
+    dots = ""
+    for p in points:
+        dist_s = f"{p['dist']:.0f} Mpc" if p["dist"] else "distance not reported"
+        dots += (
+            f'<circle cx="{px(p["gps"]):.1f}" cy="{py(p["mass"]):.1f}" r="2.5" fill="#ff8073" fill-opacity=".82">'
+            f"<title>{esc(p['id'])} · {p['mass']:.1f} M☉ · {p['date']} · {dist_s}</title></circle>"
+        )
+    return (
+        f'<svg class="hero-plot" viewBox="0 0 {W} {H}" role="img" '
+        f'aria-label="Remnant mass versus time for {len(points)} real GWTC events">'
+        f'<line class="frame-line" x1="{L}" y1="{T}" x2="{L}" y2="{T + inner_h}"/>'
+        f'<line class="frame-line" x1="{L}" y1="{T + inner_h}" x2="{W - R}" y2="{T + inner_h}"/>'
+        f"{grid}{xlab}{dots}"
+        f'<text x="{W - R}" y="{T + 3}" text-anchor="end" opacity=".85">remnant mass (M☉)</text>'
+        "</svg>"
+    )
+
+
+def run_bar_svg(runs: list[tuple]) -> str:
+    """Events per observing run, straight out of the GPS column."""
+    if not runs:
+        return ""
+    counts = [n for _, n, _ in runs]
+    maximum = max(counts) or 1
+    W, H = 480, 74
+    bar_w = 34
+    gap = (W - 16 - bar_w * len(runs)) / max(1, len(runs) - 1)
+    bars = ""
+    for i, (name, n, colour) in enumerate(runs):
+        h = max(2, (n / maximum) * 44)
+        x = 8 + i * (bar_w + gap)
+        bars += (
+            f'<g><rect x="{x:.1f}" y="{52 - h:.1f}" width="{bar_w}" height="{h:.1f}" '
+            f'rx="2.5" fill="{colour}" fill-opacity=".85"/>'
+            f'<text x="{x + bar_w / 2:.1f}" y="{48 - h:.1f}" text-anchor="middle" '
+            f'fill="#95a5c0" font-size="10">{n}</text>'
+            f'<text x="{x + bar_w / 2:.1f}" y="{68}" text-anchor="middle" font-size="9.5" '
+            f'fill="#647a9c">{name}</text></g>'
+        )
+    return (
+        f'<svg class="hero-plot" viewBox="0 0 {W} {H}" role="img" '
+        f'aria-label="Real GWTC events per observing run">{bars}</svg>'
+    )
+
+
+def instrument_panel(stats: dict, hero: dict) -> str:
+    """Live-inventory panel: real counts + two build-time plots from the data."""
+    run_svg = run_bar_svg(hero["runs"])
+    rem_svg = remnant_plot_svg(hero["points"])
+    metrics_cls = ("emerald", "sky", "amber", "violet")
+    metric_data = (
+        ("GW events", fmt_int(hero["n_events"])),
+        ("Remnant models", fmt_int(stats["remnants"])),
+        ("AGN masses", fmt_int(stats["agn_masses"])),
+        ("Notebooks", fmt_int(stats["notebooks"])),
+    )
+    metric_cells = "".join(
+        f'<div class="metric {cls}"><div class="label">{esc(label)}</div>'
+        f'<div class="value">{value}</div></div>'
+        for cls, (label, value) in zip(metrics_cls, metric_data)
+    )
+    return f"""<div class="panel" aria-label="Live programme inventory">
+      <div class="panel-head"><span class="pulse"></span> <b>live inventory</b> · rebuilt at every data refresh</div>
+      <div class="panel-body">
+        <div class="metrics">{metric_cells}</div>
+        <div class="plot-block">
+          <div class="plot-cap"><b>remnant mass vs time</b><span>every dot = one GWTC event</span></div>
+          {rem_svg}
+        </div>
+        <div class="plot-block">
+          <div class="plot-cap"><b>events per observing run</b><span>assigned by GPS time</span></div>
+          {run_svg}
+        </div>
+      </div>
+      <div class="panel-foot"><span>source: <b>GWOSC · GWTC-4.1/5.0</b></span><span>fetched <b>{esc(hero["fetched"] or "—")}</b> UTC</span></div>
+    </div>"""
+
+
+# --------------------------------------------------------------------------
 # Pages
 # --------------------------------------------------------------------------
 def build_index(stats: dict) -> str:
@@ -871,31 +1026,24 @@ def build_index(stats: dict) -> str:
         figure_card(k) for k in ("gw_mass", "kerr_isco", "agn_mass", "wormhole_3d")
     )
 
+    hero = hero_data()
+
     content = f"""
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow"><span class="dot"></span> Research programme · 2026</span>
-      <h1>Mapping the <span class="accent">extreme universe</span>.</h1>
-      <p class="lede">A reproducible, open research programme on black holes, wormholes, white holes and the compact-object remnants of gravitational-wave mergers — from first-principles relativity to catalogue-scale inference.</p>
+      <div class="dateline"><span class="pulse"></span> observing log · <b>GWOSC snapshot</b> · <b>{
+        fmt_int(hero["n_events"])
+    }</b> events</div>
+      <h1>Spacetime at its heaviest.</h1>
+      <p class="lede">A reproducible, open research programme on black holes, wormholes and white holes — from first-principles relativity to catalogue-scale inference on real gravitational-wave data.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="research.html">Explore the research <span aria-hidden="true">→</span></a>
-        <a class="btn btn-ghost" href="theory.html">Read the theory</a>
+        <a class="btn btn-primary" href="research.html">Explore the research</a>
+        <a class="btn btn-ghost" href="data.html">Open the data catalogue</a>
         <a class="btn btn-ghost" href="gallery.html">Interactive figures</a>
       </div>
     </div>
-    <div class="console" aria-label="Programme metrics">
-      <div class="console-head"><span class="pulse"></span> Programme status · live inventory</div>
-      <div class="metrics">
-        {metric("GW events", fmt_int(stats["gw_events"]), "", "cyan")}
-        {metric("AGN masses", fmt_int(stats["agn_masses"]), "", "amber")}
-        {metric("Notebooks", fmt_int(stats["notebooks"]), "", "violet")}
-        {metric("Datasets", fmt_int(stats["datasets"]), "", "cyan")}
-      </div>
-      <div class="console-foot"><span>theory docs: {
-        stats["theory_docs"]
-    }</span><span>figures: {stats["figures"]}</span></div>
-    </div>
+    {instrument_panel(stats, hero)}
   </div>
 </section>
 
@@ -919,11 +1067,11 @@ def build_index(stats: dict) -> str:
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="eyebrow">01 · Research streams</span>
         <h2>Four questions, one relativistic framework</h2>
         <p>Each stream pairs analytic geometry with catalogue-scale computation, and every result is reproducible from a notebook in the repository.</p>
       </div>
-      <a class="more" href="research.html">All research →</a>
+      <span class="section-meta">04 streams</span>
+      <a class="more" href="research.html">all research →</a>
     </div>
     <div class="grid cols-2">{streams}</div>
   </div>
@@ -933,11 +1081,11 @@ def build_index(stats: dict) -> str:
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="eyebrow">02 · Latest results</span>
         <h2>What the pipeline is producing</h2>
         <p>Deterministic data refresh, notebook execution and graph drift checks keep these numbers current.</p>
       </div>
-      <a class="more" href="data.html">Data catalogue →</a>
+      <span class="section-meta">verified · live</span>
+      <a class="more" href="data.html">data catalogue →</a>
     </div>
     <div class="grid cols-2">
       <article class="card reveal">
@@ -972,11 +1120,11 @@ def build_index(stats: dict) -> str:
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="eyebrow">03 · Interactive figures</span>
         <h2>Computed, not illustrated</h2>
         <p>Every visualisation is generated from the same data and model code that produces the tables. Open a figure to explore the underlying values.</p>
       </div>
-      <a class="more" href="gallery.html">Full gallery →</a>
+      <span class="section-meta">{fmt_int(stats["figures"])} figures</span>
+      <a class="more" href="gallery.html">full gallery →</a>
     </div>
     <div class="figure-grid">{featured}</div>
   </div>
@@ -986,9 +1134,10 @@ def build_index(stats: dict) -> str:
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="eyebrow">04 · Method</span>
         <h2>From observation to a defensible claim</h2>
+        <p>The four-step method behind every number on this site.</p>
       </div>
+      <span class="section-meta">method</span>
     </div>
     <div class="grid cols-4">
       <div class="card reveal"><span class="tag cyan">01</span><h3>Acquire</h3><p>GWOSC, HEASARC, BlackCAT, Gaia, SXS and literature compilations, with provenance recorded per file.</p></div>
@@ -1049,7 +1198,6 @@ def build_research(stats: dict) -> str:
 
     content = f"""
 <div class="page-head">
-  <span class="eyebrow">Research</span>
   <h1>A programme built from first principles and real catalogues.</h1>
   <p class="lede">Four coupled streams, one reproducibility contract: every number below can be regenerated from a committed notebook or script.</p>
 </div>
@@ -1060,7 +1208,7 @@ def build_research(stats: dict) -> str:
 
 <section class="section" id="questions">
   <div class="section-head">
-    <div><span class="eyebrow">Open questions</span><h2>What we are testing</h2>
+    <div><h2>What we are testing</h2>
     <p>Concrete, falsifiable questions rather than a survey of everything.</p></div>
   </div>
   <div class="grid cols-2">
@@ -1077,7 +1225,7 @@ def build_research(stats: dict) -> str:
 
 <section class="section" id="notebooks">
   <div class="section-head">
-    <div><span class="eyebrow">Notebooks</span><h2>{len(notebooks)} executable notebooks</h2>
+    <div><h2>{len(notebooks)} executable notebooks</h2>
     <p>Run under the notebook-health loop; failures are treated as bugs in the science, not just in the code.</p></div>
   </div>
   <div class="table-wrap"><table class="data">
@@ -1088,7 +1236,7 @@ def build_research(stats: dict) -> str:
 
 <section class="section" id="reports">
   <div class="section-head">
-    <div><span class="eyebrow">Reports</span><h2>Reviewable write-ups</h2>
+    <div><h2>Reviewable write-ups</h2>
     <p>Short, self-contained documents tied to the notebooks and tables that produce them.</p></div>
   </div>
   <div class="table-wrap"><table class="data">
@@ -1156,7 +1304,6 @@ def build_data(stats: dict) -> str:
 
     content = f"""
 <div class="page-head">
-  <span class="eyebrow">Data</span>
   <h1>Catalogues with provenance.</h1>
   <p class="lede">Every dataset is traceable to a public archive or a named compilation. Row counts are measured at build time — this page cannot go stale.</p>
 </div>
@@ -1177,9 +1324,7 @@ def build_data(stats: dict) -> str:
 
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Catalogue inventory</span><h2>{
-        len(CATALOGS)
-    } datasets</h2>
+    <div><h2>{len(CATALOGS)} datasets</h2>
     <p>Counts exclude the header row. Derived tables are produced by the analysis pipeline and carry their generating notebook.</p></div>
     <a class="more" href="{REPO_TREE}data/processed">Processed data →</a>
   </div>
@@ -1192,7 +1337,7 @@ def build_data(stats: dict) -> str:
 
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Visual exploration</span><h2>Interactive data views</h2>
+    <div><h2>Interactive data views</h2>
     <p>Each figure is a self-contained Plotly document generated from the catalogue it visualises.</p></div>
   </div>
   <div class="figure-grid">{featured}</div>
@@ -1221,7 +1366,6 @@ def build_models() -> str:
 
     content = f"""
 <div class="page-head">
-  <span class="eyebrow">Models</span>
   <h1>Six geometries that organise the programme.</h1>
   <p class="lede">Each model is implemented symbolically or numerically, checked against a known limit, and connected to an observable.</p>
 </div>
@@ -1232,7 +1376,7 @@ def build_models() -> str:
 
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Model outputs</span><h2>Where the models meet the data</h2>
+    <div><h2>Where the models meet the data</h2>
     <p>Spin dependence, effective potentials, stability and parameter inference.</p></div>
     <a class="more" href="gallery.html">Full gallery →</a>
   </div>
@@ -1260,7 +1404,6 @@ def build_theory() -> str:
     )
     content = f"""
 <div class="page-head">
-  <span class="eyebrow">Theory</span>
   <h1>Derivations, not summaries.</h1>
   <p class="lede">Self-contained documents that start from the metric and end at an observable. Sign conventions and units are stated at the top of each page.</p>
 </div>
@@ -1271,7 +1414,7 @@ def build_theory() -> str:
 
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Also on the site</span><h2>Companion analyses</h2></div>
+    <div><h2>Companion analyses</h2></div>
   </div>
   <div class="grid cols-3">
     {card("Geometry", "cyan", "Geodesics", "Orbits, precession and the effective-potential method.", "geodesics.html")}
@@ -1303,14 +1446,14 @@ def build_gallery() -> str:
         sections.append(f"""
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">{esc(group)}</span><h2>{len(keys)} visualisations</h2></div>
+    <div><h2>{len(keys)} visualisations</h2></div>
+    <span class="section-meta">{esc(group)}</span>
   </div>
   <div class="figure-grid">{cards}</div>
 </section>""")
 
     content = f"""
 <div class="page-head">
-  <span class="eyebrow">Visualisations</span>
   <h1>Interactive figures, generated from source.</h1>
   <p class="lede">Plotly documents are lazy-loaded as you scroll. Animations are rendered from the same simulation output as the static figures.</p>
 </div>
@@ -1386,6 +1529,7 @@ def rewrite_content_pages() -> list[str]:
 # GitHub Pages portal (docs/index.html) and publishing
 # --------------------------------------------------------------------------
 def build_portal(stats: dict) -> str:
+    hero = hero_data()
     notebooks = sorted(PROJECT.glob("notebooks/*.ipynb"))
     nb_cards = "\n".join(
         f'<a class="card reveal" href="{p.name.replace(".ipynb", ".html")}">'
@@ -1401,10 +1545,15 @@ def build_portal(stats: dict) -> str:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#05070d">
+<meta name="theme-color" content="#04070b">
 <link rel="icon" href="premium/assets/favicon.svg" type="image/svg+xml">
 <title>Exotic Compact Objects · Research portal</title>
 <meta name="description" content="Research portal: compact objects, gravitational waves, theory and executable notebooks.">
+<meta property="og:title" content="Exotic Compact Objects · Research portal">
+<meta property="og:description" content="Compact objects, gravitational waves, theory and executable notebooks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
 <link rel="stylesheet" href="premium/style.css">
 </head>
 <body>
@@ -1412,9 +1561,9 @@ def build_portal(stats: dict) -> str:
   <div class="wrap header-inner">
     <a class="brand" href="premium/index.html">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/></svg>
       </span>
-      <span>Astro Science<small>Compact-object research</small></span>
+      <span>Astro Science<small>compact-object research</small></span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
@@ -1435,31 +1584,22 @@ def build_portal(stats: dict) -> str:
   <section class="hero" style="padding-top:36px">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow"><span class="dot"></span> Research portal · GitHub Pages</span>
-        <h1>Exotic compact objects, <span class="accent">from first principles</span>.</h1>
-        <p class="lede">Black holes, wormholes and white holes — analytic geometry, catalogue-scale inference and {stats["notebooks"]} executable notebooks. Start with the research site, or read the notebooks directly.</p>
+        <div class="dateline"><span class="pulse"></span> research portal · data fetched <b>{esc(hero["fetched"] or "—")}</b> UTC</div>
+        <h1>The heaviest objects, computed in public.</h1>
+        <p class="lede">Black holes, wormholes and white holes — analytic geometry, catalogue-scale inference on real data and {stats["notebooks"]} executable notebooks. Enter the research site, or read the notebooks directly.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="premium/index.html">Open the research site <span aria-hidden="true">→</span></a>
+          <a class="btn btn-primary" href="premium/index.html">Open the research site</a>
           <a class="btn btn-ghost" href="premium/theory.html">Theory</a>
           <a class="btn btn-ghost" href="{GITHUB}">Source</a>
         </div>
       </div>
-      <div class="console">
-        <div class="console-head"><span class="pulse"></span> Repository inventory</div>
-        <div class="metrics">
-          <div class="metric cyan"><div class="label">GW events</div><div class="value">{fmt_int(stats["gw_events"])}</div></div>
-          <div class="metric amber"><div class="label">Datasets</div><div class="value">{fmt_int(stats["datasets"])}</div></div>
-          <div class="metric violet"><div class="label">Notebooks</div><div class="value">{fmt_int(stats["notebooks"])}</div></div>
-          <div class="metric cyan"><div class="label">Figures</div><div class="value">{fmt_int(stats["figures"])}</div></div>
-        </div>
-        <div class="console-foot"><span>theory docs: {stats["theory_docs"]}</span><span>rows: {fmt_int(stats["catalog_rows"])}</span></div>
-      </div>
+      {instrument_panel(stats, hero)}
     </div>
   </section>
 
   <section class="section">
     <div class="section-head">
-      <div><span class="eyebrow">Research site</span><h2>Four destinations</h2>
+      <div><h2>Four destinations</h2>
       <p>The polished view: dashboard, catalogues, models, interactive figures and derivations.</p></div>
     </div>
     <div class="grid cols-4">
@@ -1472,7 +1612,7 @@ def build_portal(stats: dict) -> str:
 
   <section class="section">
     <div class="section-head">
-      <div><span class="eyebrow">Latest results</span><h2>Three things worth reading</h2>
+      <div><h2>Three things worth reading</h2>
       <p>Every claim links to the derivation, the catalogue or the executable notebook behind it.</p></div>
     </div>
     <div class="grid cols-3">
@@ -1499,7 +1639,7 @@ def build_portal(stats: dict) -> str:
 
   <section class="section" id="notebooks">
     <div class="section-head">
-      <div><span class="eyebrow">Notebooks</span><h2>Executable research record</h2>
+      <div><h2>Executable research record</h2>
       <p>Selected HTML renders. The complete set of source notebooks lives in the repository and is executed by the health loop.</p></div>
       <a class="more" href="{GITHUB}/tree/main/notebooks">Source notebooks →</a>
     </div>

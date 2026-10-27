@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="dark">
-<meta name="theme-color" content="#05070d">
+<meta name="theme-color" content="#04070b">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <title>Visualisations · Astro Science</title>
 <meta name="description" content="Interactive Plotly figures and animations across the research programme.">
@@ -14,6 +14,9 @@
 <meta property="og:title" content="Visualisations">
 <meta property="og:description" content="Interactive Plotly figures and animations across the research programme.">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
 <link rel="stylesheet" href="style.css">
 <script>
 window.MathJax = {
@@ -29,13 +32,13 @@ window.MathJax = {
   <div class="wrap header-inner">
     <a class="brand" href="index.html" aria-label="Astro Science home">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6">
-          <circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/>
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/>
           <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
           <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
         </svg>
       </span>
-      <span>Astro Science<small>Compact-object research</small></span>
+      <span>Astro Science<small>compact-object research</small></span>
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
     <nav class="site-nav" id="site-nav" aria-label="Main">
@@ -58,14 +61,14 @@ window.MathJax = {
 <div class="wrap"><main class="page">
 
 <div class="page-head">
-  <span class="eyebrow">Visualisations</span>
   <h1>Interactive figures, generated from source.</h1>
   <p class="lede">Plotly documents are lazy-loaded as you scroll. Animations are rendered from the same simulation output as the static figures.</p>
 </div>
 
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Exoplanets</span><h2>2 visualisations</h2></div>
+    <div><h2>2 visualisations</h2></div>
+    <span class="section-meta">Exoplanets</span>
   </div>
   <div class="figure-grid"><figure class="figure-card reveal">
   <div class="frame"><iframe data-src="figures/exoplanet_mass_radius.html" title="Exoplanet mass-radius" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
@@ -78,7 +81,8 @@ window.MathJax = {
 </section>
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Gravitational waves</span><h2>9 visualisations</h2></div>
+    <div><h2>9 visualisations</h2></div>
+    <span class="section-meta">Gravitational waves</span>
   </div>
   <div class="figure-grid"><figure class="figure-card reveal">
   <div class="frame"><iframe data-src="figures/gw_mass.html" title="GWTC mass distribution" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
@@ -119,7 +123,8 @@ window.MathJax = {
 </section>
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Black holes</span><h2>13 visualisations</h2></div>
+    <div><h2>13 visualisations</h2></div>
+    <span class="section-meta">Black holes</span>
   </div>
   <div class="figure-grid"><figure class="figure-card reveal">
   <div class="frame"><iframe data-src="figures/kerr_isco.html" title="Kerr ISCO" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
@@ -176,7 +181,8 @@ window.MathJax = {
 </section>
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">AGN &amp; SMBH</span><h2>3 visualisations</h2></div>
+    <div><h2>3 visualisations</h2></div>
+    <span class="section-meta">AGN &amp; SMBH</span>
   </div>
   <div class="figure-grid"><figure class="figure-card reveal">
   <div class="frame"><iframe data-src="figures/agn_mass.html" title="AGN black-hole masses" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
@@ -193,16 +199,18 @@ window.MathJax = {
 </section>
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">X-ray binaries</span><h2>1 visualisations</h2></div>
+    <div><h2>1 visualisations</h2></div>
+    <span class="section-meta">X-ray binaries</span>
   </div>
   <div class="figure-grid"><figure class="figure-card reveal">
-  <div class="frame"><iframe data-src="figures/corbet.html" title="Corbet diagram" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
-  <figcaption class="cap"><h3>Corbet diagram</h3><span>interactive</span></figcaption>
+  <div class="frame"><iframe data-src="figures/corbet.html" title="Corbet diagram (synthetic demonstration)" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
+  <figcaption class="cap"><h3>Corbet diagram (synthetic demonstration)</h3><span>interactive</span></figcaption>
 </figure></div>
 </section>
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Gaia</span><h2>1 visualisations</h2></div>
+    <div><h2>1 visualisations</h2></div>
+    <span class="section-meta">Gaia</span>
   </div>
   <div class="figure-grid"><figure class="figure-card reveal">
   <div class="frame"><iframe data-src="figures/gaia_sky.html" title="Gaia DR3 sky map" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
@@ -211,7 +219,8 @@ window.MathJax = {
 </section>
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Cosmology</span><h2>2 visualisations</h2></div>
+    <div><h2>2 visualisations</h2></div>
+    <span class="section-meta">Cosmology</span>
   </div>
   <div class="figure-grid"><figure class="figure-card reveal">
   <div class="frame"><iframe data-src="figures/planck_spectra.html" title="CMB power spectra" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
@@ -224,7 +233,8 @@ window.MathJax = {
 </section>
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Wormholes</span><h2>2 visualisations</h2></div>
+    <div><h2>2 visualisations</h2></div>
+    <span class="section-meta">Wormholes</span>
   </div>
   <div class="figure-grid"><figure class="figure-card reveal">
   <div class="frame"><iframe data-src="figures/wormhole_3d.html" title="Wormhole embedding" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
@@ -237,7 +247,8 @@ window.MathJax = {
 </section>
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">White holes</span><h2>2 visualisations</h2></div>
+    <div><h2>2 visualisations</h2></div>
+    <span class="section-meta">White holes</span>
   </div>
   <div class="figure-grid"><figure class="figure-card reveal">
   <div class="frame"><iframe data-src="figures/white_hole_explosion.html" title="White-hole outburst" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
@@ -250,7 +261,8 @@ window.MathJax = {
 </section>
 <section class="section">
   <div class="section-head">
-    <div><span class="eyebrow">Advanced theory</span><h2>1 visualisations</h2></div>
+    <div><h2>1 visualisations</h2></div>
+    <span class="section-meta">Advanced theory</span>
   </div>
   <div class="figure-grid"><figure class="figure-card reveal">
   <div class="frame"><iframe data-src="figures/raychaudhuri_focusing.html" title="Raychaudhuri focusing" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div></div>
@@ -265,7 +277,7 @@ window.MathJax = {
       <div>
         <a class="brand" href="index.html" style="margin-bottom:14px">
           <span class="brand-mark" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#58d3ff" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#58d3ff" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
           </span>
           <span>Astro Science<small>Compact-object research</small></span>
         </a>

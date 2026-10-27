@@ -601,6 +601,74 @@ def derive_shadow_diameter():
 
 # ---------------------------------------------------------------------------
 
+
+
+# ---------------------------------------------------------------------------
+# 14. Kepler's third law (exoplanet orbital period)
+def derive_kepler_third_law():
+    a, P = sp.symbols("a P", positive=True)
+    G, M = sp.symbols("G M", positive=True)
+    # Derive: P = 2*pi*sqrt(a^3/(G*M))
+    P_expr = 2 * sp.pi * sp.sqrt(a**3 / (G * M))
+    # Check: P^2 * G * M / (4*pi^2) = a^3
+    check = sp.simplify(P_expr**2 * G * M / (4 * sp.pi**2) - a**3)
+    checks = [
+        {
+            "label": "P^2 proportional to a^3 (Kepler's third law)",
+            "ok": check == 0,
+        },
+    ]
+    return {
+        "name": "kepler_third_law",
+        "description": "Kepler's third law for exoplanet orbital period",
+        "formula": "P = 2 pi sqrt(a^3 / (G M))",
+        "formula_latex": [
+            "P = 2\pi\sqrt{\frac{a^{3}}{GM}}"
+        ],
+        "steps": [
+            "Start from gravitational force = centripetal force: GMm/a^2 = m v^2/a",
+            "Substitute v = 2 pi a / P (circular orbit: circumference / period)",
+            "Solve for orbital velocity v and period P",
+            "Result: P = 2 pi sqrt(a^3 / (GM))",
+        ],
+        "checks": checks,
+    }
+
+
+
+
+# ---------------------------------------------------------------------------
+# 14. Kepler's third law (exoplanet orbital period)
+def derive_kepler_third_law():
+    a, P = sp.symbols("a P", positive=True)
+    G, M = sp.symbols("G M", positive=True)
+    # Derive: P = 2*pi*sqrt(a^3/(G*M))
+    P_expr = 2 * sp.pi * sp.sqrt(a**3 / (G * M))
+    # Check: P^2 * G * M / (4*pi^2) = a^3
+    check = sp.simplify(P_expr**2 * G * M / (4 * sp.pi**2) - a**3)
+    checks = [
+        {
+            "label": "P^2 proportional to a^3 (Kepler's third law)",
+            "ok": check == 0,
+        },
+    ]
+    return {
+        "name": "kepler_third_law",
+        "description": "Kepler's third law for exoplanet orbital period",
+        "formula": "P = 2 pi sqrt(a^3 / (G M))",
+        "formula_latex": [
+            "P = 2\pi\sqrt{\frac{a^{3}}{GM}}"
+        ],
+        "steps": [
+            "Start from gravitational force = centripetal force: GMm/a^2 = m v^2/a",
+            "Substitute v = 2 pi a / P (circular orbit: circumference / period)",
+            "Solve for orbital velocity v and period P",
+            "Result: P = 2 pi sqrt(a^3 / (GM))",
+        ],
+        "checks": checks,
+    }
+
+
 ALL = [
     derive_schwarzschild_ricci_flatness,
     derive_photon_sphere,

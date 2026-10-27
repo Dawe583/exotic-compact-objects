@@ -56,7 +56,7 @@
       // reading progress indicator
       const bar = document.createElement("div");
       bar.style.cssText =
-        "height:2px;background:linear-gradient(90deg,#58d3ff,#a78bfa);width:0;margin-bottom:14px;border-radius:2px;transition:width .1s linear";
+        "height:2px;background:linear-gradient(90deg,#2fe3ac,#a48bff);width:0;margin-bottom:14px;border-radius:2px;transition:width .1s linear";
       toc.appendChild(bar);
       toc.appendChild(frag);
 
@@ -102,20 +102,8 @@
     }
   }
 
-  /* ---- reveal on scroll ---- */
-  const reveals = document.querySelectorAll(".reveal");
-  if (reveals.length) {
-    if ("IntersectionObserver" in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((en) => {
-          if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
-        });
-      }, { rootMargin: "-40px 0px" });
-      reveals.forEach((el) => io.observe(el));
-    } else {
-      reveals.forEach((el) => el.classList.add("in"));
-    }
-  }
+  /* ---- reveal-on-scroll intentionally removed: content is always visible,
+         so nothing depends on scroll choreography to become readable ---- */
 
   /* ---- external links open in new tab ---- */
   document.querySelectorAll("a[href^='http']").forEach((a) => {

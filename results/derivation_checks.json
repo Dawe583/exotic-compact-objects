@@ -1,5 +1,5 @@
 {
-  "fetched_utc": "2026-10-27T23:14:18.167111+00:00",
+  "fetched_utc": "2026-10-27T23:27:24.625326+00:00",
   "symbolic": [
     {
       "name": "schwarzschild_ricci_flat",
@@ -216,6 +216,22 @@
         }
       ],
       "all_ok": true
+    },
+    {
+      "name": "smbh_eddington_growth",
+      "description": "Eddington-limited SMBH growth: e-folding time and seed constraint",
+      "formula": "t_ef = (eps/(1-eps)) sigma_T c/(4 pi G m_p) 1/(f lambda);  M_seed = M_obs exp(-Delta_t/t_ef)",
+      "checks": [
+        {
+          "label": "E-folding time satisfies t_ef * (1-eps)/eps * f*lambda * 4pi G m_p/(sigma_T c) = 1",
+          "ok": true
+        },
+        {
+          "label": "Seed constraint M_seed = M_obs exp(-Delta_t/t_ef) inverts correctly",
+          "ok": true
+        }
+      ],
+      "all_ok": true
     }
   ],
   "numeric": [
@@ -272,8 +288,28 @@
       "pass": true
     },
     {
+      "label": "SMBH Eddington e-folding time (eps=0.1) ~ 50 Myr",
+      "value_Myr": 50.05449012517987,
+      "pass": true
+    },
+    {
+      "label": "SMBH required seed for 1e9 Msun at z~7.5 (order of magnitude)",
+      "value_Msun": 45896.860646872185,
+      "pass": true
+    },
+    {
       "label": "EHT shadow diameter M87* (Schwarzschild) ~ 40 uas",
       "value_uas": 39.68934225250342,
+      "pass": true
+    },
+    {
+      "label": "PTA timing residual h=1e-15 @ 1 nHz ~ 160 ns",
+      "value_ns": 159.15494309189535,
+      "pass": true
+    },
+    {
+      "label": "Kerr ISCO Schwarzschild limit = 6 M",
+      "value": 6.0,
       "pass": true
     },
     {

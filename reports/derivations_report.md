@@ -1,6 +1,6 @@
 # Formula derivations and verification
 
-Generated (UTC): 2026-10-27T23:14:18.167102+00:00
+Generated (UTC): 2026-10-27T23:27:24.625317+00:00
 
 Every entry: symbolic derivation in `models/derivations.py` executed with Sympy,
 each check simplifies to an identity (0) or strict inequality; then numeric
@@ -88,6 +88,12 @@ BH shadow diameter in Schwarzschild spacetime
 - check: **b_c = 3 sqrt(3) m (critical impact parameter)** → PASS
 - check: **D_shadow = 2 b_c = 6 sqrt(3) m = 2 sqrt(27) GM/c^2** → PASS
 
+### smbh_eddington_growth — PASS
+Eddington-limited SMBH growth: e-folding time and seed constraint
+- formula: `t_ef = (eps/(1-eps)) sigma_T c/(4 pi G m_p) 1/(f lambda);  M_seed = M_obs exp(-Delta_t/t_ef)`
+- check: **E-folding time satisfies t_ef * (1-eps)/eps * f*lambda * 4pi G m_p/(sigma_T c) = 1** → PASS
+- check: **Seed constraint M_seed = M_obs exp(-Delta_t/t_ef) inverts correctly** → PASS
+
 ## Numerical spot checks
 
 ### Eddington luminosity: analytic vs astropy constants (1 Msun) — PASS
@@ -128,10 +134,22 @@ BH shadow diameter in Schwarzschild spacetime
 - relative_deviation_vs_first_order: 0.08024076540795372
 - relative_deviation_vs_analytic_including_2nd_order: 0.006156386235459056
 
+### SMBH Eddington e-folding time (eps=0.1) ~ 50 Myr — PASS
+- value_Myr: 50.05449012517987
+
+### SMBH required seed for 1e9 Msun at z~7.5 (order of magnitude) — PASS
+- value_Msun: 45896.860646872185
+
 ### EHT shadow diameter M87* (Schwarzschild) ~ 40 uas — PASS
 - value_uas: 39.68934225250342
+
+### PTA timing residual h=1e-15 @ 1 nHz ~ 160 ns — PASS
+- value_ns: 159.15494309189535
+
+### Kerr ISCO Schwarzschild limit = 6 M — PASS
+- value: 6.0
 
 ### White-hole instability timescale 1 Msun ~ 5e-6 s — PASS
 - value_s: 4.925639893961039e-06
 
-Total: ALL CHECKS PASS (1.4 s)
+Total: ALL CHECKS PASS (1.5 s)

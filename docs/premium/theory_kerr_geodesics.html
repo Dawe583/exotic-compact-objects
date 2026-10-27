@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#04070b">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Kerr geodesics and frame dragging · Astro Science</title>
+<meta name="description" content="Kerr geodesics and frame dragging — a self-contained derivation from first principles.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="Kerr geodesics and frame dragging">
+<meta property="og:description" content="Kerr geodesics and frame dragging — a self-contained derivation from first principles.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="theory.html">Theory</a><span class="sep">/</span><span>Kerr geodesics and frame dragging</span></nav></div>
+<div class="wrap"><div class="prose-layout"><article class="prose" id="prose">
+<h1>Kerr geodesics and frame dragging</h1>
+<p class="lead">The Kerr metric describes a rotating black hole. This page derives the geodesic equations, the ISCO as a function of spin, and the Lense-Thirring (frame-dragging) effect.</p>
+
+<h2>1. The Kerr metric</h2>
+<p>In Boyer-Lindquist coordinates (t, r, θ, φ):</p>
+<div class="eq">$$ ds^{2} = -\left(1-\frac{2Mr}{\Sigma}\right)dt^{2} - \frac{4Mar\sin^{2}\theta}{\Sigma}\,dt\,d\phi + \frac{\Sigma}{\Delta}dr^{2} + \Sigma\,d\theta^{2} + \left(r^{2}+a^{2}+\frac{2Ma^{2}r\sin^{2}\theta}{\Sigma}\right)\sin^{2}\theta\,d\phi^{2} $$</div>
+<p>with Σ = r² + a² cos²θ, Δ = r² − 2Mr + a², and a = J/M (spin parameter, 0 ≤ a ≤ M). The horizons are at r<sub>±</sub> = M ± √(M² − a²).</p>
+
+<h2>2. Conserved quantities</h2>
+<p>By axisymmetry and stationarity there are three conserved quantities per unit mass: energy E, angular momentum L<sub>z</sub>, and the Carter constant Q. The geodesic equations reduce to first-order ODEs in r and θ:</p>
+<div class="eq">$$ \Sigma\,\frac{dr}{d\lambda} = \pm\sqrt{R(r)},\qquad \Sigma\,\frac{d\theta}{d\lambda} = \pm\sqrt{\Theta(\theta)} $$</div>
+<p>where R(r) and Θ(θ) are quartic polynomials in r and θ built from E, L<sub>z</sub>, Q. This is what makes Kerr geodesics integrable (Carter 1968).</p>
+
+<h2>3. ISCO as a function of spin</h2>
+<p>The innermost stable circular orbit (ISCO) radius depends on spin and on whether the orbit is prograde or retrograde:</p>
+<div class="eq">$$ r_{\rm ISCO} = M\left\{3 + Z_{2} \mp \sqrt{(3-Z_{1})(3+Z_{1}+2Z_{2})}\right\} $$</div>
+<p>with Z<sub>1</sub> = 1 + (1−a²/M²)<sup>1/3</sup>[(1+a/M)<sup>1/3</sup> + (1−a/M)<sup>1/3</sup>] and Z<sub>2</sub> = √(3a²/M² + Z<sub>1</sub>²). The minus sign is prograde, the plus is retrograde.</p>
+<ul>
+  <li>a = 0 (Schwarzschild): r<sub>ISCO</sub> = 6 M (prograde = retrograde).</li>
+  <li>a = M (extremal): r<sub>ISCO,pro</sub> = M, r<sub>ISCO,retro</sub> = 9 M.</li>
+</ul>
+<p>This site's <code>kerr_isco</code> figure plots both branches; the original code had a factor-of-two bug (12 GM/c² instead of 6 GM/c²) that was found and fixed.</p>
+
+<h2>4. Frame dragging (Lense-Thirring)</h2>
+<p>A rotating mass drags inertial frames. The precession frequency of a gyroscope at radius r is</p>
+<div class="eq">$$ \Omega_{\rm LT} = \frac{2 G J}{c^{2} r^{3}} = \frac{2 G M a}{c^{2} r^{3}} $$</div>
+<p>For the Earth (a ≈ 0) this is tiny (~10<sup>-14</sup> rad/s at the surface); Gravity Probe B measured it to ~1%. For a Kerr hole near the ISCO, frame dragging is of order c/r and dominates the dynamics.</p>
+
+<h2>5. Observational tests</h2>
+<ul>
+  <li><strong>X-ray reflection spectroscopy:</strong> the iron Kα line profile depends on r<sub>ISCO</sub> and hence on spin; this is the main spin-measurement technique for stellar-mass holes.</li>
+  <li><strong>Continuum fitting:</strong> the disk temperature profile depends on r<sub>ISCO</sub>; used for stellar-mass holes with known mass and distance.</li>
+  <li><strong>Gravitational waves:</strong> the spin-orbit coupling in the inspiral imprints on the waveform; the effective spin χ<sub>eff</sub> is measured for every merger.</li>
+  <li><strong>EHT:</strong> the shadow shape constrains spin (see the <a href="theory_eht_shadow.html">EHT shadow page</a>).</li>
+</ul>
+
+<h2>6. Assumptions and caveats</h2>
+<ul>
+  <li>Vacuum Kerr metric; ignores accretion disk back-reaction.</li>
+  <li>Test particles (geodesic approximation); finite-size and radiation-reaction effects matter near the ISCO.</li>
+  <li>Spin measurements depend on disk models (inclination, emissivity) that are not fully understood.</li>
+</ul>
+
+<h2>7. References</h2>
+<ul>
+  <li>Kerr R. P., 1963, <em>Phys. Rev. Lett.</em> 11, 237 — the metric.</li>
+  <li>Carter B., 1968, <em>Phys. Rev.</em> 174, 1559 — integrability.</li>
+  <li>Bardeen J. M., Press W. H., Teukolsky S. A., 1972, <em>ApJ</em> 178, 347 — ISCO formula.</li>
+  <li>Reynolds C. S., 2014, <em>Space Sci. Rev.</em> 183, 277 — spin measurements.</li>
+</ul>
+</article><aside class="toc" id="toc" aria-label="Table of contents"></aside></div></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

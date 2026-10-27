@@ -469,6 +469,13 @@ THEORY_DOCS = [
         "violet",
     ),
     (
+        "theory_kerr_geodesics.html",
+        "Kerr geodesics",
+        "Geodesics and frame dragging",
+        "Kerr metric, ISCO vs spin, and Lense-Thirring precession.",
+        "cyan",
+    ),
+    (
         "theory_kerr_newman_adm.html",
         "Kerr-Newman ADM",
         "Mass, spin and charge from infinity",

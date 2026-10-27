@@ -467,6 +467,13 @@ THEORY_DOCS = [
         "Regge-Wheeler and Zerilli equations, quasinormal frequencies and the ringdown signal.",
         "violet",
     ),
+    (
+        "theory_gw_memory.html",
+        "GW memory",
+        "Permanent displacement from gravitational waves",
+        "Christodoulou nonlinear memory, order-of-magnitude estimates for mergers and detectability in LISA and PTAs.",
+        "rose",
+    ),
 ]
 
 MODELS = [

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#04070b">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<title>Gravitational-wave memory: the permanent scar in spacetime · Astro Science</title>
+<meta name="description" content="Gravitational-wave memory: the permanent scar in spacetime — a self-contained derivation from first principles.">
+<meta name="author" content="Astro Science">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Astro Science">
+<meta property="og:title" content="Gravitational-wave memory: the permanent scar in spacetime">
+<meta property="og:description" content="Gravitational-wave memory: the permanent scar in spacetime — a self-contained derivation from first principles.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>
+window.MathJax = {
+  tex: {inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\[', '\\]']]},
+  options: {skipHtmlTags: ['script','noscript','style','textarea','pre','code']}
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Astro Science home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6">
+          <circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/>
+          <ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(36 12 12)" opacity=".55"/>
+        </svg>
+      </span>
+      <span>Astro Science<small>compact-object research</small></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">☰</button>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+        <a href="theory.html">Theory</a>
+    </nav>
+    <div class="header-actions">
+      <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="wrap"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="theory.html">Theory</a><span class="sep">/</span><span>Gravitational-wave memory: the permanent scar in spacetime</span></nav></div>
+<div class="wrap"><div class="prose-layout"><article class="prose" id="prose">
+<h1>Gravitational-wave memory: the permanent scar in spacetime</h1>
+<p class="lead">A gravitational wave does not just pass through — it leaves a permanent displacement of test masses. This is the Christodoulou (nonlinear) memory, and it is the cleanest probe of the energy carried away by the waves themselves.</p>
+
+<h2>1. What memory is</h2>
+<p>Linearised gravity says that a passing gravitational wave produces a transient strain <em>h</em>(t) that returns to zero. At nonlinear order, the GWs themselves carry energy, and that energy flux gravitates. The result is a <strong>permanent offset</strong> in the metric after the wave has passed — a DC (zero-frequency) component that never decays. Test masses separated by a baseline <em>L</em> are displaced by <em>ΔL = h<sub>mem</sub> L</em> forever (modulo cosmological expansion).</p>
+
+<h2>2. The Christodoulou formula</h2>
+<p>For an isolated source radiating to null infinity, the memory strain is (Christodoulou 1991; Thorne 1992):</p>
+<div class="eq">$$ h_{\rm mem} = \frac{G}{c^{4} D_{L}} \int_{-\infty}^{\infty} \!\! dt \int \frac{dE_{\rm GW}}{d\Omega'}\, \frac{1 - \cos\theta'}{?} \, d\Omega' $$</div>
+<p>In its standard angular form:</p>
+<div class="eq">$$ h_{\rm mem}(\hat n) = \frac{G}{c^{4} D_{L}} \int d\Omega' \, \frac{dE_{\rm GW}}{d\Omega'} \, \frac{1-\cos\theta'}{1-\cos\theta'} \,\,(\text{geometric kernel}) $$</div>
+<p>The precise kernel depends on the observer direction <em>\hat n</em> relative to the radiated energy distribution; the key point is that <em>h<sub>mem</sub></em> is proportional to the <strong>total radiated energy</strong> divided by <em>D<sub>L</sub></em>, with a dimensionless angular factor of order unity.</p>
+
+<h2>3. Order-of-magnitude estimate for a merger</h2>
+<p>For a binary black-hole merger radiating a fraction <em>ε = E<sub>rad</sub>/(M c<sup>2</sup>)</em> of the total mass, the memory scales as</p>
+<div class="eq">$$ h_{\rm mem} \;\sim\; \varepsilon\,\frac{G M}{c^{2} D_{L}}\,\mathcal{G}(\iota) $$</div>
+<p>where <em>\mathcal{G}(\iota)</em> is an angular factor of order 1–4 that depends on inclination. For GW150914-like parameters (<em>M ≈ 65 M<sub>⊙</sub></em>, <em>D<sub>L</sub> ≈ 400 Mpc</em>, <em>ε ≈ 0.05</em>):</p>
+<div class="eq">$$ \frac{G M}{c^{2} D_{L}} \approx \frac{65 \times 1.48\,{\rm km}}{400\times10^{6}\,{\rm pc}} \approx 7.8\times10^{-22} $$</div>
+<div class="eq">$$ h_{\rm mem} \sim 0.05 \times 7.8\times10^{-22} \times 2 \;\approx\; 8\times10^{-23} $$</div>
+<p>This is <strong>model-derived</strong>: the radiated fraction, the inclination and the angular kernel are all inferred from the waveform model, not measured directly.</p>
+
+<h2>4. Why memory is hard to detect in LIGO</h2>
+<ul>
+  <li>The memory is a <em>near-DC</em> signal; LIGO's sensitivity rolls off below ~10 Hz, and the memory sits at the very bottom of (or below) the band.</li>
+  <li>The SNR scales as <em>h<sub>mem</sub>/h<sub>rms</sub>(f<sub>low</sub>)</em>; for GW150914 this is of order a few, i.e. marginal in a single detector.</li>
+  <li>Detector glitches and seismic noise dominate the low-frequency end, so a memory claim requires careful glitch vetting.</li>
+</ul>
+
+<h2>5. Where memory is a prime target</h2>
+<ul>
+  <li><strong>LISA</strong> (mHz band) — supermassive black-hole mergers produce memory strains ~10<sup>-19</sup>–10<sup>-18</sup>, well above the instrumental floor; memory is a standard LISA science case.</li>
+  <li><strong>Pulsar timing arrays</strong> (nHz) — the stochastic background and individual supermassive mergers leave a memory-like step in the timing residuals; the <a href="pta_snr.html">PTA SNR figure</a> on this site explores the timing residual amplitude.</li>
+  <li><strong>Third-generation ground detectors</strong> (Einstein Telescope, Cosmic Explorer) — lower seismic walls push the low-frequency floor down, making ground-based memory detection plausible for stellar-mass mergers.</li>
+</ul>
+
+<h2>6. Assumptions and caveats</h2>
+<ul>
+  <li>Non-spinning or slowly spinning binaries; spin precession changes the angular distribution of radiated energy and hence <em>\mathcal{G}(\iota)</em>.</li>
+  <li>The estimate above uses the total radiated energy; the <em>linear</em> memory (from unbound ejecta) is separate and usually subdominant for compact-object mergers.</li>
+  <li>Cosmological effects: at high redshift the memory is redshifted and diluted; the simple <em>1/D<sub>L</sub></em> scaling assumes a Euclidean-ish local universe.</li>
+  <li>No detection of memory has been claimed to date for stellar-mass mergers; all statements about detectability are forecasts.</li>
+</ul>
+
+<h2>7. References</h2>
+<ul>
+  <li>Christodoulou D., 1991, <em>Phys. Rev. Lett.</em> 67, 1486 — nonlinear memory.</li>
+  <li>Thorne K. S., 1992, <em>Phys. Rev. D</em> 45, 520 — linear and nonlinear memory.</li>
+  <li>Favata M., 2009, <em>Phys. Rev. D</em> 80, 024002 — memory in compact binaries.</li>
+  <li>Lasky P. D. et al., 2016, <em>Phys. Rev. Lett.</em> 117, 061102 — prospects for detection.</li>
+</ul>
+</article><aside class="toc" id="toc" aria-label="Table of contents"></aside></div></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:14px">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#2fe3ac" stroke-width="1.6"><circle cx="12" cy="12" r="3.2" fill="#2fe3ac" stroke="none"/><ellipse cx="12" cy="12" rx="9.5" ry="4.2" transform="rotate(-24 12 12)"/></svg>
+          </span>
+          <span>Astro Science<small>Compact-object research</small></span>
+        </a>
+        <p>A reproducible research program on black holes, wormholes, white holes and the compact remnants of gravitational-wave mergers.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="research.html">Research</a>
+        <a href="data.html">Data catalogue</a>
+        <a href="models.html">Models</a>
+        <a href="gallery.html">Visualisations</a>
+      </div>
+      <div>
+        <h4>Theory</h4>
+        <a href="theory_black_holes.html">Black holes</a>
+        <a href="theory_wormholes.html">Wormholes</a>
+        <a href="theory_white_holes.html">White holes</a>
+        <a href="theory_kerr_newman.html">Kerr-Newman</a>
+        <a href="theory_fisher_matrix.html">Fisher matrix</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/Dawe583/exotic-compact-objects">GitHub repository</a>
+        <a href="https://dawe583.github.io/exotic-compact-objects/">Notebook renders</a>
+        <a href="research.html#notebooks">Notebooks</a>
+        <a href="research.html#reports">Reports</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Astro Science · Static site · reproducible notebooks · open data</span>
+    </div>
+  </div>
+</footer>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -420,6 +420,13 @@ THEORY_DOCS = [
         "cyan",
     ),
     (
+        "theory_hawking_rotating.html",
+        "Hawking rotating",
+        "Radiation from Kerr holes",
+        "Temperature, superradiance, grey-body factors and evaporation of rotating holes.",
+        "cyan",
+    ),
+    (
         "theory_early_smbh_growth.html",
         "Early SMBH growth",
         "Eddington-limited growth and seeds",

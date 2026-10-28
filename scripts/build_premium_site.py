@@ -41,6 +41,8 @@ NAV = [
     ("models.html", "Models"),
     ("gallery.html", "Visualisations"),
     ("theory.html", "Theory"),
+    ("notebooks.html", "Notebooks"),
+    ("data_provenance.html", "Provenance"),
 ]
 
 # --------------------------------------------------------------------------

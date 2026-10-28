@@ -1,0 +1,5773 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "exotic-compact-objects",
+    "languages": [],
+    "frameworks": [],
+    "description": "Exotic compact objects research project.",
+    "analyzedAt": "2026-10-28T22:00:01.543998+01:00",
+    "gitCommitHash": "e6aaf54"
+  },
+  "nodes": [
+    {
+      "id": "pipeline:.github/workflows/ci.yml",
+      "type": "pipeline",
+      "name": "ci.yml",
+      "filePath": ".github/workflows/ci.yml",
+      "summary": "Infrastructure config at .github/workflows/ci.yml.",
+      "tags": [
+        "yml",
+        "yaml",
+        "infra"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:premium/early_smbh_growth.md",
+      "type": "document",
+      "name": "early_smbh_growth.md",
+      "filePath": "premium/early_smbh_growth.md",
+      "summary": "Documentation at premium/early_smbh_growth.md (34 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:premium/quantum_gravity.md",
+      "type": "document",
+      "name": "quantum_gravity.md",
+      "filePath": "premium/quantum_gravity.md",
+      "summary": "Documentation at premium/quantum_gravity.md (120 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:premium/theory_bh_perturbation.md",
+      "type": "document",
+      "name": "theory_bh_perturbation.md",
+      "filePath": "premium/theory_bh_perturbation.md",
+      "summary": "Documentation at premium/theory_bh_perturbation.md (405 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:premium/theory_black_holes.md",
+      "type": "document",
+      "name": "theory_black_holes.md",
+      "filePath": "premium/theory_black_holes.md",
+      "summary": "Documentation at premium/theory_black_holes.md (565 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:premium/theory_christoffel_kerr.md",
+      "type": "document",
+      "name": "theory_christoffel_kerr.md",
+      "filePath": "premium/theory_christoffel_kerr.md",
+      "summary": "Documentation at premium/theory_christoffel_kerr.md (700 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:premium/theory_fisher_matrix.md",
+      "type": "document",
+      "name": "theory_fisher_matrix.md",
+      "filePath": "premium/theory_fisher_matrix.md",
+      "summary": "Documentation at premium/theory_fisher_matrix.md (444 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:premium/theory_geodesic_equations.md",
+      "type": "document",
+      "name": "theory_geodesic_equations.md",
+      "filePath": "premium/theory_geodesic_equations.md",
+      "summary": "Documentation at premium/theory_geodesic_equations.md (469 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:premium/theory_kerr_newman.md",
+      "type": "document",
+      "name": "theory_kerr_newman.md",
+      "filePath": "premium/theory_kerr_newman.md",
+      "summary": "Documentation at premium/theory_kerr_newman.md (392 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:premium/theory_kerr_newman_adm.md",
+      "type": "document",
+      "name": "theory_kerr_newman_adm.md",
+      "filePath": "premium/theory_kerr_newman_adm.md",
+      "summary": "Documentation at premium/theory_kerr_newman_adm.md (558 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:premium/theory_raychaudhuri.md",
+      "type": "document",
+      "name": "theory_raychaudhuri.md",
+      "filePath": "premium/theory_raychaudhuri.md",
+      "summary": "Documentation at premium/theory_raychaudhuri.md (363 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:premium/theory_reissner_nordstrom.md",
+      "type": "document",
+      "name": "theory_reissner_nordstrom.md",
+      "filePath": "premium/theory_reissner_nordstrom.md",
+      "summary": "Documentation at premium/theory_reissner_nordstrom.md (345 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:premium/theory_white_holes.md",
+      "type": "document",
+      "name": "theory_white_holes.md",
+      "filePath": "premium/theory_white_holes.md",
+      "summary": "Documentation at premium/theory_white_holes.md (452 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:premium/theory_wormholes.md",
+      "type": "document",
+      "name": "theory_wormholes.md",
+      "filePath": "premium/theory_wormholes.md",
+      "summary": "Documentation at premium/theory_wormholes.md (571 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:reports/agn_demographics.md",
+      "type": "document",
+      "name": "agn_demographics.md",
+      "filePath": "reports/agn_demographics.md",
+      "summary": "Documentation at reports/agn_demographics.md (30 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:reports/compute_data_report.md",
+      "type": "document",
+      "name": "compute_data_report.md",
+      "filePath": "reports/compute_data_report.md",
+      "summary": "Documentation at reports/compute_data_report.md (34 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:reports/derivations_report.md",
+      "type": "document",
+      "name": "derivations_report.md",
+      "filePath": "reports/derivations_report.md",
+      "summary": "Documentation at reports/derivations_report.md (139 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:reports/exotic_discrimination.md",
+      "type": "document",
+      "name": "exotic_discrimination.md",
+      "filePath": "reports/exotic_discrimination.md",
+      "summary": "Documentation at reports/exotic_discrimination.md (58 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:reports/gwosc_latest.md",
+      "type": "document",
+      "name": "gwosc_latest.md",
+      "filePath": "reports/gwosc_latest.md",
+      "summary": "Documentation at reports/gwosc_latest.md (5 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:reports/qnm_kerr.md",
+      "type": "document",
+      "name": "qnm_kerr.md",
+      "filePath": "reports/qnm_kerr.md",
+      "summary": "Documentation at reports/qnm_kerr.md (24 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:reports/summary.md",
+      "type": "document",
+      "name": "summary.md",
+      "filePath": "reports/summary.md",
+      "summary": "Documentation at reports/summary.md (20 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:reports/sxs_waveform_analysis.md",
+      "type": "document",
+      "name": "sxs_waveform_analysis.md",
+      "filePath": "reports/sxs_waveform_analysis.md",
+      "summary": "Documentation at reports/sxs_waveform_analysis.md (36 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Documentation at README.md (94 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:THEORY.md",
+      "type": "document",
+      "name": "THEORY.md",
+      "filePath": "THEORY.md",
+      "summary": "Documentation at THEORY.md (61 lines).",
+      "tags": [
+        "md",
+        "markdown",
+        "docs"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:graphify-out/cache/stat-index.json",
+      "type": "config",
+      "name": "stat-index.json",
+      "filePath": "graphify-out/cache/stat-index.json",
+      "summary": "Configuration file stat-index.json.",
+      "tags": [
+        "json",
+        "config"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:models/__init__.py",
+      "type": "file",
+      "name": "__init__.py",
+      "filePath": "models/__init__.py",
+      "summary": "Source file __init__.py (python, 2 lines): no top-level symbols.",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:models/derivations.py",
+      "type": "file",
+      "name": "derivations.py",
+      "filePath": "models/derivations.py",
+      "summary": "Source file derivations.py (python, 669 lines): 19 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:models/derivations.py:_christoffel",
+      "type": "function",
+      "name": "_christoffel",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        42,
+        62
+      ],
+      "summary": "Function _christoffel in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:_ricci",
+      "type": "function",
+      "name": "_ricci",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        65,
+        85
+      ],
+      "summary": "Function _ricci in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_schwarzschild_ricci_flatness",
+      "type": "function",
+      "name": "derive_schwarzschild_ricci_flatness",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        92,
+        118
+      ],
+      "summary": "Function derive_schwarzschild_ricci_flatness in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_photon_sphere",
+      "type": "function",
+      "name": "derive_photon_sphere",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        125,
+        157
+      ],
+      "summary": "Function derive_photon_sphere in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_isco",
+      "type": "function",
+      "name": "derive_isco",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        164,
+        193
+      ],
+      "summary": "Function derive_isco in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_kerr_horizons_ergosphere",
+      "type": "function",
+      "name": "derive_kerr_horizons_ergosphere",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        200,
+        242
+      ],
+      "summary": "Function derive_kerr_horizons_ergosphere in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_morris_thorne_exotic_density",
+      "type": "function",
+      "name": "derive_morris_thorne_exotic_density",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        249,
+        271
+      ],
+      "summary": "Function derive_morris_thorne_exotic_density in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_eddington_luminosity",
+      "type": "function",
+      "name": "derive_eddington_luminosity",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        278,
+        302
+      ],
+      "summary": "Function derive_eddington_luminosity in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_hawking_temperature",
+      "type": "function",
+      "name": "derive_hawking_temperature",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        309,
+        329
+      ],
+      "summary": "Function derive_hawking_temperature in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_friedmann_continuity",
+      "type": "function",
+      "name": "derive_friedmann_continuity",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        336,
+        405
+      ],
+      "summary": "Function derive_friedmann_continuity in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_light_deflection",
+      "type": "function",
+      "name": "derive_light_deflection",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        412,
+        427
+      ],
+      "summary": "Function derive_light_deflection in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_gw_time_to_coalescence",
+      "type": "function",
+      "name": "derive_gw_time_to_coalescence",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        434,
+        498
+      ],
+      "summary": "Function derive_gw_time_to_coalescence in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_kerr_isco_spin",
+      "type": "function",
+      "name": "derive_kerr_isco_spin",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        505,
+        529
+      ],
+      "summary": "Function derive_kerr_isco_spin in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_penrose_efficiency",
+      "type": "function",
+      "name": "derive_penrose_efficiency",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        536,
+        590
+      ],
+      "summary": "Function derive_penrose_efficiency in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_shadow_diameter",
+      "type": "function",
+      "name": "derive_shadow_diameter",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        597,
+        622
+      ],
+      "summary": "Function derive_shadow_diameter in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_kepler_third_law",
+      "type": "function",
+      "name": "derive_kepler_third_law",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        660,
+        685
+      ],
+      "summary": "Function derive_kepler_third_law in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:derive_smbh_growth",
+      "type": "function",
+      "name": "derive_smbh_growth",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        690,
+        731
+      ],
+      "summary": "Function derive_smbh_growth in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/derivations.py:run_all",
+      "type": "function",
+      "name": "run_all",
+      "filePath": "models/derivations.py",
+      "lineRange": [
+        752,
+        753
+      ],
+      "summary": "Function run_all in derivations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:models/equations.py",
+      "type": "file",
+      "name": "equations.py",
+      "filePath": "models/equations.py",
+      "summary": "Source file equations.py (python, 119 lines): 22 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:models/equations.py:schwarzschild_radius",
+      "type": "function",
+      "name": "schwarzschild_radius",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        11,
+        13
+      ],
+      "summary": "Function schwarzschild_radius in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:hawking_temperature",
+      "type": "function",
+      "name": "hawking_temperature",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        15,
+        17
+      ],
+      "summary": "Function hawking_temperature in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:isco_radius_schwarzschild",
+      "type": "function",
+      "name": "isco_radius_schwarzschild",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        19,
+        21
+      ],
+      "summary": "Function isco_radius_schwarzschild in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:photon_sphere_radius_schwarzschild",
+      "type": "function",
+      "name": "photon_sphere_radius_schwarzschild",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        23,
+        25
+      ],
+      "summary": "Function photon_sphere_radius_schwarzschild in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:kerr_horizon_radius",
+      "type": "function",
+      "name": "kerr_horizon_radius",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        29,
+        34
+      ],
+      "summary": "Function kerr_horizon_radius in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:ergosphere_radius_equatorial",
+      "type": "function",
+      "name": "ergosphere_radius_equatorial",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        36,
+        39
+      ],
+      "summary": "Function ergosphere_radius_equatorial in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:morris_thorne_shape_function",
+      "type": "function",
+      "name": "morris_thorne_shape_function",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        43,
+        46
+      ],
+      "summary": "Function morris_thorne_shape_function in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:morris_thorne_redshift_function",
+      "type": "function",
+      "name": "morris_thorne_redshift_function",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        48,
+        51
+      ],
+      "summary": "Function morris_thorne_redshift_function in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:wormhole_throat_radius",
+      "type": "function",
+      "name": "wormhole_throat_radius",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        53,
+        55
+      ],
+      "summary": "Function wormhole_throat_radius in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:morris_thorne_metric_components",
+      "type": "function",
+      "name": "morris_thorne_metric_components",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        57,
+        66
+      ],
+      "summary": "Function morris_thorne_metric_components in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:white_hole_time_reversed_schwarzschild",
+      "type": "function",
+      "name": "white_hole_time_reversed_schwarzschild",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        70,
+        73
+      ],
+      "summary": "Function white_hole_time_reversed_schwarzschild in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:white_hole_negative_mass_radius",
+      "type": "function",
+      "name": "white_hole_negative_mass_radius",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        75,
+        78
+      ],
+      "summary": "Function white_hole_negative_mass_radius in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:isco_radius_kerr",
+      "type": "function",
+      "name": "isco_radius_kerr",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        82,
+        91
+      ],
+      "summary": "Function isco_radius_kerr in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:effective_potential_schwarzschild",
+      "type": "function",
+      "name": "effective_potential_schwarzschild",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        95,
+        99
+      ],
+      "summary": "Function effective_potential_schwarzschild in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:flare_out_condition",
+      "type": "function",
+      "name": "flare_out_condition",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        103,
+        105
+      ],
+      "summary": "Function flare_out_condition in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:morris_thorne_embedding_z",
+      "type": "function",
+      "name": "morris_thorne_embedding_z",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        107,
+        112
+      ],
+      "summary": "Function morris_thorne_embedding_z in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:hawking_power",
+      "type": "function",
+      "name": "hawking_power",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        116,
+        120
+      ],
+      "summary": "Function hawking_power in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:hawking_lifetime",
+      "type": "function",
+      "name": "hawking_lifetime",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        122,
+        126
+      ],
+      "summary": "Function hawking_lifetime in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:white_hole_hawking_analog",
+      "type": "function",
+      "name": "white_hole_hawking_analog",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        128,
+        131
+      ],
+      "summary": "Function white_hole_hawking_analog in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:white_hole_instability_timescale",
+      "type": "function",
+      "name": "white_hole_instability_timescale",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        135,
+        139
+      ],
+      "summary": "Function white_hole_instability_timescale in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:white_hole_perturbation_growth",
+      "type": "function",
+      "name": "white_hole_perturbation_growth",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        141,
+        144
+      ],
+      "summary": "Function white_hole_perturbation_growth in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/equations.py:compactness",
+      "type": "function",
+      "name": "compactness",
+      "filePath": "models/equations.py",
+      "lineRange": [
+        148,
+        152
+      ],
+      "summary": "Function compactness in equations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:models/formulas.py",
+      "type": "file",
+      "name": "formulas.py",
+      "filePath": "models/formulas.py",
+      "summary": "Source file formulas.py (python, 138 lines): 16 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:models/formulas.py:kerr_isco_radius",
+      "type": "function",
+      "name": "kerr_isco_radius",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        19,
+        40
+      ],
+      "summary": "Function kerr_isco_radius in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:isco_frequency",
+      "type": "function",
+      "name": "isco_frequency",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        43,
+        46
+      ],
+      "summary": "Function isco_frequency in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:eddington_luminosity",
+      "type": "function",
+      "name": "eddington_luminosity",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        52,
+        54
+      ],
+      "summary": "Function eddington_luminosity in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:eddington_mass_accretion_rate",
+      "type": "function",
+      "name": "eddington_mass_accretion_rate",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        57,
+        62
+      ],
+      "summary": "Function eddington_mass_accretion_rate in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:gw_chirp_mass",
+      "type": "function",
+      "name": "gw_chirp_mass",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        68,
+        70
+      ],
+      "summary": "Function gw_chirp_mass in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:gw_symmetric_mass_ratio",
+      "type": "function",
+      "name": "gw_symmetric_mass_ratio",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        73,
+        75
+      ],
+      "summary": "Function gw_symmetric_mass_ratio in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:gw_delta",
+      "type": "function",
+      "name": "gw_delta",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        78,
+        80
+      ],
+      "summary": "Function gw_delta in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:gw_time_to_coalescence",
+      "type": "function",
+      "name": "gw_time_to_coalescence",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        83,
+        89
+      ],
+      "summary": "Function gw_time_to_coalescence in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:gw_peak_strain_leading_order",
+      "type": "function",
+      "name": "gw_peak_strain_leading_order",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        92,
+        105
+      ],
+      "summary": "Function gw_peak_strain_leading_order in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:shadow_diameter_schwarzschild",
+      "type": "function",
+      "name": "shadow_diameter_schwarzschild",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        111,
+        113
+      ],
+      "summary": "Function shadow_diameter_schwarzschild in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:shadow_angular_diameter",
+      "type": "function",
+      "name": "shadow_angular_diameter",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        116,
+        120
+      ],
+      "summary": "Function shadow_angular_diameter in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:tidal_deformability",
+      "type": "function",
+      "name": "tidal_deformability",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        126,
+        129
+      ],
+      "summary": "Function tidal_deformability in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:penrose_max_extraction_efficiency",
+      "type": "function",
+      "name": "penrose_max_extraction_efficiency",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        135,
+        147
+      ],
+      "summary": "Function penrose_max_extraction_efficiency in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:penrose_efficiency_vs_spin",
+      "type": "function",
+      "name": "penrose_efficiency_vs_spin",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        150,
+        158
+      ],
+      "summary": "Function penrose_efficiency_vs_spin in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:max_mass_energy_extraction_fraction",
+      "type": "function",
+      "name": "max_mass_energy_extraction_fraction",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        161,
+        170
+      ],
+      "summary": "Function max_mass_energy_extraction_fraction in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:models/formulas.py:friedmann_H",
+      "type": "function",
+      "name": "friedmann_H",
+      "filePath": "models/formulas.py",
+      "lineRange": [
+        176,
+        193
+      ],
+      "summary": "Function friedmann_H in formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/01_exotic_compact_objects_fundamentals.ipynb",
+      "type": "file",
+      "name": "01_exotic_compact_objects_fundamentals.ipynb",
+      "filePath": "notebooks/01_exotic_compact_objects_fundamentals.ipynb",
+      "summary": "File at notebooks/01_exotic_compact_objects_fundamentals.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/02_extended_models.ipynb",
+      "type": "file",
+      "name": "02_extended_models.ipynb",
+      "filePath": "notebooks/02_extended_models.ipynb",
+      "summary": "File at notebooks/02_extended_models.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/03_data_exploration.ipynb",
+      "type": "file",
+      "name": "03_data_exploration.ipynb",
+      "filePath": "notebooks/03_data_exploration.ipynb",
+      "summary": "File at notebooks/03_data_exploration.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/04_white_hole_instability.ipynb",
+      "type": "file",
+      "name": "04_white_hole_instability.ipynb",
+      "filePath": "notebooks/04_white_hole_instability.ipynb",
+      "summary": "File at notebooks/04_white_hole_instability.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/05_equation_derivations.ipynb",
+      "type": "file",
+      "name": "05_equation_derivations.ipynb",
+      "filePath": "notebooks/05_equation_derivations.ipynb",
+      "summary": "File at notebooks/05_equation_derivations.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/06_visual_models.ipynb",
+      "type": "file",
+      "name": "06_visual_models.ipynb",
+      "filePath": "notebooks/06_visual_models.ipynb",
+      "summary": "File at notebooks/06_visual_models.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/07_geodesics.ipynb",
+      "type": "file",
+      "name": "07_geodesics.ipynb",
+      "filePath": "notebooks/07_geodesics.ipynb",
+      "summary": "File at notebooks/07_geodesics.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/08_sympy_christoffel.ipynb",
+      "type": "file",
+      "name": "08_sympy_christoffel.ipynb",
+      "filePath": "notebooks/08_sympy_christoffel.ipynb",
+      "summary": "File at notebooks/08_sympy_christoffel.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/09_white_hole_extended.ipynb",
+      "type": "file",
+      "name": "09_white_hole_extended.ipynb",
+      "filePath": "notebooks/09_white_hole_extended.ipynb",
+      "summary": "File at notebooks/09_white_hole_extended.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/10_complete_theory.ipynb",
+      "type": "file",
+      "name": "10_complete_theory.ipynb",
+      "filePath": "notebooks/10_complete_theory.ipynb",
+      "summary": "File at notebooks/10_complete_theory.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/11_data_synthesis.ipynb",
+      "type": "file",
+      "name": "11_data_synthesis.ipynb",
+      "filePath": "notebooks/11_data_synthesis.ipynb",
+      "summary": "File at notebooks/11_data_synthesis.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/12_advanced_models.ipynb",
+      "type": "file",
+      "name": "12_advanced_models.ipynb",
+      "filePath": "notebooks/12_advanced_models.ipynb",
+      "summary": "File at notebooks/12_advanced_models.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/13_white_hole_deep_dive.ipynb",
+      "type": "file",
+      "name": "13_white_hole_deep_dive.ipynb",
+      "filePath": "notebooks/13_white_hole_deep_dive.ipynb",
+      "summary": "File at notebooks/13_white_hole_deep_dive.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/14_rebound_nbody.ipynb",
+      "type": "file",
+      "name": "14_rebound_nbody.ipynb",
+      "filePath": "notebooks/14_rebound_nbody.ipynb",
+      "summary": "File at notebooks/14_rebound_nbody.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/15_einsteinpy_geodesics.ipynb",
+      "type": "file",
+      "name": "15_einsteinpy_geodesics.ipynb",
+      "filePath": "notebooks/15_einsteinpy_geodesics.ipynb",
+      "summary": "File at notebooks/15_einsteinpy_geodesics.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/16_yt_cosmology.ipynb",
+      "type": "file",
+      "name": "16_yt_cosmology.ipynb",
+      "filePath": "notebooks/16_yt_cosmology.ipynb",
+      "summary": "File at notebooks/16_yt_cosmology.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/17_gw_analysis.ipynb",
+      "type": "file",
+      "name": "17_gw_analysis.ipynb",
+      "filePath": "notebooks/17_gw_analysis.ipynb",
+      "summary": "File at notebooks/17_gw_analysis.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/18_ml_astronomy.ipynb",
+      "type": "file",
+      "name": "18_ml_astronomy.ipynb",
+      "filePath": "notebooks/18_ml_astronomy.ipynb",
+      "summary": "File at notebooks/18_ml_astronomy.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:premium/js/accordion.js",
+      "type": "file",
+      "name": "accordion.js",
+      "filePath": "premium/js/accordion.js",
+      "summary": "Source file accordion.js (javascript, 26 lines): no top-level symbols.",
+      "tags": [
+        "js",
+        "javascript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:premium/js/sliders.js",
+      "type": "file",
+      "name": "sliders.js",
+      "filePath": "premium/js/sliders.js",
+      "summary": "Source file sliders.js (javascript, 125 lines): no top-level symbols.",
+      "tags": [
+        "js",
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:premium/js/tables.js",
+      "type": "file",
+      "name": "tables.js",
+      "filePath": "premium/js/tables.js",
+      "summary": "Source file tables.js (javascript, 50 lines): no top-level symbols.",
+      "tags": [
+        "js",
+        "javascript"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:premium/js/theme.js",
+      "type": "file",
+      "name": "theme.js",
+      "filePath": "premium/js/theme.js",
+      "summary": "Source file theme.js (javascript, 40 lines): no top-level symbols.",
+      "tags": [
+        "js",
+        "javascript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:premium/js/toast.js",
+      "type": "file",
+      "name": "toast.js",
+      "filePath": "premium/js/toast.js",
+      "summary": "Source file toast.js (javascript, 31 lines): no top-level symbols.",
+      "tags": [
+        "js",
+        "javascript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:premium/js/tooltips.js",
+      "type": "file",
+      "name": "tooltips.js",
+      "filePath": "premium/js/tooltips.js",
+      "summary": "Source file tooltips.js (javascript, 40 lines): no top-level symbols.",
+      "tags": [
+        "js",
+        "javascript"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/add_bh_derived_quantities.py",
+      "type": "file",
+      "name": "add_bh_derived_quantities.py",
+      "filePath": "scripts/add_bh_derived_quantities.py",
+      "summary": "Source file add_bh_derived_quantities.py (python, 15 lines): no top-level symbols.",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/agn_demographics.py",
+      "type": "file",
+      "name": "agn_demographics.py",
+      "filePath": "scripts/agn_demographics.py",
+      "summary": "Source file agn_demographics.py (python, 167 lines): 6 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/agn_demographics.py:build",
+      "type": "function",
+      "name": "build",
+      "filePath": "scripts/agn_demographics.py",
+      "lineRange": [
+        18,
+        24
+      ],
+      "summary": "Function build in agn_demographics.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/agn_demographics.py:summarise",
+      "type": "function",
+      "name": "summarise",
+      "filePath": "scripts/agn_demographics.py",
+      "lineRange": [
+        27,
+        40
+      ],
+      "summary": "Function summarise in agn_demographics.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/agn_demographics.py:plot",
+      "type": "function",
+      "name": "plot",
+      "filePath": "scripts/agn_demographics.py",
+      "lineRange": [
+        43,
+        86
+      ],
+      "summary": "Function plot in agn_demographics.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/agn_demographics.py:plotly_html",
+      "type": "function",
+      "name": "plotly_html",
+      "filePath": "scripts/agn_demographics.py",
+      "lineRange": [
+        89,
+        135
+      ],
+      "summary": "Function plotly_html in agn_demographics.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/agn_demographics.py:report",
+      "type": "function",
+      "name": "report",
+      "filePath": "scripts/agn_demographics.py",
+      "lineRange": [
+        138,
+        184
+      ],
+      "summary": "Function report in agn_demographics.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/agn_demographics.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/agn_demographics.py",
+      "lineRange": [
+        187,
+        197
+      ],
+      "summary": "Function main in agn_demographics.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/build_agn_mass_figure.py",
+      "type": "file",
+      "name": "build_agn_mass_figure.py",
+      "filePath": "scripts/build_agn_mass_figure.py",
+      "summary": "Source file build_agn_mass_figure.py (python, 36 lines): no top-level symbols.",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/build_agn_reverberation_dashboard.py",
+      "type": "file",
+      "name": "build_agn_reverberation_dashboard.py",
+      "filePath": "scripts/build_agn_reverberation_dashboard.py",
+      "summary": "Source file build_agn_reverberation_dashboard.py (python, 23 lines): no top-level symbols.",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/build_blackcat_dashboard.py",
+      "type": "file",
+      "name": "build_blackcat_dashboard.py",
+      "filePath": "scripts/build_blackcat_dashboard.py",
+      "summary": "Source file build_blackcat_dashboard.py (python, 24 lines): no top-level symbols.",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/build_corbet_dashboard.py",
+      "type": "file",
+      "name": "build_corbet_dashboard.py",
+      "filePath": "scripts/build_corbet_dashboard.py",
+      "summary": "Source file build_corbet_dashboard.py (python, 67 lines): no top-level symbols.",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/build_eht_shadow_figure.py",
+      "type": "file",
+      "name": "build_eht_shadow_figure.py",
+      "filePath": "scripts/build_eht_shadow_figure.py",
+      "summary": "Source file build_eht_shadow_figure.py (python, 40 lines): 1 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/build_eht_shadow_figure.py:shadow_diam",
+      "type": "function",
+      "name": "shadow_diam",
+      "filePath": "scripts/build_eht_shadow_figure.py",
+      "lineRange": [
+        14,
+        17
+      ],
+      "summary": "Function shadow_diam in build_eht_shadow_figure.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/build_gwtc_remnant_dashboard.py",
+      "type": "file",
+      "name": "build_gwtc_remnant_dashboard.py",
+      "filePath": "scripts/build_gwtc_remnant_dashboard.py",
+      "summary": "Source file build_gwtc_remnant_dashboard.py (python, 27 lines): no top-level symbols.",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/build_pta_figure.py",
+      "type": "file",
+      "name": "build_pta_figure.py",
+      "filePath": "scripts/build_pta_figure.py",
+      "summary": "Source file build_pta_figure.py (python, 44 lines): no top-level symbols.",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/build_theoretical_data.py",
+      "type": "file",
+      "name": "build_theoretical_data.py",
+      "filePath": "scripts/build_theoretical_data.py",
+      "summary": "Source file build_theoretical_data.py (python, 48 lines): no top-level symbols.",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/compute_with_data.py",
+      "type": "file",
+      "name": "compute_with_data.py",
+      "filePath": "scripts/compute_with_data.py",
+      "summary": "Source file compute_with_data.py (python, 451 lines): 4 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/compute_with_data.py:gwtc_analysis",
+      "type": "function",
+      "name": "gwtc_analysis",
+      "filePath": "scripts/compute_with_data.py",
+      "lineRange": [
+        60,
+        191
+      ],
+      "summary": "Function gwtc_analysis in compute_with_data.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/compute_with_data.py:strain_quicklook",
+      "type": "function",
+      "name": "strain_quicklook",
+      "filePath": "scripts/compute_with_data.py",
+      "lineRange": [
+        195,
+        287
+      ],
+      "summary": "Function strain_quicklook in compute_with_data.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/compute_with_data.py:sxs_characterisation",
+      "type": "function",
+      "name": "sxs_characterisation",
+      "filePath": "scripts/compute_with_data.py",
+      "lineRange": [
+        291,
+        405
+      ],
+      "summary": "Function sxs_characterisation in compute_with_data.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/compute_with_data.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/compute_with_data.py",
+      "lineRange": [
+        409,
+        505
+      ],
+      "summary": "Function main in compute_with_data.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/create_animations.py",
+      "type": "file",
+      "name": "create_animations.py",
+      "filePath": "scripts/create_animations.py",
+      "summary": "Source file create_animations.py (python, 866 lines): 13 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/create_animations.py:update_bh",
+      "type": "function",
+      "name": "update_bh",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        109,
+        112
+      ],
+      "summary": "Function update_bh in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:particle_orbit",
+      "type": "function",
+      "name": "particle_orbit",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        136,
+        150
+      ],
+      "summary": "Function particle_orbit in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:update_kerr",
+      "type": "function",
+      "name": "update_kerr",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        259,
+        265
+      ],
+      "summary": "Function update_kerr in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:wormhole_embedding",
+      "type": "function",
+      "name": "wormhole_embedding",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        288,
+        295
+      ],
+      "summary": "Function wormhole_embedding in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:update_wh",
+      "type": "function",
+      "name": "update_wh",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        403,
+        409
+      ],
+      "summary": "Function update_wh in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:update_wh_exp",
+      "type": "function",
+      "name": "update_wh_exp",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        508,
+        525
+      ],
+      "summary": "Function update_wh_exp in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:cmb_spectrum",
+      "type": "function",
+      "name": "cmb_spectrum",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        543,
+        561
+      ],
+      "summary": "Function cmb_spectrum in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:update_cmb",
+      "type": "function",
+      "name": "update_cmb",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        630,
+        636
+      ],
+      "summary": "Function update_cmb in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:update_mem",
+      "type": "function",
+      "name": "update_mem",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        769,
+        777
+      ],
+      "summary": "Function update_mem in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:incoming_particle",
+      "type": "function",
+      "name": "incoming_particle",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        802,
+        812
+      ],
+      "summary": "Function incoming_particle in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:escaping_particle",
+      "type": "function",
+      "name": "escaping_particle",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        815,
+        824
+      ],
+      "summary": "Function escaping_particle in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:captured_particle",
+      "type": "function",
+      "name": "captured_particle",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        827,
+        836
+      ],
+      "summary": "Function captured_particle in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/create_animations.py:update_pen",
+      "type": "function",
+      "name": "update_pen",
+      "filePath": "scripts/create_animations.py",
+      "lineRange": [
+        965,
+        980
+      ],
+      "summary": "Function update_pen in create_animations.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_blackcat.py",
+      "type": "file",
+      "name": "download_blackcat.py",
+      "filePath": "scripts/download_blackcat.py",
+      "summary": "Source file download_blackcat.py (python, 112 lines): 4 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/download_blackcat.py:reachable_mirrors",
+      "type": "function",
+      "name": "reachable_mirrors",
+      "filePath": "scripts/download_blackcat.py",
+      "lineRange": [
+        35,
+        50
+      ],
+      "summary": "Function reachable_mirrors in download_blackcat.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_blackcat.py:fetch_table",
+      "type": "function",
+      "name": "fetch_table",
+      "filePath": "scripts/download_blackcat.py",
+      "lineRange": [
+        53,
+        74
+      ],
+      "summary": "Function fetch_table in download_blackcat.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_blackcat.py:cache_age_days",
+      "type": "function",
+      "name": "cache_age_days",
+      "filePath": "scripts/download_blackcat.py",
+      "lineRange": [
+        77,
+        81
+      ],
+      "summary": "Function cache_age_days in download_blackcat.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_blackcat.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_blackcat.py",
+      "lineRange": [
+        84,
+        129
+      ],
+      "summary": "Function main in download_blackcat.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/19_gw_strain_analysis.ipynb",
+      "type": "file",
+      "name": "19_gw_strain_analysis.ipynb",
+      "filePath": "notebooks/19_gw_strain_analysis.ipynb",
+      "summary": "File at notebooks/19_gw_strain_analysis.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/20_gwtc_remnant_catalog.ipynb",
+      "type": "file",
+      "name": "20_gwtc_remnant_catalog.ipynb",
+      "filePath": "notebooks/20_gwtc_remnant_catalog.ipynb",
+      "summary": "File at notebooks/20_gwtc_remnant_catalog.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/21_agn_mass_catalog.ipynb",
+      "type": "file",
+      "name": "21_agn_mass_catalog.ipynb",
+      "filePath": "notebooks/21_agn_mass_catalog.ipynb",
+      "summary": "File at notebooks/21_agn_mass_catalog.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/22_blackcat_dynamical_catalog.ipynb",
+      "type": "file",
+      "name": "22_blackcat_dynamical_catalog.ipynb",
+      "filePath": "notebooks/22_blackcat_dynamical_catalog.ipynb",
+      "summary": "File at notebooks/22_blackcat_dynamical_catalog.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/23_early_smbh_growth.ipynb",
+      "type": "file",
+      "name": "23_early_smbh_growth.ipynb",
+      "filePath": "notebooks/23_early_smbh_growth.ipynb",
+      "summary": "File at notebooks/23_early_smbh_growth.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/24_quantum_gravity.ipynb",
+      "type": "file",
+      "name": "24_quantum_gravity.ipynb",
+      "filePath": "notebooks/24_quantum_gravity.ipynb",
+      "summary": "File at notebooks/24_quantum_gravity.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_eht.py",
+      "type": "file",
+      "name": "download_eht.py",
+      "filePath": "scripts/download_eht.py",
+      "summary": "Source file download_eht.py (python, 63 lines): 1 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/download_eht.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_eht.py",
+      "lineRange": [
+        32,
+        75
+      ],
+      "summary": "Function main in download_eht.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_gaia_dr3.py",
+      "type": "file",
+      "name": "download_gaia_dr3.py",
+      "filePath": "scripts/download_gaia_dr3.py",
+      "summary": "Source file download_gaia_dr3.py (python, 147 lines): 6 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/download_gaia_dr3.py:configure_gaia",
+      "type": "function",
+      "name": "configure_gaia",
+      "filePath": "scripts/download_gaia_dr3.py",
+      "lineRange": [
+        29,
+        33
+      ],
+      "summary": "Function configure_gaia in download_gaia_dr3.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gaia_dr3.py:query_bh_candidates",
+      "type": "function",
+      "name": "query_bh_candidates",
+      "filePath": "scripts/download_gaia_dr3.py",
+      "lineRange": [
+        36,
+        67
+      ],
+      "summary": "Function query_bh_candidates in download_gaia_dr3.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gaia_dr3.py:query_known_bh_systems",
+      "type": "function",
+      "name": "query_known_bh_systems",
+      "filePath": "scripts/download_gaia_dr3.py",
+      "lineRange": [
+        70,
+        93
+      ],
+      "summary": "Function query_known_bh_systems in download_gaia_dr3.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gaia_dr3.py:query_wide_binaries",
+      "type": "function",
+      "name": "query_wide_binaries",
+      "filePath": "scripts/download_gaia_dr3.py",
+      "lineRange": [
+        96,
+        127
+      ],
+      "summary": "Function query_wide_binaries in download_gaia_dr3.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gaia_dr3.py:save_data",
+      "type": "function",
+      "name": "save_data",
+      "filePath": "scripts/download_gaia_dr3.py",
+      "lineRange": [
+        130,
+        151
+      ],
+      "summary": "Function save_data in download_gaia_dr3.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gaia_dr3.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_gaia_dr3.py",
+      "lineRange": [
+        154,
+        173
+      ],
+      "summary": "Function main in download_gaia_dr3.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_gwb.py",
+      "type": "file",
+      "name": "download_gwb.py",
+      "filePath": "scripts/download_gwb.py",
+      "summary": "Source file download_gwb.py (python, 412 lines): 7 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/download_gwb.py:download_nanograv_15yr",
+      "type": "function",
+      "name": "download_nanograv_15yr",
+      "filePath": "scripts/download_gwb.py",
+      "lineRange": [
+        27,
+        135
+      ],
+      "summary": "Function download_nanograv_15yr in download_gwb.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwb.py:download_epta_dr2",
+      "type": "function",
+      "name": "download_epta_dr2",
+      "filePath": "scripts/download_gwb.py",
+      "lineRange": [
+        138,
+        201
+      ],
+      "summary": "Function download_epta_dr2 in download_gwb.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwb.py:download_ppta_dr2",
+      "type": "function",
+      "name": "download_ppta_dr2",
+      "filePath": "scripts/download_gwb.py",
+      "lineRange": [
+        204,
+        267
+      ],
+      "summary": "Function download_ppta_dr2 in download_gwb.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwb.py:download_ipta_dr2",
+      "type": "function",
+      "name": "download_ipta_dr2",
+      "filePath": "scripts/download_gwb.py",
+      "lineRange": [
+        270,
+        351
+      ],
+      "summary": "Function download_ipta_dr2 in download_gwb.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwb.py:download_gwb_spectra",
+      "type": "function",
+      "name": "download_gwb_spectra",
+      "filePath": "scripts/download_gwb.py",
+      "lineRange": [
+        354,
+        396
+      ],
+      "summary": "Function download_gwb_spectra in download_gwb.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwb.py:create_gwb_summary",
+      "type": "function",
+      "name": "create_gwb_summary",
+      "filePath": "scripts/download_gwb.py",
+      "lineRange": [
+        399,
+        459
+      ],
+      "summary": "Function create_gwb_summary in download_gwb.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwb.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_gwb.py",
+      "lineRange": [
+        462,
+        486
+      ],
+      "summary": "Function main in download_gwb.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_gwosc.py",
+      "type": "file",
+      "name": "download_gwosc.py",
+      "filePath": "scripts/download_gwosc.py",
+      "summary": "Source file download_gwosc.py (python, 86 lines): 1 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/download_gwosc.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_gwosc.py",
+      "lineRange": [
+        17,
+        86
+      ],
+      "summary": "Function main in download_gwosc.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_gwosc_o4.py",
+      "type": "file",
+      "name": "download_gwosc_o4.py",
+      "filePath": "scripts/download_gwosc_o4.py",
+      "summary": "Source file download_gwosc_o4.py (python, 135 lines): 6 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/download_gwosc_o4.py:fetch_event_catalog",
+      "type": "function",
+      "name": "fetch_event_catalog",
+      "filePath": "scripts/download_gwosc_o4.py",
+      "lineRange": [
+        30,
+        42
+      ],
+      "summary": "Function fetch_event_catalog in download_gwosc_o4.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwosc_o4.py:filter_o4_events",
+      "type": "function",
+      "name": "filter_o4_events",
+      "filePath": "scripts/download_gwosc_o4.py",
+      "lineRange": [
+        45,
+        56
+      ],
+      "summary": "Function filter_o4_events in download_gwosc_o4.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwosc_o4.py:download_strain_data",
+      "type": "function",
+      "name": "download_strain_data",
+      "filePath": "scripts/download_gwosc_o4.py",
+      "lineRange": [
+        59,
+        87
+      ],
+      "summary": "Function download_strain_data in download_gwosc_o4.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwosc_o4.py:download_file",
+      "type": "function",
+      "name": "download_file",
+      "filePath": "scripts/download_gwosc_o4.py",
+      "lineRange": [
+        90,
+        110
+      ],
+      "summary": "Function download_file in download_gwosc_o4.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwosc_o4.py:save_event_metadata",
+      "type": "function",
+      "name": "save_event_metadata",
+      "filePath": "scripts/download_gwosc_o4.py",
+      "lineRange": [
+        113,
+        130
+      ],
+      "summary": "Function save_event_metadata in download_gwosc_o4.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_gwosc_o4.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_gwosc_o4.py",
+      "lineRange": [
+        133,
+        164
+      ],
+      "summary": "Function main in download_gwosc_o4.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_heasarc.py",
+      "type": "file",
+      "name": "download_heasarc.py",
+      "filePath": "scripts/download_heasarc.py",
+      "summary": "Source file download_heasarc.py (python, 53 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/download_heasarc.py:tap",
+      "type": "function",
+      "name": "tap",
+      "filePath": "scripts/download_heasarc.py",
+      "lineRange": [
+        28,
+        31
+      ],
+      "summary": "Function tap in download_heasarc.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_heasarc.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_heasarc.py",
+      "lineRange": [
+        33,
+        55
+      ],
+      "summary": "Function main in download_heasarc.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_planck.py",
+      "type": "file",
+      "name": "download_planck.py",
+      "filePath": "scripts/download_planck.py",
+      "summary": "Source file download_planck.py (python, 176 lines): 5 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/download_planck.py:download_planck_power_spectra",
+      "type": "function",
+      "name": "download_planck_power_spectra",
+      "filePath": "scripts/download_planck.py",
+      "lineRange": [
+        34,
+        64
+      ],
+      "summary": "Function download_planck_power_spectra in download_planck.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_planck.py:generate_camb_power_spectra",
+      "type": "function",
+      "name": "generate_camb_power_spectra",
+      "filePath": "scripts/download_planck.py",
+      "lineRange": [
+        67,
+        135
+      ],
+      "summary": "Function generate_camb_power_spectra in download_planck.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_planck.py:download_planck_lensing_map",
+      "type": "function",
+      "name": "download_planck_lensing_map",
+      "filePath": "scripts/download_planck.py",
+      "lineRange": [
+        138,
+        163
+      ],
+      "summary": "Function download_planck_lensing_map in download_planck.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_planck.py:generate_planck_likelihood_data",
+      "type": "function",
+      "name": "generate_planck_likelihood_data",
+      "filePath": "scripts/download_planck.py",
+      "lineRange": [
+        166,
+        191
+      ],
+      "summary": "Function generate_planck_likelihood_data in download_planck.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_planck.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_planck.py",
+      "lineRange": [
+        194,
+        217
+      ],
+      "summary": "Function main in download_planck.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_sdss.py",
+      "type": "file",
+      "name": "download_sdss.py",
+      "filePath": "scripts/download_sdss.py",
+      "summary": "Source file download_sdss.py (python, 141 lines): 7 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/download_sdss.py:configure_sdss",
+      "type": "function",
+      "name": "configure_sdss",
+      "filePath": "scripts/download_sdss.py",
+      "lineRange": [
+        29,
+        32
+      ],
+      "summary": "Function configure_sdss in download_sdss.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_sdss.py:query_sdss_dr17_quasars",
+      "type": "function",
+      "name": "query_sdss_dr17_quasars",
+      "filePath": "scripts/download_sdss.py",
+      "lineRange": [
+        35,
+        66
+      ],
+      "summary": "Function query_sdss_dr17_quasars in download_sdss.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_sdss.py:query_sdss_dr18_quasars",
+      "type": "function",
+      "name": "query_sdss_dr18_quasars",
+      "filePath": "scripts/download_sdss.py",
+      "lineRange": [
+        69,
+        85
+      ],
+      "summary": "Function query_sdss_dr18_quasars in download_sdss.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_sdss.py:query_sdss_bh_masses",
+      "type": "function",
+      "name": "query_sdss_bh_masses",
+      "filePath": "scripts/download_sdss.py",
+      "lineRange": [
+        88,
+        105
+      ],
+      "summary": "Function query_sdss_bh_masses in download_sdss.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_sdss.py:query_sdss_xray_agn",
+      "type": "function",
+      "name": "query_sdss_xray_agn",
+      "filePath": "scripts/download_sdss.py",
+      "lineRange": [
+        108,
+        124
+      ],
+      "summary": "Function query_sdss_xray_agn in download_sdss.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_sdss.py:save_data",
+      "type": "function",
+      "name": "save_data",
+      "filePath": "scripts/download_sdss.py",
+      "lineRange": [
+        127,
+        141
+      ],
+      "summary": "Function save_data in download_sdss.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_sdss.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_sdss.py",
+      "lineRange": [
+        144,
+        167
+      ],
+      "summary": "Function main in download_sdss.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_strain_marquee.py",
+      "type": "file",
+      "name": "download_strain_marquee.py",
+      "filePath": "scripts/download_strain_marquee.py",
+      "summary": "Source file download_strain_marquee.py (python, 98 lines): 3 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/download_strain_marquee.py:sha_short",
+      "type": "function",
+      "name": "sha_short",
+      "filePath": "scripts/download_strain_marquee.py",
+      "lineRange": [
+        29,
+        34
+      ],
+      "summary": "Function sha_short in download_strain_marquee.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_strain_marquee.py:download",
+      "type": "function",
+      "name": "download",
+      "filePath": "scripts/download_strain_marquee.py",
+      "lineRange": [
+        37,
+        58
+      ],
+      "summary": "Function download in download_strain_marquee.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_strain_marquee.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_strain_marquee.py",
+      "lineRange": [
+        61,
+        115
+      ],
+      "summary": "Function main in download_strain_marquee.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_sxs.py",
+      "type": "file",
+      "name": "download_sxs.py",
+      "filePath": "scripts/download_sxs.py",
+      "summary": "Source file download_sxs.py (python, 68 lines): 1 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/download_sxs.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_sxs.py",
+      "lineRange": [
+        31,
+        78
+      ],
+      "summary": "Function main in download_sxs.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/download_xray_binaries.py",
+      "type": "file",
+      "name": "download_xray_binaries.py",
+      "filePath": "scripts/download_xray_binaries.py",
+      "summary": "Source file download_xray_binaries.py (python, 537 lines): 6 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/download_xray_binaries.py:create_maxi_catalog",
+      "type": "function",
+      "name": "create_maxi_catalog",
+      "filePath": "scripts/download_xray_binaries.py",
+      "lineRange": [
+        32,
+        104
+      ],
+      "summary": "Function create_maxi_catalog in download_xray_binaries.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_xray_binaries.py:create_swift_bat_catalog",
+      "type": "function",
+      "name": "create_swift_bat_catalog",
+      "filePath": "scripts/download_xray_binaries.py",
+      "lineRange": [
+        107,
+        180
+      ],
+      "summary": "Function create_swift_bat_catalog in download_xray_binaries.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_xray_binaries.py:create_nicer_catalog",
+      "type": "function",
+      "name": "create_nicer_catalog",
+      "filePath": "scripts/download_xray_binaries.py",
+      "lineRange": [
+        183,
+        257
+      ],
+      "summary": "Function create_nicer_catalog in download_xray_binaries.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_xray_binaries.py:create_xray_binary_catalogs",
+      "type": "function",
+      "name": "create_xray_binary_catalogs",
+      "filePath": "scripts/download_xray_binaries.py",
+      "lineRange": [
+        260,
+        463
+      ],
+      "summary": "Function create_xray_binary_catalogs in download_xray_binaries.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_xray_binaries.py:create_major_surveys_summary",
+      "type": "function",
+      "name": "create_major_surveys_summary",
+      "filePath": "scripts/download_xray_binaries.py",
+      "lineRange": [
+        466,
+        561
+      ],
+      "summary": "Function create_major_surveys_summary in download_xray_binaries.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/download_xray_binaries.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/download_xray_binaries.py",
+      "lineRange": [
+        564,
+        597
+      ],
+      "summary": "Function main in download_xray_binaries.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/exotic_discrimination.py",
+      "type": "file",
+      "name": "exotic_discrimination.py",
+      "filePath": "scripts/exotic_discrimination.py",
+      "summary": "Source file exotic_discrimination.py (python, 238 lines): 7 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/exotic_discrimination.py:a_for_eta",
+      "type": "function",
+      "name": "a_for_eta",
+      "filePath": "scripts/exotic_discrimination.py",
+      "lineRange": [
+        24,
+        32
+      ],
+      "summary": "Function a_for_eta in exotic_discrimination.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/exotic_discrimination.py:build",
+      "type": "function",
+      "name": "build",
+      "filePath": "scripts/exotic_discrimination.py",
+      "lineRange": [
+        35,
+        41
+      ],
+      "summary": "Function build in exotic_discrimination.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/exotic_discrimination.py:summarise",
+      "type": "function",
+      "name": "summarise",
+      "filePath": "scripts/exotic_discrimination.py",
+      "lineRange": [
+        44,
+        62
+      ],
+      "summary": "Function summarise in exotic_discrimination.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/exotic_discrimination.py:plot",
+      "type": "function",
+      "name": "plot",
+      "filePath": "scripts/exotic_discrimination.py",
+      "lineRange": [
+        65,
+        120
+      ],
+      "summary": "Function plot in exotic_discrimination.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/exotic_discrimination.py:plotly_html",
+      "type": "function",
+      "name": "plotly_html",
+      "filePath": "scripts/exotic_discrimination.py",
+      "lineRange": [
+        123,
+        177
+      ],
+      "summary": "Function plotly_html in exotic_discrimination.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/exotic_discrimination.py:report",
+      "type": "function",
+      "name": "report",
+      "filePath": "scripts/exotic_discrimination.py",
+      "lineRange": [
+        180,
+        262
+      ],
+      "summary": "Function report in exotic_discrimination.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/exotic_discrimination.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/exotic_discrimination.py",
+      "lineRange": [
+        265,
+        277
+      ],
+      "summary": "Function main in exotic_discrimination.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook.py",
+      "type": "file",
+      "name": "make_notebook.py",
+      "filePath": "scripts/make_notebook.py",
+      "summary": "Source file make_notebook.py (python, 92 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook.py",
+      "lineRange": [
+        11,
+        11
+      ],
+      "summary": "Function md in make_notebook.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook.py",
+      "lineRange": [
+        12,
+        12
+      ],
+      "summary": "Function code in make_notebook.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook10.py",
+      "type": "file",
+      "name": "make_notebook10.py",
+      "filePath": "scripts/make_notebook10.py",
+      "summary": "Source file make_notebook10.py (python, 115 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook10.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook10.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook10.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook10.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook10.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook10.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook11.py",
+      "type": "file",
+      "name": "make_notebook11.py",
+      "filePath": "scripts/make_notebook11.py",
+      "summary": "Source file make_notebook11.py (python, 53 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook11.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook11.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook11.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook11.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook11.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook11.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook12.py",
+      "type": "file",
+      "name": "make_notebook12.py",
+      "filePath": "scripts/make_notebook12.py",
+      "summary": "Source file make_notebook12.py (python, 61 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook12.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook12.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook12.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook12.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook12.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook12.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook13.py",
+      "type": "file",
+      "name": "make_notebook13.py",
+      "filePath": "scripts/make_notebook13.py",
+      "summary": "Source file make_notebook13.py (python, 58 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook13.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook13.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook13.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook13.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook13.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook13.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook2.py",
+      "type": "file",
+      "name": "make_notebook2.py",
+      "filePath": "scripts/make_notebook2.py",
+      "summary": "Source file make_notebook2.py (python, 89 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook2.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook2.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook2.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook2.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook2.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook2.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook3.py",
+      "type": "file",
+      "name": "make_notebook3.py",
+      "filePath": "scripts/make_notebook3.py",
+      "summary": "Source file make_notebook3.py (python, 48 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook3.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook3.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook3.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook3.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook3.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook3.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook4.py",
+      "type": "file",
+      "name": "make_notebook4.py",
+      "filePath": "scripts/make_notebook4.py",
+      "summary": "Source file make_notebook4.py (python, 58 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook4.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook4.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook4.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook4.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook4.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook4.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook5.py",
+      "type": "file",
+      "name": "make_notebook5.py",
+      "filePath": "scripts/make_notebook5.py",
+      "summary": "Source file make_notebook5.py (python, 127 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook5.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook5.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook5.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook5.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook5.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook5.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook6.py",
+      "type": "file",
+      "name": "make_notebook6.py",
+      "filePath": "scripts/make_notebook6.py",
+      "summary": "Source file make_notebook6.py (python, 72 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook6.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook6.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook6.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook6.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook6.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook6.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook7.py",
+      "type": "file",
+      "name": "make_notebook7.py",
+      "filePath": "scripts/make_notebook7.py",
+      "summary": "Source file make_notebook7.py (python, 70 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook7.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook7.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook7.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook7.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook7.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook7.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook8.py",
+      "type": "file",
+      "name": "make_notebook8.py",
+      "filePath": "scripts/make_notebook8.py",
+      "summary": "Source file make_notebook8.py (python, 78 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/make_notebook8.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook8.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook8.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook8.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook8.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook8.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_notebook9.py",
+      "type": "file",
+      "name": "make_notebook9.py",
+      "filePath": "scripts/make_notebook9.py",
+      "summary": "Source file make_notebook9.py (python, 47 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook9.py:md",
+      "type": "function",
+      "name": "md",
+      "filePath": "scripts/make_notebook9.py",
+      "lineRange": [
+        8,
+        8
+      ],
+      "summary": "Function md in make_notebook9.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/make_notebook9.py:code",
+      "type": "function",
+      "name": "code",
+      "filePath": "scripts/make_notebook9.py",
+      "lineRange": [
+        9,
+        9
+      ],
+      "summary": "Function code in make_notebook9.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/make_premium_figures.py",
+      "type": "file",
+      "name": "make_premium_figures.py",
+      "filePath": "scripts/make_premium_figures.py",
+      "summary": "Source file make_premium_figures.py (python, 72 lines): no top-level symbols.",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:scripts/process_blackcat.py",
+      "type": "file",
+      "name": "process_blackcat.py",
+      "filePath": "scripts/process_blackcat.py",
+      "summary": "Source file process_blackcat.py (python, 27 lines): 1 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/process_blackcat.py:read_table",
+      "type": "function",
+      "name": "read_table",
+      "filePath": "scripts/process_blackcat.py",
+      "lineRange": [
+        7,
+        13
+      ],
+      "summary": "Function read_table in process_blackcat.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/qnm_kerr.py",
+      "type": "file",
+      "name": "qnm_kerr.py",
+      "filePath": "scripts/qnm_kerr.py",
+      "summary": "Source file qnm_kerr.py (python, 177 lines): 10 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/qnm_kerr.py:isco_radius",
+      "type": "function",
+      "name": "isco_radius",
+      "filePath": "scripts/qnm_kerr.py",
+      "lineRange": [
+        16,
+        20
+      ],
+      "summary": "Function isco_radius in qnm_kerr.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/qnm_kerr.py:photon_sphere_radius",
+      "type": "function",
+      "name": "photon_sphere_radius",
+      "filePath": "scripts/qnm_kerr.py",
+      "lineRange": [
+        23,
+        27
+      ],
+      "summary": "Function photon_sphere_radius in qnm_kerr.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/qnm_kerr.py:qnm_eikonal",
+      "type": "function",
+      "name": "qnm_eikonal",
+      "filePath": "scripts/qnm_kerr.py",
+      "lineRange": [
+        30,
+        44
+      ],
+      "summary": "Function qnm_eikonal in qnm_kerr.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/qnm_kerr.py:q_factor",
+      "type": "function",
+      "name": "q_factor",
+      "filePath": "scripts/qnm_kerr.py",
+      "lineRange": [
+        47,
+        50
+      ],
+      "summary": "Function q_factor in qnm_kerr.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/qnm_kerr.py:build_table",
+      "type": "function",
+      "name": "build_table",
+      "filePath": "scripts/qnm_kerr.py",
+      "lineRange": [
+        53,
+        71
+      ],
+      "summary": "Function build_table in qnm_kerr.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/qnm_kerr.py:summarise",
+      "type": "function",
+      "name": "summarise",
+      "filePath": "scripts/qnm_kerr.py",
+      "lineRange": [
+        74,
+        82
+      ],
+      "summary": "Function summarise in qnm_kerr.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/qnm_kerr.py:plot",
+      "type": "function",
+      "name": "plot",
+      "filePath": "scripts/qnm_kerr.py",
+      "lineRange": [
+        85,
+        123
+      ],
+      "summary": "Function plot in qnm_kerr.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/qnm_kerr.py:plotly_html",
+      "type": "function",
+      "name": "plotly_html",
+      "filePath": "scripts/qnm_kerr.py",
+      "lineRange": [
+        126,
+        164
+      ],
+      "summary": "Function plotly_html in qnm_kerr.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/qnm_kerr.py:report",
+      "type": "function",
+      "name": "report",
+      "filePath": "scripts/qnm_kerr.py",
+      "lineRange": [
+        167,
+        203
+      ],
+      "summary": "Function report in qnm_kerr.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/qnm_kerr.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/qnm_kerr.py",
+      "lineRange": [
+        206,
+        215
+      ],
+      "summary": "Function main in qnm_kerr.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/sxs_waveform_analysis.py",
+      "type": "file",
+      "name": "sxs_waveform_analysis.py",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "summary": "Source file sxs_waveform_analysis.py (python, 329 lines): 10 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/sxs_waveform_analysis.py:remnant_spin",
+      "type": "function",
+      "name": "remnant_spin",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "lineRange": [
+        18,
+        29
+      ],
+      "summary": "Function remnant_spin in sxs_waveform_analysis.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/sxs_waveform_analysis.py:isco_radius",
+      "type": "function",
+      "name": "isco_radius",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "lineRange": [
+        32,
+        36
+      ],
+      "summary": "Function isco_radius in sxs_waveform_analysis.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/sxs_waveform_analysis.py:isco_frequency",
+      "type": "function",
+      "name": "isco_frequency",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "lineRange": [
+        39,
+        42
+      ],
+      "summary": "Function isco_frequency in sxs_waveform_analysis.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/sxs_waveform_analysis.py:qnm_frequency",
+      "type": "function",
+      "name": "qnm_frequency",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "lineRange": [
+        45,
+        47
+      ],
+      "summary": "Function qnm_frequency in sxs_waveform_analysis.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/sxs_waveform_analysis.py:build",
+      "type": "function",
+      "name": "build",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "lineRange": [
+        50,
+        75
+      ],
+      "summary": "Function build in sxs_waveform_analysis.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/sxs_waveform_analysis.py:summarise",
+      "type": "function",
+      "name": "summarise",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "lineRange": [
+        78,
+        89
+      ],
+      "summary": "Function summarise in sxs_waveform_analysis.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/sxs_waveform_analysis.py:plot",
+      "type": "function",
+      "name": "plot",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "lineRange": [
+        92,
+        165
+      ],
+      "summary": "Function plot in sxs_waveform_analysis.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/sxs_waveform_analysis.py:plotly_html",
+      "type": "function",
+      "name": "plotly_html",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "lineRange": [
+        168,
+        282
+      ],
+      "summary": "Function plotly_html in sxs_waveform_analysis.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/sxs_waveform_analysis.py:report",
+      "type": "function",
+      "name": "report",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "lineRange": [
+        285,
+        351
+      ],
+      "summary": "Function report in sxs_waveform_analysis.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/sxs_waveform_analysis.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/sxs_waveform_analysis.py",
+      "lineRange": [
+        354,
+        371
+      ],
+      "summary": "Function main in sxs_waveform_analysis.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/update_gwosc_gwtc5.py",
+      "type": "file",
+      "name": "update_gwosc_gwtc5.py",
+      "filePath": "scripts/update_gwosc_gwtc5.py",
+      "summary": "Source file update_gwosc_gwtc5.py (python, 99 lines): 1 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/update_gwosc_gwtc5.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/update_gwosc_gwtc5.py",
+      "lineRange": [
+        27,
+        109
+      ],
+      "summary": "Function main in update_gwosc_gwtc5.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/verify_data_provenance.py",
+      "type": "file",
+      "name": "verify_data_provenance.py",
+      "filePath": "scripts/verify_data_provenance.py",
+      "summary": "Source file verify_data_provenance.py (python, 172 lines): 4 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:scripts/verify_data_provenance.py:check_sqlite",
+      "type": "function",
+      "name": "check_sqlite",
+      "filePath": "scripts/verify_data_provenance.py",
+      "lineRange": [
+        21,
+        62
+      ],
+      "summary": "Function check_sqlite in verify_data_provenance.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/verify_data_provenance.py:check_csv",
+      "type": "function",
+      "name": "check_csv",
+      "filePath": "scripts/verify_data_provenance.py",
+      "lineRange": [
+        65,
+        85
+      ],
+      "summary": "Function check_csv in verify_data_provenance.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/verify_data_provenance.py:check_tsv",
+      "type": "function",
+      "name": "check_tsv",
+      "filePath": "scripts/verify_data_provenance.py",
+      "lineRange": [
+        88,
+        101
+      ],
+      "summary": "Function check_tsv in verify_data_provenance.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/verify_data_provenance.py:check_json",
+      "type": "function",
+      "name": "check_json",
+      "filePath": "scripts/verify_data_provenance.py",
+      "lineRange": [
+        104,
+        119
+      ],
+      "summary": "Function check_json in verify_data_provenance.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scripts/verify_formulas.py",
+      "type": "file",
+      "name": "verify_formulas.py",
+      "filePath": "scripts/verify_formulas.py",
+      "summary": "Source file verify_formulas.py (python, 404 lines): 2 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:scripts/verify_formulas.py:numerical_checks",
+      "type": "function",
+      "name": "numerical_checks",
+      "filePath": "scripts/verify_formulas.py",
+      "lineRange": [
+        35,
+        346
+      ],
+      "summary": "Function numerical_checks in verify_formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:scripts/verify_formulas.py:main",
+      "type": "function",
+      "name": "main",
+      "filePath": "scripts/verify_formulas.py",
+      "lineRange": [
+        352,
+        440
+      ],
+      "summary": "Function main in verify_formulas.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:tests/test_analyses.py",
+      "type": "file",
+      "name": "test_analyses.py",
+      "filePath": "tests/test_analyses.py",
+      "summary": "Source file test_analyses.py (python, 31 lines): 5 function(s).",
+      "tags": [
+        "py",
+        "python"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_analyses.py:test_remnant_energetics_output",
+      "type": "function",
+      "name": "test_remnant_energetics_output",
+      "filePath": "tests/test_analyses.py",
+      "lineRange": [
+        10,
+        17
+      ],
+      "summary": "Function test_remnant_energetics_output in test_analyses.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_analyses.py:test_exotic_discrimination_output",
+      "type": "function",
+      "name": "test_exotic_discrimination_output",
+      "filePath": "tests/test_analyses.py",
+      "lineRange": [
+        20,
+        25
+      ],
+      "summary": "Function test_exotic_discrimination_output in test_analyses.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_analyses.py:test_agn_demographics_output",
+      "type": "function",
+      "name": "test_agn_demographics_output",
+      "filePath": "tests/test_analyses.py",
+      "lineRange": [
+        28,
+        33
+      ],
+      "summary": "Function test_agn_demographics_output in test_analyses.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_analyses.py:test_figures_exist",
+      "type": "function",
+      "name": "test_figures_exist",
+      "filePath": "tests/test_analyses.py",
+      "lineRange": [
+        36,
+        38
+      ],
+      "summary": "Function test_figures_exist in test_analyses.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:tests/test_analyses.py:test_site_pages_exist",
+      "type": "function",
+      "name": "test_site_pages_exist",
+      "filePath": "tests/test_analyses.py",
+      "lineRange": [
+        41,
+        44
+      ],
+      "summary": "Function test_site_pages_exist in test_analyses.py.",
+      "tags": [
+        "python",
+        "function"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:theory.tex",
+      "type": "file",
+      "name": "theory.tex",
+      "filePath": "theory.tex",
+      "summary": "File at theory.tex (skipped by extractor).",
+      "tags": [
+        "tex"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:_christoffel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:_ricci",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_schwarzschild_ricci_flatness",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_photon_sphere",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_isco",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_kerr_horizons_ergosphere",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_morris_thorne_exotic_density",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_eddington_luminosity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_hawking_temperature",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_friedmann_continuity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_light_deflection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_gw_time_to_coalescence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_kerr_isco_spin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_penrose_efficiency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_shadow_diameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_kepler_third_law",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:derive_smbh_growth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/derivations.py",
+      "target": "function:models/derivations.py:run_all",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:schwarzschild_radius",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:hawking_temperature",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:isco_radius_schwarzschild",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:photon_sphere_radius_schwarzschild",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:kerr_horizon_radius",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:ergosphere_radius_equatorial",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:morris_thorne_shape_function",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:morris_thorne_redshift_function",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:wormhole_throat_radius",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:morris_thorne_metric_components",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:white_hole_time_reversed_schwarzschild",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:white_hole_negative_mass_radius",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:isco_radius_kerr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:effective_potential_schwarzschild",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:flare_out_condition",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:morris_thorne_embedding_z",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:hawking_power",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:hawking_lifetime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:white_hole_hawking_analog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:white_hole_instability_timescale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:white_hole_perturbation_growth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/equations.py",
+      "target": "function:models/equations.py:compactness",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:kerr_isco_radius",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:isco_frequency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:eddington_luminosity",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:eddington_mass_accretion_rate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:gw_chirp_mass",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:gw_symmetric_mass_ratio",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:gw_delta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:gw_time_to_coalescence",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:gw_peak_strain_leading_order",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:shadow_diameter_schwarzschild",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:shadow_angular_diameter",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:tidal_deformability",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:penrose_max_extraction_efficiency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:penrose_efficiency_vs_spin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:max_mass_energy_extraction_fraction",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:models/formulas.py",
+      "target": "function:models/formulas.py:friedmann_H",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/agn_demographics.py",
+      "target": "function:scripts/agn_demographics.py:build",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/agn_demographics.py",
+      "target": "function:scripts/agn_demographics.py:summarise",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/agn_demographics.py",
+      "target": "function:scripts/agn_demographics.py:plot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/agn_demographics.py",
+      "target": "function:scripts/agn_demographics.py:plotly_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/agn_demographics.py",
+      "target": "function:scripts/agn_demographics.py:report",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/agn_demographics.py",
+      "target": "function:scripts/agn_demographics.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/build_eht_shadow_figure.py",
+      "target": "function:scripts/build_eht_shadow_figure.py:shadow_diam",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/compute_with_data.py",
+      "target": "function:scripts/compute_with_data.py:gwtc_analysis",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/compute_with_data.py",
+      "target": "function:scripts/compute_with_data.py:strain_quicklook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/compute_with_data.py",
+      "target": "function:scripts/compute_with_data.py:sxs_characterisation",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/compute_with_data.py",
+      "target": "function:scripts/compute_with_data.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:update_bh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:particle_orbit",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:update_kerr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:wormhole_embedding",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:update_wh",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:update_wh_exp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:cmb_spectrum",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:update_cmb",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:update_mem",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:incoming_particle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:escaping_particle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:captured_particle",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/create_animations.py",
+      "target": "function:scripts/create_animations.py:update_pen",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_blackcat.py",
+      "target": "function:scripts/download_blackcat.py:reachable_mirrors",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_blackcat.py",
+      "target": "function:scripts/download_blackcat.py:fetch_table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_blackcat.py",
+      "target": "function:scripts/download_blackcat.py:cache_age_days",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_blackcat.py",
+      "target": "function:scripts/download_blackcat.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_eht.py",
+      "target": "function:scripts/download_eht.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gaia_dr3.py",
+      "target": "function:scripts/download_gaia_dr3.py:configure_gaia",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gaia_dr3.py",
+      "target": "function:scripts/download_gaia_dr3.py:query_bh_candidates",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gaia_dr3.py",
+      "target": "function:scripts/download_gaia_dr3.py:query_known_bh_systems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gaia_dr3.py",
+      "target": "function:scripts/download_gaia_dr3.py:query_wide_binaries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gaia_dr3.py",
+      "target": "function:scripts/download_gaia_dr3.py:save_data",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gaia_dr3.py",
+      "target": "function:scripts/download_gaia_dr3.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwb.py",
+      "target": "function:scripts/download_gwb.py:download_nanograv_15yr",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwb.py",
+      "target": "function:scripts/download_gwb.py:download_epta_dr2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwb.py",
+      "target": "function:scripts/download_gwb.py:download_ppta_dr2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwb.py",
+      "target": "function:scripts/download_gwb.py:download_ipta_dr2",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwb.py",
+      "target": "function:scripts/download_gwb.py:download_gwb_spectra",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwb.py",
+      "target": "function:scripts/download_gwb.py:create_gwb_summary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwb.py",
+      "target": "function:scripts/download_gwb.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwosc.py",
+      "target": "function:scripts/download_gwosc.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwosc_o4.py",
+      "target": "function:scripts/download_gwosc_o4.py:fetch_event_catalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwosc_o4.py",
+      "target": "function:scripts/download_gwosc_o4.py:filter_o4_events",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwosc_o4.py",
+      "target": "function:scripts/download_gwosc_o4.py:download_strain_data",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwosc_o4.py",
+      "target": "function:scripts/download_gwosc_o4.py:download_file",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwosc_o4.py",
+      "target": "function:scripts/download_gwosc_o4.py:save_event_metadata",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_gwosc_o4.py",
+      "target": "function:scripts/download_gwosc_o4.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_heasarc.py",
+      "target": "function:scripts/download_heasarc.py:tap",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_heasarc.py",
+      "target": "function:scripts/download_heasarc.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_planck.py",
+      "target": "function:scripts/download_planck.py:download_planck_power_spectra",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_planck.py",
+      "target": "function:scripts/download_planck.py:generate_camb_power_spectra",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_planck.py",
+      "target": "function:scripts/download_planck.py:download_planck_lensing_map",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_planck.py",
+      "target": "function:scripts/download_planck.py:generate_planck_likelihood_data",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_planck.py",
+      "target": "function:scripts/download_planck.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_sdss.py",
+      "target": "function:scripts/download_sdss.py:configure_sdss",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_sdss.py",
+      "target": "function:scripts/download_sdss.py:query_sdss_dr17_quasars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_sdss.py",
+      "target": "function:scripts/download_sdss.py:query_sdss_dr18_quasars",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_sdss.py",
+      "target": "function:scripts/download_sdss.py:query_sdss_bh_masses",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_sdss.py",
+      "target": "function:scripts/download_sdss.py:query_sdss_xray_agn",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_sdss.py",
+      "target": "function:scripts/download_sdss.py:save_data",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_sdss.py",
+      "target": "function:scripts/download_sdss.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_strain_marquee.py",
+      "target": "function:scripts/download_strain_marquee.py:sha_short",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_strain_marquee.py",
+      "target": "function:scripts/download_strain_marquee.py:download",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_strain_marquee.py",
+      "target": "function:scripts/download_strain_marquee.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_sxs.py",
+      "target": "function:scripts/download_sxs.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_xray_binaries.py",
+      "target": "function:scripts/download_xray_binaries.py:create_maxi_catalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_xray_binaries.py",
+      "target": "function:scripts/download_xray_binaries.py:create_swift_bat_catalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_xray_binaries.py",
+      "target": "function:scripts/download_xray_binaries.py:create_nicer_catalog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_xray_binaries.py",
+      "target": "function:scripts/download_xray_binaries.py:create_xray_binary_catalogs",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_xray_binaries.py",
+      "target": "function:scripts/download_xray_binaries.py:create_major_surveys_summary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/download_xray_binaries.py",
+      "target": "function:scripts/download_xray_binaries.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/exotic_discrimination.py",
+      "target": "function:scripts/exotic_discrimination.py:a_for_eta",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/exotic_discrimination.py",
+      "target": "function:scripts/exotic_discrimination.py:build",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/exotic_discrimination.py",
+      "target": "function:scripts/exotic_discrimination.py:summarise",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/exotic_discrimination.py",
+      "target": "function:scripts/exotic_discrimination.py:plot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/exotic_discrimination.py",
+      "target": "function:scripts/exotic_discrimination.py:plotly_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/exotic_discrimination.py",
+      "target": "function:scripts/exotic_discrimination.py:report",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/exotic_discrimination.py",
+      "target": "function:scripts/exotic_discrimination.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook.py",
+      "target": "function:scripts/make_notebook.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook.py",
+      "target": "function:scripts/make_notebook.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook10.py",
+      "target": "function:scripts/make_notebook10.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook10.py",
+      "target": "function:scripts/make_notebook10.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook11.py",
+      "target": "function:scripts/make_notebook11.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook11.py",
+      "target": "function:scripts/make_notebook11.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook12.py",
+      "target": "function:scripts/make_notebook12.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook12.py",
+      "target": "function:scripts/make_notebook12.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook13.py",
+      "target": "function:scripts/make_notebook13.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook13.py",
+      "target": "function:scripts/make_notebook13.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook2.py",
+      "target": "function:scripts/make_notebook2.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook2.py",
+      "target": "function:scripts/make_notebook2.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook3.py",
+      "target": "function:scripts/make_notebook3.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook3.py",
+      "target": "function:scripts/make_notebook3.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook4.py",
+      "target": "function:scripts/make_notebook4.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook4.py",
+      "target": "function:scripts/make_notebook4.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook5.py",
+      "target": "function:scripts/make_notebook5.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook5.py",
+      "target": "function:scripts/make_notebook5.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook6.py",
+      "target": "function:scripts/make_notebook6.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook6.py",
+      "target": "function:scripts/make_notebook6.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook7.py",
+      "target": "function:scripts/make_notebook7.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook7.py",
+      "target": "function:scripts/make_notebook7.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook8.py",
+      "target": "function:scripts/make_notebook8.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook8.py",
+      "target": "function:scripts/make_notebook8.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook9.py",
+      "target": "function:scripts/make_notebook9.py:md",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/make_notebook9.py",
+      "target": "function:scripts/make_notebook9.py:code",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/process_blackcat.py",
+      "target": "function:scripts/process_blackcat.py:read_table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/qnm_kerr.py",
+      "target": "function:scripts/qnm_kerr.py:isco_radius",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/qnm_kerr.py",
+      "target": "function:scripts/qnm_kerr.py:photon_sphere_radius",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/qnm_kerr.py",
+      "target": "function:scripts/qnm_kerr.py:qnm_eikonal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/qnm_kerr.py",
+      "target": "function:scripts/qnm_kerr.py:q_factor",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/qnm_kerr.py",
+      "target": "function:scripts/qnm_kerr.py:build_table",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/qnm_kerr.py",
+      "target": "function:scripts/qnm_kerr.py:summarise",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/qnm_kerr.py",
+      "target": "function:scripts/qnm_kerr.py:plot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/qnm_kerr.py",
+      "target": "function:scripts/qnm_kerr.py:plotly_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/qnm_kerr.py",
+      "target": "function:scripts/qnm_kerr.py:report",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/qnm_kerr.py",
+      "target": "function:scripts/qnm_kerr.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/sxs_waveform_analysis.py",
+      "target": "function:scripts/sxs_waveform_analysis.py:remnant_spin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/sxs_waveform_analysis.py",
+      "target": "function:scripts/sxs_waveform_analysis.py:isco_radius",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/sxs_waveform_analysis.py",
+      "target": "function:scripts/sxs_waveform_analysis.py:isco_frequency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/sxs_waveform_analysis.py",
+      "target": "function:scripts/sxs_waveform_analysis.py:qnm_frequency",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/sxs_waveform_analysis.py",
+      "target": "function:scripts/sxs_waveform_analysis.py:build",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/sxs_waveform_analysis.py",
+      "target": "function:scripts/sxs_waveform_analysis.py:summarise",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/sxs_waveform_analysis.py",
+      "target": "function:scripts/sxs_waveform_analysis.py:plot",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/sxs_waveform_analysis.py",
+      "target": "function:scripts/sxs_waveform_analysis.py:plotly_html",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/sxs_waveform_analysis.py",
+      "target": "function:scripts/sxs_waveform_analysis.py:report",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/sxs_waveform_analysis.py",
+      "target": "function:scripts/sxs_waveform_analysis.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/update_gwosc_gwtc5.py",
+      "target": "function:scripts/update_gwosc_gwtc5.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/verify_data_provenance.py",
+      "target": "function:scripts/verify_data_provenance.py:check_sqlite",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/verify_data_provenance.py",
+      "target": "function:scripts/verify_data_provenance.py:check_csv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/verify_data_provenance.py",
+      "target": "function:scripts/verify_data_provenance.py:check_tsv",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/verify_data_provenance.py",
+      "target": "function:scripts/verify_data_provenance.py:check_json",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/verify_formulas.py",
+      "target": "function:scripts/verify_formulas.py:numerical_checks",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:scripts/verify_formulas.py",
+      "target": "function:scripts/verify_formulas.py:main",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analyses.py",
+      "target": "function:tests/test_analyses.py:test_remnant_energetics_output",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analyses.py",
+      "target": "function:tests/test_analyses.py:test_exotic_discrimination_output",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analyses.py",
+      "target": "function:tests/test_analyses.py:test_agn_demographics_output",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analyses.py",
+      "target": "function:tests/test_analyses.py:test_figures_exist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:tests/test_analyses.py",
+      "target": "function:tests/test_analyses.py:test_site_pages_exist",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ],
+  "layers": [],
+  "tour": []
+}

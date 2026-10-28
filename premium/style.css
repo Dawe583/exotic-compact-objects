@@ -476,3 +476,89 @@ hr.soft{border-top:1px solid var(--line)}
   a{color:#111;text-decoration:underline}
   .prose h2{page-break-after:avoid}
 }
+
+/* ==========================================================================
+   ENHANCEMENT PASS — 2026-10-28 (visual upgrade)
+   ========================================================================== */
+
+/* ---------- motion: respect reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- scroll reveal (CSS-only, progressive) ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.reveal.is-visible{opacity:1;transform:none}
+
+/* ---------- cards: lift + glow on hover ---------- */
+.card,.panel,.metric{
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.card:hover,.panel:hover{
+  transform:translateY(-3px);
+  box-shadow:0 30px 70px -34px rgba(47,227,172,.22), var(--shadow);
+  border-color:var(--line-strong);
+}
+
+/* ---------- glow pulse on primary accent dots ---------- */
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{
+  0%,100%{box-shadow:0 0 9px var(--emerald)}
+  50%{box-shadow:0 0 16px var(--emerald),0 0 32px rgba(47,227,172,.4)}
+}
+
+/* ---------- hero title gradient ---------- */
+.hero h1{
+  background:linear-gradient(120deg,#e7eefa 0%,#7feccf 45%,#a48bff 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-text-fill-color:transparent;
+}
+
+/* ---------- button upgrade ---------- */
+.btn{
+  position:relative;overflow:hidden;
+}
+.btn::before,.btn::after{transition:color .15s ease}
+.btn:hover{box-shadow:0 0 24px rgba(47,227,172,.18)}
+
+/* ---------- code blocks ---------- */
+pre{
+  background:linear-gradient(180deg,rgba(15,26,45,.9),rgba(11,19,34,.95));
+  border:1px solid var(--line-strong);
+  box-shadow:inset 0 1px 0 rgba(231,238,250,.04);
+}
+pre code{color:#d6e6ff}
+
+/* ---------- improved responsive ---------- */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .hero{padding:48px 0 24px}
+  .metrics{grid-template-columns:1fr}
+  .header-inner{gap:14px}
+  .site-nav a{padding:6px 8px;font-size:.74rem}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  body{font-size:15.5px}
+  h1{font-size:1.9rem}
+  .panel-head{padding:12px 14px 0}
+  .panel-body{padding:12px 14px 6px}
+}
+
+/* ---------- footer upgrade ---------- */
+footer,.site-footer{
+  border-top:1px solid var(--line);
+  background:linear-gradient(180deg,transparent,rgba(4,7,11,.6));
+}
+
+/* ---------- focus states (accessibility) ---------- */
+a:focus-visible,button:focus-visible,.btn:focus-visible{
+  outline:2px solid var(--emerald);outline-offset:3px;border-radius:4px;
+}
+
+/* ---------- scrollbar ---------- */
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:var(--ink)}
+::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:5px}
+::-webkit-scrollbar-thumb:hover{background:var(--emerald)}

@@ -534,34 +534,57 @@ def derive_kerr_isco_spin():
 
 
 def derive_penrose_efficiency():
-    """Maximum Penrose process efficiency for a maximally spinning BH.
+    """Maximum single-decay Penrose-process efficiency for an extremal Kerr BH.
 
-    Maximal split of an a=1 BH of mass M into two equal remnants, each carrying
-    specific energy e = 1/sqrt(2) (the maximum extractable unit energy from
-    orbital mechanics at a=1); remnants leave with total energy M/sqrt(2).
+    Setup (Bardeen, Press & Teukolsky 1972; Wald 1974; Universe 7 (2021) 416):
+    a neutral particle falls from rest at infinity (specific energy E1 = m1)
+    and decays inside the ergosphere into fragment 2 (captured, negative
+    energy E2 < 0) and fragment 3 (escapes, E3 > E1).
 
-    eta = 1 - E_out/M = 1 - 1/sqrt(2)  ≈ 29.29 %.
+    Conservation: E3 - E1 = -E2, so the efficiency is
+        eta = (E3 - E1)/E1 = -E2/E1 > 0   (requires E2 < 0)
+    For an extremal Kerr hole (a = M) the Wald-inequality limit at the
+    horizon gives the least (most negative) captured specific energy as
+    E2_min = -(sqrt(2) - 1)/2 * E1, hence
+        eta_max = (sqrt(2) - 1)/2 ≈ 20.7 %.
+    The general spin dependence (arXiv:1905.05321, eq. 6) is
+        eta(a) = M/(2a) (sqrt(2) sqrt(1 - sqrt(1 - a^2/M^2)) - a/M).
     """
-    extracted = 2 * (M_bh_ / 2) / sp.sqrt(2)
-    eta = sp.simplify(1 - extracted / M_bh_)
+    eta_max = (sp.sqrt(2) - 1) / 2
+    # Symbolic consistency of the efficiency definition with conservation:
+    # E3 = E1 - E2  <=>  eta = (E3-E1)/E1 = -E2/E1.
+    E1_, E2_, E3_ = sp.symbols("E1 E2 E3", real=True)
+    eta_identity = sp.simplify(-E2_ / E1_ - ((E1_ - E2_) - E1_) / E1_)
+    # E3/E1 = 1 + eta_max given the extremal-limit capture E2/E1 = -eta_max.
+    e3_over_e1 = sp.simplify(
+        ((E1_ - E2_) / E1_ - (1 + eta_max)).subs(E2_, -eta_max * E1_)
+    )
+    # General spin curve eta(s), s = a/M in (0, 1], must approach eta_max.
+    s = sp.symbols("s", positive=True)
+    eta_of_s = (sp.sqrt(2) * sp.sqrt(1 - sp.sqrt(1 - s**2)) - s) / (2 * s)
+    limit_spin = sp.simplify(sp.limit(eta_of_s, s, 1, "+"))
     checks = [
+        {"label": "eta = -E2/E1 follows from E3 = E1 - E2", "ok": eta_identity == 0},
+        {"label": "E3/E1 = 1 + eta_max for the extremal split", "ok": e3_over_e1 == 0},
         {
-            "label": "eta_max = 1 - 1/sqrt(2) ≈ 29.29 %",
-            "ok": sp.simplify(eta - (1 - 1 / sp.sqrt(2))) == 0,
-        }
+            "label": "general eta(a) -> (sqrt(2)-1)/2 as a/M -> 1",
+            "ok": limit_spin == eta_max,
+        },
     ]
     return {
         "name": "penrose_efficiency",
-        "description": "Maximum Penrose-process efficiency",
-        "formula": "eta = 1 - E_out/M with E_out = M / sqrt(2)",
+        "description": "Maximum single-decay Penrose efficiency (extremal Kerr)",
+        "formula": "eta = (E3-E1)/E1 = -E2/E1;  eta_max = (sqrt(2)-1)/2 ≈ 20.7 %",
         "formula_latex": [
-            "\\eta_{\\max} = 1 - \\frac{1}{\\sqrt{2}} \\approx 29.29\\,\\%"
+            "\\eta = -\\frac{E_2}{E_1}",
+            "\\eta_{\\max} = \\frac{\\sqrt{2}-1}{2} \\approx 20.7\\,\\%",
         ],
         "steps": [
-            "maximally spinning BH a=1, mass M",
-            "split into two equal remnants each with e = 1/sqrt(2)",
-            "total extracted energy E_out = M/sqrt(2)",
-            "efficiency eta = 1 - E_out/M",
+            "Particle from rest at infinity: E1 = m1; decays inside the ergosphere",
+            "Fragment 2 captured with E2 < 0; fragment 3 escapes with E3 = E1 - E2 > E1",
+            "Efficiency eta = -E2/E1 by construction",
+            "Wald-inequality limit at the horizon of a = M: E2_min/E1 = -(sqrt(2)-1)/2",
+            "General spin: eta(a) = M/(2a)(sqrt(2)sqrt(1-sqrt(1-a^2/M^2)) - a/M) -> (sqrt(2)-1)/2",
         ],
         "checks": checks,
     }
@@ -602,7 +625,6 @@ def derive_shadow_diameter():
 # ---------------------------------------------------------------------------
 
 
-
 # ---------------------------------------------------------------------------
 # 14. Kepler's third law (exoplanet orbital period)
 def derive_kepler_third_law():
@@ -622,9 +644,7 @@ def derive_kepler_third_law():
         "name": "kepler_third_law",
         "description": "Kepler's third law for exoplanet orbital period",
         "formula": "P = 2 pi sqrt(a^3 / (G M))",
-        "formula_latex": [
-            "P = 2\pi\sqrt{\frac{a^{3}}{GM}}"
-        ],
+        "formula_latex": [r"P = 2\pi\sqrt{\frac{a^{3}}{GM}}"],
         "steps": [
             "Start from gravitational force = centripetal force: GMm/a^2 = m v^2/a",
             "Substitute v = 2 pi a / P (circular orbit: circumference / period)",
@@ -635,8 +655,6 @@ def derive_kepler_third_law():
     }
 
 
-
-
 # ---------------------------------------------------------------------------
 # 14. Kepler's third law (exoplanet orbital period)
 def derive_kepler_third_law():
@@ -656,14 +674,58 @@ def derive_kepler_third_law():
         "name": "kepler_third_law",
         "description": "Kepler's third law for exoplanet orbital period",
         "formula": "P = 2 pi sqrt(a^3 / (G M))",
-        "formula_latex": [
-            "P = 2\pi\sqrt{\frac{a^{3}}{GM}}"
-        ],
+        "formula_latex": [r"P = 2\pi\sqrt{\frac{a^{3}}{GM}}"],
         "steps": [
             "Start from gravitational force = centripetal force: GMm/a^2 = m v^2/a",
             "Substitute v = 2 pi a / P (circular orbit: circumference / period)",
             "Solve for orbital velocity v and period P",
             "Result: P = 2 pi sqrt(a^3 / (GM))",
+        ],
+        "checks": checks,
+    }
+
+
+# ---------------------------------------------------------------------------
+# SMBH growth: Eddington-limited exponential growth and seed constraint
+def derive_smbh_growth():
+    eps_, f_, lam_, M0_, Mobs_, Dt_ = sp.symbols(
+        "eps f lambda M0 Mobs Delta_t", positive=True
+    )
+    # dM/dt = (1-eps)/eps * f * lambda * (4 pi G m_p/(sigma_T c)) * M  = M / t_ef
+    # => t_ef = eps/(1-eps) * sigma_T*c/(4 pi G m_p) * 1/(f lambda)
+    t_ef = eps_ / (1 - eps_) * sigma_T_ * c_ / (4 * sp.pi * G_ * m_p_) * 1 / (f_ * lam_)
+    # Check: t_ef * (1-eps)/eps * f*lambda * (4 pi G m_p/(sigma_T c)) = 1
+    check1 = sp.simplify(
+        t_ef * (1 - eps_) / eps_ * f_ * lam_ * (4 * sp.pi * G_ * m_p_) / (sigma_T_ * c_)
+        - 1
+    )
+    # Seed constraint: M_seed = M_obs * exp(-Delta_t / t_ef)
+    M_seed = Mobs_ * sp.exp(-Dt_ / t_ef)
+    # Check: M_obs = M_seed * exp(Delta_t / t_ef)
+    check2 = sp.simplify(M_seed * sp.exp(Dt_ / t_ef) - Mobs_)
+    checks = [
+        {
+            "label": "E-folding time satisfies t_ef * (1-eps)/eps * f*lambda * 4pi G m_p/(sigma_T c) = 1",
+            "ok": check1 == 0,
+        },
+        {
+            "label": "Seed constraint M_seed = M_obs exp(-Delta_t/t_ef) inverts correctly",
+            "ok": check2 == 0,
+        },
+    ]
+    return {
+        "name": "smbh_eddington_growth",
+        "description": "Eddington-limited SMBH growth: e-folding time and seed constraint",
+        "formula": "t_ef = (eps/(1-eps)) sigma_T c/(4 pi G m_p) 1/(f lambda);  M_seed = M_obs exp(-Delta_t/t_ef)",
+        "formula_latex": [
+            r"t_{\rm ef} = \frac{\varepsilon}{1-\varepsilon}\frac{\sigma_T c}{4\pi G m_p}\frac{1}{f\lambda}",
+            r"M_{\rm seed} = M_{\rm obs}\,\exp(-\Delta t/t_{\rm ef})",
+        ],
+        "steps": [
+            "Radiation-gravity balance gives L_Edd = 4 pi G M m_p c / sigma_T",
+            "Mass growth rate dM/dt = (1-eps)/eps * f * lambda * 4 pi G m_p/(sigma_T c) * M = M/t_ef",
+            "Integrate: M(t)=M0 exp(t/t_ef); e-folding time t_ef as above",
+            "Invert for required seed: M_seed = M_obs exp(-Delta_t/t_ef)",
         ],
         "checks": checks,
     }
@@ -683,6 +745,7 @@ ALL = [
     derive_kerr_isco_spin,
     derive_penrose_efficiency,
     derive_shadow_diameter,
+    derive_smbh_growth,
 ]
 
 

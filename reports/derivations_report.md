@@ -1,6 +1,6 @@
 # Formula derivations and verification
 
-Generated (UTC): 2026-10-27T23:27:24.625317+00:00
+Generated (UTC): 2026-10-28T19:38:22.319407+00:00
 
 Every entry: symbolic derivation in `models/derivations.py` executed with Sympy,
 each check simplifies to an identity (0) or strict inequality; then numeric
@@ -78,9 +78,11 @@ Bardeen-Press-Teukolsky ISCO formula and its spin limits
 - check: **limit a -> 1 equals 1 (extremal)** → PASS
 
 ### penrose_efficiency — PASS
-Maximum Penrose-process efficiency
-- formula: `eta = 1 - E_out/M with E_out = M / sqrt(2)`
-- check: **eta_max = 1 - 1/sqrt(2) ≈ 29.29 %** → PASS
+Maximum single-decay Penrose efficiency (extremal Kerr)
+- formula: `eta = (E3-E1)/E1 = -E2/E1;  eta_max = (sqrt(2)-1)/2 ≈ 20.7 %`
+- check: **eta = -E2/E1 follows from E3 = E1 - E2** → PASS
+- check: **E3/E1 = 1 + eta_max for the extremal split** → PASS
+- check: **general eta(a) -> (sqrt(2)-1)/2 as a/M -> 1** → PASS
 
 ### shadow_diameter — PASS
 BH shadow diameter in Schwarzschild spacetime
@@ -145,6 +147,25 @@ Eddington-limited SMBH growth: e-folding time and seed constraint
 
 ### PTA timing residual h=1e-15 @ 1 nHz ~ 160 ns — PASS
 - value_ns: 159.15494309189535
+
+### Penrose single-decay efficiency a=M ~ 20.7% — PASS
+- value: 0.20710678118654757
+- reference: 0.2071
+- relative_deviation: 3.2743537168355534e-05
+
+### Penrose efficiency a=0.5 < 2% — PASS
+- value: 0.0176380902050417
+
+### Extremal Kerr extractable mass-energy fraction ~ 29.3% — PASS
+- value: 0.2928932188134524
+- reference: 0.2929
+- relative_deviation: 2.3151883057584266e-05
+
+### Kerr ISCO extremal prograde = 1 M — PASS
+- value: 1.0
+
+### Kerr ISCO extremal retrograde = 9 M — PASS
+- value: 9.0
 
 ### Kerr ISCO Schwarzschild limit = 6 M — PASS
 - value: 6.0

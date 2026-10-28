@@ -206,17 +206,35 @@ def numerical_checks():
     c = 2.99792458e8
     G = 6.67430e-11
     m_p = 1.67262192369e-27
-    t_ef = (eps/(1-eps)) * (sigma_T*c)/(4*np.pi*G*m_p) * 1.0/(f*lam) / (1e6*365.25*86400)
-    out.append({"label": "SMBH Eddington e-folding time (eps=0.1) ~ 50 Myr",
-                "value_Myr": float(t_ef), "pass": bool(40 < t_ef < 60)})
+    t_ef = (
+        (eps / (1 - eps))
+        * (sigma_T * c)
+        / (4 * np.pi * G * m_p)
+        * 1.0
+        / (f * lam)
+        / (1e6 * 365.25 * 86400)
+    )
+    out.append(
+        {
+            "label": "SMBH Eddington e-folding time (eps=0.1) ~ 50 Myr",
+            "value_Myr": float(t_ef),
+            "pass": bool(40 < t_ef < 60),
+        }
+    )
     # SMBH seed constraint: 1e9 Msun at z=7.5 from z_f=20, eps=0.1
     # Delta t ~ 0.5 Gyr for Planck18-ish; seed ~ M_obs * exp(-Delta t / t_ef)
     import math
+
     dt_Gyr = 0.5
-    t_ef_Gyr = t_ef/1000.0
-    seed = 1e9 * math.exp(-dt_Gyr/t_ef_Gyr)
-    out.append({"label": "SMBH required seed for 1e9 Msun at z~7.5 (order of magnitude)",
-                "value_Msun": float(seed), "pass": bool(seed > 0 and seed < 1e9)})
+    t_ef_Gyr = t_ef / 1000.0
+    seed = 1e9 * math.exp(-dt_Gyr / t_ef_Gyr)
+    out.append(
+        {
+            "label": "SMBH required seed for 1e9 Msun at z~7.5 (order of magnitude)",
+            "value_Msun": float(seed),
+            "pass": bool(seed > 0 and seed < 1e9),
+        }
+    )
 
     # Shadow: Schwarzschild angular diameter for M87* parameters ~ 40 uas
     G = 6.67430e-11
@@ -235,13 +253,85 @@ def numerical_checks():
     )
     # PTA: timing residual for h=1e-15 at 1 nHz ~ 160 ns
     h, f = 1e-15, 1e-9
-    dt_ns = h/(2*np.pi*f)*1e9
-    out.append({"label": "PTA timing residual h=1e-15 @ 1 nHz ~ 160 ns",
-                "value_ns": float(dt_ns), "pass": bool(150 < dt_ns < 170)})
+    dt_ns = h / (2 * np.pi * f) * 1e9
+    out.append(
+        {
+            "label": "PTA timing residual h=1e-15 @ 1 nHz ~ 160 ns",
+            "value_ns": float(dt_ns),
+            "pass": bool(150 < dt_ns < 170),
+        }
+    )
+    # Penrose process: single-decay efficiency for extremal Kerr ≈ 20.7 %,
+    # computed from the general spin curve eta(a) (arXiv:1905.05321 eq. 6)
+    # and cross-checked against the literature reference in Universe 7 (2021).
+    eta_pp = F.penrose_efficiency_vs_spin(1.0)
+    out.append(
+        {
+            "label": "Penrose single-decay efficiency a=M ~ 20.7%",
+            "value": eta_pp,
+            "reference": 0.2071,
+            "relative_deviation": abs(eta_pp - 0.2071) / 0.2071,
+            "pass": abs(eta_pp - 0.2071) / 0.2071 < 0.01,
+        }
+    )
+    # Weak-spin sanity: eta(a=0.5) is documented < 2 % (arXiv:1905.05321).
+    eta_half = F.penrose_efficiency_vs_spin(0.5)
+    out.append(
+        {
+            "label": "Penrose efficiency a=0.5 < 2%",
+            "value": eta_half,
+            "pass": eta_half < 0.02,
+        }
+    )
+    # Total extractable mass-energy of an extremal Kerr hole (the ROTATIONAL
+    # reservoir, Christodoulou & Ruffini 1971): 1 - M_irr/M with the horizon
+    # area via Smarr: A = 4 pi (r_+^2 + a^2), r_+ = M (extremal, a = M)
+    # -> A = 8 pi M^2 -> M_irr = sqrt(A/(16 pi)) = M/sqrt(2).
+    # Literature rounding: 29.3 %.
+    M_ = 1 * u.Msun
+    r_plus = (const.G * M_ / const.c**2).to(u.m)  # a = M (extremal): r_+ = GM/c^2
+    area = 4 * np.pi * (r_plus**2 + r_plus**2)  # a^2 = r_plus^2 for a = M
+    m_irr_ratio = np.sqrt(area / (16 * np.pi * r_plus**2))
+    spin_fraction = 1 - m_irr_ratio.value
+    out.append(
+        {
+            "label": "Extremal Kerr extractable mass-energy fraction ~ 29.3%",
+            "value": spin_fraction,
+            "reference": 0.2929,
+            "relative_deviation": abs(spin_fraction - 0.2929) / 0.2929,
+            "pass": abs(spin_fraction - 0.2929) / 0.2929 < 0.01,
+        }
+    )
+    # Hawking temperature (independent statement commented out: the computed
+    # check above, "Hawking temperature of a 1 Msun Schwarzschild BH", covers it).
+
+    # Kerr ISCO limits in M units: prograde extremal r_isco = 1 M,
+    # retrograde r_isco = 9 M (Bardeen 1972).
+    rg = (const.G * M_ / const.c**2).to(u.m)  # gravitational radius = 1 M in length
+    isco_pro = F.kerr_isco_radius(M_, 1.0)
+    isco_retro = F.kerr_isco_radius(M_, 1.0, retrograde=True)
+    pro_ratio = isco_pro.to(u.m).value / rg.value
+    retro_ratio = isco_retro.to(u.m).value / rg.value
+    out.append(
+        {
+            "label": "Kerr ISCO extremal prograde = 1 M",
+            "value": round(pro_ratio, 4),
+            "pass": bool(abs(pro_ratio - 1.0) < 1e-3),
+        }
+    )
+    out.append(
+        {
+            "label": "Kerr ISCO extremal retrograde = 9 M",
+            "value": round(retro_ratio, 4),
+            "pass": bool(abs(retro_ratio - 9.0) < 1e-3),
+        }
+    )
+
     # Kerr ISCO: prograde extremal -> 1 M, Schwarzschild -> 6 M
     # (formula check already in derivations; numeric spot check here)
-    out.append({"label": "Kerr ISCO Schwarzschild limit = 6 M",
-                "value": 6.0, "pass": True})
+    out.append(
+        {"label": "Kerr ISCO Schwarzschild limit = 6 M", "value": 6.0, "pass": True}
+    )
 
     # White-hole instability timescale for 1 Msun ~ 5e-6 s
     t_inst = (6.67430e-11 * 1.98847e30) / (2.99792458e8**3)

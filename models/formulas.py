@@ -133,18 +133,41 @@ def tidal_deformability(compactness: float, love_number_k2: float = 0.085) -> fl
 
 
 def penrose_max_extraction_efficiency() -> float:
-    """Maximum Penrose-process efficiency: 1 - 1/sqrt(2) ≈ 0.29289 (29.29 %)."""
-    return float(1.0 - 1.0 / np.sqrt(2.0))
+    """Maximum single-decay Penrose-process efficiency, extremal Kerr ≈ 20.7 %.
 
-
-def penrose_max_specific_energy_spin(a: float) -> float:
-    """Linearized demo of efficiency vs spin: eta(a) ≈ (1 - 1/sqrt(2)) * a.
-
-    Physically meaningful only as a sketch; the exact maximal case is a=1
-    with eta = 1 - 1/sqrt(2) ≈ 29.29% (see penrose_max_extraction_efficiency).
+    eta_max = (sqrt(2) - 1) / 2 ≈ 0.2071 (Bardeen, Press & Teukolsky 1972;
+    Wald 1974; see also Universe 7 (2021) 416, eq. 29, and arXiv:1905.05321
+    eq. 6 at a = M), the bound for one decay of a neutral particle from rest
+    at infinity whose captured fragment reaches a negative-energy orbit as the
+    splitting point approaches the horizon. NOT to be confused with the total
+    extractable mass-energy fraction of an extremal Kerr hole,
+    1 - 1/sqrt(2) ≈ 29.3 % (reversible spin-down to the irreducible mass;
+    Christodoulou & Ruffini 1971) — see max_mass_energy_extraction_fraction.
     """
-    a = float(np.clip(a, 0.0, 1.0))
-    return (1.0 - 1.0 / np.sqrt(2.0)) * a
+    return float((np.sqrt(2.0) - 1.0) / 2.0)
+
+
+def penrose_efficiency_vs_spin(a_fraction: float) -> float:
+    """Single-decay Penrose efficiency eta for dimensionless spin a/M ∈ (0, 1].
+
+    eta(a) = (1/(2 a))(sqrt(2) sqrt(1 - sqrt(1 - a^2)) - a), with M = 1
+    (arXiv:1905.05321 eq. 6). Limits: a → 1 gives (sqrt(2) - 1)/2 ≈ 0.207;
+    a = 0.5 gives ≈ 0.0176 (< 2 %, consistent with the literature).
+    """
+    a = float(np.clip(a_fraction, 0.0, 1.0))
+    return float((np.sqrt(2.0) * np.sqrt(1.0 - np.sqrt(1.0 - a * a)) - a) / (2.0 * a))
+
+
+def max_mass_energy_extraction_fraction() -> float:
+    """Total extractable mass-energy fraction, extremal Kerr ≈ 29.3 %.
+
+    1 - M_irr/M with M_irr = M / sqrt(2) for a = M (Christodoulou & Ruffini
+    1971 irreducible-mass limit), reached only by an ideal reversible
+    sequence of processes spinning the hole down to zero. This is the bound
+    on the ROTATIONAL RESERVOIR, not the single-decay Penrose-process
+    efficiency (see penrose_max_extraction_efficiency).
+    """
+    return float(1.0 - 1.0 / np.sqrt(2.0))
 
 
 # ----------------------------------------------------------------- cosmology

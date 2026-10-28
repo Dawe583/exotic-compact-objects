@@ -23,3 +23,12 @@ results/
 # Understand-Anything scratch (transient, regenerated each refresh)
 .ua/intermediate/
 .ua/tmp/
+
+# Generated site HTML (not source)
+*.html
+
+# Generated docs site
+/docs/
+
+# Transient loop reports (not source)
+reports/refresh-*.md

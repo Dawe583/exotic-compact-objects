@@ -912,7 +912,7 @@ def figure_card(key: str, wide: bool = False) -> str:
     png_path = FIG / f"{key}.png"
     wide_cls = " wide" if wide else ""
     if html_path.exists():
-        media = f'<iframe data-src="figures/{key}.html" title="{esc(title)}" loading="lazy"></iframe><div class="placeholder">Loading interactive figure…</div>'
+        media = f'<iframe src="figures/{key}.html" title="{esc(title)}" loading="lazy" onload="this.nextElementSibling.style.display=\'none\'"></iframe><div class="placeholder">Loading interactive figure…</div>'
         kind = "interactive"
     elif gif_path.exists():
         media = f'<img src="figures/{key}.gif" alt="{esc(title)}" loading="lazy">'

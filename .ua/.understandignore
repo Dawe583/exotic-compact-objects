@@ -32,3 +32,9 @@ results/
 
 # Transient loop reports (not source)
 reports/refresh-*.md
+
+# Graph outputs (not source)
+.ua/*.json
+
+# Generated site CSS
+*.css

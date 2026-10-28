@@ -5,7 +5,7 @@
     "languages": [],
     "frameworks": [],
     "description": "Exotic compact objects research project.",
-    "analyzedAt": "2026-10-28T22:00:01.543998+01:00",
+    "analyzedAt": "2026-10-28T23:01:20.749688+01:00",
     "gitCommitHash": "e6aaf54"
   },
   "nodes": [
@@ -2076,6 +2076,83 @@
       "complexity": "simple"
     },
     {
+      "id": "file:notebooks/19_gw_strain_analysis.ipynb",
+      "type": "file",
+      "name": "19_gw_strain_analysis.ipynb",
+      "filePath": "notebooks/19_gw_strain_analysis.ipynb",
+      "summary": "File at notebooks/19_gw_strain_analysis.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/20_gwtc_remnant_catalog.ipynb",
+      "type": "file",
+      "name": "20_gwtc_remnant_catalog.ipynb",
+      "filePath": "notebooks/20_gwtc_remnant_catalog.ipynb",
+      "summary": "File at notebooks/20_gwtc_remnant_catalog.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/21_agn_mass_catalog.ipynb",
+      "type": "file",
+      "name": "21_agn_mass_catalog.ipynb",
+      "filePath": "notebooks/21_agn_mass_catalog.ipynb",
+      "summary": "File at notebooks/21_agn_mass_catalog.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/22_blackcat_dynamical_catalog.ipynb",
+      "type": "file",
+      "name": "22_blackcat_dynamical_catalog.ipynb",
+      "filePath": "notebooks/22_blackcat_dynamical_catalog.ipynb",
+      "summary": "File at notebooks/22_blackcat_dynamical_catalog.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/23_early_smbh_growth.ipynb",
+      "type": "file",
+      "name": "23_early_smbh_growth.ipynb",
+      "filePath": "notebooks/23_early_smbh_growth.ipynb",
+      "summary": "File at notebooks/23_early_smbh_growth.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/24_quantum_gravity.ipynb",
+      "type": "file",
+      "name": "24_quantum_gravity.ipynb",
+      "filePath": "notebooks/24_quantum_gravity.ipynb",
+      "summary": "File at notebooks/24_quantum_gravity.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:notebooks/25_gw_real_analysis.ipynb",
+      "type": "file",
+      "name": "25_gw_real_analysis.ipynb",
+      "filePath": "notebooks/25_gw_real_analysis.ipynb",
+      "summary": "File at notebooks/25_gw_real_analysis.ipynb (skipped by extractor).",
+      "tags": [
+        "ipynb"
+      ],
+      "complexity": "simple"
+    },
+    {
       "id": "file:scripts/download_blackcat.py",
       "type": "file",
       "name": "download_blackcat.py",
@@ -2148,72 +2225,6 @@
       "tags": [
         "python",
         "function"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:notebooks/19_gw_strain_analysis.ipynb",
-      "type": "file",
-      "name": "19_gw_strain_analysis.ipynb",
-      "filePath": "notebooks/19_gw_strain_analysis.ipynb",
-      "summary": "File at notebooks/19_gw_strain_analysis.ipynb (skipped by extractor).",
-      "tags": [
-        "ipynb"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:notebooks/20_gwtc_remnant_catalog.ipynb",
-      "type": "file",
-      "name": "20_gwtc_remnant_catalog.ipynb",
-      "filePath": "notebooks/20_gwtc_remnant_catalog.ipynb",
-      "summary": "File at notebooks/20_gwtc_remnant_catalog.ipynb (skipped by extractor).",
-      "tags": [
-        "ipynb"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:notebooks/21_agn_mass_catalog.ipynb",
-      "type": "file",
-      "name": "21_agn_mass_catalog.ipynb",
-      "filePath": "notebooks/21_agn_mass_catalog.ipynb",
-      "summary": "File at notebooks/21_agn_mass_catalog.ipynb (skipped by extractor).",
-      "tags": [
-        "ipynb"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:notebooks/22_blackcat_dynamical_catalog.ipynb",
-      "type": "file",
-      "name": "22_blackcat_dynamical_catalog.ipynb",
-      "filePath": "notebooks/22_blackcat_dynamical_catalog.ipynb",
-      "summary": "File at notebooks/22_blackcat_dynamical_catalog.ipynb (skipped by extractor).",
-      "tags": [
-        "ipynb"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:notebooks/23_early_smbh_growth.ipynb",
-      "type": "file",
-      "name": "23_early_smbh_growth.ipynb",
-      "filePath": "notebooks/23_early_smbh_growth.ipynb",
-      "summary": "File at notebooks/23_early_smbh_growth.ipynb (skipped by extractor).",
-      "tags": [
-        "ipynb"
-      ],
-      "complexity": "simple"
-    },
-    {
-      "id": "file:notebooks/24_quantum_gravity.ipynb",
-      "type": "file",
-      "name": "24_quantum_gravity.ipynb",
-      "filePath": "notebooks/24_quantum_gravity.ipynb",
-      "summary": "File at notebooks/24_quantum_gravity.ipynb (skipped by extractor).",
-      "tags": [
-        "ipynb"
       ],
       "complexity": "simple"
     },

@@ -50,6 +50,9 @@ window.MathJax = {
         <a href="theory.html">Theory</a>
     </nav>
     <div class="header-actions">
+      <button class="btn-icon" data-theme-toggle aria-label="Toggle theme">
+        <svg class="icon icon--md" aria-hidden="true"><use href="icons.svg#icon-moon"/></svg>
+      </button>
       <a class="gh-btn" href="https://github.com/Dawe583/exotic-compact-objects" aria-label="GitHub repository">
         <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
         <span>GitHub</span>
@@ -66,7 +69,7 @@ window.MathJax = {
 </div>
 
 <section class="section" style="border-top:none;padding-top:32px">
-  <div class="stat-band reveal"><div class="stat"><div class="k">20</div><div class="l">Curated catalogues</div></div><div class="stat"><div class="k">89 890</div><div class="l">Total rows</div></div><div class="stat"><div class="k">391</div><div class="l">GW events</div></div><div class="stat"><div class="k">86</div><div class="l">AGN masses</div></div><div class="stat"><div class="k">14</div><div class="l">HEASARC tables</div></div></div>
+  <div class="stat-band reveal"><div class="stat"><div class="k">20</div><div class="l">Curated catalogues</div></div><div class="stat"><div class="k">76 988</div><div class="l">Total rows</div></div><div class="stat"><div class="k">391</div><div class="l">GW events</div></div><div class="stat"><div class="k">86</div><div class="l">AGN masses</div></div><div class="stat"><div class="k">14</div><div class="l">HEASARC tables</div></div></div>
 </section>
 
 <section class="section">
@@ -85,8 +88,8 @@ window.MathJax = {
 <tr><td class="name">AGN reverberation masses</td><td>AGN &amp; SMBH</td><td class="num">86</td><td class="num">15</td><td>Supermassive black-hole masses from reverberation mapping with line widths and time delays.<br><span class="muted mono" style="font-size:.72rem">data/processed/agn_reverberation_masses.csv</span></td><td>Literature</td><td><span class="badge ok">ready</span></td></tr>
 <tr><td class="name">AGN BH mass compilation</td><td>AGN &amp; SMBH</td><td class="num">88</td><td class="num">1</td><td>Compiled AGN black-hole masses across redshift used for demographic comparisons.<br><span class="muted mono" style="font-size:.72rem">data/external/agn_bh_mass.csv</span></td><td>Literature</td><td><span class="badge ok">ready</span></td></tr>
 <tr><td class="name">BlackCAT dynamical BHs</td><td>Black holes</td><td class="num">18</td><td class="num">51</td><td>Dynamically confirmed stellar-mass black holes with orbital and distance measurements.<br><span class="muted mono" style="font-size:.72rem">data/processed/blackcat_dynamical.csv</span></td><td>BlackCAT</td><td><span class="badge ok">ready</span></td></tr>
-<tr><td class="name">Exoplanet catalog (confirmed)</td><td>Exoplanets</td><td class="num">6 451</td><td class="num">36</td><td>Confirmed exoplanets from NASA Exoplanet Archive (real measurements).<br><span class="muted mono" style="font-size:.72rem">../exoplanets/data/raw/exoplanets_confirmed.csv</span></td><td>NASA Exoplanet Archive</td><td><span class="badge ok">ready</span></td></tr>
-<tr><td class="name">Exoplanet processed sample</td><td>Exoplanets</td><td class="num">6 451</td><td class="num">22</td><td>Processed exoplanet sample used by the exoplanets notebooks and theory docs.<br><span class="muted mono" style="font-size:.72rem">../exoplanets/data/processed/exoplanets.csv</span></td><td>Exoplanets project</td><td><span class="badge ok">ready</span></td></tr>
+<tr><td class="name">Exoplanet catalog (confirmed)</td><td>Exoplanets</td><td class="num">0</td><td class="num">0</td><td>Confirmed exoplanets from NASA Exoplanet Archive (real measurements).<br><span class="muted mono" style="font-size:.72rem">../exoplanets/data/raw/exoplanets_confirmed.csv</span></td><td>NASA Exoplanet Archive</td><td><span class="badge warn">missing</span></td></tr>
+<tr><td class="name">Exoplanet processed sample</td><td>Exoplanets</td><td class="num">0</td><td class="num">0</td><td>Processed exoplanet sample used by the exoplanets notebooks and theory docs.<br><span class="muted mono" style="font-size:.72rem">../exoplanets/data/processed/exoplanets.csv</span></td><td>Exoplanets project</td><td><span class="badge warn">missing</span></td></tr>
 <tr><td class="name">Known compact objects</td><td>Black holes</td><td class="num">10</td><td class="num">5</td><td>Curated compact-object landmarks spanning stellar-mass BHs, neutron stars and SMBHs.<br><span class="muted mono" style="font-size:.72rem">data/processed/known_compact_objects.csv</span></td><td>Curated</td><td><span class="badge ok">ready</span></td></tr>
 <tr><td class="name">XRBCAT X-ray binaries</td><td>X-ray binaries</td><td class="num">229</td><td class="num">16</td><td>X-ray binary catalogue with companion type, orbital period and X-ray properties.<br><span class="muted mono" style="font-size:.72rem">data/external/xrbcat.csv</span></td><td>XRBCAT</td><td><span class="badge ok">ready</span></td></tr>
 <tr><td class="name">ATNF pulsars</td><td>Stellar remnants</td><td class="num">4 503</td><td class="num">147</td><td>The ATNF pulsar catalogue: spin periods, dispersion measures and Galactic positions.<br><span class="muted mono" style="font-size:.72rem">data/external/atnfpulsar.csv</span></td><td>ATNF</td><td><span class="badge ok">ready</span></td></tr>
@@ -174,5 +177,8 @@ window.MathJax = {
   </div>
 </footer>
 <script src="assets/site.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/sliders.js"></script>
+<script src="js/tables.js"></script>
 </body>
 </html>

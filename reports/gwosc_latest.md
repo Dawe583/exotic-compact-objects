@@ -1,6 +1,6 @@
 # Exotic Compact Objects – GWOSC snapshot
 
-Updated UTC: 2026-10-28T19:52:20.198585+00:00
+Updated UTC: 2026-10-28T20:33:47.936909+00:00
 Source: GWOSC GWTC event API (https://gwosc.org/eventapi/json/GWTC/)
 Records: 391
 

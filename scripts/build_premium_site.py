@@ -793,6 +793,7 @@ def shell(
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="icons.css">
 <script>
 window.MathJax = {{
   tex: {{inlineMath: [['\\\\(', '\\\\)'], ['$', '$']], displayMath: [['$$', '$$'], ['\\\\[', '\\\\]']]}},
@@ -878,6 +879,9 @@ window.MathJax = {{
 <script src="js/theme.js"></script>
 <script src="js/sliders.js"></script>
 <script src="js/tables.js"></script>
+<script src="js/tooltips.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/accordion.js"></script>
 </body>
 </html>
 """
@@ -1698,6 +1702,7 @@ def build_portal(stats: dict) -> str:
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
 <link rel="stylesheet" href="premium/style.css">
+<link rel="stylesheet" href="premium/icons.css">
 </head>
 <body>
 <header class="site-header">
@@ -1802,6 +1807,9 @@ def build_portal(stats: dict) -> str:
 <script src="premium/js/theme.js"></script>
 <script src="premium/js/sliders.js"></script>
 <script src="premium/js/tables.js"></script>
+<script src="premium/js/tooltips.js"></script>
+<script src="premium/js/toast.js"></script>
+<script src="premium/js/accordion.js"></script>
 </body>
 </html>
 """
@@ -1824,6 +1832,11 @@ def publish(stats: dict) -> None:
     (target / "js").mkdir(exist_ok=True)
     for js_path in (SITE / "js").glob("*.js"):
         shutil.copy2(js_path, target / "js" / js_path.name)
+    # Copy icons
+    if (SITE / "icons.svg").exists():
+        shutil.copy2(SITE / "icons.svg", target / "icons.svg")
+    if (SITE / "icons.css").exists():
+        shutil.copy2(SITE / "icons.css", target / "icons.css")
     shutil.copy2(SITE / "assets/favicon.svg", target / "assets/favicon.svg")
     for path in FIG.glob("*.html"):
         dest = target / "figures" / path.name

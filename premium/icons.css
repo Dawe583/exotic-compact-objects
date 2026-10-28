@@ -1,0 +1,48 @@
+/* Astro Science — Icon System */
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  fill: currentColor;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+.icon--xs { width: 12px; height: 12px; }
+.icon--sm { width: 16px; height: 16px; }
+.icon--md { width: 20px; height: 20px; }
+.icon--lg { width: 24px; height: 24px; }
+.icon--xl { width: 32px; height: 32px; }
+.icon--2xl { width: 48px; height: 48px; }
+
+.icon--emerald { color: var(--emerald); }
+.icon--sky { color: var(--sky); }
+.icon--rose { color: var(--rose); }
+.icon--amber { color: var(--amber); }
+.icon--violet { color: var(--violet); }
+.icon--muted { color: var(--muted); }
+.icon--dim { color: var(--dim); }
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-strong);
+  background: rgba(231,238,250,.03);
+  color: var(--text);
+  cursor: pointer;
+  transition: background .15s ease, border-color .15s ease, color .15s ease;
+}
+.icon-btn:hover {
+  background: rgba(231,238,250,.07);
+  border-color: var(--emerald);
+  color: var(--emerald);
+}
+.icon-btn:focus-visible {
+  outline: 2px solid var(--emerald);
+  outline-offset: 2px;
+}
+CSS
